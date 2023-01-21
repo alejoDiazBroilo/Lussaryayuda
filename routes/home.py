@@ -1,8 +1,13 @@
 from flask import Blueprint,render_template,redirect,url_for
-from models.example import ExampleDatabase
 from utils.db import db
 
 Home = Blueprint("Home",__name__)
+
+
+@Home.route("/")
+def getHome():
+    return render_template("home/home.html")
+
 
 """
 
