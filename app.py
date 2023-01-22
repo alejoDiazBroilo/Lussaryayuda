@@ -4,7 +4,7 @@ from flask import Flask
 from routes.home import Home
 
 app = Flask(__name__)
-
+app.secret_key = 'thisismyfavoritesecretkey'
 
 """
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://bdi:pepe1234@localhost/CatolicaDb"
