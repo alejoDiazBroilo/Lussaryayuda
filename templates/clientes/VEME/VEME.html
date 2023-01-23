@@ -3,19 +3,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% block head %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'Lussary/static/css/clientes/VEME/VEME_css.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='/css/clientes/VEME/VEME_css.css') }}">
 
     <title>Document</title>
-</head>
-{% block content %}
-    <body>
-        <h1>aaa</h1>
-    </body>
-{% endblock %}
+    {% endblock %}
 
+</head>
+<body>
+    {% block content %}
+    <h1>pepe</h1>
+    {% endblock %}
+</body>
 </html>
 
 
