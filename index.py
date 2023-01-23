@@ -9,7 +9,7 @@ with app.app_context():
 from flask import Flask
 #from flask_sqlalchemy import SQLAlchemy
 
-from routes.home import Home
+from routes.lussary_config.settings import Home
 
 if __name__=='__main__':
     app.run(debug=True)

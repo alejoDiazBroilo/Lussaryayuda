@@ -5,8 +5,13 @@ Home = Blueprint("Home",__name__)
 
 
 @Home.route("/")
+def getHomePrincipalPageLussary():
+    return render_template("lussary_config/settings.html")
+
+@Home.route("/home")
 def getHome():
-    return render_template("home/home.html")
+    return redirect(url_for('Home.getHomePrincipalPageLussary'))
+
 
 
 """
