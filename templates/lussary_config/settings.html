@@ -7,7 +7,7 @@
 <head>
 
     {% block head %}
-    <link rel="stylesheet" href="{%static '/css/lussary_config/settings_css.css'%}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='/css/lussary_config/settings_css.css') }}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,9 +23,23 @@
     {% block content %}
 
     <div class="principio">
-        <img src="/home/agusalonia04/Lussary/Lussary/static/src/LogoBlack.png" alt="Logo">
-        <h1 class="titulo">LUSSARY</h1>
-        <h3 class="subtitulo">COMPANY</h3>
+        <img class="logo" src="/static/src/LogoBlack.png" alt="Logo">
+        <a class="flecha" href="">V</a>
+    </div>
+
+    <div class="quienesSomos">
+        <div class="quienesSomos-izquierda">
+            <h1 class="titulo-QuienesSomos">¿Quienes somos?</h1>
+            <p class="texto-QuienesSomos">
+                Somos un grupo de cinco personas que quiso comenzar un emprendimiento de desarrollo web un 17 de Enero del año 2023.
+                <br>
+                Trabajamos juntos para diseñar y desarrollar nuestros proyectos de la mejor manera posible.
+            </p>
+        </div>
+
+        <div class="quienesSomos-derecha">
+            <img class="foto-QuienesSomos" src="/static/src/primeraFoto.jpeg" alt="Primera foto">
+        </div>
     </div>
 
     {% endblock %}

@@ -1,3 +1,82 @@
 body{
-    background-color: black;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+.principio{
+    color: white;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.85)
+    ),
+    url(/static/src/ProgramadoresBro.jpeg);
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 50% 100%, 0 85%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    
+    margin: 0;
+    background-size: cover;
+    background-position: center center;
+}
+
+.logo{
+    width: 400px;
+    height: 400px;
+    margin-bottom: 100px;
+}
+
+.flecha{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-bottom: -15px;
+}
+
+.quienesSomos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.quienesSomos-izquierda{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.titulo-QuienesSomos{
+    text-align: center;
+}
+
+.texto-QuienesSomos{
+    font-size: 20px
+}
+
+.quienesSomos-derecha{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;+
+    
+}
+
+.foto-QuienesSomos{
+    width: 350px;
+    height: 200px;
+    background-position: center center;
+    box-shadow: 34px 34px 0px 0px rgba(0,6,176,0.8);
+    -webkit-box-shadow: 34px 34px 0px 0px rgba(0,6,176,0.8);
+    -moz-box-shadow: 34px 34px 0px 0px rgba(0,6,176,0.8);
 }
