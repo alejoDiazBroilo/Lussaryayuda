@@ -1,13 +1,34 @@
 {% extends "base.html" %}
-{% block title %}
-    Home
-{% endblock %}
 
 
 
-{% block content %}
-    <h1>PAGINA PRINCIPAL DE LUSSARY</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% block head %}
+    <link rel="stylesheet" href="{%static '/css/lussary_config/settings_css.css'%}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
     
-{% endblock %}
+    {% block title %}
+    Lussary Company
+    {% endblock %}
 
+</head>
 
+<body>
+    {% block content %}
+
+    <div class="principio">
+        <img src="/home/agusalonia04/Lussary/Lussary/static/src/LogoBlack.png" alt="Logo">
+        <h1 class="titulo">LUSSARY</h1>
+        <h3 class="subtitulo">COMPANY</h3>
+    </div>
+
+    {% endblock %}
+</body>
+
+</html>
