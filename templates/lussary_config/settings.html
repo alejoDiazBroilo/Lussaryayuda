@@ -8,6 +8,7 @@
 
     {% block head %}
     <link rel="stylesheet" href="{{ url_for('static',filename='/css/lussary_config/settings_css.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,19 +28,60 @@
         <a class="flecha" href="">V</a>
     </div>
 
-    <div class="quienesSomos">
-        <div class="quienesSomos-izquierda">
-            <h1 class="titulo-QuienesSomos">¿Quienes somos?</h1>
-            <p class="texto-QuienesSomos">
-                Somos un grupo de cinco personas que quiso comenzar un emprendimiento de desarrollo web un 17 de Enero del año 2023.
-                <br>
-                Trabajamos juntos para diseñar y desarrollar nuestros proyectos de la mejor manera posible.
-            </p>
-        </div>
+    <div class="frase">
+        <h1 class="frase-frase">"El arte desafia a la tecnologia, y la tecnologia inspira al arte."</h1>
+        <p class="autor-frase">John Lasseter</p>
+    </div>
 
-        <div class="quienesSomos-derecha">
-            <img class="foto-QuienesSomos" src="/static/src/primeraFoto.jpeg" alt="Primera foto">
-        </div>
+
+<div class="informacion">
+    <div class="quienesSomos">
+        <span class="material-symbols-outlined simbolo">
+            unknown_document
+            </span>
+        <h1 class="titulo-QuienesSomos">¿Quienes somos?</h1>
+        <p class="texto-QuienesSomos">
+            Somos un grupo de cinco personas que quiso comenzar un emprendimiento de desarrollo web un 17 de Enero del año 2023.
+            <br>
+            Trabajamos juntos para diseñar y desarrollar nuestros proyectos de la mejor manera posible.
+        </p>
+    </div>
+
+    <div class="comoEmpezamos">
+        <span class="material-symbols-outlined simbolo">
+            tips_and_updates
+            </span>
+        <h1 class="titulo-comoEmpezamos">¿Como empezamos?</h1>
+        <p class="texto-comoEmpezamos">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, quae adipisci et optio maiores officiis! Esse a quia sapiente, sunt earum at aut, quo quae magnam debitis quibusdam fugiat ducimus...
+        </p>
+    </div>
+
+    <div class="queHacemos">
+        <span class="material-symbols-outlined simbolo">
+            checklist
+            </span>
+        <h1 class="titulo-queHacemos">¿Que hacemos?</h1>
+        <p class="texto-queHacemos">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, quae adipisci et optio maiores officiis! Esse a quia sapiente, sunt earum at aut, quo quae magnam debitis quibusdam fugiat ducimus...
+        </p>
+    </div>
+</div>
+
+
+    
+
+    <div class="proyectos">
+        <h1 class="titulo-proyectos">Nuestros proyectos</h1>
+        <h2 class="barra-proyectos">__________</h2>
+        <p class="frase-proyectos">"La creatividad es la inteligencia divirtiéndose."</p>
+        <p class="autor-proyectos">ALbert Einstein</p>
+        <a class="boton-proyectos" href="">Galeria de proyectos</a>
+    </div>
+
+    <div class="pibes">
+        <h1 class="titulo-pibes">5 pibes, 1 proyecto.</h1>
+        <p class="texto-pibes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sunt maiores et a sapiente, ab possimus suscipit voluptatibus nihil, odio laudantium dolor laboriosam eius! Deleniti qui harum aspernatur ratione repudiandae!</p>
     </div>
 
     {% endblock %}

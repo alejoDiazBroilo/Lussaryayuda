@@ -40,43 +40,167 @@ body{
     margin-bottom: -15px;
 }
 
-.quienesSomos{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
 
-.quienesSomos-izquierda{
-    width: 50%;
+
+
+.frase{
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.titulo-QuienesSomos{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.texto-QuienesSomos{
-    font-size: 20px
+
+.frase-frase{
+    font-size: 30px;
+    margin: 100px 300px 0px 300px;
+    font-style: italic;
+    font-weight: bold;
 }
 
-.quienesSomos-derecha{
-    width: 50%;
+.autor-frase{
+    font-size: 15px;
+}
+
+
+
+
+.informacion{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+.simbolo{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;+
-    
+    text-align: center;
 }
 
-.foto-QuienesSomos{
-    width: 350px;
-    height: 200px;
+.quienesSomos{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+
+.titulo-QuienesSomos{
+    font-size: 25px;
+    margin: 0 35px;
+}
+
+.texto-QuienesSomos{
+    font-size: 15px;
+    margin: 0 35px;
+}
+
+.comoEmpezamos{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+
+.titulo-comoEmpezamos{
+    font-size: 25px;
+    margin: 0 35px;
+}
+
+.texto-comoEmpezamos{
+    font-size: 15px;
+    margin: 0 35px;
+}
+
+
+
+
+.queHacemos{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+
+.titulo-queHacemos{
+    font-size: 25px;
+    margin: 0 35px;
+}
+
+.texto-queHacemos{
+    font-size: 15px;
+    margin: 0 35px;
+}
+
+
+
+
+.proyectos{
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.85)
+    ),
+    url(/static/src/galeriaGod.jpeg);
+    background-size: cover;
     background-position: center center;
-    box-shadow: 34px 34px 0px 0px rgba(0,6,176,0.8);
-    -webkit-box-shadow: 34px 34px 0px 0px rgba(0,6,176,0.8);
-    -moz-box-shadow: 34px 34px 0px 0px rgba(0,6,176,0.8);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.titulo-proyectos{
+    font-size: 40px;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.barra-proyectos{
+    font-size: 40px;
+    margin-top: 0px;
+    color: white;
+}
+
+.boton-proyectos{
+    border: solid 2px white;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+
+.boton-proyectos:hover{
+    background-color: white;
+    /* color: rgb(118, 173, 255); */
+    color: black;
+}
+
+.frase-proyectos{
+    font-size: 25px;
+    font-style: italic;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.autor-proyectos{
+    font-size: 15px;
+    color: white;
 }
