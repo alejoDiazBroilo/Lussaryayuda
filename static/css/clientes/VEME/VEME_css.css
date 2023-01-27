@@ -78,3 +78,17 @@ body{
     margin-left: 50px;
     margin-bottom: 60px;
 }
+
+.div-galery{
+    margin-top: 160px;
+    color: aqua;
+}
+
+.photo3{
+    border: 4px solid blue;
+    height: 100px;
+    flex: 1;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 60px;
+}
