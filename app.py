@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 #from flask_sqlalchemy import SQLAlchemy
 
 from routes.lussary_config.settings import Home
@@ -7,6 +7,11 @@ from routes.clientes.VEME.VEME_home import VEME_home
 
 app = Flask(__name__)
 app.secret_key = '3594ea6944dfc5dcd8eaadf8dff0759e'
+
+#@app.route('/galeria')
+#def otra_pagina():
+    #return render_template('galeria.html')
+
 
 """
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://bdi:pepe1234@localhost/CatolicaDb"
@@ -17,4 +22,8 @@ SQLAlchemy(app)
 """
 app.register_blueprint(Home)
 app.register_blueprint(VEME_home)
+
+
+
+
 
