@@ -25,6 +25,7 @@ body{
 }
 
 
+
 #name{
     color: aliceblue;
     font-size: 70px;
@@ -86,9 +87,108 @@ body{
 
 .photo3{
     border: 4px solid blue;
-    height: 100px;
+    height: 80px;
     flex: 1;
     margin-right: 50px;
     margin-left: 50px;
     margin-bottom: 60px;
 }
+
+
+/*SLIDER*/
+
+.slider-frame {
+	width: 300px;
+    height: 500px;
+	margin: 50px auto 0;
+    border: 30px solid lavender;
+	overflow: hidden;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 500%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 30;}
+	25% {margin-left: 30;}
+	
+	25% {margin-left: -130%;}
+	50% {margin-left: -130%;}
+	
+	50% {margin-left: -260%;}
+	75% {margin-left: -260%;}
+	
+	75% {margin-left: -380%;}
+	100% {margin-left: -380%;}
+}
+
+/*FIN DE SLIDER*/
+
+.div-contacto{
+    margin-top: 700px;
+    color: pink;
+    font-size: 50px;
+}
+
+/*BOTON WHATSAPP*/
+.btn-whats {
+    background-color: #fff;
+    border: 1px solid #25D366;
+    padding: 8px;
+    position: relative;
+    width: 200px;
+    height: 2.4em;
+    transition: 0.5s;
+    font-size: 25px;
+    border-radius: 0.4em;
+  }
+  
+  .btn-whats p {
+    position: absolute;
+    top: 0.4em;
+    left: 1.15em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #25D366;
+  }
+  
+  .btn-whats svg {
+    position: absolute;
+    top: 0.45em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1.3em;
+    fill: #fff
+  }
+  
+  .btn-whats:hover p {
+    left: 0.5em;
+    color: #fff
+  }
+  
+  .btn-whats:hover svg {
+    opacity: 1;
+  }
+  
+  .btn-whats:hover {
+    background-color: #25D366;
+  }
+  
