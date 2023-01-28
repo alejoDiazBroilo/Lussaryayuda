@@ -142,12 +142,14 @@ body{
     margin-top: 700px;
     color: pink;
     font-size: 50px;
+    margin-bottom: 200px;
 }
 
 /*BOTON WHATSAPP*/
 .btn-whats {
-    background-color: #fff;
+    background-color: #67d890;
     border: 1px solid #25D366;
+    cursor: grab;
     padding: 8px;
     position: relative;
     width: 200px;
@@ -155,28 +157,29 @@ body{
     transition: 0.5s;
     font-size: 25px;
     border-radius: 0.4em;
+    margin-right: 200px;
   }
   
   .btn-whats p {
     position: absolute;
-    top: 0.4em;
-    left: 1.15em;
+    top: 0.5em;
+    left: 1.5em;
     margin: 0;
     padding: 0;
     transition: .5s;
-    color: #25D366;
+    color: #ffffff;
   }
   
   .btn-whats svg {
     position: absolute;
     top: 0.45em;
-    right: 0.5em;
+    right: 0.7em;
     margin: 0;
     padding: 0;
     opacity: 0;
     transition: 0.5s;
-    height: 1.3em;
-    fill: #fff
+    height: 1.4em;
+    fill: rgb(255, 255, 255)
   }
   
   .btn-whats:hover p {
@@ -191,4 +194,146 @@ body{
   .btn-whats:hover {
     background-color: #25D366;
   }
-  
+  /*FIN BOTON WHATSAPP*/
+
+  /*BOTON INSTAGRAN*/
+.btn-ig {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(196,0,255,1) 0%, rgba(255,45,229,1) 22%, rgba(255,22,66,1) 47%, rgba(250,182,103,1) 77%, rgba(249,250,103,1) 97%);    border: 1px solid #25D366;
+  border: none;
+  cursor: grab;
+  padding: 8px;
+  position: relative;
+  width: 200px;
+  height: 2.4em;
+  transition: 0.5s;
+  font-size: 25px;
+  border-radius: 0.4em;
+}
+
+.btn-ig p {
+  position: absolute;
+  top: 0.5em;
+  left: 1.5em;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+  color: #ffffff;
+}
+
+.btn-ig svg {
+  position: absolute;
+  top: 0.45em;
+  right: 0.7em;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1.4em;
+  fill: #fff
+}
+
+.btn-ig:hover p {
+  left: 0.3em;
+  color: #fff
+}
+
+.btn-ig:hover svg {
+  opacity: 1;
+}
+
+.btn-ig:hover {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(249,250,103,1) 0%, rgba(250,182,103,1) 19%, rgba(255,22,66,1) 42%, rgba(255,45,229,1) 72%, rgba(196,0,255,1) 100%);
+}
+
+/*FIN BOTON INSTAGRAN*/
+
+/*FOOTER*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+
+
+/*FIN DE FOOTER*/
