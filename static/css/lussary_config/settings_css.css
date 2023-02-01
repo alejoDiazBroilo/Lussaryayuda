@@ -230,8 +230,69 @@ body{
     text-align: center;
 }
 
+.tarjetas-pibes2{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tarjetas-pibes3{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.arriba-tarjetas-pibes2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.abajo-tarjetas-pibes2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.arriba-tarjetas-pibes3{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.medio-tarjetas-pibes3{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.abajo-tarjetas-pibes3{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+
+
 .morais-pibes, .fini-pibes, .salonia-pibes, .diaz-pibes, .blazquez-pibes{
-    width: 18%;
+    width: 200px;
     margin-right: 10px;
     margin-left: 10px;
     border: 2px solid black;
@@ -308,6 +369,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .titulo-contactanos{
@@ -317,6 +379,31 @@ body{
 .botones-contactanos{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.botones-contactanos2{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.arriba-botones-contactanos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: -75px;
+}
+
+.abajo-botones-contactanos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .instagram, .whatsapp, .twitter, .tiktok{
@@ -327,7 +414,9 @@ body{
     padding: 10px 25px 10px 25px;
     font-weight: bold;
     border-radius: 5px;
-    margin-bottom: 100px;
+    width: 150px;
+    text-align: center;
+    font-size: 12px;
 }
 
 .instagram:hover{
@@ -341,16 +430,28 @@ body{
         rgb(250, 212, 0)
     );
     color: white;
+
+    box-shadow: 0px 0px 5px 2px rgba(181,0,125,0.75);
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(181,0,125,0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(181,0,125,0.75);
 }
 
 .whatsapp:hover{
     background-color: rgb(0, 226, 0);
     color: white;
+
+    box-shadow: 0px 0px 5px 2px rgba(0,202,11,0.75);
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,202,11,0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,202,11,0.75);
 }
 
 .twitter:hover{
     background-color: rgb(0, 153, 255);
     color: white;
+
+    box-shadow: 0px 0px 5px 2px rgba(0,83,181,0.75);
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,83,181,0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,83,181,0.75);
 }
 
 .tiktok:hover{
@@ -363,5 +464,380 @@ body{
         rgb(0, 0, 0),
         rgb(255, 0, 221)
     );
-    color: white    ;
+    color: white;
+
+    box-shadow: 0px 0px 5px 2px rgba(51,51,51,0.75);
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(51,51,51,0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(51,51,51,0.75);
+}
+
+.footer{
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    clip-path: polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%, 50% 100%, 100% 100%, 100% 85%, 100% 50%, 100% 0, 100% 0, 50% 15%);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1148px) {
+    .tarjetas-pibes{
+        display: none;
+    }
+    
+    .tarjetas-pibes2{
+        display: flex;
+    }
+
+    .tarjetas-pibes3{
+        display: none;
+    }
+
+    .morais-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .fini-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .salonia-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .diaz-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .blazquez-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1048px) {
+    .frase-frase{
+        font-size: 28px;
+        margin: 100px 225px 0px 225px;
+    }
+
+    .autor-frase{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 919px) {
+    .titulo-QuienesSomos{
+        font-size: 24px;
+        margin: 0 25px;
+    }
+    
+    .texto-QuienesSomos{
+        font-size: 13px;
+        margin: 0 25px;
+        letter-spacing: 0.5px;
+        line-height: 15px;
+    }
+
+    .titulo-comoEmpezamos{
+        font-size: 24px;
+        margin: 0 25px;
+    }
+    
+    .texto-comoEmpezamos{
+        font-size: 13px;
+        margin: 0 25px;
+        letter-spacing: 0.5px;
+        line-height: 15px;
+    }
+    
+    .titulo-queHacemos{
+        font-size: 24px;
+        margin: 0 25px;
+    }
+    
+    .texto-queHacemos{
+        font-size: 13px;
+        margin: 0 25px;
+        letter-spacing: 0.5px;
+        line-height: 15px;
+    }
+}
+
+@media (max-width: 870px) {
+    .frase-frase{
+        font-size: 26px;
+        margin: 100px 150px 0px 150px;
+    }
+
+    .autor-frase{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 810px) {
+    .tarjetas-pibes{
+        display: none;
+    }
+    
+    .tarjetas-pibes2{
+        display: none;
+    }
+
+    .tarjetas-pibes3{
+        display: flex;
+    }
+
+    .morais-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .fini-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .salonia-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .diaz-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .blazquez-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 688px) {
+    .frase-frase{
+        font-size: 24px;
+        margin: 100px 75px 0px 75px;
+    }
+
+    .autor-frase{
+        font-size: 12px;
+    }
+
+    .titulo-QuienesSomos{
+        font-size: 20px;
+        margin: 0 15px;
+    }
+    
+    .texto-QuienesSomos{
+        font-size: 10px;
+        margin: 0 15px;
+        letter-spacing: 0.5px;
+        line-height: 15px;
+    }
+
+    .titulo-comoEmpezamos{
+        font-size: 20px;
+        margin: 0 15px;
+    }
+    
+    .texto-comoEmpezamos{
+        font-size: 10px;
+        margin: 0 15px;
+        letter-spacing: 0.5px;
+        line-height: 15px;
+    }
+    
+    .titulo-queHacemos{
+        font-size: 20px;
+        margin: 0 15px;
+    }
+    
+    .texto-queHacemos{
+        font-size: 10px;
+        margin: 0 15px;
+        letter-spacing: 0.5px;
+        line-height: 15px;
+    }
+
+}
+
+@media (max-width: 574px) {
+    .botones-contactanos{
+        display: none;
+    }
+
+    .botones-contactanos2{
+        display: flex;
+    }
+
+    .arriba-botones-contactanos{
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+}
+
+@media (max-width: 540px) {
+    .tarjetas-pibes{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .tarjetas-pibes2{
+        display: none;
+    }
+
+    .tarjetas-pibes3{
+        display: none;
+    }
+
+    .morais-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .fini-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .salonia-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .diaz-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .blazquez-pibes{
+        width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 510px) {
+    .frase-frase{
+        font-size: 22px;
+        margin: 100px 20px 0px 20px;
+    }
+
+    .autor-frase{
+        font-size: 11px;
+    }
+
+    .informacion{
+        flex-direction: column;
+    }
+    
+    .quienesSomos{
+        width: 100%;
+    }
+    
+    .titulo-QuienesSomos{
+        font-size: 28px;
+        margin: 0 35px;
+    }
+    
+    .texto-QuienesSomos{
+        font-size: 16px;
+        margin: 0 35px;
+        letter-spacing: 1px;
+        line-height: 20px;
+    }
+    
+    .comoEmpezamos{
+        width: 100%;
+    }
+    
+    .titulo-comoEmpezamos{
+        font-size: 28px;
+        margin: 0 35px;
+    }
+    
+    .texto-comoEmpezamos{
+        font-size: 16px;
+        margin: 0 35px;
+        letter-spacing: 1px;
+        line-height: 20px;
+    }
+    
+    .queHacemos{
+        width: 100%;
+    }
+    
+    
+    .titulo-queHacemos{
+        font-size: 28px;
+        margin: 0 35px;
+    }
+    
+    .texto-queHacemos{
+        font-size: 16px;
+        margin: 0 35px;
+        letter-spacing: 1px;
+        line-height: 20px;
+    }
+
+    .hr{
+        width: 70%;
+        color: black;
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 472px) {
+    .frase-frase{
+        font-size: 20px;
+        margin: 100px 5px 0px 5px;
+    }
+
+    .autor-frase{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 290px) {
+
+    .titulo-contactanos{
+        font-size: 28px;
+    }
+    .botones-contactanos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botones-contactanos2{
+        display: none;
+    }
+
+    .instagram, .whatsapp, .twitter, .tiktok{
+        margin-bottom: 10px;
+    }
 }
