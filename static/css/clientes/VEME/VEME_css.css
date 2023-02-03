@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+
 body{
-    background-color: black;
+    background-color: rgb(200, 227, 228) ;
     margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto Condensed', sans-serif;
+
 }
 
 .div-main{
@@ -11,6 +17,8 @@ body{
 
 }
 
+
+
 .div-title{
     background-image:linear-gradient(    to right,
     rgb(50, 209, 215) 2%,
@@ -20,183 +28,169 @@ body{
     rgb(177, 210, 215) 5% 30%,
     rgb(157, 206, 213) 30% 15%
     );
-    height: 200px;
-    padding-top: 50px;
+    height: 500px;
+    padding-top: 240px;
+
 }
+
 
 
 
 #name{
-    color: aliceblue;
-    font-size: 70px;
-    margin-top: 20px;
-    margin-bottom: 0px;
+  color: aliceblue;
+  font-size: 160px;
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
 
 #subname{
-    color: aquamarine;
-    font-size: 20px;
-    margin-top: 0px;
+  color: rgb(1, 122, 82);
+  font-size: 20px;
+  margin-top: 0px;
 }
 
 .div-container{
-    display: flex;
+  display: flex;  
 }
 
-.photo{
-    border: 4px solid blue;
-    height: 200px;
-    flex: 1;
+.div-photo{
+  border: 4px solid rgb(0, 0, 0);
+  height: 200px;
+  flex: 1;
 }
 
 .div-info{
-    margin-top: 90px;
-    color: rgb(98, 83, 112);
-    display: flex;
+  margin-top: 90px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 
 .title{
-    font-size: 60px;
+  font-size: 60px;
+
 }
 
-.info{
-    background-color: rgb(179, 179, 179);
-    max-width: 70%;
-    margin-left: 250px;
+.div-quienes{
+  background-color: rgb(191, 214, 220);
 }
+
+
+
 
 .div-loquehacemos{
-    margin-top: 200px;
-    color: rgb(98, 83, 112);
+  margin-top: 200px;
+  color: rgb(0, 109, 109);
+  margin-bottom: 200px;
 }
 
-.photo2{
-    border: 4px solid blue;
-    height: 600px;
-    flex: 1;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 60px;
+.div-photo2{
+  border: 4px solid blue;
+  height: 600px;
+  flex: 1;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 60px;
 }
 
 .div-galery{
-    margin-top: 160px;
-    color: aqua;
+  display: flex;
+  flex-direction: row;
 }
 
-.photo3{
-    border: 4px solid blue;
-    height: 80px;
-    flex: 1;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 60px;
+.div-ropa{
+  width: 25%;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 750px;
+  background-color: #67d89060;
+  border: 2px solid white;
+  border-radius: 15px;
 }
 
 
-/*SLIDER*/
-
-.slider-frame {
-	width: 300px;
-    height: 500px;
-	margin: 50px auto 0;
-    border: 30px solid lavender;
-	overflow: hidden;
-}
-
-.slider-frame ul {
-	display: flex;
-	padding: 0;
-	width: 500%;
-	
-	animation: slide 20s infinite alternate ease-in-out;
-}
-
-.slider-frame li {
-	width: 100%;
-	list-style: none;
-}
-
-.slider-frame img {
-	width: 100%;
-}
-
-@keyframes slide {
-	0% {margin-left: 30;}
-	25% {margin-left: 30;}
-	
-	25% {margin-left: -130%;}
-	50% {margin-left: -130%;}
-	
-	50% {margin-left: -260%;}
-	75% {margin-left: -260%;}
-	
-	75% {margin-left: -380%;}
-	100% {margin-left: -380%;}
-}
-
-/*FIN DE SLIDER*/
 
 .div-contacto{
-    margin-top: 700px;
-    color: pink;
-    font-size: 50px;
-    margin-bottom: 200px;
+  color: pink;
+  margin-bottom: 200px;
+}
+
+.div-container3{
+  display: flex;
+  flex-direction: row;  
+}
+
+.div-photo3{
+  width: 33%;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 600px;
+  background-color: #67d89060;
+  border: 2px solid white;
+  border-radius: 15px
 }
 
 /*BOTON WHATSAPP*/
 .btn-whats {
-    background-color: #67d890;
-    border: 1px solid #25D366;
-    cursor: grab;
-    padding: 8px;
-    position: relative;
-    width: 200px;
-    height: 2.4em;
-    transition: 0.5s;
-    font-size: 25px;
-    border-radius: 0.4em;
-    margin-right: 200px;
-  }
+  background-color: #67d890;
+  border: 1px solid #25D366;
+  cursor: grab;
+  padding: 8px;
+  position: relative;
+  width: 200px;
+  height: 2.4em;
+  transition: 0.5s;
+  font-size: 25px;
+  border-radius: 0.4em;
+  margin-right: 30px;
+}
+.div-container2{
+  display: flex;
+  background-color: #67d890;
+}
   
-  .btn-whats p {
-    position: absolute;
-    top: 0.5em;
-    left: 1.5em;
-    margin: 0;
-    padding: 0;
-    transition: .5s;
-    color: #ffffff;
-  }
+.btn-whats p {
+  position: absolute;
+  font-weight: bold;
+  top: 0.55em;
+  left: 1.5em;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+  color: #ffffff;
   
-  .btn-whats svg {
-    position: absolute;
-    top: 0.45em;
-    right: 0.7em;
-    margin: 0;
-    padding: 0;
-    opacity: 0;
-    transition: 0.5s;
-    height: 1.4em;
-    fill: rgb(255, 255, 255)
-  }
-  
-  .btn-whats:hover p {
-    left: 0.5em;
-    color: #fff
-  }
-  
-  .btn-whats:hover svg {
-    opacity: 1;
-  }
-  
-  .btn-whats:hover {
-    background-color: #25D366;
-  }
-  /*FIN BOTON WHATSAPP*/
+}
 
-  /*BOTON INSTAGRAN*/
+.btn-whats svg {
+  position: absolute;
+  top: 0.45em;
+  right: 0.7em;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1.4em;
+  fill: rgb(255, 255, 255)
+}
+
+.btn-whats:hover p {
+  left: 0.5em;
+  color: #fff
+}
+
+.btn-whats:hover svg {
+  opacity: 1;
+}
+
+.btn-whats:hover {
+  background-color: #25D366;
+}
+/*FIN BOTON WHATSAPP*/
+/*BOTON INSTAGRAN*/
 .btn-ig {
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(196,0,255,1) 0%, rgba(255,45,229,1) 22%, rgba(255,22,66,1) 47%, rgba(250,182,103,1) 77%, rgba(249,250,103,1) 97%);    border: 1px solid #25D366;
   border: none;
@@ -208,15 +202,17 @@ body{
   transition: 0.5s;
   font-size: 25px;
   border-radius: 0.4em;
+  opacity: 0.8;
 }
 
 .btn-ig p {
   position: absolute;
-  top: 0.5em;
+  font-weight: bold;
+  top: 0.6em;
   left: 1.5em;
   margin: 0;
   padding: 0;
-  transition: .4.9s;
+  transition: .5s;
   color: #ffffff;
 }
 
@@ -242,7 +238,21 @@ body{
 }
 
 .btn-ig:hover {
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(249,250,103,1) 0%, rgba(250,182,103,1) 19%, rgba(255,22,66,1) 42%, rgba(255,45,229,1) 72%, rgba(196,0,255,1) 100%);
+  opacity: 1;
+}
+
+.contacto{
+  color: rgb(0, 109, 109);
+}
+
+.h1-ropa{
+  background-color: rgb(0, 109, 109);
+  margin-top: 0;
+  height: 40px;
+  padding: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #fff;
 }
 
 /*FIN BOTON INSTAGRAN*/
@@ -337,3 +347,200 @@ body{
 
 
 /*FIN DE FOOTER*/
+
+/*MEDIA MOMENTO*/
+@media screen and (max-width:600px){
+  .div-container{
+      display:none;
+  }
+
+  .div-contacto{
+    color: #25D366;
+    font-size: 18px;
+  }
+
+  #name{
+    font-size: 100px;
+  }
+
+  .div-galery{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div-container3{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div-galery{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div-ropa{
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  .div-photo3{
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .div-main{
+    width: auto;
+  }
+
+  .btn-whats{
+    margin-bottom: 30px;
+    margin-right: 0px;
+  } 
+
+  .slider-frame {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+  
+  }
+  
+  .slider-frame ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 400%;
+    
+    animation: slide 20s infinite alternate ease-in-out;
+  }
+  
+  .slider-frame li {
+    width: 70%;
+    list-style: none;
+  }
+  
+  .slider-frame img {
+    width: 96%;
+  }
+
+  
+}
+
+
+@media screen and (max-width:360px){
+  .div-container{
+      display:none;
+  }
+
+  .div-contacto{
+    color: #253fd3;
+    font-size: 18px;
+  }
+
+  #name{
+    font-size: 100px;
+  }
+
+}
+
+@media screen and (max-width:1024px){
+  .div-container{
+      display:none;
+  }
+
+  .div-contacto{
+    color: #253fd3;
+    font-size: 18px;
+  }
+
+  #name{
+    font-size: 100px;
+  }
+
+
+  .div-ropa{
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .div-photo3{
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media screen and (max-width:820px){
+  .div-container{
+      display:none;
+  }
+
+  .div-contacto{
+    color: #25D366;
+    font-size: 18px;
+  }
+
+  #name{
+    font-size: 100px;
+  }
+
+  .div-galery{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div-container3{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div-galery{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+/*SLIDER*/
+.slider-frame {
+	width: auto;
+  height: auto;
+	overflow: hidden;
+
+}
+
+.slider-frame ul {
+	display: flex;
+  flex-direction: row;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 70%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 96%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
