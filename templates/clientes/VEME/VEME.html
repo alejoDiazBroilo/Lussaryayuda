@@ -12,7 +12,6 @@
 
 {% block content %}
     <div class="div-main">
-
         <section id="section-1">
             <div class="div-title">
                 <div class="div-fondo">
@@ -52,58 +51,19 @@
         
             <h1 class="title" style="color: rgb(0, 109, 109);">CONOCE NUESTRA GALERIA</h1>
             <div class="div-galery">
-                <div class="div-ropa">
-                    <h1 class="h1-ropa">PANTALONES</h1>
-                    <div class="slider-frame">
-                        <ul>
-                            {% for i in range(4) %}
-                                <li><img src="{{ url_for('static',filename='/src/clientes/VEME/pantalon')}}{{i+1}}{{'.png'}}" alt=""></li>
-                            {% endfor %}
-                            
-                        </ul>
+                {% for prenda in prendas %}
+                    <div class="div-ropa">
+                        <h1 class="h1-ropa">{{prenda.upper()}}</h1>
+                        <div class="slider-frame">
+                            <ul>
+                                {% for i in range(4) %}
+                                    <li><img src="{{ url_for('static',filename='src/clientes/VEME/')}}{{prenda}}{{i+1}}{{'.png'}}" alt="{{ url_for('static',filename='src/clientes/VEME/')}}{{prenda}}{{i+1}}{{'.png'}}"></li>
+                                {% endfor %}
+                                
+                            </ul>
+                        </div>
                     </div>
-                
-                </div>
-
-                <div class="div-ropa" style="font-weight: bold;">
-                    <h1 class="h1-ropa">REMERAS</h1>
-                    <div class="slider-frame">
-                        <ul>
-                            <li><img src="/static/src/clientes/VEME/remera1.png" alt=""></li>
-                            <li><img src="/static/src/clientes/VEME/remera2.png" alt=""></li>
-                            <li><img src="/static/src/clientes/VEME/remera3.png" alt=""></li>
-                            <li><img src="/static/src/clientes/VEME/remera4.png" alt=""></li>
-                        </ul>
-                    </div>
-                
-                </div>
-
-                <div class="div-ropa">
-                    <h1 class="h1-ropa" style="font-weight: bold;">VESTIDOS</h1>
-                    <div class="slider-frame">
-                        <ul>
-                            <li><img src="slider1.jpg" alt=""></li>
-                            <li><img src="slider2.jpg" alt=""></li>
-                            <li><img src="slider3.jpg" alt=""></li>
-                            <li><img src="slider4.jpg" alt=""></li>
-                        </ul>
-                    </div>
-                
-                </div>
-
-                <div class="div-ropa">
-                    <h1 class="h1-ropa" >CAMPERAS</h1>
-                    <div class="slider-frame">
-                        <ul>
-                            <li><img src="slider1.jpg" alt=""></li>
-                            <li><img src="slider2.jpg" alt=""></li>
-                            <li><img src="slider3.jpg" alt=""></li>
-                            <li><img src="slider4.jpg" alt=""></li>
-                        </ul>
-                    </div>
-                
-                </div>
-
+                {% endfor %}
             </div>
         </section>
 
