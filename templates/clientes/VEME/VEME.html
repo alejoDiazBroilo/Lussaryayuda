@@ -48,24 +48,6 @@
                     {% endfor %}
                 </div>
             </div>
-        
-            <h1 class="title" style="color: rgb(0, 109, 109);">CONOCE NUESTRA GALERIA</h1>
-            <div class="div-galery">
-                {% for prenda in prendas %}
-                    <div class="div-ropa">
-                        <h1 class="h1-ropa">{{prenda.upper()}}</h1>
-                        <div class="slider-frame">
-                            <ul>
-                                {% for i in range(4) %}
-                                    <li><img src="{{ url_for('static',filename='src/clientes/VEME/')}}{{prenda}}{{i+1}}{{'.png'}}" alt="{{ url_for('static',filename='src/clientes/VEME/')}}{{prenda}}{{i+1}}{{'.png'}}"></li>
-                                {% endfor %}
-                                
-                            </ul>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-
 
             <h1 class="title" style="color: rgb(0, 109, 109);">CONOCE NUESTRA GALERIA</h1>
             <div class="galeria">
@@ -81,7 +63,7 @@
                                         {% for i in range(4) %}
                                             <img src="{{ url_for('static',filename='src/clientes/VEME/')}}{{prenda}}{{i+1}}{{'.png'}}" alt="{{ url_for('static',filename='src/clientes/VEME/')}}{{prenda}}{{i+1}}{{'.png'}}">
                                         {% endfor %}
-                                        <img src="{{ url_for('static',filename='src/clientes/VEME/')}}{{prenda}}{{2}}{{'.png'}}">
+                                        <img src="{{ url_for('static',filename='src/clientes/VEME/')}}{{prenda}}{{1}}{{'.png'}}">
                                     </figure>
                                 </div>
                             </div>
