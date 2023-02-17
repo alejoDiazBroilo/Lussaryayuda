@@ -3,841 +3,907 @@ body{
     font-family: 'Poppins',sans-serif;
 }
 
-.principio{
-    color: white;
-    width: 100%;
-    height: 600px;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.85),
-        rgba(0, 0, 0, 0.85)
-        
-    ),
-    url(/static/src/ProgramadoresBro.jpeg);
-    clip-path: polygon(50% 0, 100% 0, 100% 85%, 50% 100%, 50% 100%, 0 85%, 0 0);
+/* PRINCIPIO */
 
+.principio{
+    background-image: url(/static/src/matrix.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.principio-adelante{
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    clip-path: polygon(40% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 15% 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.principio-adelante-logoUnido{
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-size: cover;
-    background-position: center center;
+    margin-right: 30px;
 }
 
-.logo{
+.principio-adelante-logoUnido-imagen{
     width: 400px;
     height: 400px;
+    margin-right: 20px;
+}
+
+.principio-adelante-logoUnido-nombre{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    margin-top: -100px;
+}
+
+.principio-adelante-hr{
+    width: 30%;
+    margin-right: 70px;
+}
+
+.principio-adelante-frase{
+    color: rgb(145, 145, 145);
+    margin-right: 70px;
+    margin-left: 750px;
+    font-size: 30px;
+    text-align: right;
+    font-style: italic;
+}
+
+.principio-adelante-autor{
+    color: rgb(145, 145, 145);
+    margin-right: 70px;
+    margin-left: 750px;
+    font-size: 20px;
+    text-align: right;
+    font-style: italic;
+    margin-top: -10px;
     margin-bottom: 100px;
 }
 
-.flecha-flecha{
-    font-size: 35px;
-    text-decoration: none;
-    color: white;
-}
+/* CONTENIDO */
 
-
-
-
-.frase{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-
-.frase-frase{
-    font-size: 30px;
-    margin: 100px 300px 0px 300px;
-    font-style: italic;
-    font-weight: bold;
-}
-
-.autor-frase{
-    font-size: 15px;
-}
-
-
-
-
-.informacion{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin-top: 80px;
-    justify-content: center;
-    text-align: center;
-}
-
-.simbolo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.quienesSomos{
-    width: 33%;
+.contenido{
+    border: 12px solid black;
+    background-color: transparent;
+    margin: 50px 50px 0px 50px;
+    border-radius: 8px;
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     display: flex;
     flex-direction: column;
 }
 
-
-.titulo-QuienesSomos{
-    font-size: 28px;
-    margin: 0 35px;
-    color: rgb(39, 97, 255);
-}
-
-.texto-QuienesSomos{
-    font-size: 16px;
-    margin: 0 35px;
-    letter-spacing: 1px;
-    line-height: 20px;
-}
-
-.comoEmpezamos{
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.titulo-comoEmpezamos{
-    font-size: 28px;
-    margin: 0 35px;
-    color: rgb(39, 97, 255);
-}
-
-.texto-comoEmpezamos{
-    font-size: 16px;
-    margin: 0 35px;
-    letter-spacing: 1px;
-    line-height: 20px;
-}
-
-
-
-
-.queHacemos{
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.titulo-queHacemos{
-    font-size: 28px;
-    margin: 0 35px;
-    color: rgb(39, 97, 255);
-}
-
-.texto-queHacemos{
-    font-size: 16px;
-    margin: 0 35px;
-    letter-spacing: 1px;
-    line-height: 20px;
-}
-
-
-
-
-.proyectos{
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.85),
-        rgba(0, 0, 0, 0.85)
-    ),
-    url(/static/src/galeriaGod.jpeg);
-    clip-path: polygon(0 0, 0 0, 0 50%, 0 85%, 0 85%, 50% 100%, 100% 85%, 100% 85%, 100% 50%, 100% 0, 100% 0, 50% 15%);
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 90px;
-}
-
-.titulo-proyectos{
-    font-size: 40px;
-    margin-top: 150px;
-    margin-bottom: 0px;
-    color: white;
-}
-
-.barra-proyectos{
-    font-size: 40px;
-    margin-top: 0px;
-    color: white;
-}
-
-.boton-proyectos{
-    border: solid 2px white;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 150px;
-}
-
-.boton-proyectos:hover{
-    background-color: white;
-    /* color: rgb(118, 173, 255); */
-    color: black;
-}
-
-.frase-proyectos{
-    font-size: 25px;
-    font-style: italic;
-    color: white;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.autor-proyectos{
-    font-size: 15px;
-    color: white;
-}
-
-/* PIBES */
-.pibes{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 80px 0 80px 0;
-}
-
-.titulo-pibes{
-    text-align: center;
-    font-family: 'Rajdhani', cursive;
-}
-
-.tarjetas-pibes{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.tarjetas-pibes2{
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.tarjetas-pibes3{
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.arriba-tarjetas-pibes2{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.abajo-tarjetas-pibes2{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-
-.arriba-tarjetas-pibes3{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-
-.medio-tarjetas-pibes3{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.abajo-tarjetas-pibes3{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-}
-
-
-
-.morais-pibes, .fini-pibes, .salonia-pibes, .diaz-pibes, .blazquez-pibes{
-    width: 200px;
-    margin-right: 10px;
-    margin-left: 10px;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 50px 20px 50px 20px;
-    background-color: white;
-    transition: transform .2s; 
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
-.morais-pibes:hover, .fini-pibes:hover, .salonia-pibes:hover, .diaz-pibes:hover, .blazquez-pibes:hover{
-    transform: scale(1.2); 
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-}
-
-.foto-pibes{
-    border: 2px solid black 2px;
+.contenido-camara{
+    width: 10px;
+    height: 10px;
+    background-color: black;
     border-radius: 100%;
+    display: flex;
+    margin-top: 5px;
+    margin: 5px 50% 0 50%;
+}
+
+.contenido-lados{
+    display: flex;
+    flex-direction: row;
+}
+
+.contenido-izquierda{
+    width: 70%;
+}
+
+.contenido-izquierda-titulo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contenido-izquierda-titulo-decoracion{
     width: 150px;
     height: 150px;
-    transition: transform .2s; 
+
 }
 
-.foto-pibes:hover {
-    transform: scale(1.1); 
-}
-
-.nombre-pibes{
-    font-size: 18px;
-}
-
-.titulo-tarjetas-pibes{
-    font-size: 16px;
-}
-
-.link1-pibes{
-    text-decoration: none;
-    border: 2px solid rgb(39, 97, 255);
-    border-radius: 5px;
-    background-color: rgb(39, 97, 255);
+.contenido-izquierda-titulo-titulo{
     color: white;
-    padding: 8px;
-    font-weight: bold;
+    font-size: 45px;
+    margin-left: -80px;
+    color: rgb(100, 100, 255);
 }
 
-.link1-pibes:hover{
-    background-color: white;
-    color: rgb(39, 97, 255);
-}
-
-.link2-pibes{
-    text-decoration: none;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 8px;
-    font-weight: bold;
-}
-
-.link2-pibes:hover{
-    background-color: white;
+.contenido-izquierda-parrafo{
     color: black;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    margin-left: 20px;
+    margin-right: 80px;
+    margin-top: -10px;
+}
+
+.contenido-derecha{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.contenido-derecha-imagen{
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 10px 0;
+}
+
+/* PROYECTOS */
+
+.proyectos{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.proyectos-titulo{
+    font-family: system-ui;
+    color: transparent;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    background-image: linear-gradient(
+        180deg,
+        rgb(0, 204, 255),
+        rgb(0, 0, 226)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.proyectos-frase{
+    color: rgb(145, 145, 145);
+    font-style: italic;
+    margin-top: 0px;
+}
+
+.proyectos-hr{
+    width: 15%;
+}
+
+.proyectos-subtitulo{
+    color: white;
+    font-weight: bold;
 }
 
 
+.proyectos-imagenes{
+    display: flex;
+    width: 650px;
+    height: 350px;
+}
 
-/* CONTACTANOS */
+.proyectos-imagenes img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.proyectos-imagenes img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.proyectos-boton {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(0,140,255);
+    margin: 40px 0 40px 0;
+  }
+  
+  .proyectos-boton:hover {
+    box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+  }
+
+
+  .estilo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  
+  .estilo-izquierda{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .estilo-izquierda-texto-div{
+    width: 80%;
+    text-align: left;
+  }
+
+  .estilo-izquierda-texto{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+
+  }
+
+  .estilo-izquierda-imagen-div{
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .estilo-izquierda-imagen{
+    width: 350px;
+    height: 250px;
+  }
+
+  .estilo-derecha{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .estilo-derecha-texto-div{
+    width: 80%;
+    text-align: right;
+  }
+
+  .estilo-derecha-texto{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+
+  }
+
+  .estilo-derecha-imagen-div{
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .estilo-derecha-imagen{
+    width: 350px;
+    height: 250px;
+  }
+
+  .fechaBinaria{
+    font-size: 12.5px;
+    margin-top: 0px;
+    margin-bottom: 150px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 10px;
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+  }
+
+.pibes-titulo{
+    text-align: center;
+    font-family: system-ui;
+    color: transparent;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    background-image: linear-gradient(
+        180deg,
+        rgb(100, 100, 100),
+        rgb(0, 0, 0)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.pibes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px 0 20px;
+}
+
+.pibes:hover > :not(:hover){
+    opacity: .4;
+}
+
+.pibes-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: .5rem;
+}
+
+.pibes-pibe{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    background-color: black;
+    transition: .3s;
+}
+
+.pibes-pibe-nombre{
+    font-weight: bold;
+    opacity: 1;
+    margin-top: 200px;
+    position: absolute;
+    color: white;
+}
+
+.pibes-pibe-texto{
+    font-style: italic;
+    margin-top: 250px;
+    position: absolute;
+    color: white;
+}
+
+.pibes-pibe-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: .5;
+}
+
 
 .contactanos{
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: black;
+    margin-top: 100px;
     align-items: center;
-    justify-content: center;
 }
 
-.titulo-contactanos{
+.contactanos-titulo{
     text-align: center;
+    font-family: system-ui;
+    color: transparent;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    background-image: linear-gradient(
+        180deg,
+        rgb(255, 255, 255),
+        rgb(170, 170, 170)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
-.botones-contactanos{
+.contactanos-hr{
+    width: 10%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.contactanos-botones{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 95%;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
-.botones-contactanos2{
-    display: none;
+.contactanos-botones-boton{
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px 0 5px;
+}
+
+.contactanos-boton-img{
+    width: 70%;
+    height: 70%;
+}
+
+.instagram{
+    background-image: linear-gradient(
+        to right,
+        rgb(153, 0, 255),
+        rgb(255, 0, 179),
+        rgb(255, 0, 0),
+        rgb(255, 136, 0),
+        rgb(255, 251, 0)
+    );
+    box-shadow: 1px 1px 3px 0px rgba(220,0,255,0.75);
+-webkit-box-shadow: 1px 1px 3px 0px rgba(220,0,255,0.75);
+-moz-box-shadow: 1px 1px 3px 0px rgba(220,0,255,0.75);
+}
+
+.whatsapp{
+    background-image: linear-gradient(
+        to right,
+        rgb(0, 255, 0),
+        rgb(100, 255, 100)
+    );
+    box-shadow: 1px 1px 3px 0px rgba(0,255,13,0.75);
+-webkit-box-shadow: 1px 1px 3px 0px rgba(0,255,13,0.75);
+-moz-box-shadow: 1px 1px 3px 0px rgba(0,255,13,0.75);
+}
+
+.twitter{
+    background-image: linear-gradient(
+        to right,
+        rgb(0, 132, 255),
+        rgb(0, 247, 255)
+    );
+    box-shadow: 1px 1px 3px 0px rgba(0,178,255,0.75);
+-webkit-box-shadow: 1px 1px 3px 0px rgba(0,178,255,0.75);
+-moz-box-shadow: 1px 1px 3px 0px rgba(0,178,255,0.75);
+}
+
+.tikTok{
+    background-color: linear-gradient(
+        to right,
+        rgb(0, 255, 213),
+        rgb(0, 0, 0),
+        rgb(0, 0, 0),
+        rgb(0, 0, 0),
+        rgb(255, 0, 55)
+    );
+    box-shadow: 1px 1px 3px 0px rgba(255,0,106,0.75);
+-webkit-box-shadow: 1px 1px 3px 0px rgba(255,0,106,0.75);
+-moz-box-shadow: 1px 1px 3px 0px rgba(255,0,106,0.75);
+}
+
+.contactanos-botones-boton:hover{
+    transform: scale(1.5);
+}
+
+
+
+.division-contactanosEinstein{
+    width: 100%;
+    height: 7.5px;
+    background-color: rgb(15, 15, 15);
+}
+
+
+
+.einstein{
+    width: 100%;
+    display: flex;
+    height: 300px;
+    background-color: black;
+    flex-direction: row;
+}
+
+.einstein-img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    width: 40%; 
+}
+
+.einstein-texto{
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
+    align-items: center;
     justify-content: center;
+    text-align: left;
 }
 
-.arriba-botones-contactanos{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: -75px;
-}
-
-.abajo-botones-contactanos{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.instagram, .whatsapp, .twitter, .tiktok{
-    margin: 0 15px 0 15px;
-    border: 2px solid black;
-    background-color: white;
-    color: black;
-    padding: 10px 25px 10px 25px;
+.einstein-frase{
+    color: white;
+    font-size: 20px;
+    font-style: italic;
     font-weight: bold;
-    border-radius: 5px;
-    width: 150px;
-    text-align: center;
-    font-size: 12px;
+    width: 70%;
 }
 
-.instagram:hover{
-    background: 
-    linear-gradient(
-        to right,
-        rgb(137, 0, 250),
-        rgb(255, 0, 221),
-        rgb(250, 0, 96),
-        rgb(250, 92, 0),
-        rgb(250, 212, 0)
-    );
+.einstein-autor{
     color: white;
-
-    box-shadow: 0px 0px 5px 2px rgba(181,0,125,0.75);
-    -webkit-box-shadow: 0px 0px 5px 2px rgba(181,0,125,0.75);
-    -moz-box-shadow: 0px 0px 5px 2px rgba(181,0,125,0.75);
-}
-
-.whatsapp:hover{
-    background-color: rgb(0, 226, 0);
-    color: white;
-
-    box-shadow: 0px 0px 5px 2px rgba(0,202,11,0.75);
-    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,202,11,0.75);
-    -moz-box-shadow: 0px 0px 5px 2px rgba(0,202,11,0.75);
-}
-
-.twitter:hover{
-    background-color: rgb(0, 153, 255);
-    color: white;
-
-    box-shadow: 0px 0px 5px 2px rgba(0,83,181,0.75);
-    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,83,181,0.75);
-    -moz-box-shadow: 0px 0px 5px 2px rgba(0,83,181,0.75);
-}
-
-.tiktok:hover{
-    background: 
-    linear-gradient(
-        to right,
-        rgb(0, 255, 242),
-        rgb(0, 0, 0),
-        rgb(0, 0, 0),
-        rgb(0, 0, 0),
-        rgb(255, 0, 221)
-    );
-    color: white;
-
-    box-shadow: 0px 0px 5px 2px rgba(51,51,51,0.75);
-    -webkit-box-shadow: 0px 0px 5px 2px rgba(51,51,51,0.75);
-    -moz-box-shadow: 0px 0px 5px 2px rgba(51,51,51,0.75);
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    width: 70%;
 }
 
 .footer{
+    background-color: rgb(20, 20, 20);
     width: 100%;
-    height: 400px;
-    background-color: black;
-    clip-path: polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%, 50% 100%, 100% 100%, 100% 85%, 100% 50%, 100% 0, 100% 0, 50% 15%);
+    height: 300px;
 }
 
+/*RESPONSIVE DEL PRINCIPIO*/
+@media (max-width: 550px){
 
-/* RESPONSIVE */
-
-@media (max-width: 1148px) {
-    .tarjetas-pibes{
-        display: none;
+    .principio-adelante-logoUnido-imagen{
+        width: 300px;
+        height: 300px;
     }
     
-    .tarjetas-pibes2{
-        display: flex;
-    }
-
-    .tarjetas-pibes3{
-        display: none;
-    }
-
-    .morais-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .fini-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .salonia-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .diaz-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .blazquez-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-}
-
-@media (max-width: 1048px) {
-    .frase-frase{
-        font-size: 28px;
-        margin: 100px 225px 0px 225px;
-    }
-
-    .autor-frase{
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 919px) {
-    .titulo-QuienesSomos{
-        font-size: 24px;
-        margin: 0 25px;
+    .principio-adelante-logoUnido-nombre{
+        font-size: 30px;
+        margin-top: -80px;
     }
     
-    .texto-QuienesSomos{
-        font-size: 13px;
-        margin: 0 25px;
-        letter-spacing: 0.5px;
+    .principio-adelante-hr{
+        width: 40%;
+        margin-right: 20px;
+    }
+    
+    .principio-adelante-frase{
+        margin-right: 20px;
+        font-size: 20px;
+    }
+    
+    .principio-adelante-autor{
+        margin-right: 20px;
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width: 360px){
+
+    .principio-adelante-logoUnido-imagen{
+        width: 200px;
+        height: 200px;
+    }
+    
+    .principio-adelante-logoUnido-nombre{
+        font-size: 20px;
+        margin-top: -40px;
+    }
+    
+    .principio-adelante-hr{
+        width: 40%;
+        margin-right: 20px;
+    }
+    
+    .principio-adelante-frase{
+        font-size: 20px;
+    }
+    
+    .principio-adelante-autor{
+        font-size: 15px;
+    }
+    
+}
+
+/*RESPONSIVE DE LA COMPU DE ARRIBA*/
+@media (max-width: 850px){
+
+    .contenido-lados{
+        flex-direction: column;
+    }
+
+    .contenido-izquierda{
+        width: 100%;
+    }
+
+    .contenido-derecha{
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    .contenido-derecha-imagen{
+        margin: 20px 10px 0 10px;
+    }
+
+    .contenido-izquierda-parrafo{
+        line-height: 22px;
+        margin-right: 22px;
+    }
+}
+
+@media (max-width: 850px){
+
+    .contenido-derecha-imagen{
+        width: 50px;
+        height: 50px;
+        margin: 20px 5px 0 5px;
+    }
+}
+
+@media (max-width: 460px){
+    
+    .contenido-izquierda-titulo-decoracion{
+        width: 75px;
+        height: 75px;
+    
+    }
+    
+    .contenido-izquierda-titulo-titulo{
+        font-size: 30px;
+        margin-left: -40px;
+    }
+    
+    .contenido-izquierda-parrafo{
+        font-size: 15px;
+        letter-spacing: 0.3px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 420px){
+    
+    .contenido-derecha-imagen{
+        width: 25px;
+        height: 25px;
+        margin: 20px 2px 0 2px;
+    }
+}
+
+@media (max-width: 340px){
+    
+    .contenido-izquierda-titulo-decoracion{
+        width: 50px;
+        height: 50px;
+    
+    }
+    
+    .contenido-izquierda-titulo-titulo{
+        font-size: 20px;
+        margin-left: -25px;
+    }
+    
+    .contenido-izquierda-parrafo{
+        font-size: 12px;
+        letter-spacing: 0.1px;
         line-height: 15px;
     }
-
-    .titulo-comoEmpezamos{
-        font-size: 24px;
-        margin: 0 25px;
-    }
-    
-    .texto-comoEmpezamos{
-        font-size: 13px;
-        margin: 0 25px;
-        letter-spacing: 0.5px;
-        line-height: 15px;
-    }
-    
-    .titulo-queHacemos{
-        font-size: 24px;
-        margin: 0 25px;
-    }
-    
-    .texto-queHacemos{
-        font-size: 13px;
-        margin: 0 25px;
-        letter-spacing: 0.5px;
-        line-height: 15px;
-    }
 }
 
-@media (max-width: 870px) {
-    .frase-frase{
-        font-size: 26px;
-        margin: 100px 150px 0px 150px;
-    }
+/*RESPONSIVE DE LOS PROYECTOS*/
 
-    .autor-frase{
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 810px) {
-    .tarjetas-pibes{
-        display: none;
+@media (max-width: 700px){
+    
+    .proyectos-imagenes{
+        width: 400px;
+        height: 325px;
     }
     
-    .tarjetas-pibes2{
-        display: none;
+    .proyectos-imagenes img:hover{
+        width: 225px;
     }
 
-    .tarjetas-pibes3{
-        display: flex;
-    }
-
-    .morais-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .fini-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .salonia-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .diaz-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .blazquez-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
 }
 
-@media (max-width: 688px) {
-    .frase-frase{
-        font-size: 24px;
-        margin: 100px 75px 0px 75px;
+@media (max-width: 600px){
+    
+    .proyectos-titulo{
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .proyectos-frase{
+        font-size: 15px;
+    }
+    
+    .proyectos-subtitulo{
+        font-size: 15px;
     }
 
-    .autor-frase{
+}
+
+@media (max-width: 600px){
+ 
+    .proyectos-imagenes{
+        width: 250px;
+        height: 300px;
+    }
+    
+    .proyectos-imagenes img:hover{
+        width: 200px;
+    }
+
+}
+
+@media (max-width: 350px){
+    
+    .proyectos-titulo{
+        font-size: 35px;
+    }
+    
+    .proyectos-frase{
+        font-size: 12px;
+    }
+    
+    .proyectos-subtitulo{
         font-size: 12px;
     }
 
-    .titulo-QuienesSomos{
-        font-size: 20px;
-        margin: 0 15px;
-    }
-    
-    .texto-QuienesSomos{
-        font-size: 10px;
-        margin: 0 15px;
-        letter-spacing: 0.5px;
-        line-height: 15px;
-    }
+}
 
-    .titulo-comoEmpezamos{
-        font-size: 20px;
-        margin: 0 15px;
+@media (max-width: 280px){
+
+    .proyectos-imagenes{
+        width: 200px;
+        height: 250px;
     }
     
-    .texto-comoEmpezamos{
-        font-size: 10px;
-        margin: 0 15px;
-        letter-spacing: 0.5px;
-        line-height: 15px;
-    }
-    
-    .titulo-queHacemos{
-        font-size: 20px;
-        margin: 0 15px;
-    }
-    
-    .texto-queHacemos{
-        font-size: 10px;
-        margin: 0 15px;
-        letter-spacing: 0.5px;
-        line-height: 15px;
+    .proyectos-imagenes img:hover{
+        width: 150px;
     }
 
 }
 
-@media (max-width: 574px) {
-    .botones-contactanos{
-        display: none;
-    }
+/*RESPONSIVE DE LOS ESTILOS*/
+@media (max-width: 690px){
 
-    .botones-contactanos2{
-        display: flex;
-    }
-
-    .arriba-botones-contactanos{
-        margin-bottom: 20px;
-        margin-top: -10px;
-    }
-}
-
-@media (max-width: 540px) {
-    .tarjetas-pibes{
-        display: flex;
+    .estilo{
         flex-direction: column;
-    }
+      }
+      
+      .estilo-izquierda{
+        width: 100%;
+      }
+
+      .estilo-hr{
+        width: 80%;
+      }
     
-    .tarjetas-pibes2{
-        display: none;
-    }
+      .estilo-derecha{
+        width: 100%;
+      }
 
-    .tarjetas-pibes3{
-        display: none;
-    }
-
-    .morais-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-        margin-bottom: 20px;
-    }
-
-    .fini-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-        margin-bottom: 20px;
-    }
-
-    .salonia-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-        margin-bottom: 20px;
-    }
-
-    .diaz-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-        margin-bottom: 20px;
-    }
-
-    .blazquez-pibes{
-        width: 200px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
 }
 
-@media (max-width: 510px) {
-    .frase-frase{
-        font-size: 22px;
-        margin: 100px 20px 0px 20px;
-    }
+@media (max-width: 380px){
+      
+    .fechaBinaria{
+        font-size: 10px;
+        letter-spacing: 5px;
+      }
 
-    .autor-frase{
-        font-size: 11px;
-    }
+}
 
-    .informacion{
-        flex-direction: column;
-    }
-    
-    .quienesSomos{
-        width: 100%;
-    }
-    
-    .titulo-QuienesSomos{
-        font-size: 28px;
-        margin: 0 35px;
-    }
-    
-    .texto-QuienesSomos{
-        font-size: 16px;
-        margin: 0 35px;
-        letter-spacing: 1px;
-        line-height: 20px;
-    }
-    
-    .comoEmpezamos{
-        width: 100%;
-    }
-    
-    .titulo-comoEmpezamos{
-        font-size: 28px;
-        margin: 0 35px;
-    }
-    
-    .texto-comoEmpezamos{
-        font-size: 16px;
-        margin: 0 35px;
-        letter-spacing: 1px;
-        line-height: 20px;
-    }
-    
-    .queHacemos{
-        width: 100%;
-    }
-    
-    
-    .titulo-queHacemos{
-        font-size: 28px;
-        margin: 0 35px;
-    }
-    
-    .texto-queHacemos{
-        font-size: 16px;
-        margin: 0 35px;
-        letter-spacing: 1px;
-        line-height: 20px;
-    }
+/*RESPONSI' E' LO' PIBE'*/
+@media (max-width: 280px){
 
-    .hr{
-        width: 70%;
-        color: black;
-        margin-top: 20px;
+    .pibes-titulo{
+        font-size: 40px;
     }
 
 }
 
-@media (max-width: 472px) {
-    .frase-frase{
-        font-size: 20px;
-        margin: 100px 5px 0px 5px;
+/*RESPONSIVE DE CONTACTANOS*/
+@media (max-width: 400px){
+
+    .contactanos-titulo{
+        font-size: 40px;
     }
 
-    .autor-frase{
+}
+
+@media (max-width: 330px){
+
+    .contactanos-botones-boton{
+        width: 35px;
+        height: 35px;
+        margin: 0 3px 0 3px;
+    }
+
+}
+
+@media (max-width: 300px){
+
+    .contactanos-titulo{
+        font-size: 30px;
+    }
+}
+
+/*RESPONSIVE DE EINSTEIN*/
+@media (max-width: 790px){
+
+    .einstein{
+        height: 250px;
+    }
+    
+    .einstein-img{
+        width: 250px;
+        height: 250px;
+        width: 40%; 
+    }
+
+}
+
+@media (max-width: 650px){
+
+    .einstein{
+        height: 200px;
+    }
+    
+    .einstein-img{
+        width: 200px;
+        height: 200px;
+        width: 40%; 
+    }
+
+}
+
+@media (max-width: 530px){
+
+    .einstein{
+        height: 150px;
+    }
+    
+    .einstein-img{
+        width: 150px;
+        height: 150px;
+        width: 40%; 
+    }
+    
+    .einstein-frase{
+        font-size: 15px;
+    }
+    
+    .einstein-autor{
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 400px){
+
+    .einstein{
+        height: 100px;
+    }
+    
+    .einstein-img{
+        width: 100px;
+        height: 100px;
+        width: 40%; 
+    }
+
+    .einstein-frase{
+        font-size: 12px;
+    }
+    
+    .einstein-autor{
         font-size: 10px;
     }
+
 }
 
-@media (max-width: 290px) {
 
-    .titulo-contactanos{
-        font-size: 28px;
-    }
-    .botones-contactanos{
-        display: flex;
-        flex-direction: column;
-    }
 
-    .botones-contactanos2{
-        display: none;
-    }
 
-    .instagram, .whatsapp, .twitter, .tiktok{
-        margin-bottom: 10px;
-    }
-}
+

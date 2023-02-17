@@ -14,9 +14,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     
+    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,284 +36,151 @@
     {% block content %}
 
     <div class="principio">
-        <img class="logo" src="/static/src/LogoBlack.png" alt="Logo">
-        <span class="material-symbols-outlined flecha">
-            <a class="flecha-flecha" href="">expand_circle_down</a> 
-            </span>
+        <div class="principio-adelante">
+            <div class="principio-adelante-logoUnido">
+                <img class="principio-adelante-logoUnido-imagen" src="/static/src/LogoBlackSinLetras.png" alt="Team Lussary">
+                <h1 class="principio-adelante-logoUnido-nombre">TEAM LUSSARY</h1>
+            </div>
+            <hr class="principio-adelante-hr">
+            <p class="principio-adelante-frase">"El arte desafía a la tecnologia, y la tecnología inspira al arte"</p>
+            <p class="principio-adelante-autor">"John Lasseter"</p>
+        </div>
     </div>
 
-    <div class="frase">
-        <h1 class="frase-frase">"El arte desafia a la tecnologia, y la tecnologia inspira al arte."</h1>
-        <p class="autor-frase">John Lasseter</p>
+
+
+
+    <div class="contenido">
+        <div class="contenido-camara"></div>
+        <div class="contenido-lados">
+            <div class="contenido-izquierda">
+                <div class="contenido-izquierda-titulo">
+                    <img class="contenido-izquierda-titulo-decoracion" src="/static/src/cuadrado.png" alt="Decoracion">
+                    <h1 class="contenido-izquierda-titulo-titulo">¿Qué es Lussary?</h1>
+                </div>
+                <p class="contenido-izquierda-parrafo">Team Lussary es un grupo de cinco personas que quisieron comenzar un emprendimiento de desarrollo web un 17 de Enero del año 2023.
+                    Trabajamos juntos para diseñar y desarrollar nuestros proyectos de la mejor manera posible y que el cliente quede a gusto con nuestro trabajo. </p>
+                
+                    <div class="contenido-izquierda-titulo">
+                        <img class="contenido-izquierda-titulo-decoracion" src="/static/src/cuadrado.png" alt="Decoracion">
+                        <h1 class="contenido-izquierda-titulo-titulo">¿Qué hacemos?</h1>
+                    </div>
+                    <p class="contenido-izquierda-parrafo">Nos enfocamos, principalmente, en diseñar páginas y aplicaciones web para cualquier tipo de nogocios. </p>
+            </div>
+
+            <div class="contenido-derecha">
+                <img src="/static/src/python.png" alt="Python" class="contenido-derecha-imagen">
+                <img src="/static/src/flask.png" alt="Flask" class="contenido-derecha-imagen">
+                <img src="/static/src/html.png" alt="HTML" class="contenido-derecha-imagen">
+                <img src="/static/src/css.png" alt="CSS" class="contenido-derecha-imagen">
+                <img src="/static/src/js.png" alt="JS" class="contenido-derecha-imagen">
+            </div>
+        </div>
     </div>
 
 
-<div class="informacion">
-    <div class="quienesSomos">
-        <span class="material-symbols-outlined simbolo">
-            unknown_document
-            </span>
-        <h1 class="titulo-QuienesSomos">¿Quiénes somos?</h1>
-        <p class="texto-QuienesSomos">
-            Somos un grupo de cinco personas que quiso comenzar un emprendimiento de desarrollo web un 17 de Enero del año 2023.
-            <br>
-            Trabajamos juntos para diseñar y desarrollar nuestros proyectos de la mejor manera posible.
-        </p>
-    </div>
-
-    <hr class="hr">
-
-    <div class="comoEmpezamos">
-        <span class="material-symbols-outlined simbolo">
-            tips_and_updates
-            </span>
-        <h1 class="titulo-comoEmpezamos">¿Cómo empezamos?</h1>
-        <p class="texto-comoEmpezamos">
-            Todo comenzó una noche cualquiera en una sala de Discord, uno de nosotros propuso la idea de comenzar un emprendimiento, por lo cual, nos quedamos toda esa noche planificando y viendo los pros y los contras con los que nos íbamos a enfrentar.
-        </p>
-    </div>
-
-    <hr class="hr">
-
-    <div class="queHacemos">
-        <span class="material-symbols-outlined simbolo">
-            checklist
-            </span>
-        <h1 class="titulo-queHacemos">¿Qué hacemos?</h1>
-        <p class="texto-queHacemos">
-            Nosotros nos dedicamos a diseñar cualquier tipo de página o aplicación web, por supuesto, que a gusto del cliente.
-            <br>
-            A continuación, podrán ver en nuestra galería algunos de los proyectos con los que estuvimos trabajando para diferentes empresas.
-        </p>
-    </div>
-</div>
-
-
-    
 
     <div class="proyectos">
-        <h1 class="titulo-proyectos">Nuestros proyectos</h1>
-        <h2 class="barra-proyectos">__________</h2>
-        <p class="frase-proyectos">"La creatividad es la inteligencia divirtiéndose."</p>
-        <p class="autor-proyectos">ALbert Einstein</p>
-        <a class="boton-proyectos" href="">Galeria</a>
+        <h1 class="proyectos-titulo">NUESTROS PROYECTOS</h1>
+        <p class="proyectos-frase">"No somos perfectos, nuestro codigo si."</p>
+        <hr class="proyectos-hr">
+        <p class="proyectos-subtitulo">TOP 3</p>
+        <section class="proyectos-imagenes">
+            <img class="proyectos-imagenes-imagen1" src="/static/src/perrito1.jpeg" alt="P1">
+            <img class="proyectos-imagenes-imagen2" src="/static/src/perrito2.jpeg" alt="P2">
+            <img class="proyectos-imagenes-imagen3" src="/static/src/perrito3.jpg" alt="P3">
+        </section>
+        <button class="proyectos-boton">Galeria</button>
     </div>
 
-
-
-    <div class="pibes">
-        <h1 class="titulo-pibes">5 PIBES, 1 PROYECTO.</h1>
-        <hr>
-        <div class="tarjetas-pibes">
-            <div class="morais-pibes">
-                <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                <p class="nombre-pibes">Morais, Joaquín</p>
-                <hr>
-                <p class="titulo-tarjetas-pibes">Programador</p>
-                <a href="" class="link1-pibes">in</a>
-                <a href="" class="link2-pibes">GitHub</a>
-            </div>
-
-            <div class="fini-pibes">
-                <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                <p class="nombre-pibes">Fini Minué, Marco</p>
-                <hr>
-                <p class="titulo-tarjetas-pibes">Programador</p>
-                <a href="" class="link1-pibes">in</a>
-                <a href="" class="link2-pibes">GitHub</a>
-            </div>
-
-            <div class="salonia-pibes">
-                <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                <p class="nombre-pibes">Salonia, Agustín</p>
-                <hr>
-                <p class="titulo-tarjetas-pibes">Programador</p>
-                <a href="" class="link1-pibes">in</a>
-                <a href="" class="link2-pibes">GitHub</a>
-            </div>
-
-            <div class="diaz-pibes">
-                <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                <p class="nombre-pibes">Diaz Broilo, Alejo</p>
-                <hr>
-                <p class="titulo-tarjetas-pibes">Programador</p>
-                <a href="" class="link1-pibes">in</a>
-                <a href="" class="link2-pibes">GitHub</a>
-            </div>
-
-            <div class="blazquez-pibes">
-                <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                <p class="nombre-pibes">Blázquez, Máximo</p>
-                <hr>
-                <p class="titulo-tarjetas-pibes">Programador</p>
-                <a href="" class="link1-pibes">in</a>
-                <a href="" class="link2-pibes">GitHub</a>
-            </div>
+    <div class="estilo">
+        <div class="estilo-izquierda">
+            <div class="estilo-izquierda-texto-div"><p class="estilo-izquierda-texto">Estilo simple, bonito <br> y agradable a la vista.</p></div>
+            <div class="estilo-izquierda-imagen-div"><img src="/static/src/chef.jpg" alt="" class="estilo-izquierda-imagen"></div>
+            
         </div>
-
-
-
-
-
-        <div class="tarjetas-pibes2">
-            <div class="arriba-tarjetas-pibes2">
-                <div class="morais-pibes">
-                    <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                    <p class="nombre-pibes">Morais, Joaquín</p>
-                    <hr>
-                    <p class="titulo-tarjetas-pibes">Programador</p>
-                    <a href="" class="link1-pibes">in</a>
-                    <a href="" class="link2-pibes">GitHub</a>
-                </div>
-    
-                <div class="fini-pibes">
-                    <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                    <p class="nombre-pibes">Fini Minué, Marco</p>
-                    <hr>
-                    <p class="titulo-tarjetas-pibes">Programador</p>
-                    <a href="" class="link1-pibes">in</a>
-                    <a href="" class="link2-pibes">GitHub</a>
-                </div>
-    
-                <div class="salonia-pibes">
-                    <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                    <p class="nombre-pibes">Salonia, Agustín</p>
-                    <hr>
-                    <p class="titulo-tarjetas-pibes">Programador</p>
-                    <a href="" class="link1-pibes">in</a>
-                    <a href="" class="link2-pibes">GitHub</a>
-                </div>
-            </div>
-
-            <div class="abajo-tarjetas-pibes2">
-                <div class="diaz-pibes">
-                    <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                    <p class="nombre-pibes">Diaz Broilo, Alejo</p>
-                    <hr>
-                    <p class="titulo-tarjetas-pibes">Programador</p>
-                    <a href="" class="link1-pibes">in</a>
-                    <a href="" class="link2-pibes">GitHub</a>
-                </div>
-    
-                <div class="blazquez-pibes">
-                    <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                    <p class="nombre-pibes">Blázquez, Máximo</p>
-                    <hr>
-                    <p class="titulo-tarjetas-pibes">Programador</p>
-                    <a href="" class="link1-pibes">in</a>
-                    <a href="" class="link2-pibes">GitHub</a>
-                </div>
-            </div>
+        <hr class="estilo-hr">
+        <div class="estilo-derecha">
+            <div class="estilo-derecha-texto-div"><p class="estilo-derecha-texto">Adaptable a cualquier pantalla.</p></div>
+            <div class="estilo-derecha-imagen-div"><img src="/static/src/5312.jpg" alt="" class="estilo-derecha-imagen"></div>
+            
         </div>
-
-
-
-
-
-
-
-        <div class="tarjetas-pibes3">
-            <div class="arriba-tarjetas-pibes3">
-                <div class="morais-pibes">
-                    <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                    <p class="nombre-pibes">Morais, Joaquín</p>
-                    <hr>
-                    <p class="titulo-tarjetas-pibes">Programador</p>
-                    <a href="" class="link1-pibes">in</a>
-                    <a href="" class="link2-pibes">GitHub</a>
-                </div>
-    
-                <div class="fini-pibes">
-                    <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                    <p class="nombre-pibes">Fini Minué, Marco</p>
-                    <hr>
-                    <p class="titulo-tarjetas-pibes">Programador</p>
-                    <a href="" class="link1-pibes">in</a>
-                    <a href="" class="link2-pibes">GitHub</a>
-                </div>
-            </div>
-
-            <div class="medio-tarjetas-pibes3">
-                <div class="salonia-pibes">
-                    <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                    <p class="nombre-pibes">Salonia, Agustín</p>
-                    <hr>
-                    <p class="titulo-tarjetas-pibes">Programador</p>
-                    <a href="" class="link1-pibes">in</a>
-                    <a href="" class="link2-pibes">GitHub</a>
-                </div>
-
-                <div class="diaz-pibes">
-                    <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                    <p class="nombre-pibes">Diaz Broilo, Alejo</p>
-                    <hr>
-                    <p class="titulo-tarjetas-pibes">Programador</p>
-                    <a href="" class="link1-pibes">in</a>
-                    <a href="" class="link2-pibes">GitHub</a>
-                </div>
-            </div>
-
-            <div class="abajo-tarjetas-pibes3">    
-                <div class="blazquez-pibes">
-                    <img src="/static/src/perrito.jpg" alt="Foto" class="foto-pibes">
-                    <p class="nombre-pibes">Blázquez, Máximo</p>
-                    <hr>
-                    <p class="titulo-tarjetas-pibes">Programador</p>
-                    <a href="" class="link1-pibes">in</a>
-                    <a href="" class="link2-pibes">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
     </div>
 
-    <!-- BOTON DE CONTACTO ---------------------------------------------------------------------- -->
+    <p class="fechaBinaria">10001-1-11111100111</p>
 
+    <div class="pibess">
+        <h1 class="pibes-titulo">5 PIBES, 1 PROYECTO.</h1>
+        <div class="pibes">
+            <div class="pibes-pibe pibes-pibe-mora">
+                <img src="/static/src/mora.jpg" alt="" class="pibes-pibe-img">
+                <p class="pibes-pibe-nombre">Joaquín Morais</p>
+                <p class="pibes-pibe-texto">Programador</p>
+            </div>
+            <div class="pibes-pibe pibes-pibe-fini">
+                <img src="/static/src/fini.jpg" alt="" class="pibes-pibe-img">
+                <p class="pibes-pibe-nombre">Marco Fini Minué</p>
+                <p class="pibes-pibe-texto">Programador</p>
+            </div>
+            <div class="pibes-pibe pibes-pibe-salo">
+                <img src="/static/src/salo.jpg" alt="" class="pibes-pibe-img">
+                <p class="pibes-pibe-nombre">Agustín Salonia</p>
+                <p class="pibes-pibe-texto">Programador</p>
+            </div>
+            <div class="pibes-pibe pibes-pibe-alejo">
+                <img src="/static/src/alejo.jpg" alt="" class="pibes-pibe-img">
+                <p class="pibes-pibe-nombre">Alejo Diaz Broilo</p>
+                <p class="pibes-pibe-texto">Programador</p>
+            </div>
+            <div class="pibes-pibe pibes-pibe-facha">
+                <img src="/static/src/facha.jpg" alt="" class="pibes-pibe-img">
+                <p class="pibes-pibe-nombre">Máximo Blázquez</p>
+                <p class="pibes-pibe-texto">Programador</p>
+            </div>
+        </div>
+    </div>
+
+    
     <div class="contactanos">
-        <h1 class="titulo-contactanos">CONTACTANOS</h1>
-        <div class="botones-contactanos">
-            <button class="instagram">Instagram</button>
-            <button class="whatsapp">Whatsapp</button>
-            <button class="twitter">Twitter</button>
-            <button class="tiktok">Tik Tok</button> 
+        <h1 class="contactanos-titulo">CONTACTANOS</h1>
+        <hr class="contactanos-hr">
+        <div class="contactanos-botones">
+            <a href="" class="contactanos-botones-boton instagram"><img src="/static/src/ig.png" alt="" class="contactanos-boton-img"></a>
+            <a href="" class="contactanos-botones-boton whatsapp"><img src="/static/src/wsp.png" alt="" class="contactanos-boton-img "></a>
+            <a href="" class="contactanos-botones-boton twitter"><img src="/static/src/tw.png" alt="" class="contactanos-boton-img "></a>
+            <a href="" class="contactanos-botones-boton tikTok"><img src="/static/src/tt.png" alt="" class="contactanos-boton-img "></a>
         </div>
-
-
-
-        <div class="botones-contactanos2">
-            <div class="arriba-botones-contactanos">
-                <button class="instagram">Instagram</button>
-                <button class="whatsapp">Whatsapp</button>
-            </div>
-
-            <div class="abajo-botones-contactanos">
-                <button class="twitter">Twitter</button>
-                <button class="tiktok">Tik Tok</button> 
-            </div>
-        </div>
-
-
-
-    </div>
-
-    <!-- FIN DEL BOTON DE CONTACTO -------------------------------------------------------------- -->
-
-    <div class="final">
-        <p class="ig"></p>
-    </div>
-
-    <!-- FOOTER --------------------------------------------------------------------------------- -->
-
-    <div class="footer">
         
     </div>
 
-    <!-- FIN DEL FOOTER ------------------------------------------------------------------------- -->
+    <div class="division-contactanosEinstein"></div>
+
+    <div class="einstein">
+        <img src="/static/src/einstein3.png" alt="" class="einstein-img">
+        <div class="einstein-texto">
+            <p class="einstein-frase">"En medio de la dificultad reside la oportunidad."</p>
+        <p class="einstein-autor">Albert Einstein</p>
+        </div>
+        
+    </div>
+
+
+
+    <div class="footer">
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="{{ url_for('static',filename='/js/lussary_config/sttings_js.js') }}"></script>
+
+    
+    
 
     {% endblock %}
 </body>
