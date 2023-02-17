@@ -41,11 +41,12 @@ body{
   margin: 0px;
   text-align: center;
   z-index: 5;
-  
+  transition: all 1s ease-in-out;
 }
 
 .div-fondo h1,h6{
   margin: 0px;
+  transition: all 1s ease-in-out;
 }
 
 .veme-colores-background{
@@ -62,7 +63,6 @@ body{
 #name{
   color: aliceblue;
   font-size: 160px;
-  margin-bottom: 0px;
 }
 
 #subname{
@@ -83,7 +83,7 @@ body{
 }
 
 .div-info{
-  margin-top: 90px;
+  padding-top: 150px;
   color: rgb(0, 0, 0);
   display: flex;
   flex-direction: row;
@@ -107,9 +107,8 @@ body{
 
 
 .div-loquehacemos{
-  margin-top: 200px;
   color: rgb(0, 109, 109);
-  margin-bottom: 200px;
+  padding-top: 100px;
 }
 
 .div-photo2{
@@ -118,7 +117,7 @@ body{
   flex: 1;
   margin-right: 50px;
   margin-left: 50px;
-  margin-bottom: 60px;
+  
 }
 
 .div-galery{
@@ -142,7 +141,8 @@ body{
 
 .div-contacto{
   color: pink;
-  margin-bottom: 200px;
+  padding-top: 20px;
+  padding-bottom: 70px;
 }
 
 .div-container3{
@@ -177,7 +177,6 @@ body{
 .galeria-menu{
   width: 100%;
   overflow: hidden;
-  border-radius: 15px;
   background-color: #67d89060;
   border: 2px solid white;
   border-radius: 15px;
@@ -589,8 +588,7 @@ div#slider figure {
 
   .div-ropa{
     width: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    
     height: auto;
   }
 
@@ -645,6 +643,15 @@ div#slider figure {
     font-size: 19px;
   }
 }
+@media screen and (max-width:400px){
+  .div-fondo h1{
+    font-size: 65px;
+  }
+  .div-fondo h6{
+    font-size: 13px;
+  }
+}
+
 
 
 @media screen and (max-width:360px){
