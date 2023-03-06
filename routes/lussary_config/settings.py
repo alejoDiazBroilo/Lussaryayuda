@@ -12,6 +12,10 @@ def getHomePrincipalPageLussary():
 def getHome():
     return redirect(url_for('Home.getHomePrincipalPageLussary'))
 
+@Home.route("/galeria")
+def getGaleria():
+    return render_template("lussary_config/galeria.html")
+
 
 """
 

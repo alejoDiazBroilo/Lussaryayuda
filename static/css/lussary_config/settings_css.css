@@ -9,6 +9,7 @@ body{
     background-image: url(/static/src/matrix.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 .principio-adelante{
@@ -19,6 +20,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    height: 100vh;
 }
 
 .principio-adelante-logoUnido{
@@ -72,7 +74,7 @@ body{
 
 .contenido{
     border: 12px solid black;
-    background-color: transparent;
+    background-color: rgb(200, 200, 200);
     margin: 50px 50px 0px 50px;
     border-radius: 8px;
     border-bottom: none;
@@ -158,7 +160,9 @@ body{
 .proyectos-titulo{
     font-family: system-ui;
     color: transparent;
-    font-size: 50px;
+    font-size: 70px;
+    margin-top: 80px;
+    margin-bottom: 10px;
     font-weight: 600;
     letter-spacing: -0.015em;
     background-image: linear-gradient(
@@ -206,6 +210,8 @@ body{
     object-fit: cover;
     opacity: .8;
     transition: .5s ease;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 .proyectos-imagenes img:hover{
@@ -213,6 +219,8 @@ body{
     width: 300px;
     opacity: 1;
     filter: contrast(120%);
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
 }
 
 .proyectos-boton {
@@ -228,7 +236,7 @@ body{
     transition-property: box-shadow;
     background: rgb(0,140,255);
     box-shadow: 0 0 25px rgb(0,140,255);
-    margin: 40px 0 40px 0;
+    margin: 40px 0 80px 0;
   }
   
   .proyectos-boton:hover {
@@ -511,7 +519,7 @@ body{
     height: 30px;
     display: flex;
     flex-direction: column;
-    margin-top: 0px;
+    margin-top: 10px;
     align-items: center;
 }
 
