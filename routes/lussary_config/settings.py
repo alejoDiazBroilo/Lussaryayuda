@@ -19,7 +19,7 @@ def getGaleria():
 
 @Home.route("/example")
 def getExample():
-    return render_template("example.html")
+    return render_template("a/e/example.html")
 
 
 """
