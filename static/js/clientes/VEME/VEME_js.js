@@ -1,3 +1,5 @@
+console.log('hola')
+
 // VARIABLES
 const VEME_cartel = document.getElementById('VEME_sticky');
 const VEME_cartel_nombre = document.getElementById('name');
