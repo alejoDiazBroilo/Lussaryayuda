@@ -6,7 +6,7 @@ VEME_home = Blueprint("VEME_home",__name__)
 
 @VEME_home.route("/clientes/VEME")
 def getPrincipalPageVEME():
-    return render_template("clientes/VEME/VEME.html")
+    return render_template("clientes/VEME/VEME.html",prendas = ['pantalones','pantalones','remeras','remeras'])
 
 
 """
