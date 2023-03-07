@@ -17,6 +17,11 @@ def getGaleria():
     return render_template("lussary_config/galeria.html")
 
 
+@Home.route("/example")
+def getExample():
+    return render_template("example.html")
+
+
 """
 
 @Home.route("/")
