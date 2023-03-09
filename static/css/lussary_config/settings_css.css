@@ -1,15 +1,20 @@
 body{
     margin: 0;
     font-family: 'Poppins',sans-serif;
+    background-color: white;
 }
 
 /* PRINCIPIO */
 
 .principio{
-    background-image: url(/static/src/matrix.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
+}
+
+.principio-img{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
 }
 
 .principio-adelante{
@@ -74,7 +79,7 @@ body{
 
 .contenido{
     border: 12px solid black;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(240, 240, 240);
     margin: 50px 50px 0px 50px;
     border-radius: 8px;
     border-bottom: none;
@@ -161,7 +166,7 @@ body{
     font-family: system-ui;
     color: transparent;
     font-size: 70px;
-    margin-top: 80px;
+    margin-top: 50px;
     margin-bottom: 10px;
     font-weight: 600;
     letter-spacing: -0.015em;
@@ -236,7 +241,7 @@ body{
     transition-property: box-shadow;
     background: rgb(0,140,255);
     box-shadow: 0 0 25px rgb(0,140,255);
-    margin: 40px 0 80px 0;
+    margin: 40px 0 50px 0;
   }
   
   .proyectos-boton:hover {
@@ -456,13 +461,12 @@ body{
 .contactanos-botones-boton{
     width: 50px;
     height: 50px;
-    border: 2px solid white;
+    border: none;
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 5px 0 5px;
-    transition: .2s;
 }
 
 .contactanos-boton-img{
@@ -485,12 +489,13 @@ body{
 }
 
 
-
+/*
 .division-contactanosEinstein{
     width: 100%;
     height: 7.5px;
     background-color: rgb(15, 15, 15);
 }
+*/
 
 
 .footerFondo{

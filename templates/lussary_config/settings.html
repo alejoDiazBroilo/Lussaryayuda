@@ -17,9 +17,10 @@
     {% block content %}
 
     <div class="principio">
+        <img class="principio-img" src="{{ url_for('static',filename='src/Lussary/image77.png') }}" alt="">
         <div class="principio-adelante">
             <div class="principio-adelante-logoUnido">
-                <img class="principio-adelante-logoUnido-imagen" src="/static/src/LogoBlackSinLetras.png" alt="Team Lussary">
+                <img class="principio-adelante-logoUnido-imagen" src="{{ url_for('static',filename='src/Lussary/LogoBlackSinLetras.png') }}" alt="Team Lussary">
                 <h1 class="principio-adelante-logoUnido-nombre">TEAM LUSSARY</h1>
             </div>
             <hr class="principio-adelante-hr">
@@ -29,32 +30,32 @@
     </div>
 
 
-
+    
 
     <div class="contenido">
         <div class="contenido-camara"></div>
         <div class="contenido-lados">
             <div class="contenido-izquierda">
                 <div class="contenido-izquierda-titulo">
-                    <img class="contenido-izquierda-titulo-decoracion" src="/static/src/cuadrado.png" alt="Decoracion">
+                    <img class="contenido-izquierda-titulo-decoracion" src="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}" alt="Decoracion">
                     <h1 class="contenido-izquierda-titulo-titulo">¿Qué es Lussary?</h1>
                 </div>
                 <p class="contenido-izquierda-parrafo">Team Lussary es un grupo de cinco personas que quisieron comenzar un emprendimiento de desarrollo web un 17 de Enero del año 2023.
                     Trabajamos juntos para diseñar y desarrollar nuestros proyectos de la mejor manera posible y que el cliente quede a gusto con nuestro trabajo. </p>
                 
                     <div class="contenido-izquierda-titulo">
-                        <img class="contenido-izquierda-titulo-decoracion" src="/static/src/cuadrado.png" alt="Decoracion">
+                        <img class="contenido-izquierda-titulo-decoracion" src="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}" alt="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}">
                         <h1 class="contenido-izquierda-titulo-titulo">¿Qué hacemos?</h1>
                     </div>
                     <p class="contenido-izquierda-parrafo">Nos enfocamos, principalmente, en diseñar páginas y aplicaciones web para cualquier tipo de nogocios. </p>
             </div>
 
             <div class="contenido-derecha">
-                <img src="/static/src/python.png" alt="Python" class="contenido-derecha-imagen">
-                <img src="/static/src/mysql.png" alt="MySql" class="contenido-derecha-imagen">
-                <img src="/static/src/flask.png" alt="Flask" class="contenido-derecha-imagen">
-                <img src="/static/src/git.png" alt="Git" class="contenido-derecha-imagen">
-                <img src="/static/src/js.png" alt="JS" class="contenido-derecha-imagen">
+                <img src="{{ url_for('static',filename='/src/Lussary/python.png') }}" alt="Python" class="contenido-derecha-imagen">
+                <img src="{{ url_for('static',filename='/src/Lussary/mysql.png') }}" alt="MySql" class="contenido-derecha-imagen">
+                <img src="{{ url_for('static',filename='/src/Lussary/flask.png') }}" alt="Flask" class="contenido-derecha-imagen">
+                <img src="{{ url_for('static',filename='/src/Lussary/git.png') }}" alt="Git" class="contenido-derecha-imagen">
+                <img src="{{ url_for('static',filename='/src/Lussary/js.png') }}" alt="JS" class="contenido-derecha-imagen">
             </div>
         </div>
     </div>
@@ -67,23 +68,23 @@
         <hr class="proyectos-hr">
         <p class="proyectos-subtitulo">TOP 3</p>
         <section class="proyectos-imagenes">
-            <img class="proyectos-imagenes-imagen1" src="/static/src/perrito1.jpeg" alt="P1">
-            <img class="proyectos-imagenes-imagen2" src="/static/src/perrito2.jpeg" alt="P2">
-            <img class="proyectos-imagenes-imagen3" src="/static/src/perrito3.jpg" alt="P3">
+            <img class="proyectos-imagenes-imagen1" src="{{ url_for('static',filename='/src/Lussary/perrito1.jpeg') }}" alt="P1">
+            <img class="proyectos-imagenes-imagen2" src="{{ url_for('static',filename='/src/Lussary/perrito2.jpeg') }}" alt="P2">
+            <img class="proyectos-imagenes-imagen3" src="{{ url_for('static',filename='/src/Lussary/perrito3.jpg') }}" alt="P3">
         </section>
-        <button class="proyectos-boton">Galeria</button>
+        <a href="{{ url_for('Home.getGaleria')}}"><button class="proyectos-boton">Galeria</button></a>
     </div>
 
     <div class="estilo">
         <div class="estilo-izquierda">
             <div class="estilo-izquierda-texto-div"><p class="estilo-izquierda-texto">Estilo simple, bonito <br> y agradable a la vista.</p></div>
-            <div class="estilo-izquierda-imagen-div"><img src="/static/src/estilosba.png" alt="" class="estilo-izquierda-imagen"></div>
+            <div class="estilo-izquierda-imagen-div"><img src="{{ url_for('static',filename='/src/Lussary/estilosba.png') }}" alt="" class="estilo-izquierda-imagen"></div>
             
         </div>
         <hr class="estilo-hr">
         <div class="estilo-derecha">
             <div class="estilo-derecha-texto-div"><p class="estilo-derecha-texto">Adaptable a cualquier pantalla.</p></div>
-            <div class="estilo-derecha-imagen-div"><img src="/static/src/5312.jpg" alt="" class="estilo-derecha-imagen"></div>
+            <div class="estilo-derecha-imagen-div"><img src="{{ url_for('static',filename='/src/Lussary/5312.jpg') }}" alt="" class="estilo-derecha-imagen"></div>
             
         </div>
     </div>
@@ -94,27 +95,27 @@
         <h1 class="pibes-titulo">5 PIBES, 1 PROYECTO</h1>
         <div class="pibes">
             <div class="pibes-pibe pibes-pibe-mora">
-                <img src="/static/src/mora.jpg" alt="" class="pibes-pibe-img">
+                <img src="{{ url_for('static',filename='/src/Lussary/mora.jpg') }}" alt="" class="pibes-pibe-img">
                 <p class="pibes-pibe-nombre">Joaquín Morais</p>
                 <p class="pibes-pibe-texto">Programador</p>
             </div>
             <div class="pibes-pibe pibes-pibe-fini">
-                <img src="/static/src/fini.jpg" alt="" class="pibes-pibe-img">
+                <img src="{{ url_for('static',filename='/src/Lussary/fini.jpg') }}" alt="" class="pibes-pibe-img">
                 <p class="pibes-pibe-nombre">Marco Fini Minué</p>
                 <p class="pibes-pibe-texto">Programador</p>
             </div>
             <div class="pibes-pibe pibes-pibe-salo">
-                <img src="/static/src/salo.jpg" alt="" class="pibes-pibe-img">
+                <img src="{{ url_for('static',filename='/src/Lussary/salo.jpg') }}" alt="" class="pibes-pibe-img">
                 <p class="pibes-pibe-nombre">Agustín Salonia</p>
                 <p class="pibes-pibe-texto">Programador</p>
             </div>
             <div class="pibes-pibe pibes-pibe-alejo">
-                <img src="/static/src/alejo.jpg" alt="" class="pibes-pibe-img">
+                <img src="{{ url_for('static',filename='/src/Lussary/alejo.jpg') }}" alt="" class="pibes-pibe-img">
                 <p class="pibes-pibe-nombre">Alejo Diaz Broilo</p>
                 <p class="pibes-pibe-texto">Programador</p>
             </div>
             <div class="pibes-pibe pibes-pibe-facha">
-                <img src="/static/src/facha.jpg" alt="" class="pibes-pibe-img">
+                <img src="{{ url_for('static',filename='/src/Lussary/facha.jpg') }}" alt="" class="pibes-pibe-img">
                 <p class="pibes-pibe-nombre">Máximo Blázquez</p>
                 <p class="pibes-pibe-texto">Programador</p>
             </div>
@@ -129,10 +130,10 @@
             <div class="contactanos-botones">
                 <hr class="contactanos-botones-hr1">
                 <div class="contactanos-botones-div">
-                    <a href="" class="contactanos-botones-boton instagram"><img src="/static/src/ig-blanco.png" alt="" class="contactanos-boton-img"></a>
-                <a href="" class="contactanos-botones-boton whatsapp"><img src="/static/src/wsp-blanco.png" alt="" class="contactanos-boton-img "></a>
-                <a href="" class="contactanos-botones-boton twitter"><img src="/static/src/tw-blanco.png" alt="" class="contactanos-boton-img "></a>
-                <a href="" class="contactanos-botones-boton tikTok"><img src="/static/src/tt.png" alt="" class="contactanos-boton-img "></a>
+                    <a href="" class="contactanos-botones-boton instagram"><img src="{{ url_for('static',filename='/src/Lussary/ig-blanco.png') }}" alt="" class="contactanos-boton-img"></a>
+                <a href="" class="contactanos-botones-boton whatsapp"><img src="{{ url_for('static',filename='/src/Lussary/wsp-blanco.png') }}" alt="" class="contactanos-boton-img "></a>
+                <a href="" class="contactanos-botones-boton twitter"><img src="{{ url_for('static',filename='/src/Lussary/tw-blanco.png') }}" alt="" class="contactanos-boton-img "></a>
+                <a href="" class="contactanos-botones-boton tikTok"><img src="{{ url_for('static',filename='/src/Lussary/tt.png') }}" alt="" class="contactanos-boton-img "></a>
                 </div>
                 
                 <hr class="contactanos-botones-hr2">
@@ -141,7 +142,7 @@
 
         <div class="footerFondo">
             <div class="footerFondo-imagen-div">
-                <img src="/static/src/LussaryConLogoBlanco.png" alt="" class="footerFondo-imagen">
+                <img src="{{ url_for('static',filename='/src/Lussary/LussaryConLogoBlanco.png') }}" alt="" class="footerFondo-imagen">
             </div>
 
             <div class="footerFondo-copyright-div">
