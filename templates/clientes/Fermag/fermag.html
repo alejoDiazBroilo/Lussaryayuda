@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/fermag.css') }}">
+    {% endblock %}
+    
+    {% block title %}
+    Fermag S.A.
+    {% endblock %}
+
+<body>
+    {% block content %}
+
+    <script src="/static/js/clientes/Fermag/fermag.js"></script>
+
+    <div class="inicio">
+        <img src="{{ url_for('static',filename='src/clientes/Fermag/fondo1.png') }}" alt="Fondo1">
+        <div class="inicio-adelante">
+            <h1>FERMAG S.A.</h1>
+            <p>GESTION ENERGETICA & RENOVABLES</p>
+        </div>
+    </div>
+
+    {% endblock %}
+</body>
