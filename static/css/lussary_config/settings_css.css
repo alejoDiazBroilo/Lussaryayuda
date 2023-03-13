@@ -4,6 +4,33 @@ body{
     background-color: white;
 }
 
+/* MENU 
+.menu{
+    background-color: rgb(0, 0, 0);
+}
+
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li{
+    display: inline-block;
+}
+
+.menu ul li a{
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.menu ul li a:hover{
+    background-color: red;
+}
+*/
+
 /* PRINCIPIO */
 
 .principio{
@@ -11,7 +38,7 @@ body{
 }
 
 .principio-img{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: absolute;
     object-fit: cover;
@@ -51,8 +78,8 @@ body{
 }
 
 .principio-adelante-hr{
-    width: 30%;
-    margin-right: 70px;
+    width: 35%;
+    margin-right: 3.5%;
 }
 
 .principio-adelante-frase{
@@ -101,11 +128,11 @@ body{
 
 .contenido-lados{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .contenido-izquierda{
-    width: 70%;
+    width: 100%;
 }
 
 .contenido-izquierda-titulo{
@@ -138,17 +165,28 @@ body{
 }
 
 .contenido-derecha{
-    width: 30%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: space-between;
+    justify-content: center;
 }
 
+.contenido-derecha-div{
+    width: 350px;
+    background-color: rgba(90, 90, 90, 0.5);
+    border-radius: 16px;
+    margin-bottom: 4px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+
 .contenido-derecha-imagen{
-    width: 100px;
-    height: 100px;
-    margin: 10px 0 10px 0;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px 0 10px;
 }
 
 /* PROYECTOS */
@@ -160,6 +198,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .proyectos-titulo{
@@ -487,16 +526,6 @@ body{
     margin-right: 0px;
 }
 
-
-/*
-.division-contactanosEinstein{
-    width: 100%;
-    height: 7.5px;
-    background-color: rgb(15, 15, 15);
-}
-*/
-
-
 .footerFondo{
     width: 100%;
     display: flex;
@@ -515,7 +544,7 @@ body{
 }
 
 .footerFondo-imagen{
-    width: 12%;
+    width: 160px;
 }
 
 .footerFondo-copyright-div{
@@ -537,6 +566,7 @@ body{
     flex-direction: row;
     align-items: center;
     margin-bottom: 75px;
+    text-align: center;
 }
 
 .footerFondo-links-informacionLegal, .footerFondo-links-politicaPrivacidad{
@@ -555,299 +585,168 @@ body{
     height: 15px;
 }
 
-
-/*
-
-.einstein{
-    width: 100%;
-    display: flex;
-    height: 300px;
-    background-color: black;
-    flex-direction: row;
-}
-
-.einstein-img{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    width: 40%; 
-}
-
-.einstein-texto{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-}
-
-.einstein-frase{
-    color: white;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: bold;
-    width: 70%;
-}
-
-.einstein-autor{
-    color: white;
-    font-size: 15px;
-    font-style: italic;
-    font-weight: bold;
-    width: 70%;
-}
-
-*/
-
 /*RESPONSIVE DEL PRINCIPIO*/
-@media (max-width: 550px){
+@media (max-width: 800px){
 
+    .principio-adelante{
+        background-color: rgba(20, 20, 20, 0.95);
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .principio-adelante-logoUnido{
+        width: 70%;
+        margin-right: 0;
+    }
+    
     .principio-adelante-logoUnido-imagen{
-        width: 300px;
-        height: 300px;
+        margin-right: 0;
     }
     
     .principio-adelante-logoUnido-nombre{
-        font-size: 30px;
-        margin-top: -80px;
+        margin-top: -100px;
     }
     
     .principio-adelante-hr{
-        width: 40%;
-        margin-right: 20px;
+        width: 60%;
+        margin-right: 10%;
+        margin-left: 10%;
     }
     
     .principio-adelante-frase{
-        margin-right: 20px;
-        font-size: 20px;
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
     }
     
     .principio-adelante-autor{
-        margin-right: 20px;
-        font-size: 15px;
-    }
-    
-}
-
-@media (max-width: 360px){
-
-    .principio-adelante-logoUnido-imagen{
-        width: 200px;
-        height: 200px;
-    }
-    
-    .principio-adelante-logoUnido-nombre{
-        font-size: 20px;
-        margin-top: -40px;
-    }
-    
-    .principio-adelante-hr{
-        width: 40%;
-        margin-right: 20px;
-    }
-    
-    .principio-adelante-frase{
-        font-size: 20px;
-    }
-    
-    .principio-adelante-autor{
-        font-size: 15px;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: -10px;
+        margin-bottom: 100px;
+        text-align: center;
     }
     
 }
 
 /*RESPONSIVE DE LA COMPU DE ARRIBA*/
-@media (max-width: 850px){
 
+@media (max-width: 800px){
 
     .contenido{
-        margin: 30px 30px 0px 30px;
+        border: 10px solid black;
+        margin: 50px 20px 0 20px;
+        border-bottom: none;
     }
 
-    .contenido-lados{
-        flex-direction: column;
+}
+
+@media (max-width: 600px){
+    
+    .contenido-derecha-div{
+        width: 250px;
+        border-radius: 8px;
+    }
+    
+    
+    .contenido-derecha-imagen{
+        width: 40px;
+        height: 40px;
+        margin: 0 5px 0 5px;
+    }
+
+}
+
+@media (max-width: 470px){
+
+    .contenido{
+        border: 8px solid black;
+        margin: 50px 12px 0 12px;
     }
 
     .contenido-izquierda{
         width: 100%;
-    }
 
-    .contenido-derecha{
-        width: 100%;
-        flex-direction: row;
-    }
-    
-    .contenido-derecha-imagen{
-        margin: 20px 10px 0 10px;
-    }
-
-    .contenido-izquierda-parrafo{
-        line-height: 22px;
-        margin-right: 22px;
-    }
-}
-
-@media (max-width: 675px){
-
-    .contenido{
-        margin: 30px 20px 0px 20px;
-    }
-
-    .contenido-derecha-imagen{
-        width: 50px;
-        height: 50px;
-        margin: 20px 5px 0 5px;
-    }
-}
-
-@media (max-width: 460px){
-    
-    .contenido{
-        margin: 20px 10px 0px 10px;
     }
 
     .contenido-izquierda-titulo-decoracion{
-        width: 75px;
-        height: 75px;
+        width: 125px;
+        height: 125px;
     
     }
     
     .contenido-izquierda-titulo-titulo{
-        font-size: 30px;
-        margin-left: -40px;
+        font-size: 35px;
+        margin-left: -65px;
     }
     
     .contenido-izquierda-parrafo{
-        font-size: 15px;
-        letter-spacing: 0.3px;
-        line-height: 20px;
-    }
-}
-
-@media (max-width: 420px){
-    
-    .contenido{
-        margin: 18px 8px 0 8px;
-        border: 8px solid black;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: -10px;
     }
 
-    .contenido-derecha-imagen{
-        width: 25px;
-        height: 25px;
-        margin: 20px 2px 0 2px;
-    }
-}
-
-@media (max-width: 340px){
-    
-    .contenido{
-        margin: 15px 5px 0 5px;
-        border: 6px solid black;
-    }
-
-    .contenido-izquierda-titulo-decoracion{
-        width: 50px;
-        height: 50px;
-    
-    }
-    
-    .contenido-izquierda-titulo-titulo{
-        font-size: 20px;
-        margin-left: -25px;
-    }
-    
-    .contenido-izquierda-parrafo{
-        font-size: 12px;
-        letter-spacing: 0.1px;
-        line-height: 15px;
-    }
 }
 
 /*RESPONSIVE DE LOS PROYECTOS*/
-@media (max-width: 700px){
+
+@media (max-width: 680px){
+    
+    .proyectos-titulo{
+        font-size: 70px;
+    }    
     
     .proyectos-imagenes{
         width: 400px;
         height: 350px;
     }
-    
+
     .proyectos-imagenes img:hover{
-        width: 175px;
+        width: 250px;
     }
 
 }
 
-@media (max-width: 600px){
+@media (max-width: 415px){
     
     .proyectos-titulo{
-        font-size: 50px;
-        text-align: center;
-    }
+        font-size: 55px;
+    }    
     
-    .proyectos-frase{
-        font-size: 15px;
-    }
-    
-    .proyectos-subtitulo{
-        font-size: 15px;
-    }
-
-}
-
-@media (max-width: 600px){
- 
     .proyectos-imagenes{
-        width: 350px;
-        height: 325px;
+        width: 300px;
+        height: 350px;
     }
-    
+
     .proyectos-imagenes img:hover{
-        width: 100px;
+        width: 180px;
     }
 
 }
 
-@media (max-width: 350px){
+@media (max-width: 330px){
+    
+    .proyectos-titulo{
+        font-size: 45px;
+    }    
     
     .proyectos-imagenes{
         width: 250px;
-        height: 300px;
-    }
-    
-    .proyectos-imagenes img:hover{
-        width: 75px;
+        height: 350px;
     }
 
-    .proyectos-titulo{
-        font-size: 35px;
-    }
-    
-    .proyectos-frase{
-        font-size: 12px;
-    }
-    
-    .proyectos-subtitulo{
-        font-size: 12px;
+    .proyectos-imagenes img:hover{
+        width: 180px;
     }
 
 }
 
-@media (max-width: 280px){
-
-    .proyectos-imagenes{
-        width: 200px;
-        height: 250px;
-    }
-    
-    .proyectos-imagenes img:hover{
-        width: 50px;
-    }
-
-}
 
 /*RESPONSIVE DE LOS ESTILOS*/
-@media (max-width: 690px){
+@media (max-width: 800px){
 
     .estilo{
         flex-direction: column;
@@ -876,7 +775,7 @@ body{
 
 }
 
-/*RESPONSI' E' LO' PIBE'*/
+/*RESPONSI' E' LO' PIBE'
 @media (max-width: 280px){
 
     .pibes-titulo{
@@ -886,113 +785,11 @@ body{
 }
 
 /*RESPONSIVE DE CONTACTANOS*/
-@media (max-width: 530px){
-    .contactanos-botones-boton{
-        width: 40px;
-        height: 40px;
-        border: 1.5px solid white;
-
-    }
-}
 
 @media (max-width: 400px){
 
     .contactanos-titulo{
-        font-size: 40px;
-    }
-
-    .contactanos-botones-boton{
-        width: 30px;
-        height: 30px;
-        border: 1.5px solid white;
-
-    }
-
-}
-
-@media (max-width: 300px){
-
-    .contactanos-titulo{
-        font-size: 30px;
-    }
-
-    .contactanos-botones-boton{
-        width: 20px;
-        height: 20px;
-        border: 1.5px solid white;
-
-    }
-}
-
-/*RESPONSIVE DE EINSTEIN*/
-@media (max-width: 790px){
-
-    .einstein{
-        height: 250px;
-    }
-    
-    .einstein-img{
-        width: 250px;
-        height: 250px;
-        width: 40%; 
-    }
-
-}
-
-@media (max-width: 650px){
-
-    .einstein{
-        height: 200px;
-    }
-    
-    .einstein-img{
-        width: 200px;
-        height: 200px;
-        width: 40%; 
-    }
-
-}
-
-@media (max-width: 530px){
-
-    .einstein{
-        height: 150px;
-    }
-    
-    .einstein-img{
-        width: 150px;
-        height: 150px;
-        width: 40%; 
-    }
-    
-    .einstein-frase{
-        font-size: 15px;
-    }
-    
-    .einstein-autor{
-        font-size: 12px;
-    }
-
-}
-
-@media (max-width: 400px){
-
-    .einstein{
-        height: 100px;
-    }
-    
-    .einstein-img{
-        width: 100px;
-        height: 100px;
-        width: 40%; 
-    }
-
-    .einstein-frase{
-        font-size: 12px;
-    }
-    
-    .einstein-autor{
-        font-size: 10px;
+        font-size: 38px;
     }
 
 }

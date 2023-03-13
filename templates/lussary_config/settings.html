@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% endblock %}
     
     {% block title %}
@@ -15,6 +16,17 @@
 
 <body>
     {% block content %}
+
+    <!--
+    <div class="menu">
+        <ul>
+            <li><a href="">Sobre nosotros</a></li>
+            <li><a href="">Galeria</a></li>
+            <li><a href="">Programadores</a></li>
+            <li><a href="">Contactanos</a></li>
+        </ul>
+    </div>
+    -->
 
     <div class="principio">
         <img class="principio-img" src="{{ url_for('static',filename='src/Lussary/image77.png') }}" alt="">
@@ -51,11 +63,13 @@
             </div>
 
             <div class="contenido-derecha">
-                <img src="{{ url_for('static',filename='/src/Lussary/python.png') }}" alt="Python" class="contenido-derecha-imagen">
-                <img src="{{ url_for('static',filename='/src/Lussary/mysql.png') }}" alt="MySql" class="contenido-derecha-imagen">
-                <img src="{{ url_for('static',filename='/src/Lussary/flask.png') }}" alt="Flask" class="contenido-derecha-imagen">
-                <img src="{{ url_for('static',filename='/src/Lussary/git.png') }}" alt="Git" class="contenido-derecha-imagen">
-                <img src="{{ url_for('static',filename='/src/Lussary/js.png') }}" alt="JS" class="contenido-derecha-imagen">
+                <div class="contenido-derecha-div">
+                    <img src="{{ url_for('static',filename='/src/Lussary/python.png') }}" alt="Python" class="contenido-derecha-imagen">
+                    <img src="{{ url_for('static',filename='/src/Lussary/mysql.png') }}" alt="MySql" class="contenido-derecha-imagen">
+                    <img src="{{ url_for('static',filename='/src/Lussary/flask.png') }}" alt="Flask" class="contenido-derecha-imagen">
+                    <img src="{{ url_for('static',filename='/src/Lussary/git.png') }}" alt="Git" class="contenido-derecha-imagen">
+                    <img src="{{ url_for('static',filename='/src/Lussary/js.png') }}" alt="JS" class="contenido-derecha-imagen">
+                </div>
             </div>
         </div>
     </div>
@@ -75,7 +89,7 @@
         <a href="{{ url_for('Home.getGaleria')}}"><button class="proyectos-boton">Galeria</button></a>
     </div>
 
-    <!-- 
+    
     <div class="estilo">
         <div class="estilo-izquierda">
             <div class="estilo-izquierda-texto-div"><p class="estilo-izquierda-texto">Estilo simple, bonito <br> y agradable a la vista.</p></div>
@@ -89,15 +103,7 @@
             
         </div>
     </div>
-    -->
-    <div class="estilo-main">
-        <div class="estilo-menu">
-            <h1>hola</h1>
-        </div>
-        <div class="estilo-menu">
-            <h1>chau</h1>
-        </div>
-    </div>
+    
     <p class="fechaBinaria">10001-1-11111100111</p>
 
     <div class="pibess">

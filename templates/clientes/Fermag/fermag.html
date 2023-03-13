@@ -14,10 +14,27 @@
     <script src="/static/js/clientes/Fermag/fermag.js"></script>
 
     <div class="inicio">
-        <img src="{{ url_for('static',filename='src/clientes/Fermag/fondo1.png') }}" alt="Fondo1">
+        <img src="/static/src/clientes/Fermag/fondo1.png" alt="">
+        <!--<img src="{{ url_for('static',filename='src/clientes/Fermag/fondo1.png') }}" alt="Fondo1">-->
         <div class="inicio-adelante">
-            <h1>FERMAG S.A.</h1>
-            <p>GESTION ENERGETICA & RENOVABLES</p>
+            <button class="inicio-adelante-boton atras"> < </button>
+            <div class="inicio-adelante-texto">
+                <h1>FERMAG S.A.</h1>
+                <p>DOMOTICA, ENERGIAS RENOVABLES Y UPS</p>
+            </div>
+            <button class="inicio-adelante-boton adelante"> > </button>
+            
+        </div>
+    </div>
+
+    <!-- CAMBIAR EL VIDEO E IMAGEN SEGUN LO QUE ELLOS PIDAN EN SU MOMENTO -->
+    <div class="bloques">
+        <div class="bloque1">
+            <video src="/static/src/clientes/Fermag/perrito.mp4" autoplay="true" muted="true" loop="true" poster="https://carontestudio.com/img/contacto.jpg"></video>
+        </div>
+
+        <div class="bloque2">
+            <img src="/static/src/clientes/Fermag/fondo4.jpg" alt="">
         </div>
     </div>
 
