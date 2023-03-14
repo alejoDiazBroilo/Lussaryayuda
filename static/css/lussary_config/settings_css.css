@@ -39,9 +39,9 @@ body{
 
 .principio-img{
     height: 100%;
-    width: 100%;
+    width: 40%;
     position: absolute;
-    object-fit: cover;
+    background-size: contain;
 }
 
 .principio-adelante{
