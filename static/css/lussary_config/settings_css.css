@@ -501,10 +501,10 @@ body{
     height: 50px;
     border: none;
     border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 5px 0 5px;
+    background-color: transparent;
+    object-fit: cover;
+    cursor: grab;
 }
 
 .contactanos-boton-img{
