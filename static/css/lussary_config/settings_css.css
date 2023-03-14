@@ -108,7 +108,7 @@ body{
     border: 12px solid black;
     background-color: rgb(240, 240, 240);
     margin: 50px 50px 0px 50px;
-    border-radius: 8px;
+    border-radius: 16px;
     border-bottom: none;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -117,13 +117,13 @@ body{
 }
 
 .contenido-camara{
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     background-color: black;
-    border-radius: 100%;
+    border-radius: 64px;
     display: flex;
     margin-top: 5px;
-    margin: 5px 50% 0 50%;
+    margin: 5px auto;
 }
 
 .contenido-lados{
@@ -639,7 +639,17 @@ body{
     .contenido{
         border: 10px solid black;
         margin: 50px 20px 0 20px;
+        border-radius: 64px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
         border-bottom: none;
+    }
+    
+    .contenido-camara{
+        width: 100px;
+        height: 30px;
+        border-radius: 64px;
+        margin: 5px auto;
     }
 
 }
@@ -775,15 +785,6 @@ body{
 
 }
 
-/*RESPONSI' E' LO' PIBE'
-@media (max-width: 280px){
-
-    .pibes-titulo{
-        font-size: 40px;
-    }
-
-}
-
 /*RESPONSIVE DE CONTACTANOS*/
 
 @media (max-width: 400px){
@@ -794,7 +795,84 @@ body{
 
 }
 
+/* 400px */
+@media (max-width: 400px){
 
+    .principio-adelante-logoUnido{
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .principio-adelante-logoUnido-imagen{
+        width: 100%;
+        object-fit: cover;
+        margin-right: 0px;
+    }
+
+}
+
+/* 350px */
+@media (max-width: 350px){
+
+    .estilo-izquierda-imagen{
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+      }
+
+      .estilo-derecha-imagen{
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+      }
+
+      .contenido-derecha-div{
+        width: 200px;
+        background-color: rgba(90, 90, 90, 0.5);
+        border-radius: 8px;
+        margin-bottom: 4px;
+        padding: 2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    
+    .contenido-derecha-imagen{
+        width: 30px;
+        height: 30px;
+        margin: 0 5px 0 5px;
+    }
+
+}
+
+/* 275px */
+@media (max-width: 275px){
+    
+    .contenido-izquierda-titulo-decoracion{
+        width: 125px;
+        height: 125px;
+    
+    }
+    
+    .contenido-izquierda-titulo-titulo{
+        font-size: 25px;
+        margin-left: -70px;
+    }
+
+    .contactanos-titulo{
+        font-size: 30px;
+    }
+
+    .proyectos-titulo{
+        font-size: 40px;
+    }
+
+    .pibes-titulo{
+        font-size: 40px;
+    }
+
+}
 
 
 
