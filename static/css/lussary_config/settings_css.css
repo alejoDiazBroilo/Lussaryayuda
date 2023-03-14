@@ -652,6 +652,10 @@ body{
         margin: 5px auto;
     }
 
+    .principio-img{
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 600px){
