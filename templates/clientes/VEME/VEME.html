@@ -7,7 +7,6 @@
     <title>VEME | Indumentaria Femenina</title>
 
     <!-- CUSTOM CSS -->
-    
     <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/VEME/VEME_css.css') }}">
 {% endblock %}
 
@@ -61,15 +60,14 @@
                     {% for prenda in prendas %}
                         <div class="galeria-menu">
                             <div class="galeria-menu-titulo">
-                                <h1>REMERAS</h1>
+                                <h1>{{ prenda.title() }}</h1>
                             </div>
                             <div class="galeria-menu-imagen">
                                 <div id="slider">
                                     <figure>
-                                        {% for i in range(4) %}
+                                        {% for i in range(5) %}
                                             <img src="{{ url_for('static',filename='src/clientes/VEME/')}}{{prenda}}{{i+1}}{{'.png'}}" alt="{{ url_for('static',filename='src/clientes/VEME/')}}{{prenda}}{{i+1}}{{'.png'}}">
                                         {% endfor %}
-                                        <img src="{{ url_for('static',filename='src/clientes/VEME/')}}{{prenda}}{{1}}{{'.png'}}">
                                     </figure>
                                 </div>
                             </div>
