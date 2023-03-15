@@ -52,6 +52,7 @@ a{
     transition-property: all;
     transition-timing-function: cubic-bezier(.4,0,.2,1);    
     text-decoration: none;
+    margin-bottom: 100px;
 }
 
 a:hover{
