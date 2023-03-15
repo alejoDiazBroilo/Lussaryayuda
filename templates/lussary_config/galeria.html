@@ -14,32 +14,13 @@
 <body>
     {% block content %}
 
-    <h1 class="galeria-titulo">GALERIA DE PROYECTOS</h1>
+    <div class="div-aclaracion">
+        <h1 class="galeria-titulo">GALERIA DE PROYECTOS</h1>
+        <img class="imagen-lussary" src="{{ url_for('static',filename='src/Lussary/LogoBlackSinLetras.png') }}" alt="">
+        <h1 style="font-style: italic;">"Estamos trabajando en la galería más fachera jamás vista..."</h1>
+        <h4>-  Team Lussary</h4>
 
-    <hr class="galeria-hr">
-
-    <!--
-    <div class="galeria-imagenes">
-        <div class="galeria-imagenes-div">
-            <img class="galeria-imagenes-imagen" src="/static/src/fernanfloo.jpeg" alt="">
-            <div class="galeria-imagenes-panel">
-                <img src="" alt="" class="galeria-imagenes-panel-imagen">
-                <p class="galeria-imagenes-panel-texto">VEME</p>
-            </div>
-        </div>
-
-        <div class="galeria-imagenes-div">
-            <img class="galeria-imagenes-imagen" src="" alt="">
-            <div class="galeria-imagenes-panel">
-                <img src="" alt="" class="galeria-imagenes-panel-imagen">
-            <p class="galeria-imagenes-panel-texto">Fermag</p>
-            </div>
-            
-        </div>
+        <a href="{{ url_for('Home.getHomePrincipalPageLussary')}}">VOLVER</a>
     </div>
-    -->
-
-    <h1 class="a">PROXIMAMENTE...</h1>
-
     {% endblock %}
 </body>
