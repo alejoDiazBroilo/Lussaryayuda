@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template,redirect,url_for
+from flask import Blueprint,render_template,redirect,url_for,jsonify
 from utils.db import db
 
 Home = Blueprint("Home",__name__)
@@ -17,9 +17,9 @@ def getGaleria():
     return render_template("lussary_config/galeria.html")
 
 
-@Home.route("/example")
+@Home.route("")
 def getExample():
-    return render_template("a/e/example.html")
+    return jsonify({'message':'hello'})
 
 
 """
