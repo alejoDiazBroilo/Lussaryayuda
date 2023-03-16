@@ -209,11 +209,11 @@ body{
     margin-bottom: 10px;
     font-weight: 600;
     letter-spacing: -0.015em;
-    background-image: linear-gradient(
-        180deg,
-        rgb(0, 204, 255),
-        rgb(0, 0, 226)
-    );
+    background-image: linear-gradient(to bottom, #3C65E6 56%, #0006AB 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     background-clip: text;
     -webkit-background-clip: text;
 }
