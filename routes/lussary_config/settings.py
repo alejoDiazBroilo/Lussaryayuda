@@ -17,7 +17,7 @@ def getGaleria():
     return render_template("lussary_config/galeria.html")
 
 
-@Home.route("")
+@Home.route("/api")
 def getExample():
     return jsonify({'message':'hello'})
 
