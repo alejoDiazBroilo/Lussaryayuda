@@ -1,5 +1,24 @@
-var imagenes = ['/static/src/clientes/Fermag/fondo1.png', '/static/src/clientes/Fermag/fondo2.jpeg', '/static/src/clientes/Fermag/fondo3.jpeg'],
-    cont = 0;
+var cantidadDeImagenes = 3;
+var imagenes = [];
+var cont = 0
+
+for (var i = 1; i <= cantidadDeImagenes; i++) {
+    imagenes.push('/static/src/clientes/Fermag/fondo'+i+'.png');
+}
+
+setInterval(function(){
+    let img = inicio.querySelector('img');
+
+    if(cont < imagenes.length - 1){
+        img.src = imagenes[cont + 1];
+        cont++;
+    } else {
+        img.src = imagenes[0];
+        cont = 0;
+    }
+    console.log('aaa')
+}, 10000);
+
 
 function carrousel(inicio){
     inicio.addEventListener('click', e => {

@@ -15,6 +15,7 @@ body{
     height: 110%;
     position: absolute;
     object-fit: cover;  
+    animation: 2s slidy infinite alternate;
 }
 
 .inicio-adelante{
@@ -48,7 +49,7 @@ body{
     margin-top: 0px;
 }
 
-.inicio-adelante-boton{
+.inicio-adelante button{
     width: 50px;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -61,7 +62,7 @@ body{
     margin-top: -10vh;
 }
 
-.inicio-adelante-boton:hover{
+.inicio-adelante button:hover{
     background-color: rgba(255, 255, 255, 0.8   );
 }
 
