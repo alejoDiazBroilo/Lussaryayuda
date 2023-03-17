@@ -8,13 +8,9 @@ body{
 .inicio{
     width: 100%;
     height: 110vh;
-}
-
-.inicio img{
-    width: 100%;
-    height: 110%;
-    position: absolute;
-    object-fit: cover;  
+    background-image: url(/static/src/clientes/Fermag/fondo1.png);
+    background-repeat: no-repeat;
+    background-size: cover;  
     animation: 2s slidy infinite alternate;
 }
 
