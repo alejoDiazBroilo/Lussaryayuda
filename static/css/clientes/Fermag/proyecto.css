@@ -1,0 +1,11 @@
+.title-div{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title-div h1{
+    color: aliceblue;
+    border: 2px solid black;
+}
+

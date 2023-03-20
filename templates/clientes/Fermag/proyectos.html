@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/proyecto.css') }}">
+    {% endblock %}
+    
+    {% block title %}
+    Fermag S.A.
+    {% endblock %}
+
+<body>
+    {% block content %}
+
+    <script src="/static/js/clientes/Fermag/fermag.js"></script>
+
+    <div class="main-div">
+        <div class="title-div">
+            <h1>PROYECTOS</h1>
+        </div>
+    </div>
+    {% endblock %}
+</body>
