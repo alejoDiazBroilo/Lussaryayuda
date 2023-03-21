@@ -2,6 +2,9 @@
 
     {% block head %}
     <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/proyecto.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% endblock %}
     
     {% block title %}
@@ -11,12 +14,39 @@
 <body>
     {% block content %}
 
-    <script src="/static/js/clientes/Fermag/fermag.js"></script>
+    <div id="parallax-world-of-ugg">
+  
+        <section>
+          <div class="title">
+            <h1>NUESTROS PROYECTOS</h1>
+            <h4>Compartimos nuestros grandes proyectos</h4>
+          </div>
+        </section>
+        
+        <section>
+            <div class="parallax-one">
+              <h2>PITO</h2>
+            </div>
+        </section>
 
-    <div class="main-div">
-        <div class="title-div">
-            <h1>PROYECTOS</h1>
+        
+        <section>
+          <div class="parallax-two">
+            <h2>PENE</h2>
+          </div>
+        </section>
+        
+        <section>
+
+        </section>
+        
+        <section>
+          <div class="parallax-three">
+            <h2>BANANA</h2>
+          </div>
+        </section>
+        
+          
         </div>
-    </div>
     {% endblock %}
 </body>
