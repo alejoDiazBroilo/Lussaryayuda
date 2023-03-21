@@ -1,3 +1,4 @@
+/*
 var cantidadDeImagenes = 3;
 var imagenes = [];
 var cont = 0
@@ -52,3 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     carrousel(inicio);
 });
+*/
+
+window.addEventListener("scroll", function() {
+    var nav = document.querySelector("nav");
+    nav.classList.toggle("scroll", window.scrollY > 0);
+  });
