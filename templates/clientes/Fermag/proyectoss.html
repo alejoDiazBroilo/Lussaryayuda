@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/proyectoss.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+    
+    {% block title %}
+    Fermag S.A.
+    {% endblock %}
+
+    {% block content %}
+
+    {% for descripcion in descripciones %}
+    <div class="main">
+        <div>
+            <h1>{{descripcion.nombre}}</h1>
+        </div>
+    </div>
+    {% endfor %}
+    {% endblock %}

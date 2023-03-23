@@ -23,11 +23,13 @@
         </section>
         {% for nombre in nombres %}
         <section style="background-image: url({{nombre.descripcion}})" class="parallax">
-            <div >
+            <div>
               <h2>{{ nombre.nombre }}</h2>
-              <button >{{nombre.boton}}</button>
+              <h4 id="localidad">{{ nombre.img }}</h4>
+              <button >{{ nombre.boton }}</button>
             </div>
         </section>        
         {% endfor %}  
+        <p>Made by: Team Lussary</p>
         </div>
     {% endblock %}
