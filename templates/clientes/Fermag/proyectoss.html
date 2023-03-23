@@ -15,8 +15,11 @@
 
     {% for descripcion in descripciones %}
     <div class="main">
-        <div>
+        <div class="title">
             <h1>{{descripcion.nombre}}</h1>
+        </div>
+        <div class="breve-descripcion">
+            <h2>{{descripcion.descripcion1}}</h2>
         </div>
     </div>
     {% endfor %}

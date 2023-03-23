@@ -4,3 +4,9 @@
     align-items: center;
 }
 
+.title{
+    font-size: 45px;
+    font-family: 'Saira', sans-serif;
+    letter-spacing: 5px;
+    padding: 60px;
+}

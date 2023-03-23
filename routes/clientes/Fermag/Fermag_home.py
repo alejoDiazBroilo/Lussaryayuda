@@ -21,10 +21,11 @@ class Proyectos:
         return f'{self.nombre}: {self.img} correspondiente al boton: {self.boton} en: {self.descripcion}'
 
 class Descripcion:
-    def __init__(self, nombre, descripcion1, descripcion2):
+    def __init__(self, nombre, descripcion1, descripcion2, fondo):
         self.nombre = nombre
         self.descripcion1 = descripcion1
         self.descripcion2 = descripcion2
+        self.fondo = fondo
 
     def __str__(self):
         return f'{self.nombre}: {self.descripcion1} : {self.descripcion2}'
@@ -44,7 +45,7 @@ def getProjectPageFermag():
 @Fermag_home.route("/clientes/Fermag/proyectos/x")
 def getProjectDates():
     descripciones = [
-        Descripcion('Aca iria el nombre','bbb','ccc')
+        Descripcion('Aca iria el nombre','Aca va una descripcion breve','ccc', 'https://www.yachtandboat.com/wp-content/uploads/2018/12/hero-image-2.jpg')
     ]
 
     return render_template("clientes/Fermag/proyectoss.html", descripciones=descripciones)
