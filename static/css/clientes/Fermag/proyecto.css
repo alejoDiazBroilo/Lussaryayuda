@@ -34,6 +34,11 @@
 
 }
 
+.parallax{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 
 #parallax-world-of-ugg h2 {font-family:'Oswald', sans-serif; font-size:70px; letter-spacing:10px; text-align:center; color:white; font-weight:400; text-transform:uppercase; z-index:10; opacity:.9;}
@@ -46,9 +51,37 @@
 
 /* Section - Parallax */
 /**************************/
-#parallax-world-of-ugg .parallax-one {padding-top: 50vh; padding-bottom: 50vh; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1415018255745-0ec3f7aee47b?dpr=1&auto=format&fit=crop&w=1500&h=938&q=80&cs=tinysrgb&crop=); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
-#parallax-world-of-ugg .parallax-two {padding-top: 50vh; padding-bottom: 50vh; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1432163230927-a32e4fd5a326?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
-#parallax-world-of-ugg .parallax-three {padding-top: 50vh; padding-bottom: 50vh; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?dpr=1&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax {
+    padding-top: 50vh;
+    padding-bottom: 50vh; 
+    overflow: hidden; 
+    position: relative; 
+    width: 100%; 
+    background-attachment: fixed; 
+    background-size: cover; 
+    -moz-background-size: cover; 
+    -webkit-background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+button{
+    color: white;
+    border: 2px solid white;
+    border-radius: 0px;
+    background-color: transparent;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button:hover{
+    color: #000;
+    background: white;
+    mix-blend-mode: screen;
+
+
+}
 
 /* Extras */
 
