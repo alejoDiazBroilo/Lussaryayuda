@@ -132,7 +132,6 @@ p{
         margin-bottom: 850px;
 
     }
-  
 }
 @media screen and (max-width: 767px) {
   #parallax-world-of-ugg .block {padding: 30px; width:420px;}
@@ -161,16 +160,39 @@ p{
         height: 700px;
     }
     #parallax-world-of-ugg h2 {font-size:50px; letter-spacing:14px; font-weight:400;  margin-top: 250px}
+    #parallax-world-of-ugg h4 {font-size: 30px; letter-spacing:10px; font-weight:400;}
+
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 370px){
+    .title h1{
+        margin-top: 200px;
+        font-size: 30px;
+        letter-spacing: 10px;
+
+    }
+    .title h4{
+        display: none;
+    }
+
+    .parallax-three, .parallax-two, .parallax-one{
+        height: 10px;
+    }
+
+
+    #parallax-world-of-ugg h2 {font-size: 25px; letter-spacing:10px; font-weight:400; margin-top: 300px}
+    #parallax-world-of-ugg h4 {font-size: 20px; letter-spacing:0px; font-weight:400;}
+
 
   
 }
 
-
-@media screen and (min-width: 320px) and (max-width: 380px){
+@media screen and (min-width: 371px) and (max-width: 440px){
     .title h1{
         margin-top: 200px;
         font-size: 35px;
-        letter-spacing: 15px;
 
     }
     .title h4{
@@ -181,29 +203,9 @@ p{
         height: 10px;
     }
 
-    #parallax-world-of-ugg h2 {font-size: 50px; letter-spacing:14px; font-weight:400; margin-top: 300px}
-
+    #parallax-world-of-ugg h2 {font-size: 30px; letter-spacing:14px; font-weight:400; margin-top: 300px}
     
-  
-}
+    #parallax-world-of-ugg h4 {font-size: 20px; letter-spacing:10px; font-weight:400;}
 
-@media screen and (min-width: 381px) and (max-width: 440px){
-    .title h1{
-        margin-top: 200px;
-        font-size: 40px;
-
-    }
-    .title h4{
-        display: none;
-    }
-
-    .parallax-three, .parallax-two, .parallax-one{
-        height: 10px;
-    }
-
-    #parallax-world-of-ugg h2 {font-size: 50px; letter-spacing:14px; font-weight:400; margin-top: 300px}
-    
-
-  
 }
 
