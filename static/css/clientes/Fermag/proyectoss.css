@@ -10,8 +10,12 @@ body{
     align-items: center;
 }
 
+.title{
+    margin-top: 200px;
+}
+
 .title h1{
-    background: url(https://www.yachtandboat.com/wp-content/uploads/2018/12/hero-image-2.jpg)   -20px -20px no-repeat;
+    background: url(https://polopositivo.com.ar/wp-content/uploads/2020/03/hiper-libertad-1-1024x493.jpg)   -20px -20px no-repeat;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     font-size: 150px;
@@ -39,38 +43,39 @@ body{
 
 .proyecto-title {
     overflow: auto;
-    width: 50%;
-    color: rgba(26, 26, 26, 0.2);
+    width: 46%;
+    color: red;
 }
 
 .proyecto-title h1{
     font-size: 50px;
     flex-basis: 100%;
     text-align: left;
-    margin-left: 40px;
-    color: #3333;
-
+    margin-left: 60px;
+    color: rgb(20, 20, 20);
 }
 
 .proyecto-title p{
+    color: rgb(43, 43, 43);
+    font-size: 25px;
     flex-basis: 100%;
     text-align: left;
-    margin-left: 60px;
+    margin-left: 90px;
     overflow: auto;
     word-wrap: break-word;
     margin-right: 70px;
     margin-top: -30px;
-    color: rgba(26, 26, 26, 0.2);
 
 }
 
 .proyecto-img {
-  width: 50%;
-  background-color: red;
-  color: white;
-  width: 50%;
-  height: 600px;
-  background-size: cover;
+    width: 50%;
+    margin-top: -60px;
+    color: white;
+    width: 50%;
+    height: 600px;
+    background-size: cover;
+    margin-right: 0px;
 }
 
 .proyecto-img h1{
@@ -80,6 +85,7 @@ body{
 
 .infoadicional-container {
     margin-top: 100px;
+    background: rgb(240, 240, 240);
 }
 
 .ubicacion-container{
@@ -89,15 +95,163 @@ body{
 
 
 .infoadicional-container h1{
-    font-size: 45px;
+    font-size: 50px;
 }
 
+
+.infoadicional-container p{
+    margin-top: -20px;
+    font-size: 25px;
+}
+
+
+
+.swiffy-slider{
+    margin-top: 120px;
+}
+
+
+.swiffy-slider h1{
+    margin-bottom: 20px;
+}
+
+.add{
+    visibility: hidden;
+}
+
+
+.carousel__contenedor {
+	position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #fff;
+	opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -30px;
+}
+
+.carousel__siguiente {
+	right: -30px;
+}
+
+.carousel__lista {
+	overflow: hidden;
+}
+
+.carousel__elemento {
+	text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #fff;
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
-  .proyecto-container {
-    flex-direction: column;
-  }
+    .proyecto-container {
+        flex-direction: row;
+        margin-top: 60px;
+    }
   
-  .proyecto-title, .proyecto-img {
-    width: 100%;
-  }
+    .proyecto-title{
+        width: 100%;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .proyecto-title h1{
+        font-size: 50px;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .proyecto-title p{
+        font-size: 26px;
+        text-align: center;
+        margin-top: -20px;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .title h1{
+        font-size: 60px;
+    }
+
+    .proyecto-img{
+        display: none;
+    }
+  
+    .breve-descripcion h2{
+        display: none;
+    }
+    
+    .infoadicional-container p{
+        font-size: 19px;
+    }
+    .add{
+        visibility:visible;
+    }
+    .swiffy-slider{
+        font-size: 10px;
+    }
+    
+}
+
+
+@media (max-width: 341px){
+    .proyecto-title h1{
+        font-size: 45px;
+    }
+
+
+    .proyecto-title p{
+        font-size: 18px;
+        text-align: center;
+        margin-top: -30px;
+    }
+    
+    .proyecto-title{
+        margin-bottom: -50px;
+    }
+
+    .title{
+        font-size: 20px;
+    }
 }
