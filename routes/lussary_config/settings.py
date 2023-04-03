@@ -1,6 +1,7 @@
 from flask import Blueprint,render_template,redirect,url_for,jsonify
 from utils.db import db
 
+from models.tasks import *
 Home = Blueprint("Home",__name__)
 
 
@@ -21,7 +22,18 @@ def getGaleria():
 def getExample():
     return jsonify({'message':'hello'})
 
+@Home.route("/db/añadir")
+def añadir():
+    newInstance = Persona('firstPerson','apellido', 'cosa que hice')
+    db.session.add(newInstance)
+    db.session.commit()
+    return redirect(url_for('Home.getHome'))
 
+@Home.route("/db/traer")
+def traer():
+    database = Persona.query.all()
+    print(database)
+    return redirect(url_for('Home.getHome'))
 """
 
 @Home.route("/")
