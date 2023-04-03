@@ -3,6 +3,7 @@ body{
     margin: 0;
     font-family: 'Poppins',sans-serif;
     background-color: white;
+    
 }
 
 /* MENU 
@@ -38,6 +39,17 @@ body{
     height: 100vh;
 }
 
+
+canvas {
+    background-color: rgb(10, 10, 10); /* Color de fondo azul */
+    display: block;
+    margin: auto;
+    position: absolute;
+    max-width: 100%;
+    height: 100vh;
+}
+
+
 .principio-img{
     height: 100%;
     width: 40%;
@@ -64,6 +76,7 @@ body{
     align-items: center;
     text-align: center;
     margin-right: 30px;
+    
 }
 
 .principio-adelante-logoUnido-imagen{
@@ -643,7 +656,7 @@ body{
     }
     
     .principio-adelante-logoUnido-imagen{
-        margin-right: 0;
+        margin: 0px;
     }
     
     .principio-adelante-logoUnido-nombre{
@@ -837,6 +850,12 @@ body{
 }
 
 @media (max-width: 330px){
+    canvas {
+
+        position: absolute;
+        max-width: 100%;
+        height: 100vh;
+    }
     
     .proyectos-titulo{
         font-size: 45px;
@@ -883,6 +902,14 @@ body{
 /*RESPONSIVE DE LOS ESTILOS*/
 @media (max-width: 800px){
 
+    canvas {
+        background-color: rgb(10, 10, 10); /* Color de fondo azul */
+        display: block;
+        margin: auto;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }    
     .estilo{
         flex-direction: column;
       }
@@ -932,6 +959,7 @@ body{
         width: 100%;
         object-fit: cover;
         margin-right: 0px;
+        margin: 0;
     }
 
 }
