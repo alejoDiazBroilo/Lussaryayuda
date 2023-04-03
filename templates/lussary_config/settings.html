@@ -38,7 +38,62 @@
     -->
 
     <div class="principio">
-        <img class="principio-img" src="{{ url_for('static',filename='src/Lussary/image91.png') }}" alt="">
+        <canvas id="matrix-canvas"></canvas>
+        <script>
+            var windowWidth = window.innerWidth;
+            var fontSize = Math.max(Math.floor(windowWidth / 40), 10); // Mínimo de 10, máximo de 40
+
+            // Obtener el contexto del lienzo del canvas
+            var canvas = document.getElementById("matrix-canvas");
+            var ctx = canvas.getContext("2d");
+    
+            // Configurar el tamaño del lienzo para que ocupe todo el ancho y alto de la ventana
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+    
+            // Configurar la fuente y el tamaño de los caracteres
+            var fontSize = 16;
+            ctx.font = fontSize + "px monospace";
+    
+
+            // Configurar el intervalo de tiempo entre la lluvia de caracteres
+            var interval = 50; // en milisegundos
+    
+            // Definir la función que dibujará los caracteres en el lienzo del canvas
+            function drawMatrix() {
+                // Borrar el contenido anterior del lienzo
+                ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; // Color de fondo transparente
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+                // Definir los caracteres que se mostrarán en la lluvia
+                var characters = "lussaryteamLUSSARYTEAM";
+    
+                // Iterar por cada columna del lienzo
+                for (var x = 0; x < canvas.width; x += fontSize) {
+                    // Escoger un carácter aleatorio para cada columna
+                    var char = characters[Math.floor(Math.random() * characters.length)];
+    
+                    // Escoger un color aleatorio para el carácter
+                    var color = "#fff"; // Por defecto, el color es blanco
+				    var randomValue = Math.random();
+				    if (randomValue < 0.02) { // Hay una probabilidad del 2% de que el color sea amarillo
+				    	color = "#ff0"; // Color amarillo
+				    }
+				    else {
+					    // Si el número aleatorio generado está entre 0.02 y 0.52, el color será azul. Si está entre 0.52 y 1.0, el color será celeste.
+					    color = (randomValue >= 0.02 && randomValue < 0.52) ? "#40CFFF" : "#0099cc";
+				    }
+                    // Dibujar el carácter en la columna correspondiente
+                    ctx.fillStyle = color;
+                    ctx.fillText(char, x, Math.random() * canvas.height);
+                }
+            }
+
+
+            // Ejecutar la función de dibujo en un intervalo de tiempo
+            setInterval(drawMatrix, interval);
+        </script>
+    
         <div class="principio-adelante">
             <div class="principio-adelante-logoUnido">
                 <img class="principio-adelante-logoUnido-imagen" src="{{ url_for('static',filename='src/Lussary/LogoBlackSinLetras.png') }}" alt="Team Lussary">
