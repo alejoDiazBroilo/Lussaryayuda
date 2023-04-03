@@ -1,13 +1,11 @@
 {% extends "base.html" %}
 
     {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/proyectoss.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/servicios.css') }}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
-
     {% endblock %}
     
     {% block title %}
@@ -15,10 +13,22 @@
     {% endblock %}
 
     {% block content %}
-
-    {% for descripcion in descripciones %}
     <div class="main">
-        <div class="title" style="background:url({{descripcion.fondo}}); object-fit: cover; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="title" style="background:url(https://hiperlibertad.vteximg.com.br/arquivos/ids/155421/banners-04.jpg?v=637231814047630000); object-fit: cover; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;">
             <h1></h1>
         </div>
+        <h1 class="txt">Nuestros Servicios</h1>
+        <hr style="width: 20%; border-top: 3px solid rgb(0, 0, 0); margin-top: -30px;">
+        <div class="grid-container">
+            <div class="item">Servicio 1</div>
+            <div class="item">Servicio 2</div>
+            <div class="item">Servicio 3</div>
+            <div class="item">Servicio 4</div>
+            <div class="item">Servicio 5</div>
+            <div class="item">Servicio 6</div>
+          </div>
+          
+        <h1>Tu mama me la mama</h1>
     </div>
+    {% endblock %}
+
