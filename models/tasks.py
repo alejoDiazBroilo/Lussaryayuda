@@ -124,18 +124,20 @@ class Rol(db.Model):
 
 class Proyecto(db.Model):
     __tablename__ = 'Proyecto'
-    fecha_creacion = db.Column(db.Date, default=func.now())
-    titulo = db.Column(db.String(50), default = None) #unique
-    descripcion = db.Column(db.String(250), default = None)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    fecha_creacion = db.Column(db.Date, default=func.now(), nullable=False)
+    titulo = db.Column(db.String(50), nullable=False, unique=True)
+    descripcion = db.Column(db.String(250), nullable=True)
 
-    def __init__(self, titulo, descripcion, fecha_creacion=None):
+    def __init__(self, titulo, descripcion=None, fecha_creacion=None):
         self.titulo = titulo
         self.descripcion = descripcion
         if fecha_creacion is not None:
             self.fecha_creacion = fecha_creacion
     
     def __repr__(self):
-        return f'{self.nombre}\n'
+        return f'{self.titulo}\n'
+
 class Cliente(db.Model):
     __tablename__ = 'Cliente'
     id = db.Column(db.Integer, primary_key=True)
