@@ -1,6 +1,6 @@
 from app import app
 from utils.db import db
-from models.tasks import Task
+from models.tasks import *
 
 from routes.lussary_config.settings import Home
 from routes.clientes.VEME.VEME_home import VEME_home
