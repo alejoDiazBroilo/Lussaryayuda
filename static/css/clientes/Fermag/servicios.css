@@ -46,11 +46,28 @@ body{
 }
 
 .item {
-    background-color: #ccc;
+    background-color: rgb(255, 255, 255);
     text-align: center;
     font-size: 30px;
-    height: 400px;
+    height: 420px;
+    border-radius: 20px;
+    box-shadow: -8px 10px 5px -1px rgba(0,0,0,0.3);
+    -webkit-box-shadow: -8px 10px 5px -1px rgba(0,0,0,0.3);
+    -moz-box-shadow: -8px 10px 5px -1px rgba(0,0,0,0.3);
+    
+    margin: 20px;
+
 }
+
+.item h1{
+    font-size: 35px;
+}
+
+.item-img{
+    border: 2px solid black;
+}
+
+
 
 .txt{
     text-align: center;
@@ -70,5 +87,12 @@ body{
       grid-template-rows: repeat(1, 1fr);
     }
 }
+
+@media only screen and (max-width: 300px) {
+    .item h1{
+        font-size: 20px;
+    }
+}
+  
   
   
