@@ -1,40 +1,22 @@
-{% extends "base.html" %}
-
-    {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static',filename='/css/clientes/Fermag/fermag.css') }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% endblock %}
+{% extends "clientes/Fermag/baseFermag.html" %}
     
-    {% block title %}
-    Fermag S.A.
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/fermag.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <title>Fermag S.A.</title>
+        <link rel="shortcut icon" type="image/jpeg" href="/static/src/clientes/Fermag/logoFermag.jpeg" />
     {% endblock %}
 
-<body>
     {% block content %}
-
-    <script src="/static/js/clientes/Fermag/fermag.js"></script>
-
-
-
-    <nav class="navBar">
-        <img src="{{ url_for('static',filename='src/clientes/Fermag/logoFermag.png') }}" alt="FERMAG S.A.">
-        <ul>
-            <li><a href="">Empresa</a></li>
-            <li><a href="">Proyectos</a></li>
-            <li><a href="">Presentacion</a></li>
-            <li><a href="">Noticias</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Ubicacion</a></li>
-            <li><a href="">Contacto</a></li>
-        </ul>
-    </nav>
-
-
+    <script src="{{url_for('static',filename='js/clientes/Fermag/fermag.js')}}"></script>
 
     <div class="inicio" id="inicio">
         <div class="inicio-adelante">
             <h1>FERMAG S.A.</h1>
             <p>DOMOTICA, ENERGIAS RENOVABLES Y UPS</p>
+            <i class="fa fa-chevron-down" style="color: #ffffff;"></i>
         </div>
     </div>
 
@@ -52,7 +34,9 @@
         <div class="video bloque-main">
             <h1>VIDEO PRESENTACIÓN</h1>
             <hr>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/TYCkWHl_9kQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TYCkWHl_9kQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>    
         </div>
 
         <div class="noticias bloque-main">
@@ -61,9 +45,9 @@
             <div class="noticias-main">
                 <div class="noticias-adelante">
                     <div class="noticias-adelante-texto">
-                        <h2>Generador eolico cancha Estudiantes</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, vitae beatae in officiis eum incidunt doloremque numquam modi officia temporibus ut fuga deleniti quaerat cum hic autem, aspernatur reprehenderit? Accusamus?.</p>
-                        <button><span>Ver mas</span></button>
+                        <h2>MUSEO DE JUJUY</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, vitae beatae in officiis eum incidunt doloremque numquam modi officia temporibus ut fuga...</p>
+                        <a href="/noticias"><button><span>Ver mas</span></button></a>
                     </div>
                 </div>
             </div>
@@ -73,57 +57,24 @@
             <h1>SERVICIOS</h1>
             <hr>
             <div class="servicios-main">
-                <div class="servicios-menu menu1">
+                {% for i in servicios %}
+                <div class="servicios-menu menu1" style="background-image: url({{i[1]}});">
                     <div class="menu-adelante">
-                        <p>Energias renovables</p>
-                        <button><span>Ver mas</span></button>
+                        <p>{{i[0]}}</p>
+                        <button><span><a href="{{i[2]}}">Ver mas</a></span></button>
                     </div>
                 </div>
-                <div class="servicios-menu menu2">
-                    <div class="menu-adelante">
-                        <p>Domotica</p>
-                        <button><span>Ver mas</span></button>
-                    </div>
-                </div>
-                <div class="servicios-menu menu3">
-                    <div class="menu-adelante">
-                        <p>UPS</p>
-                        <button><span>Ver mas</span></button> 
-                    </div>
-                </div>
-                <div class="servicios-menu menu4">
-                    <div class="menu-adelante">
-                        <p>Obras</p>
-                        <button><span>Ver mas</span></button>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div> 
         
-        <div class="video bloque-main">
+        <div class="ubicacion bloque-main">
             <h1>UBICACION</h1>
             <hr>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1703.0795141730566!2d-64.18307004198877!3d-31.38217829535392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329956ff64c657%3A0xeb20260f9a2fd8f2!2sFermag%20S.%20A!5e0!3m2!1ses!2sar!4v1679436108833!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-    </div>
-
-    <div class="footer">
-        <div class="footer-contactanos">
-            <h2>Contactanos</h2>
-            <div class="footer-contactanos-botones">
-                <a href=""><img src="{{ url_for('static',filename='src/clientes/Fermag/gmail-blanco.png') }}" alt=""></a>
-                <a href=""><img src="{{ url_for('static',filename='src/clientes/Fermag/wsp-blanco.png') }}" alt=""></a>
-                <a href=""><img src="{{ url_for('static',filename='src/clientes/Fermag/ig-blanco.png') }}" alt=""></a>
-                <a href=""><img src="{{ url_for('static',filename='src/clientes/Fermag/fb-blanco.png') }}" alt=""></a>
-                <a href=""><img src="{{ url_for('static',filename='src/clientes/Fermag/tf-blanco.png') }}" alt=""></a>
-            </div>
-            <hr>
-            <p>Desarrollado por:</p>
-            <img class="lussary" src="{{ url_for('static',filename='src/clientes/Fermag/LogoBlack.png') }}"alt="">
-            <p>Copyright © 2023 | Fermag</p>
+            <div class="ubicacion-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1703.0795141730566!2d-64.18307004198877!3d-31.38217829535392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329956ff64c657%3A0xeb20260f9a2fd8f2!2sFermag%20S.%20A!5e0!3m2!1ses!2sar!4v1679436108833!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div> 
         </div>
     </div>
-
+    <hr>
     {% endblock %}
-</body>

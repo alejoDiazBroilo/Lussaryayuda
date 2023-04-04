@@ -8,56 +8,11 @@ body{
     font-family: 'Saira', sans-serif;
 }
 
-/* NAVBAR*/
-.navBar {
-    background-color: transparent;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    transition: background-color 0.3s ease-in-out;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .navBar.scroll{
-    /*background-color: rgb(120, 120, 255);*/
-    background-color:  #354f62  ;
-  }
-
-  .navBar img{
-    margin-left: 20px;
-  }
-  
-  .navBar ul {
-    list-style: none;
-    margin-right: 20px;
-    font-style: italic;
-  }
-  
-  .navBar li {
-    display: inline-block;
-    
-  }
-  
-  .navBar a {
-    color: rgb(0, 0, 40);
-    padding: 5px;
-    text-decoration: none;
-    border-radius: 8px;
-  }
-  
-  .navBar a:hover {
-    background-color: rgb(5, 138, 0);
-  }
-
 /* INICIO */
 .inicio{
     width: 100%;
     height: 100vh;
-    background-image: url(/static/src/clientes/Fermag/fondoPrincipal.png);
+    background-image: url(https://imageio.forbes.com/specials-images/imageserve/61f2f5b1cc9d82977b7440a4/944AiroleWay-print-10/960x0.jpg?format=jpg&width=960);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;  
@@ -106,16 +61,20 @@ body{
 }
 
 .informacion-division{
-    width: 10%;
-    margin: -20px 45% 0 45%;
+    width: 35%;
+    margin: 0 35% 0 35%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     font-family: 'Poppins', sans-serif;
 }
 
 .informacion-division hr{
-    width: 30%;
+    width: 300px;
+    margin: 0 10px 0 10px;
+
 }
 
 .informacion-division p{
@@ -150,23 +109,37 @@ body{
     font-size: 25px;
 }
 
+.servicios a{
+  text-decoration: none;
+  color: white;
+}
+
 .bloque-main hr{
     text-align: left;
     margin: 0 0 20px 10px;
     width: 40px;    
 }
 
+.video-container{
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción de aspecto de 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
 .video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    height: 100%;
 }
 
 /* NOTICIAS */
 .noticias-main{
     width: 100%;
     height: 100vh;
-    background-image: url(/static/src/clientes/Fermag/fondoEolico.jpg);
+    background-image: url(https://static.mfah.com/images/main-campus-18.15829485354753099698.jpg?width=1680);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;  
@@ -181,7 +154,7 @@ body{
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     font-weight: bold;
 }
@@ -208,25 +181,6 @@ body{
 
 .menu1{
     width: 100%;
-    background-image: url(/static/src/clientes/Fermag/fondoER.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.menu2{
-    width: 100%;
-    background-image: url(/static/src/clientes/Fermag/fondoDomotica.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.menu3{
-    width: 100%;
-    background-image: url(/static/src/clientes/Fermag/fondoUPS.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.menu4{
-    width: 100%;
-    background-image: url(/static/src/clientes/Fermag/fondoObras.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -254,7 +208,7 @@ button {
     width: 100px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: -25px 0 0 0;
+    margin: 0 0 0 0;
    }
    
    button span {
@@ -282,47 +236,71 @@ button {
     right: 0;
    }
 
-
-.footer{
-    background-color: rgb(20, 20, 20);
+   /* UBICACION */
+.ubicacion-container{
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción de aspecto de 16:9 */
+    height: 0;
+    overflow: hidden;
 }
 
-.footer-contactanos{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.footer-contactanos h2{
-    margin-top: 50px;
-}
-
-.footer-contactanos-botones{
-    display: flex;
-    flex-direction: row;
-}
-
-.footer-contactanos-botones a{
-    width: 30px;
-    height: 30px;
-    padding: 8px;
-}
-
-.footer-contactanos-botones img{
+.ubicacion iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
 }
 
-.footer-contactanos hr{
-    width: 120px;
+/* RESPONSIVE */
+@media screen and (max-width: 767px){
+    .noticias-main{
+        height: 50vh;
+        background-attachment: local;
+    }
+
+    .noticias-adelante-texto{
+        margin: 0 35px 0 35px;
+        text-transform: uppercase;
+    }
+
+    .servicios-main{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .servicios-menu{
+        height: 25vh;
+        width: 100%;
+    }
+
+    .menu-adelante p, button{
+      margin-top: -20px;
+    }
 }
 
-.lussary{
-    width: 100px;
-    height: 100px;
+@media screen and (max-width: 440px){
+    .inicio-adelante h1{
+        font-size: 35px;
+    }
+    
+    .inicio-adelante p{
+        font-size: 13px;
+    }
 }
 
+@media screen and (max-width: 330px){
+    .inicio-adelante h1{
+        font-size: 30px;
+    }
+    
+    .inicio-adelante p{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .menu-adelante p{
+      font-size: 27px;
+    }
+}
