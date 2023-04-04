@@ -24,7 +24,7 @@ def getExample():
 
 @Home.route("/db/añadir")
 def añadir():
-    newInstance = Persona('firstPerson','apellido', 'cosa que hice')
+    newInstance = Colaborador(2)
     db.session.add(newInstance)
     db.session.commit()
     return redirect(url_for('Home.getHome'))
@@ -32,7 +32,8 @@ def añadir():
 @Home.route("/db/traer")
 def traer():
     database = Persona.query.all()
-    print(database)
+    for i in range(len(database)):
+        print(database[i].contacto.id)
     return redirect(url_for('Home.getHome'))
 """
 
