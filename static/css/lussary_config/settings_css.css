@@ -3,37 +3,7 @@ body{
     margin: 0;
     font-family: 'Poppins',sans-serif;
     background-color: white;
-    
 }
-
-/* MENU 
-.menu{
-    background-color: rgb(0, 0, 0);
-}
-
-.menu ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu ul li{
-    display: inline-block;
-}
-
-.menu ul li a{
-    color: white;
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-.menu ul li a:hover{
-    background-color: red;
-}
-*/
-
-/* PRINCIPIO */
 
 .principio{
     height: 100vh;
@@ -48,7 +18,6 @@ canvas {
     max-width: 100%;
     height: 100vh;
 }
-
 
 .principio-img{
     height: 100%;
@@ -69,26 +38,24 @@ canvas {
 }
 
 .principio-adelante-logoUnido{
-    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-right: 30px;
-    
+    margin-top: 150px;
 }
 
 .principio-adelante-logoUnido-imagen{
-    width: 400px;
-    height: 400px;
+    width: 150px;
+    height: 140px;
     margin-right: 20px;
 }
 
 .principio-adelante-logoUnido-nombre{
     color: rgb(255, 255, 255);
     font-size: 40px;
-    margin-top: -100px;
 }
 
 .principio-adelante-hr{
@@ -99,7 +66,7 @@ canvas {
 .principio-adelante-frase{
     color: rgb(145, 145, 145);
     margin-right: 70px;
-    margin-left: 750px;
+    margin-left: 500px;
     font-size: 30px;
     text-align: right;
     font-style: italic;
@@ -205,10 +172,13 @@ canvas {
 }
 
 /* PROYECTOS */
-
 .proyectos{
+    background-image: url(https://s1.best-wallpaper.net/wallpaper/m/2101/Moon-space-black-background_m.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    background-color: black;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,11 +186,17 @@ canvas {
     text-align: center;
 }
 
-.proyectos-titulo{
+.proyectos-adelante{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.proyectos h1{
     font-family: system-ui;
     color: transparent;
     font-size: 70px;
-    margin-top: 50px;
+    margin-top: 125px;
     margin-bottom: 10px;
     font-weight: 600;
     letter-spacing: -0.015em;
@@ -233,56 +209,18 @@ canvas {
     -webkit-background-clip: text;
 }
 
-.proyectos-frase{
+.proyectos p{
     color: rgb(145, 145, 145);
     font-style: italic;
     margin-top: 0px;
 }
 
-.proyectos-hr{
-    width: 15%;
-}
-
-.proyectos-subtitulo{
+.proyectos hr{
+    width: 200px;
     color: white;
-    font-weight: bold;
 }
 
-
-.proyectos-imagenes{
-    display: flex;
-    width: 650px;
-    height: 350px;
-}
-
-.proyectos-imagenes-imagen1{
-    clip-path: polygon(25% 0%, 100% 0, 100% 50%, 100% 100%, 25% 100%, 0% 50%);
-}
-
-.proyectos-imagenes-imagen3{
-    clip-path: polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%, 0% 50%);
-}
-
-.proyectos-imagenes img{
-    width: 0;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
-.proyectos-imagenes img:hover{
-    cursor: crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-}
-
-.proyectos-boton {
+.proyectos button {
     padding: 10px 20px;
     border: none;
     font-size: 17px;
@@ -298,13 +236,12 @@ canvas {
     margin: 40px 0 50px 0;
   }
   
-  .proyectos-boton:hover {
+  .proyectos button:hover {
     box-shadow: 0 0 5px rgb(0,140,255),
                 0 0 25px rgb(0,140,255),
                 0 0 50px rgb(0,140,255),
                 0 0 100px rgb(0,140,255);
   }
-
 
   .estilo{
     width: 100%;
@@ -383,93 +320,13 @@ canvas {
     background-color: rgb(230, 230, 230);
   }
 
-.pibes-titulo{
-    text-align: center;
-    font-family: system-ui;
-    color: transparent;
-    font-size: 50px;
-    font-weight: 600;
-    letter-spacing: -0.015em;
-    background-image: linear-gradient(
-        180deg,
-        rgb(100, 100, 100),
-        rgb(0, 0, 0)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-.pibes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 20px 0 20px;
-}
-
-.pibes:hover > :not(:hover){
-    opacity: .4;
-}
-
-.pibes-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-right: .5rem;
-}
-
-.pibes-pibe{
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid black;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 8px;
-    position: relative;
-    background-color: black;
-    transition: .3s;
-}
-
-.pibes-pibe-nombre{
-    font-weight: bold;
-    opacity: 1;
-    margin-top: 200px;
-    position: absolute;
-    color: white;
-}
-
-.pibes-pibe-texto{
-    font-style: italic;
-    margin-top: 250px;
-    position: absolute;
-    color: white;
-}
-
-.pibes-pibe-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    opacity: .5;
-}
-
-.footer{
-    background-color: rgb(20, 20, 20);
-    width: 100%;
-}
-
-
 .contactanos{
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 100px;
     align-items: center;
+    background-color: rgb(20, 20, 20);
 }
 
 .contactanos-titulo{
@@ -511,24 +368,9 @@ canvas {
     align-items: center;
 }
 
-.contactanos-botones-boton{
-    width: 50px;
-    height: 45px;
-    border: none;
-    border-radius: 100%;
-    margin: 0 5px 0 5px;
-    background-color: transparent;
-    object-fit: cover;
-    cursor: grab;
-}
-
-.contactanos-boton-img{
-    width: 70%;
-    height: 70%;
-}
-
-.contactanos-botones-boton:hover{
-    transform: scale(1.2);
+.contactanos-botones-div a{
+    margin: 0 10px 0 10px;
+    font-size: 22px;
 }
 
 .contactanos-botones-hr1{
@@ -541,65 +383,7 @@ canvas {
     margin-right: 0px;
 }
 
-.footerFondo{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -20px;
-}
-
-.footerFondo-imagen-div{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 20px;
-    align-items: center;
-    margin-top: 5%;
-}
-
-.footerFondo-imagen{
-    width: 160px;
-}
-
-.footerFondo-copyright-div{
-    width: 100%;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    align-items: center;
-}
-
-.footerFondo-copyright{
-    font-size: 12px;
-    color: gray;
-}
-
-.footerFondo-links{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 75px;
-    text-align: center;
-}
-
-.footerFondo-links-informacionLegal, .footerFondo-links-politicaPrivacidad{
-    font-size: 12px;
-    color: white;
-    font-weight: bold;
-    margin: 0 10px 0 10px;
-    font-style: oblique;
-}
-
-.footerFondo-links a{
-    color: white;
-}
-
-.footerFondo-links-hr{
-    height: 15px;
-}
-
+/* FINI COSAS */
 .div-img-bateria{
     width: 100%;
     margin-top: -30px;
@@ -642,7 +426,7 @@ canvas {
 @media (max-width: 800px){
 
     .principio-adelante{
-        background-color: rgba(20, 20, 20, 0.95);
+        background-color: rgba(20, 20, 20, 0.9);
         clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%);
         display: flex;
         flex-direction: column;
@@ -657,10 +441,6 @@ canvas {
     
     .principio-adelante-logoUnido-imagen{
         margin: 0px;
-    }
-    
-    .principio-adelante-logoUnido-nombre{
-        margin-top: -100px;
     }
     
     .principio-adelante-hr{
@@ -937,29 +717,16 @@ canvas {
 
 }
 
-/*RESPONSIVE DE CONTACTANOS*/
-
+/* 400px */
 @media (max-width: 400px){
 
     .contactanos-titulo{
         font-size: 38px;
     }
 
-}
-
-/* 400px */
-@media (max-width: 400px){
-
     .principio-adelante-logoUnido{
         width: 100%;
         margin-right: 0px;
-    }
-
-    .principio-adelante-logoUnido-imagen{
-        width: 100%;
-        object-fit: cover;
-        margin-right: 0px;
-        margin: 0;
     }
 
 }
@@ -1001,6 +768,10 @@ canvas {
         font-size: 20px;
         margin-top: -0px;
         margin-left: 40px;
+    }
+
+    .principio-adelante-frase{
+        font-size: 28px;
     }
 
 }
