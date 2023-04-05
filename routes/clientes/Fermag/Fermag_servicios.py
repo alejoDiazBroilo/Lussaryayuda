@@ -17,11 +17,11 @@ class Servicios:
 @Fermag_servicios.route("/clientes/Fermag/servicios")    
 def FermagServicios():
     infos = [ 
-        Servicios('HOSPITAL PASTEUR'),
-        Servicios('EL PAPA DE SALO'),
-        Servicios('LA MAMA DE SALO'),
-        Servicios('SALO LA MAMA'),
-        Servicios('MUCHI')                
+        Servicios('DOMOTICA'),
+        Servicios('ENERGIAS RENOVABLES'),
+        Servicios('UPS'),
+        Servicios('INSTALACIONES ELECTRICAS'),
+        Servicios('BMS'), Servicios('AUTOMOTIZACIONES ESPECIALES')             
         ]
     
     return render_template("clientes/Fermag/servicios.html", infos=infos)
