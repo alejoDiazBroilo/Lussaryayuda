@@ -22,6 +22,19 @@ def getExample():
     return jsonify({'message':'hello'})
 
 
+
+@Home.route("/personas")
+def getPersonas():
+    return render_template("lussary_config/personas.html")
+
+
+
+
+@Home.route("/informacion")
+def getInformacion():
+    return render_template("lussary_config/informacion.html")
+
+
 """
 
 @Home.route("/")

@@ -125,33 +125,9 @@
     <p class="fechaBinaria">10001-1-11111100111</p>
 
     <div class="pibess">
-        <h1 class="pibes-titulo">5 PIBES, 1 PROYECTO</h1>
+        <h1 class="pibes-titulo">QUIENES SOMOS</h1>
         <div class="pibes">
-            <div class="pibes-pibe pibes-pibe-mora">
-                <img src="{{ url_for('static',filename='/src/Lussary/mora.jpg') }}" alt="" class="pibes-pibe-img">
-                <p class="pibes-pibe-nombre">Joaquín Morais</p>
-                <p class="pibes-pibe-texto">Programador</p>
-            </div>
-            <div class="pibes-pibe pibes-pibe-fini">
-                <img src="{{ url_for('static',filename='/src/Lussary/fini.jpg') }}" alt="" class="pibes-pibe-img">
-                <p class="pibes-pibe-nombre">Marco Fini Minué</p>
-                <p class="pibes-pibe-texto">Programador</p>
-            </div>
-            <div class="pibes-pibe pibes-pibe-salo">
-                <img src="{{ url_for('static',filename='/src/Lussary/salo.jpg') }}" alt="" class="pibes-pibe-img">
-                <p class="pibes-pibe-nombre">Agustín Salonia</p>
-                <p class="pibes-pibe-texto">Programador</p>
-            </div>
-            <div class="pibes-pibe pibes-pibe-alejo">
-                <img src="{{ url_for('static',filename='/src/Lussary/alejo.jpg') }}" alt="" class="pibes-pibe-img">
-                <p class="pibes-pibe-nombre">Alejo Diaz Broilo</p>
-                <p class="pibes-pibe-texto">Programador</p>
-            </div>
-            <div class="pibes-pibe pibes-pibe-facha">
-                <img src="{{ url_for('static',filename='/src/Lussary/facha.jpeg') }}" alt="" class="pibes-pibe-img">
-                <p class="pibes-pibe-nombre">Máximo Blázquez</p>
-                <p class="pibes-pibe-texto">Programador</p>
-            </div>
+            <a href="{{ url_for('Home.getInformacion')}}"><button class="proyectos-boton">+Informacion</button></a>
         </div>
     </div>
 
@@ -221,4 +197,3 @@
 
     {% endblock %}
 </body>
-
