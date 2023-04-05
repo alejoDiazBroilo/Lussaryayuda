@@ -37,33 +37,33 @@ def añadir():
     lista_inserts.append(Medio('instagram', 'www.instagram.com/', '/'))
                                     Contacto
     lista_inserts.append(Contacto(1, 1, 'alejo.diazbroilo'))
-    print(f"{database[i].persona_relation.nombre}, {database[i].medio_relation.link_contacto}{database[i].info_contacto}{database[i].medio_relation.link_contacto_fin}")
+    print(f"{database[i].persona_relacion.nombre}, {database[i].medio_relacion.link_contacto}{database[i].info_contacto}{database[i].medio_relacion.link_contacto_fin}")
                                     Colaborador
     lista_inserts.append(Colaborador(4))#fecha_nacimiento peta, probablemente porque tenga que insertarlo como atributo de clase
                                     DescripcionColaborador
     lista_inserts.append(DescripcionColaborador(5, 'pasatiempos', 'le encanta el lol y la pija'))
-    print(f"{database[i].colaborador_relation.persona_relation.nombre}, {database[i].titulo}: {database[i].descripcion}")
+    print(f"{database[i].colaborador_relacion.persona_relacion.nombre}, {database[i].titulo}: {database[i].descripcion}")
                                     Actividad
     lista_inserts.append(Actividad('backend', 'back de atras, end de tu nariz contra mis bolas'))
     print(f"{database[i].titulo} {database[i].descripcion}")
                                     Rol
     lista_inserts.append(Rol(5, 1))
-    print(f"{database[i].actividad_relation.titulo} {database[i].actividad_relation.descripcion} {database[i].colaborador_relation.persona_relation.nombre}")
+    print(f"{database[i].actividad_relacion.titulo} {database[i].actividad_relacion.descripcion} {database[i].colaborador_relacion.persona_relacion.nombre}")
                                     Cliente
     lista_inserts.append(Cliente(5, 2, 1))
-    print(f"{database[i].persona_relation.nombre} {database[i].colaborador_relation.persona_relation.nombre}")
+    print(f"{database[i].persona_relacion.nombre} {database[i].colaborador_relacion.persona_relacion.nombre}")
                                     Area
     lista_inserts.append(Area('hacer el models', 'hacer el model siguiendo el uml', 5))
     print(f"{database[i].titulo} {database[i].descripcion}")
                                     Contribucion
     lista_inserts.append(Contribucion(5, 1, 1,  "alejo pudo hacer el models, pendiente revision"))
-    print(f"{database[i].area_relation.titulo} {database[i].proyecto_relation.titulo} {database[i].colaborador_relation.persona_relation.nombre}")
+    print(f"{database[i].area_relacion.titulo} {database[i].proyecto_relacion.titulo} {database[i].colaborador_relacion.persona_relacion.nombre}")
                                     Categoria
     lista_inserts.append(Categoria('descripcion fermag', 'qsy que descripcion ah'))
     print(database[i].titulo, database[i].descripcion)
                                     AtributoGenerico
     lista_inserts.append(AtributoGenerico('titulo', 'nurstro trabajo', 1, 1))
-    print(database[i].titulo, database[i].subproyecto_relation.proyecto_relation.titulo)
+    print(database[i].titulo, database[i].subproyecto_relacion.proyecto_relacion.titulo)
     """
     lista_inserts = []
 
