@@ -278,6 +278,7 @@ class AtributoGenerico(db.Model):
     categoria = db.Column(db.Integer, ForeignKey('Categoria.id', ondelete='SET NULL', onupdate='CASCADE'))
     
     categoria_relation = db.relationship('Categoria')
+    subproyecto_relation = db.relationship('SubProyecto')
 
 
     fecha_creacion = db.Column(db.Date, default=func.now())
