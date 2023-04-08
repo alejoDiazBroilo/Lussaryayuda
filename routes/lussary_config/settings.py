@@ -35,6 +35,23 @@ def traer():
     for i in range(len(database)):
         print(database[i].contacto.id)
     return redirect(url_for('Home.getHome'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 """
 
 @Home.route("/")

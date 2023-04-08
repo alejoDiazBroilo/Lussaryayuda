@@ -1,7 +1,8 @@
-{% extends "base.html" %}
+{% extends "lussary_config/base.html" %}
 
     {% block head %}
     <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/galeria.css') }}">
+    <script src="{{url_for('static', filename='js/lussary_config/settings_js.js')}}"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +15,13 @@
 <body>
     {% block content %}
 
-    <div class="div-aclaracion">
-        <h1 class="galeria-titulo">GALERIA DE PROYECTOS</h1>
-        <img class="imagen-lussary" src="{{ url_for('static',filename='src/Lussary/LogoBlackSinLetras.png') }}" alt="">
-        <h1 style="font-style: italic;">"Estamos trabajando en la galería más fachera jamás vista..."</h1>
+    <div class="div">
+        <h1>GALERIA DE PROYECTOS</h1>
+        <img src="https://ih1.redbubble.net/image.978950306.0450/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="">
+        <h3 style="font-style: italic;">"Estamos trabajando en la galería más fachera jamás vista..."</h3>
         <h4>-  Team Lussary</h4>
 
-        <a href="{{ url_for('Home.getHomePrincipalPageLussary')}}">VOLVER</a>
+        <a class="boton" href="{{ url_for('Home.getHomePrincipalPageLussary')}}">VOLVER</a>
     </div>
     {% endblock %}
 </body>
