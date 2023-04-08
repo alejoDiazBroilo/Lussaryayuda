@@ -1,9 +1,11 @@
 from flask import Blueprint,render_template,redirect,url_for,jsonify
 from utils.db import db
 
-from models.tasks import *
+from models.models import *
 Home = Blueprint("Home",__name__)
-
+def Insert(obj):
+    db.session.add(obj)
+    db.session.commit()
 
 @Home.route("/")
 def getHomePrincipalPageLussary():
@@ -65,22 +67,41 @@ def añadir():
     lista_inserts.append(AtributoGenerico('titulo', 'nurstro trabajo', 1, 1))
     print(database[i].titulo, database[i].subproyecto_relacion.proyecto_relacion.titulo)
     """
-    lista_inserts = []
-
-    for i in lista_inserts:
-        print(f"{i}")
-        db.session.add(i)
-
-    db.session.commit()
+    Insert(Persona('Alejo Luis', 'Diaz Broilo', 'el pibe mas lindo de la empresa'))
+    Insert(Persona('PAPA SALO', 'Apellido', 'insert generico'))
+    Insert(Medio('instagram', 'www.instagram.com/', '/'))
+    Insert(Contacto(1, 1, 'alejo.diazbroilo'))
+    Insert(Colaborador(1, '2004-07-18'))#fecha_nacimiento peta, probablemente porque tenga que insertarlo como atributo de clase
+    Insert(DescripcionColaborador(1, 'pasatiempos', 'le encanta el lol y la pija'))
+    Insert(Actividad('backend', 'back de atras, end de tu nariz contra mis bolas'))
+    Insert(Rol(1, 1))
+    Insert(Proyecto('Fermag', 'Lorem ut tortor vestibulum, eget suscipit leo consectetur.'))
+    Insert(Proyecto('VEME', 'Lorem i ut tortor vestibulum, eget suscipit leo consectetur.'))
     return redirect(url_for('Home.traer'))
+
 
 @Home.route("/db/traer")
 def traer():
-    database = AtributoGenerico.query.all()
+    database = DescripcionColaborador.query.all()
     print("###########################################")
     for i in range(len(database)):
         print("//////////////////////////////////////////////////////////////////////////////////////////////////////")
+        print(f"{database[i].colaborador_relacion.persona_relacion.nombre}, {database[i].titulo}: {database[i].descripcion}")
+        
     return redirect(url_for('Home.getHome'))
+    
+    """
+                                    EJEMPLO DE QUERY DENTRO DE RELACION
+    database = Persona.query.all()
+    print("###########################################")
+    for i in range(len(database)):
+        ultraquery = database[i].contacto_relacion
+        for x in range(len(ultraquery)):
+            print(f"{ultraquery[i].medio_relacion.link_contacto}{database[i].nombre}{ultraquery[i].medio_relacion.link_contacto_fin}")
+        print("//////////////////////////////////////////////////////////////////////////////////////////////////////")
+    return redirect(url_for('Home.getHome'))
+    
+    """
 """
 
 @Home.route("/")

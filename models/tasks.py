@@ -1,6 +1,6 @@
 from utils.db import db
 from sqlalchemy import Column, Integer, String, Date, func, ForeignKey
-
+"""
 class Persona(db.Model): #done
     __tablename__ = 'Persona'
     id_persona = db.Column(db.Integer, primary_key=True)
@@ -108,6 +108,7 @@ class DescripcionColaborador(db.Model): #Colaborador relacion done
     def __repr__(self):
         return f'{self.colaborador} = {self.titulo}\n'
 
+
 class Actividad(db.Model): #done
     __tablename__ = 'Actividad'
     id_actividad = db.Column(db.Integer, primary_key=True)
@@ -125,7 +126,7 @@ class Actividad(db.Model): #done
     
     def __repr__(self):
         return f'{self.titulo}\n'
-
+"""
 class Rol(db.Model): #Colaborador relacion done
     __tablename__ = 'Rol'
     id_rol = db.Column(db.Integer, primary_key=True)
