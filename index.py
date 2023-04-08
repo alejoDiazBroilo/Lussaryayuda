@@ -17,3 +17,4 @@ app.register_blueprint(Fermag_servicios)
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
