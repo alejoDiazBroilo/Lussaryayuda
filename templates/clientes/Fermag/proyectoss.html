@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/proyectoss.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    {% endblock %}
+    
+    {% block title %}
+    Fermag S.A.
+    {% endblock %}
+
+    {% block content %}
+
+    {% for descripcion in descripciones %}
+    <div class="main">
+        <div class="title" style="background:url({{descripcion.fondo}}); object-fit: cover; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;">
+            <h1></h1>
+        </div>
+        <h1 class="txt">{{descripcion.nombre}}</h1>
+        <hr style="width: 20%; border-top: 3px solid rgb(0, 0, 0); margin-top: -30px;">
+        <div class="proyecto-container">
+            <div class="proyecto-title">
+                <h1>PROYECTO</h1>
+                <p>{{descripcion.proyectoDescripcion}}</p>   
+                <h1 style="margin-top: 160px;">CLIENTE</h1>
+                <p>{{descripcion.cliente}}</p>        
+            </div>
+            <div class="proyecto-img" style="background-image: url({{descripcion.img}});">
+                <h1>IMG REPRESENTATIVA</h1>                
+            </div>
+        </div>
+        <div class="infoadicional-container">
+            <div>
+                <h1>DESCRIPCION</h1>
+                <p>{{descripcion.descripcion3}}</p>
+            </div>
+            <div class="ubicacion-container">
+                <h1>UBICACION</h1>
+                <p>{{descripcion.ubicacion}}</p>
+                <iframe src="{{descripcion.mapa}}" width="100%" height="700px" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <hr style="width: 80%; margin-top: 150px; border: 1.2px solid black;">
+            <div class="swiffy-slider">
+                <h1>GALERIA DEL PROYECTO</h1>
+                <p class="add">(Desliza de derecha a izquierda para ver mas imagenes)</p>
+                <ul class="slider-container">
+                    {% for x in range(5) %}
+                    <li><img src="https://source.unsplash.com/49b9l_29ceA/1600x900" style="max-width: 100%;height: 800px; width: 100%;"></li>
+                    {% endfor %}
+                </ul>
+                <button type="button" class="slider-nav" style="margin-left: 50px;"></button>
+                <button type="button" class="slider-nav slider-nav-next" style="margin-right: 50px;"></button>
+                <div class="slider-indicators">
+                    {% for x in range(5) %}
+                    <button class="active"></button>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="made-by">MADE BY TEAM LUSSARY</h1>
+    {% endfor %}
+    {% endblock %}
