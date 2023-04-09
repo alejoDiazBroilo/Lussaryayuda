@@ -1,0 +1,52 @@
+
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/contacto.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <title>Fermag S.A.</title>
+        <link rel="shortcut icon" type="image/jpeg" href="/static/src/clientes/Fermag/logoFermag.jpeg" />
+    {% endblock %}
+
+    {% block content %}
+    <script src="{{url_for('static',filename='js/clientes/Fermag/fermag.js')}}"></script>
+
+    <a href="/clientes/Fermag"><img src="/static/src/clientes/Fermag/logoFermag.png" alt="" class="imgFer"></a>
+    <h1>CONTACTANOS!</h1>
+    <div class="grid">
+        <div>
+            <form id="form" action="" class="form">
+
+                <label for="name">Nombre Completo <span>*</span></label>
+                <input name="name" required type="text" id="name" placeholder="Juan Perez">
+        
+                <label for="email">Correo electrónico <span>*</span></label>
+                <input name="email" type="text" id="email" required placeholder="juanp@gmail.com">
+        
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+        
+                <button type="submit" class="button-58">ENVIAR</button>
+              </form>
+              <a href="mailto:marcosuperfm@gmail.com" id="trick"></a>
+        </div>
+
+    </div>
+
+      <script>
+        
+        const $form = document.querySelector('#form')
+        const $buttonMailto = document.querySelector('#trick')
+    
+        $form.addEventListener('submit', handleSubmit)
+    
+        function handleSubmit(event) {
+            event.preventDefault()
+            const form = new FormData(this)
+            console.log(form.get('name'))
+            $buttonMailto.setAttribute('href', `mailto:marcosuperfm@gmail.com?subject=nombre ${form.get('name')}  correo ${form.get('email')}&body=${form.get('message')}`)
+            $buttonMailto.click()
+        }
+      
+      </script>
+    {% endblock %}
