@@ -82,12 +82,16 @@ def añadir():
 
 @Home.route("/db/traer")
 def traer():
-    database = DescripcionColaborador.query.all()
+    database = Rol.query.all()
     print("###########################################")
     for i in range(len(database)):
         print("//////////////////////////////////////////////////////////////////////////////////////////////////////")
-        print(f"{database[i].colaborador_relacion.persona_relacion.nombre}, {database[i].titulo}: {database[i].descripcion}")
-        
+        print(database[i].actividad.titulo)
+        """
+        xd = database[i].roles
+        for x in range(len(xd)):
+            print(xd[x].actividad.titulo)
+        """
     return redirect(url_for('Home.getHome'))
     
     """
