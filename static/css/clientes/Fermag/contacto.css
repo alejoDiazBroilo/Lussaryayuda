@@ -11,17 +11,22 @@ body {
     background: #ffffff;
     color: rgb(0, 0, 0);
     line-height: 1.6;
-    padding: 0 1.5em;
     font-family: 'Saira', sans-serif;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0;
+
 
 }
 
 h1{
     font-size: 60px;
     margin-top:100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
 }
 
 form {
@@ -114,38 +119,174 @@ input[type="submit"]:hover {
 
 
 .imgFer{
+    margin-top: 37px;
     width: 300px;
+
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.social-buttons {
+    width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bolder;
+}
+
+
+
+.instagram-btn {
+    background-color: #E1306C;
+    color: #fff;
+
+
+  }
+  .youtube-btn {
+    background-color: #FF0000;
+    color: #fff;
+
+  }
+  .facebook-btn {
+    background-color: #3B5998;
+    color: #fff;
+
+  }
+  .phone-btn {
+    background-color: #00BFFF;
+    color: #fff;
+  }
+
+  .google-maps-btn {
+    background-color: #4285F4;
+    color: #fff;
+
+  }
+  
+  .whatsapp-btn {
+    background-color: #25D366;
+    color: #fff;
+
+  }
+  
+  /* Estilo */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-decoration:solid;
+    margin-bottom: 30px;
+    padding: 13px;
+    width: 40%;
+  }
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  .footer-2 {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+  }
+  
+  .footer-2 p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .logoLuss{
+    width: 140px;
+  }
+
+  .footer-1{
+    display: none;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .footer-1 {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        height: auto;
+      }
+      
+      .footer-1 p {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .footer-2{
+        display: none;
+      }
+  }
+  
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 2fr;
+  }
+}
+  
+
 
 @media (max-width: 550px) {
     .imgFer{
-        width: 150px;
+        margin-top: 40px;
+        width: 250px;
     }
     h1{
-        font-size: 30px;
+        font-size: 50px;
     }
     form{
-      height: auto;
       width: 100%;
       padding: 10px;
+      margin:  0 10px 0 10px;
     }
   
     label {
       font-size: 14px;
       font-weight: bold;
-  }
+    }
+
+    .btn{
+        width: 60%;
+        padding: 10px 10px 10px 10px;
+        font-size: xx-large;
+    }
+    footer{
+        width: 100%;
+    }
 }
   
 
-@media (max-width: 358px) {
+@media (max-width: 508px) {
   .button-58 {
     min-width: 170px;
   }
 
+  h1{
+    text-align: center;
+  }
   form{
-    margin: 0;
-    height: auto;
-    width: 100%;
+    width: auto;
     padding: 10px;
   }
 
@@ -154,3 +295,42 @@ input[type="submit"]:hover {
     font-weight: bold;
 }
 }
+
+
+@media (max-width: 420px) {
+
+    .imgFer{
+        width: 350px;
+    }
+    h1{
+        text-align: center;
+    }
+    form{
+      width: auto;
+      padding: 10px;
+    }
+  
+    label {
+      font-size: 30px;
+      font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    padding: 25px 35px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    font-size: 26px;
+  }
+
+  .button-58{
+    height: 90px;
+    font-size: 30px;
+  }
+
+  .btn{
+    width: 100%;
+  }
+
+  }
+  
