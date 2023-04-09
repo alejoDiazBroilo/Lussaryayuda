@@ -8,11 +8,6 @@ from routes.clientes.Fermag.Fermag_home import Fermag_home
 from routes.clientes.Fermag.Fermag_proyectos import Fermag_proyectos
 from routes.clientes.Fermag.Fermag_contacto import Fermag_contacto
 
-<<<<<<< HEAD
-=======
-    
-
->>>>>>> Fermag_contacto
 app.register_blueprint(Home)
 app.register_blueprint(VEME_home)
 app.register_blueprint(Fermag_home)

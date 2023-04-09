@@ -39,13 +39,10 @@ def FermagNoticias():
         ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv8lgDc1gGlVqn3UjDqKslOP6HrrUissH8xw&usqp=CAU', 'PRUEBAAAAAAA AAAAAAAAA', 'Esto es una prueba pa ver si funcaaaaa')
     ]
     return render_template('/clientes/Fermag/noticias.html', navBar = NavBar,notis = Notis)
-<<<<<<< HEAD
 
-#@Fermag_home.route("/clientes/Fermag")
-#def getPrincipalPageFermag():
-#    return render_template("clientes/Fermag/fermag.html")
-
+@Fermag_home.route("/clientes/Fermag")
+def getPrincipalPageFermag():
+    return render_template("clientes/Fermag/fermag.html")
 
 
-=======
->>>>>>> Fermag_contacto
+
