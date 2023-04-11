@@ -160,5 +160,5 @@ def traer():
     print(database)
     return redirect(url_for('Home.getHome'))
 
-
+s
 """
