@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+.main{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
     background: #ffffff;
     color: rgb(0, 0, 0);
@@ -16,7 +24,7 @@ body {
     align-items: center;
     text-align: center;
     margin: 0;
-
+  width: 100%;
 
 }
 
@@ -209,6 +217,7 @@ input[type="submit"]:hover {
     text-align: center;
     padding: 10px;
     height: auto;
+    width: 100%;
   }
   
   .footer-2 p {
@@ -223,160 +232,68 @@ input[type="submit"]:hover {
   .footer-1{
     display: none;
   }
-  
-  @media only screen and (max-width: 600px) {
-    .footer-1 {
-        display: block;
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-        height: auto;
-      }
-      
-      .footer-1 p {
-        margin: 0;
-        font-size: 14px;
-      }
 
-      .footer-2{
-        display: none;
-      }
+@media only screen and (max-width: 1020px) {
+  form {
+    width: 80%;
   }
-  
-
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 2fr;
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .social-buttons {
+    width: 80%;
   }
 }
-  
 
-
-@media (max-width: 550px) {
-    .imgFer{
-        margin-top: 40px;
-        width: 250px;
-    }
-    h1{
-        font-size: 50px;
-    }
-    form{
-      width: 100%;
-      padding: 10px;
-      margin:  0 10px 0 10px;
-    }
-  
-    label {
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .btn{
-        width: 60%;
-        padding: 10px 10px 10px 10px;
-        font-size: xx-large;
-    }
-    footer{
-        width: 100%;
-    }
-}
-  
-
-@media (max-width: 508px) {
-  .button-58 {
-    min-width: 170px;
-  }
-
-  h1{
-    text-align: center;
-  }
-  form{
-    width: auto;
-    padding: 10px;
-  }
-
-  label {
-    font-size: 14px;
-    font-weight: bold;
-}
-}
-
-
-@media (max-width: 420px) {
-
-    .imgFer{
-        width: 350px;
-    }
-    h1{
-        text-align: center;
-    }
-    form{
-      width: auto;
-      padding: 10px;
-    }
-  
-    label {
-      font-size: 30px;
-      font-weight: bold;
-  }
-
-  input {
-    width: 100%;
-    padding: 25px 35px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    font-size: 26px;
-  }
-
-  .button-58{
-    height: 90px;
-    font-size: 30px;
-  }
-
-  .btn{
-    width: 100%;
-  }
-
-  }
-
-
-  @media (max-width: 260px) {
-
-    .div-contacto h1{
-      font-size: 63px;
-    }
-    .imgFer{
-        width: 480px;
-    }
-
-    form{
-      width: auto;
-      padding: 30px;
-    }
-  
-    label {
-      font-size: 40px;
-      font-weight: bold;
-  }
-
-  input {
-    width: 100%;
-    padding: 35px 45px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    font-size: 26px;
-  }
-
-  .button-58{
-    height: 90px;
+@media only screen and (max-width: 650px) {
+  h1 {
     font-size: 40px;
   }
+  .imgFer {
+    width: 300px;
+  }
+  form {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .social-buttons {
+    width: 95%;
 
+  }
+  .logoLuss{
+    width: 100px;
+  }
   .btn{
-    height: 80px;
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
   }
+}
+@media (max-width: 300px) {
+  h1 {
+    font-size: 30px;
+    margin-top: 50px;
   }
-
-
   
+  form {
+    width: 90%;
+    margin: 30px auto;
+    padding: 10px;
+  }
+  
+  .imgFer{
+    width: 200px;
+  }
+  
+  .social-buttons {
+    width: 90%;
+    margin: 30px auto;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
