@@ -6,10 +6,10 @@ class Persona(db.Model): # se pueden hacer las querys
     id_persona = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(70), nullable = False)
     apellido = db.Column(db.String(70), nullable = False)
-    descripcion = db.Column(db.String(150), default = None)
+    descripcion = db.Column(db.String(500), default = None)
     fecha_creacion = db.Column(db.Date, default=func.now())
 
-    agenda = db.relationship('Contacto', back_populates='persona_agenda', lazy=True)
+    agenda = db.relationship('Contacto', backref='persona_agenda', lazy=True)
     colaborador_datos = db.relationship('Colaborador', backref='persona', uselist=False, lazy=True)
     cliente_datos = db.relationship('Cliente', backref='persona', uselist=False, lazy=True)
 
@@ -23,9 +23,11 @@ class Persona(db.Model): # se pueden hacer las querys
     def __repr__(self):
         return f'Nombre: {self.nombre}, Apellido: {self.apellido}\n'
 
-
-
-
+"""
+personas = Persona.query.all()
+lista_agenda = personas[i].<agenda / colaborador_datos / cliente_datos> (te guarda todos los objetos de agenda que tengan persona)
+lista_agenda[i].<datos agenda>
+"""
 
 
 
@@ -48,8 +50,11 @@ class Medio(db.Model): # se pueden hacer las querys
     
     def __repr__(self):
         return f'link: {self.link_contacto}_{self.link_contacto_fin}\n'
-
-
+"""
+medios = Medios.query.all()
+lista_agenda = medios[i].<contacto_relacion> (te guarda todos los objetos de agenda que tengan persona)
+lista_agenda[i].<datos agenda>
+"""
 
 
 
@@ -63,8 +68,8 @@ class Contacto(db.Model): # se pueden hacer las querys
     info_contacto = db.Column(db.String(200), nullable = False) 
     fecha_creacion = db.Column(db.Date, default=func.now())
 
-    medio_relacion = db.relationship('Medio', back_populates='contacto_relacion', lazy=True)
-    persona_agenda = db.relationship('Persona', back_populates='agenda', lazy=True)
+    medio_relacion = db.relationship('Medio', back_populates='contacto_relacion', lazy=True)#ignore
+    persona_agenda = db.relationship('Persona', back_populates='agenda', lazy=True)#ignore
     
     def __init__(self, medio, persona, info_contacto, fecha_creacion=None):
         self.id_medio = medio
@@ -76,7 +81,10 @@ class Contacto(db.Model): # se pueden hacer las querys
     def __repr__(self):
         return f'{self.info_contacto}\n'
 
-
+"""
+contactos = Contacto.query.all()
+personas = contactos[i].<persona_agenda> usando el backref en las clases que tienen las relationships
+"""
 
 
 
@@ -105,8 +113,11 @@ class Colaborador(db.Model):# se pueden hacer las querys
     
     def __repr__(self):
         return f'{self.fecha_nacimiento}\n'
-    
-
+"""   
+colaboradores = Colaborador.query.all()
+lista_colaboradores = colaboradores[i].<persona> (te guarda todos los objetos de agenda que tengan persona)
+colaboradores[i].<datos colaborador>
+"""
 
 
 
