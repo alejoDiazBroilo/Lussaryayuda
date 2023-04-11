@@ -109,18 +109,22 @@ def añadir():
     Insert(SubProyecto(1, 'empresa1', 'almost null because this cries a lot'))
     Insert(Area('hacer el models', 'hacer el model siguiendo el uml', 5))
     Insert(Contribucion(1, 1, 1,  "alejo pudo hacer el models, pendiente revision"))
-    Insert(Categoria('descripcion fermag', 'qsy que descripcion ah'))
+    Insert(Categoria('descripcion fermag', 'qsy que descripcion ah'))#1
     Insert(AtributoGenerico('titulo', 'nurstro trabajo', 1, 1))
     Insert(SubProyecto(1, 'place holder', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in ullamcorper ipsum. Aliquam erat volutpat. Aenean quis nunc vel odio sollicitudin auctor vel in mauris. Sed id ex id turpis sollicitudin consectetur. Nam lobortis quam id sem accumsan, eu blandit libero lobortis.'))
-    Insert(Categoria('H1', 'uso para titulos entre otros'))
+    Insert(Categoria('H1', 'uso para titulos entre otros'))#2
     Insert(AtributoGenerico('nombre del proyecto', 'wallmart cables', 2, 1))
-    Insert(Categoria('IMG', 'links de imagenes'))
+    Insert(Categoria('IMG', 'links de imagenes'))#3
     Insert(AtributoGenerico('Imagen proyecto 1', 'https://media.istockphoto.com/id/1334434982/es/foto/fantasma-aterrador-sobre-fondo-oscuro.jpg?s=612x612&w=0&k=20&c=GKJSU3NnvYt0G0m0pv6_PZHn47RL9zkUDHcNFkybPgM=', 1, 2))
-    Insert(Categoria('descripcion proyecto', 'descripciones uwu'))
+    Insert(Categoria('descripcion proyecto', 'descripciones uwu'))#4
     Insert(AtributoGenerico('descripcion de subproyecto 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in ullamcorper ipsum. Aliquam erat volutpat. Aenean quis nunc vel odio sollicitudin auctor vel in mauris. Sed id ex id turpis sollicitudin consectetur. Nam lobortis quam id sem accumsan, eu blandit libero lobortis.', 2, 3))
     Insert(AtributoGenerico('descripcion de subproyecto 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in ullamcorper ipsum. Aliquam erat volutpat. Aenean quis nunc vel odio sollicitudin auctor vel in mauris. Sed id ex id turpis sollicitudin consectetur. Nam lobortis quam id sem accumsan, eu blandit libero lobortis.', 2, 3))
-    Insert(Categoria('ubicacion', 'link o coordenadas de ub'))
-    Insert()
+    Insert(Categoria('ubicacion', 'link o coordenadas de ub'))#5
+    Insert(Categoria('idframe ubicacion', 'link o coordenadas de ub'))#5
+    Insert(AtributoGenerico('ubicacion 1', 'Av. Ejército Argentino 0000, Córdoba', 1, 5))
+    Insert(AtributoGenerico('iframe ubicacion 1', 'https://media.istockphoto.com/id/1334434982/es/foto/fantasma-aterrador-sobre-fondo-oscuro.jpg?s=612x612&w=0&k=20&c=GKJSU3NnvYt0G0m0pv6_PZHn47RL9zkUDHcNFkybPgM=', 1, 5))
+    Insert(Categoria('Fondo', 'fondo de la pagina'))#6
+    Insert(AtributoGenerico('fondo principal', 'https://imgs.search.brave.com/EpboDtNjJG46wigjM5xOWRZPjPCGCjHgHzrDh__b6lY/rs:fit:1200:675:1/g:ce/aHR0cHM6Ly9wYnMu/dHdpbWcuY29tL21l/ZGlhL0VKdDlzR09Y/MEFBdXA1Ny5qcGc', 1, 6))
     return redirect(url_for('Home.traer'))
 """
 nombre #titulo del proyecto 
