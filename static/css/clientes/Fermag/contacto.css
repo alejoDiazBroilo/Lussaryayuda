@@ -20,6 +20,12 @@ body {
 
 }
 
+.div-contacto{
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 h1{
     font-size: 60px;
     margin-top:100px;
@@ -333,4 +339,44 @@ input[type="submit"]:hover {
   }
 
   }
+
+
+  @media (max-width: 260px) {
+
+    .div-contacto h1{
+      font-size: 63px;
+    }
+    .imgFer{
+        width: 480px;
+    }
+
+    form{
+      width: auto;
+      padding: 30px;
+    }
+  
+    label {
+      font-size: 40px;
+      font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    padding: 35px 45px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    font-size: 26px;
+  }
+
+  .button-58{
+    height: 90px;
+    font-size: 40px;
+  }
+
+  .btn{
+    height: 80px;
+  }
+  }
+
+
   
