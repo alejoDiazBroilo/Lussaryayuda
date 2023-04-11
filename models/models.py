@@ -6,7 +6,7 @@ class Persona(db.Model): # se pueden hacer las querys
     id_persona = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(70), nullable = False)
     apellido = db.Column(db.String(70), nullable = False)
-    descripcion = db.Column(db.String(500), default = None)
+    descripcion = db.Column(db.String(1000), default = None)
     fecha_creacion = db.Column(db.Date, default=func.now())
 
     agenda = db.relationship('Contacto', backref='persona_agenda', lazy=True)
@@ -35,8 +35,8 @@ class Medio(db.Model): # se pueden hacer las querys
     __tablename__ = 'medio'
     id_medio = db.Column(db.Integer, primary_key=True)
     nombre_medio = db.Column(db.String(70), nullable = False)
-    link_contacto = db.Column(db.String(200), nullable = False) #unique
-    link_contacto_fin = db.Column(db.String(200), nullable = False) #unique
+    link_contacto = db.Column(db.String(1000), nullable = False) #unique
+    link_contacto_fin = db.Column(db.String(1000), nullable = False) #unique
     fecha_creacion = db.Column(db.Date, default=func.now())
 
     contacto_relacion = db.relationship('Contacto', back_populates='medio_relacion', lazy=True)
@@ -65,7 +65,7 @@ class Contacto(db.Model): # se pueden hacer las querys
     id_contacto = db.Column(db.Integer, primary_key=True)
     id_medio = db.Column(db.Integer, ForeignKey('medio.id_medio', ondelete='SET NULL', onupdate='CASCADE'))
     id_persona = db.Column(db.Integer, ForeignKey('persona.id_persona', ondelete='SET NULL', onupdate='CASCADE')) #persona_relatio
-    info_contacto = db.Column(db.String(200), nullable = False) 
+    info_contacto = db.Column(db.String(1000), nullable = False) 
     fecha_creacion = db.Column(db.Date, default=func.now())
 
     medio_relacion = db.relationship('Medio', back_populates='contacto_relacion', lazy=True)#ignore
@@ -127,7 +127,7 @@ class DescripcionColaborador(db.Model):# se pueden hacer las querys
     id_descripcioncolaborador = db.Column(db.Integer, primary_key=True)
     id_colaborador = db.Column(db.Integer, ForeignKey('colaborador.id_colaborador', ondelete='SET NULL', onupdate='CASCADE'))
     titulo = db.Column(db.String(50), default = None)
-    descripcion = db.Column(db.String(150), default = None)
+    descripcion = db.Column(db.String(1000), default = None)
     fecha_creacion = db.Column(db.Date, default=func.now())
     
     def __init__(self, colaborador, titulo, descripcion, fecha_creacion=None):
@@ -148,7 +148,7 @@ class Actividad(db.Model):# se pueden hacer las querys
     __tablename__ = 'actividad'
     id_actividad = db.Column(db.Integer, primary_key=True)
     titulo = db.Column(db.String(50), default = None) #unique
-    descripcion = db.Column(db.String(150), default = None)
+    descripcion = db.Column(db.String(1000), default = None)
     fecha_creacion = db.Column(db.Date, default=func.now())
 
     actividad_rol = db.relationship('Rol', backref='actividad', lazy=True)
@@ -194,7 +194,7 @@ class Proyecto(db.Model):
     id_proyecto = db.Column(db.Integer, primary_key=True, autoincrement=True)
     fecha_creacion = db.Column(db.Date, default=func.now(), nullable=False)
     titulo = db.Column(db.String(50), nullable=False, unique=True)
-    descripcion = db.Column(db.String(250), nullable=True)
+    descripcion = db.Column(db.String(1000), nullable=True)
 
     clientes = db.relationship('Cliente', backref='proyecto', lazy=True)
     contribuciones = db.relationship('Contribucion', backref='proyecto', lazy=True)
@@ -248,7 +248,7 @@ class Area(db.Model):
     id_area = db.Column(db.Integer, primary_key=True)
     fecha_creacion = db.Column(db.Date, default=func.now())
     titulo = db.Column(db.String(50), default = None) #unique=True
-    descripcion = db.Column(db.String(250), default = None)
+    descripcion = db.Column(db.String(1000), default = None)
     puntaje = db.Column(db.Integer, default = None)
 
     contribuciones = db.relationship('Contribucion', backref='area', lazy=True)
@@ -274,7 +274,7 @@ class Contribucion(db.Model): #Area relacion
     __tablename__ = 'contribucion' 
     id_contribucion = db.Column(db.Integer, primary_key=True)
     fecha_creacion = db.Column(db.Date, default=func.now())
-    descripcion = db.Column(db.String(250), default = None)
+    descripcion = db.Column(db.String(1000), default = None)
     id_colaborador = db.Column(db.Integer, ForeignKey('colaborador.id_colaborador', ondelete='SET NULL', onupdate='CASCADE'))
     id_proyecto = db.Column(db.Integer, ForeignKey('proyecto.id_proyecto', ondelete='SET NULL', onupdate='CASCADE'))
     id_area = db.Column(db.Integer, ForeignKey('area.id_area', ondelete='SET NULL', onupdate='CASCADE'))
@@ -300,7 +300,7 @@ class Categoria(db.Model):
     id_categoria = db.Column(db.Integer, primary_key=True)
     fecha_creacion = db.Column(db.Date, default=func.now())
     titulo = db.Column(db.String(50), default = None) # unique=True
-    descripcion = db.Column(db.String(250), default = None)
+    descripcion = db.Column(db.String(1000), default = None)
     
     atributos = db.relationship('AtributoGenerico', backref='categoria')
 
@@ -323,7 +323,7 @@ class SubProyecto(db.Model): #Proyecto relacion done
     id_subproyecto = db.Column(db.Integer, primary_key=True)
     fecha_creacion = db.Column(db.Date, default=func.now())
     titulo = db.Column(db.String(50), default = None) # unique=True
-    descripcion = db.Column(db.String(250), default = None)
+    descripcion = db.Column(db.String(1000), default = None)
     id_proyecto = db.Column(db.Integer, ForeignKey('proyecto.id_proyecto', ondelete='SET NULL', onupdate='CASCADE'))
 
     atributos = db.relationship('AtributoGenerico', backref='subproyecto')
@@ -347,7 +347,7 @@ class AtributoGenerico(db.Model):
     __tablename__ = 'atributogenerico'
     id_atributogenerico = db.Column(db.Integer, primary_key=True)
     titulo = db.Column(db.String(50), default = None) # unique=True
-    valor = db.Column(db.String(250), default = None)
+    valor = db.Column(db.String(1000), default = None)
     id_subproyecto = db.Column(db.Integer, ForeignKey('subproyecto.id_subproyecto', ondelete='SET NULL', onupdate='CASCADE'))
     id_categoria = db.Column(db.Integer, ForeignKey('categoria.id_categoria', ondelete='SET NULL', onupdate='CASCADE'))
     

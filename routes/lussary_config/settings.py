@@ -79,7 +79,7 @@ def añadir():
     Insert(Medio('Correo Electronico', '', ''))#4
     Insert(Medio('CHESS.COM', 'https://www.chess.com/member/', ''))#5
     Insert(Contacto(1, 1, 'alejo.diazbroilo'))#IG
-    Insert(Contacto(2, 1, 'alejoDiazBroilo'))#GIT
+    Insert(Contacto(2, 1, 'AlejoLuisDiazBroiloLussary'))#GIT
     Insert(Contacto(4, 1, 'diazbroiloalejolussary@gmail.com')) # MAIL END ALEJO
     Insert(Contacto(1, 2, 'agus04_Salonia'))#IG
     Insert(Contacto(2, 2, 'Salonia04'))#GIT
@@ -111,9 +111,27 @@ def añadir():
     Insert(Contribucion(1, 1, 1,  "alejo pudo hacer el models, pendiente revision"))
     Insert(Categoria('descripcion fermag', 'qsy que descripcion ah'))
     Insert(AtributoGenerico('titulo', 'nurstro trabajo', 1, 1))
-
+    Insert(SubProyecto(1, 'place holder', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in ullamcorper ipsum. Aliquam erat volutpat. Aenean quis nunc vel odio sollicitudin auctor vel in mauris. Sed id ex id turpis sollicitudin consectetur. Nam lobortis quam id sem accumsan, eu blandit libero lobortis.'))
+    Insert(Categoria('H1', 'uso para titulos entre otros'))
+    Insert(AtributoGenerico('nombre del proyecto', 'wallmart cables', 2, 1))
+    Insert(Categoria('IMG', 'links de imagenes'))
+    Insert(AtributoGenerico('Imagen proyecto 1', 'https://media.istockphoto.com/id/1334434982/es/foto/fantasma-aterrador-sobre-fondo-oscuro.jpg?s=612x612&w=0&k=20&c=GKJSU3NnvYt0G0m0pv6_PZHn47RL9zkUDHcNFkybPgM=', 1, 2))
+    Insert(Categoria('descripcion proyecto', 'descripciones uwu'))
+    Insert(AtributoGenerico('descripcion de subproyecto 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in ullamcorper ipsum. Aliquam erat volutpat. Aenean quis nunc vel odio sollicitudin auctor vel in mauris. Sed id ex id turpis sollicitudin consectetur. Nam lobortis quam id sem accumsan, eu blandit libero lobortis.', 2, 3))
+    Insert(AtributoGenerico('descripcion de subproyecto 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in ullamcorper ipsum. Aliquam erat volutpat. Aenean quis nunc vel odio sollicitudin auctor vel in mauris. Sed id ex id turpis sollicitudin consectetur. Nam lobortis quam id sem accumsan, eu blandit libero lobortis.', 2, 3))
+    Insert(Categoria('ubicacion', 'link o coordenadas de ub'))
+    Insert()
     return redirect(url_for('Home.traer'))
-
+"""
+nombre #titulo del proyecto 
+img #imagen representativa del proyecto
+proyectoDescripcion #pequenia decripcion del proyecto
+cliente #nombre del cliente
+descripcion3 #descripcion grande del proyecto
+ubicacion #ubicacion del proyecto
+mapa #link del iframe de google maps
+fondo #fondo del principio 
+"""
 
 @Home.route("/db/traer")
 def traer():
