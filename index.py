@@ -1,6 +1,6 @@
 from app import app
 from utils.db import db
-from models.tasks import *
+from models.models import *
 
 from routes.lussary_config.settings import Home
 from routes.lussary_config.Lussary_galeria import Lussary_galeria
