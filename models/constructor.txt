@@ -1,0 +1,30 @@
+                     Proyecto
+Proyecto('Fermag', 'Lorem ut tortor vestibulum, eget suscipit leo consectetur.'))
+Proyecto('VEME', 'Lorem i ut tortor vestibulum, eget suscipit leo consectetur.'))
+           SubProyecto
+SubProyecto(1, 'empresa1', 'almost null because this cries a lot'))
+           Persona
+Persona('Alejo Luis', 'Diaz Broilo', 'el pibe mas lindo de la empresa'))
+Persona('PAPA SALO', 'Apellido', 'insert generico'))
+           Medio
+Medio('instagram', 'www.instagram.com/', '/'))
+           Contacto
+Contacto(1, 1, 'alejo.diazbroilo'))
+           Colaborador
+Colaborador(4))#fecha_nacimiento peta, probablemente porque tenga que insertarlo como atributo de clase
+           DescripcionColaborador
+DescripcionColaborador(5, 'pasatiempos', 'le encanta el lol y la pija'))
+           Actividad
+Actividad('backend', 'back de atras, end de tu nariz contra mis bolas'))
+           Rol
+Rol(5, 1))
+           Cliente
+Cliente(5, 2, 1))
+           Area
+Area('hacer el models', 'hacer el model siguiendo el uml', 5))
+           Contribucion
+Contribucion(5, 1, 1,  "alejo pudo hacer el models, pendiente revision"))
+           Categoria
+Categoria('descripcion fermag', 'qsy que descripcion ah'))
+           AtributoGenerico
+AtributoGenerico('titulo', 'nurstro trabajo', 1, 1))
