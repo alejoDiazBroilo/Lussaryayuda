@@ -369,9 +369,12 @@ canvas {
     align-items: center;
 }
 
-.contactanos-botones-div a{
+.contactanos-botones-div button{
     margin: 0 10px 0 10px;
     font-size: 22px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .contactanos-botones-hr1{
