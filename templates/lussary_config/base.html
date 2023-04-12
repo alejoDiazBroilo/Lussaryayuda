@@ -18,18 +18,17 @@
     {% endblock %}
 </head>
 <body>
-    <nav class="navBar">
+    <nav class="navBar" id="navBar">
         <div class="logo">
-            <a class="navBar-logo" href="{{url_for('Home.getHome')}}"><img src="{{ url_for('static',filename='src/Lussary/LogoLussary.png') }}" alt="Team Lussary"></a>
+            <a class="navBar-logo" id="navBar-logo" href="{{url_for('Home.getHome')}}"><img src="{{ url_for('static',filename='src/Lussary/LogoLussary.png') }}" alt="Team Lussary"></a>
         </div>
 
         <div class="navegacion">
-
             <input type="checkbox" class="toogle-menu">
             <div class="hamburguer"></div>
             <ul class="menu">
                 <li><a href="{{url_for('Home.getHomePrincipalPageLussary')}}">Empresa</a></li>
-                <li><a href="{{url_for('Home.getGaleria')}}">Galeria</a></li>
+                <li><a href="{{url_for('Lussary_galeria.LussaryGaleria')}}">Galeria</a></li>
                 <li><a href="">Integrantes</a></li>
                 <li><a href="">Contactos</a></li>
             </ul>
@@ -38,7 +37,6 @@
     {% block content %}
 
     {% endblock %}
-
     <div class="footer">
         <div class="footer-imagen">
             <img src="{{ url_for('static',filename='/src/Lussary/LussaryConLogoBlanco.png') }}" alt="">
@@ -54,6 +52,13 @@
             <a href=""><p>Politica de privacidad</p></a> 
         </div>
     </div>
+
+    <!-- CUSTOM JS -->
+    {% if navbar %}
+    <script src="{{url_for('static', filename='js/lussary_config/base_static_js.js')}}"></script>  
+    {% else %}
+    <script src="{{url_for('static', filename='js/lussary_config/base_dinamic_js.js')}}"></script>  
+    {% endif %}
 
 </body>
 </html>
