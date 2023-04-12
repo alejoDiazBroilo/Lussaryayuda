@@ -13,12 +13,8 @@ app.register_blueprint(Home)
 app.register_blueprint(VEME_home)
 app.register_blueprint(Fermag_home)
 app.register_blueprint(Fermag_proyectos)
-<<<<<<< HEAD
 app.register_blueprint(Fermag_contacto)
-=======
-app.register_blueprint(Fermag_servicios)
 app.register_blueprint(Lussary_galeria)
->>>>>>> Lussary_galeria
 
 
 if __name__ == '__main__':
