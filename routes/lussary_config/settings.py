@@ -92,7 +92,6 @@ mapa #link del iframe de google maps
 fondo #fondo del principio 
 """
 
-<<<<<<< HEAD
 
 @Home.route("/personas")
 def getPersonas():
@@ -106,7 +105,6 @@ def getInformacion():
     return render_template("lussary_config/informacion.html")
 
 
-=======
 @Home.route("/db/traer")
 def traer():
     database = Persona.query.all()
@@ -132,7 +130,6 @@ def traer():
     return redirect(url_for('Home.getHome'))
     
     """
->>>>>>> d997e2c7f38af0cb97262b3f451b9c4ae885a1ec
 """
 
 @Home.route("/")
