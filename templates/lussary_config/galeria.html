@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "lussary_config/base.html" %}
 
     {% block head %}
     <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/galeria.css') }}">
@@ -11,16 +11,40 @@
     Team Lussary - Galeria
     {% endblock %}
 
-<body>
-    {% block content %}
-
-    <div class="div-aclaracion">
-        <h1 class="galeria-titulo">GALERIA DE PROYECTOS</h1>
-        <img class="imagen-lussary" src="{{ url_for('static',filename='src/Lussary/LogoBlackSinLetras.png') }}" alt="">
-        <h1 style="font-style: italic;">"Estamos trabajando en la galería más fachera jamás vista..."</h1>
-        <h4>-  Team Lussary</h4>
-
-        <a href="{{ url_for('Home.getHomePrincipalPageLussary')}}">VOLVER</a>
+{% block content %}
+<div class="div-main">
+    <div class="div">
+        {% for g in galeria %}
+        <div class="card">
+            <div class="content">
+                <div class="back">
+                    <div class="back-content">
+                        <svg stroke="#ffffff" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" height="50px" width="50px" fill="#ffffff">
+                            <img src="{{url_for('static',filename=g[0])}}" alt="">         
+                        </svg>
+                        <strong>{{g[1]}}</strong>
+                    </div>
+                </div>
+    
+                <div class="front">
+                    <div class="img">
+                        <img src="{{url_for('static',filename=g[2])}}" alt="">
+                    </div>
+        
+                    <div class="front-content">
+                        <small class="badge">{{g[1]}}</small>
+                        <div class="description">
+                            <p class="title">
+                                <strong><a href="{{g[3]}}">VER PÁGINA</a></strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %} 
     </div>
-    {% endblock %}
-</body>
+</div>
+
+
+{% endblock %}

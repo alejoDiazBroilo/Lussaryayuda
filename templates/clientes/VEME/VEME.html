@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 
+{% block title %}
+VEME | Indumentaria Femenina
+{% endblock %}
+
 {% block head %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VEME | Indumentaria Femenina</title>
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/VEME/VEME_css.css') }}">
@@ -25,9 +28,9 @@
         <section id="section-1">
             <div class="div-title veme-colores-background"></div>
             <div class="div-container">
-                {% for i in range(7) %}
-                    <div class="div-photo"> 
-                        <img src="fotoPrincipal{{i+1}}" alt="foto{{i+1}}"> 
+                {% for i in navbar_imgs %}
+                    <div class="div-photo">
+                        <img src="{{ url_for('static',filename='src/clientes/VEME/')}}{{i}}{{'.png'}}" alt="" class="{{i[:-1]}}">  
                     </div>
                 {% endfor %}
             </div>
@@ -117,7 +120,7 @@
 
                         <a href="{{url_for('Home.getHomePrincipalPageLussary')}}">Desarrollado Por</a>
                     </p>
-                    <p>Lussary &copy; 2023</p>
+                    <p>Copyright © 2023 | VEME | <a href="{{url_for('Home.getHome')}}" class="link-footer">Team Lussary</a></p>
                 </div>
             </nav>
 

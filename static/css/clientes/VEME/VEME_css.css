@@ -28,10 +28,6 @@ body{
   height: auto;
 }
 
-.div-title{
-    height: 30vh;
-    width: auto;
-}
 
 .div-fondo{
   width: 100%;
@@ -71,16 +67,7 @@ body{
   margin-top: 0px;
 }
 
-.div-container{
-  display: flex; 
-  height: 20vh; 
-}
 
-.div-photo{
-  border: 4px solid rgb(0, 0, 0);
-  height: 20vh;
-  flex: 1;
-}
 
 .div-info{
   padding-top: 150px;
@@ -103,8 +90,40 @@ body{
   width: 100%;
 }
 
+/* SECCION 1*/ 
 
+.div-title{
+  height: 30vh;
+  width: auto;
+}
 
+.div-container{
+display: flex; 
+height: 20vh; 
+}
+
+.div-photo{
+border: 4px solid rgb(0, 0, 0);
+height: 30vh;
+flex: 1;
+}
+.div-photo img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.pantalones{
+  object-position: 0% 5%;
+}
+.remeras{
+  object-position: 0% 35%;
+}
+.vestidos{
+  object-position: 0% 30%;
+}
+.camperas{
+  object-position: 0% 30%;
+}
 
 .div-loquehacemos{
   color: rgb(0, 109, 109);
@@ -413,6 +432,11 @@ div#slider figure {
 
 .footer-distributed p.footer-links a:hover{text-decoration:underline;}
 
+.link-footer{
+  text-decoration: none;
+  color: rgb(85, 85, 255);
+}
+.link-footer:hover{text-decoration:underline;}
 
 /*   ANIMACIONES   */
 @keyframes slidy {

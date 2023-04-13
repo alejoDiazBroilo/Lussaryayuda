@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/proyecto.css') }}">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}  
+{% block title %}
+Fermag S.A.
+{% endblock %}
+
+{% block content %}
+
+    
+<div id="parallax-world-of-ugg">
+  
+    <section>
+      <div class="title">
+        <h1>NUESTROS PROYECTOS</h1>
+        <h4>Compartimos nuestros grandes proyectos</h4>
+      </div>
+    </section>
+    {% for nombre in nombres %}
+    <section style="background-image: url({{nombre.descripcion}})" class="parallax">
+        <div>
+          <h2>{{ nombre.nombre }}</h2>
+          <h4 id="localidad">{{ nombre.img}}</h4>
+          <button >{{nombre.boton }}</button>
+        </div>
+    </section>        
+    {% endfor %}  
+    <p>Made by: Team Lussary</p>
+    </div>
+{% endblock %}
