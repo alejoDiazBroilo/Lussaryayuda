@@ -7,8 +7,7 @@ def getNavBar():
     return [
         ('Empresa','url_for','Fermag_home.FermagHome'),
         ('Noticias','url_for','Fermag_home.FermagNoticias'),
-        ('Servicios','url_for','Fermag_home.FermagNoticias'),#,'Fermag_proyectos.FermagProyectos'),
-        ('Proyectos','url_for','Fermag_home.FermagNoticias'),#,'Fermag_proyectos.FermagProyectos'),
+        ('Servicios','url_for','Fermag_proyectos.FermagProyectos'),
         ('Ubicacion','link','https://www.google.com/maps/?hl=es'),
         ('Contacto','link','/clientes/Fermag/contacto')
     ]
@@ -33,10 +32,10 @@ def FermagHome():
 def FermagNoticias():
     NavBar = getNavBar()
     Notis = [
-        ('https://pbs.twimg.com/media/D6uc2kBX4AAv3xV.jpg', 'PRUEBA', 'Esto es una prueba pa ver si funca'),
-        ('https://i.pinimg.com/236x/57/39/91/57399153da127ac6fe1d88512443bf3f.jpg', 'PRUEBAAA', 'Esto es una prueba pa ver si funcaaa'),
-        ('http://pm1.narvii.com/7517/58894a30021ce56ed81b9dea917c7928d98e110dr1-958-811v2_uhq.jpg', 'PRUEBAAA', 'Esto es una prueba pa ver si funcaaa'),
-        ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv8lgDc1gGlVqn3UjDqKslOP6HrrUissH8xw&usqp=CAU', 'PRUEBAAAAAAA AAAAAAAAA', 'Esto es una prueba pa ver si funcaaaaa')
+        ('https://thumbs.dreamstime.com/t/animaci%C3%B3n-del-s%C3%ADmbolo-signo-de-interrogaci%C3%B3n-en-fondo-negro-abstracta-un-120634323.jpg', '???', 'Proximamente...'),
+        ('https://thumbs.dreamstime.com/t/animaci%C3%B3n-del-s%C3%ADmbolo-signo-de-interrogaci%C3%B3n-en-fondo-negro-abstracta-un-120634323.jpg', '???', 'Proximamente...'),
+        ('https://thumbs.dreamstime.com/t/animaci%C3%B3n-del-s%C3%ADmbolo-signo-de-interrogaci%C3%B3n-en-fondo-negro-abstracta-un-120634323.jpg', '???', 'Proximamente...'),
+        ('https://thumbs.dreamstime.com/t/animaci%C3%B3n-del-s%C3%ADmbolo-signo-de-interrogaci%C3%B3n-en-fondo-negro-abstracta-un-120634323.jpg', '???', 'Proximamente...')
     ]
     return render_template('/clientes/Fermag/noticias.html', navBar = NavBar,notis = Notis)
 
