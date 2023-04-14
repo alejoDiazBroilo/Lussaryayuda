@@ -9,6 +9,9 @@ from routes.clientes.Fermag.Fermag_home import Fermag_home
 from routes.clientes.Fermag.Fermag_proyectos import Fermag_proyectos
 from routes.clientes.Fermag.Fermag_contacto import Fermag_contacto
 
+with app.app_context():
+    db.create_all()
+
 app.register_blueprint(Home)
 app.register_blueprint(VEME_home)
 app.register_blueprint(Fermag_home)
