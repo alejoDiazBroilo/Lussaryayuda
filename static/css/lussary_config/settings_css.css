@@ -423,6 +423,15 @@ canvas {
     font-weight: bold;
 }
 
+.fa:hover, .fab:hover{
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(-5px);
+    transform:scale(1.5);
+    animation-duration: 2s;
+
+}
+
+
 /*RESPONSIVE DEL PRINCIPIO*/
 @media (max-width: 800px){
 
