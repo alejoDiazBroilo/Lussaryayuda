@@ -173,7 +173,7 @@ canvas {
 
 /* PROYECTOS */
 .proyectos{
-    background-image: url(https://s1.best-wallpaper.net/wallpaper/m/2101/Moon-space-black-background_m.webp);
+    background-image: url(/static/src/Lussary/Moon.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
