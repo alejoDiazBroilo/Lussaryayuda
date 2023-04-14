@@ -11,7 +11,7 @@ body{
 
 
 canvas {
-    background-color: rgb(10, 10, 10); /* Color de fondo azul */
+    background-color: rgb(10, 10, 10); 
     display: block;
     margin: auto;
     position: absolute;
@@ -48,7 +48,7 @@ canvas {
 }
 
 .principio-adelante-logoUnido-imagen{
-    width: 150px;
+    width: 170px;
     height: 140px;
     margin-right: 20px;
 }
@@ -369,9 +369,12 @@ canvas {
     align-items: center;
 }
 
-.contactanos-botones-div a{
+.contactanos-botones-div button{
     margin: 0 10px 0 10px;
     font-size: 22px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .contactanos-botones-hr1{
@@ -423,8 +426,29 @@ canvas {
     font-weight: bold;
 }
 
-/*RESPONSIVE DEL PRINCIPIO*/
+/* RESPONSIVE */
+
 @media (max-width: 800px){
+
+    .contenido{
+        border: 10px solid black;
+        margin: 50px 20px 0 20px;
+        border-radius: 64px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom: none;
+    }
+    
+    .contenido-camara{
+        width: 100px;
+        height: 30px;
+        border-radius: 64px;
+        margin: 5px auto;
+    }
+
+    .principio-img{
+        width: 100%;
+    }
 
     .principio-adelante{
         background-color: rgba(20, 20, 20, 0.9);
@@ -494,33 +518,24 @@ canvas {
         margin-left: 100px;
     }
 
-}
-
-/*RESPONSIVE DE LA COMPU DE ARRIBA*/
-
-@media (max-width: 800px){
-
-    .contenido{
-        border: 10px solid black;
-        margin: 50px 20px 0 20px;
-        border-radius: 64px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        border-bottom: none;
-    }
-    
-    .contenido-camara{
-        width: 100px;
-        height: 30px;
-        border-radius: 64px;
-        margin: 5px auto;
+    .estilo{
+        flex-direction: column;
+      }
+      
+    .estilo-izquierda{
+    width: 100%;
     }
 
-    .principio-img{
-        width: 100%;
+    .estilo-hr{
+    width: 80%;
+    }
+
+    .estilo-derecha{
+    width: 100%;
     }
 
 }
+
 
 @media (max-width: 600px){
     
@@ -622,13 +637,7 @@ canvas {
 }
 
 @media (max-width: 330px){
-    canvas {
 
-        position: absolute;
-        max-width: 100%;
-        height: 100vh;
-    }
-    
     .proyectos-titulo{
         font-size: 45px;
     }    
@@ -670,46 +679,6 @@ canvas {
 
 }
 
-
-/*RESPONSIVE DE LOS ESTILOS*/
-@media (max-width: 800px){
-
-    canvas {
-        background-color: rgb(10, 10, 10); /* Color de fondo azul */
-        display: block;
-        margin: auto;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }    
-    .estilo{
-        flex-direction: column;
-      }
-      
-      .estilo-izquierda{
-        width: 100%;
-      }
-
-      .estilo-hr{
-        width: 80%;
-      }
-    
-      .estilo-derecha{
-        width: 100%;
-      }
-
-}
-
-@media (max-width: 380px){
-      
-    .fechaBinaria{
-        font-size: 10px;
-        letter-spacing: 5px;
-      }
-
-}
-
-/* 400px */
 @media (max-width: 400px){
 
     .contactanos-titulo{
@@ -720,10 +689,24 @@ canvas {
         width: 100%;
         margin-right: 0px;
     }
-
 }
 
-/* 350px */
+@media (max-width: 380px){
+      
+    .fechaBinaria{
+        font-size: 10px;
+        letter-spacing: 5px;
+      }
+}
+
+@media (max-width: 360px){
+    #clock{
+        font-size: 20px;
+        margin-top: -0px;
+        margin-left: 35px;
+    }
+}
+
 @media (max-width: 350px){
 
     .estilo-izquierda-imagen{
@@ -768,16 +751,6 @@ canvas {
 
 }
 
-/* 360px */
-@media (max-width: 360px){
-    #clock{
-        font-size: 20px;
-        margin-top: -0px;
-        margin-left: 35px;
-    }
-}
-
-/* 275px */
 @media (max-width: 280px){
     
     .contenido-izquierda-titulo-decoracion{
@@ -830,6 +803,19 @@ canvas {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -50,8 +50,7 @@ body{
 .noticias {
     font-family: 'Open Sans', sans-serif;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -74,6 +73,11 @@ body{
     background-color: #eeeeee;
     transition: .3s;
     margin-right: .5rem;
+}
+
+.noticia:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .noticia h1{
@@ -101,3 +105,10 @@ body{
     width: 100px;
     margin-top: -10px;
 }
+
+@media (max-width: 330px){
+    .noticias{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+    

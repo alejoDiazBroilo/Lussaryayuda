@@ -6,21 +6,11 @@ body{
     flex-direction: column;
 }
 
-.div-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 5px;
-}
-
 .div{
     width: 100%;
-    height: 100%;
     font-family: 'Open Sans', sans-serif;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /*El numerito que esta aca v, tiene que ser 1 mas de los numeros de filas que hay*/
     grid-template-rows: repeat(2, 1fr);
     margin-top: 75px;   
 }
@@ -31,7 +21,7 @@ body{
     height: 254px;
     justify-self: center;
     align-self: center;
-    margin: 15px 0 20px 0;
+    margin-bottom: 55px;
   }
   
   .content {
@@ -75,8 +65,8 @@ body{
   
   .back-content {
     position: absolute;
-    width: 99%;
-    height: 99%;
+    width: 100%;
+    height: 100%;
     background-color: #151515;
     border-radius: 5px;
     color: white;

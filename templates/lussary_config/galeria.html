@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/static/src/Lussary/LogoLussary.png" />
     {% endblock %}
     
     {% block title %}
-    Team Lussary - Galeria
+    Team Lussary
     {% endblock %}
 
-{% block content %}
-<div class="div-main">
+    {% block content %}
+    
     <div class="div">
         {% for g in galeria %}
         <div class="card">
@@ -44,7 +45,6 @@
         </div>
         {% endfor %} 
     </div>
-</div>
-
-
-{% endblock %}
+    
+    
+    {% endblock %}
