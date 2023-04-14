@@ -87,7 +87,7 @@
                 <h1 class="principio-adelante-logoUnido-nombre">TEAM LUSSARY</h1>
             </div>
             <hr class="principio-adelante-hr">
-            <p class="principio-adelante-frase">"El arte desafía a la tecnologia, y la tecnología inspira al arte"</p>
+            <p class="principio-adelante-frase">"El arte desafía a la tecnología, y la tecnología inspira al arte"</p>
             <p class="principio-adelante-autor">"John Lasseter"</p>
         </div>
     </div>
@@ -104,21 +104,34 @@
                 <div id="clock"> </div>   
 
             </div>
+
         <div class="contenido-lados">
             <div class="contenido-izquierda">
                 <div class="contenido-izquierda-titulo">
                     <img class="contenido-izquierda-titulo-decoracion" src="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}" alt="Decoracion">
                     <h1 class="contenido-izquierda-titulo-titulo">¿Qué es Lussary?</h1>
                 </div>
-                <p class="contenido-izquierda-parrafo"><span style="background: linear-gradient(to right, #3C65E6 35%, #aeca3e 0%); 
-                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">TEAM LUSSARY</span> es un grupo de cinco personas que quisieron comenzar un emprendimiento de desarrollo web un 17 de Enero del año 2023.
-                    Trabajamos juntos para <span style="color: #3C65E6;">diseñar y desarrollar</span> nuestros proyectos de la mejor manera posible y que el cliente quede a gusto con nuestro trabajo. </p>
+                <p class="contenido-izquierda-parrafo"><span style="background: linear-gradient(to right, #3C65E6 35%, #82972c 0%); 
+                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">TEAM LUSSARY</span> es un grupo de emprendedores formado por cinco estudiantes que han decidido iniciar un proyecto de desarrollo web el 17 de enero de 2023.
+                    Nuestra misión es <span style="color: #3C65E6;">diseñar y desarrollar</span> páginas y aplicaciones web que cumplan con los más altos estándares de calidad, asegurándose de que sus clientes queden completamente satisfechos con su trabajo.
+                </p>
                 
-                    <div class="contenido-izquierda-titulo">
-                        <img class="contenido-izquierda-titulo-decoracion" src="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}" alt="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}">
-                        <h1 class="contenido-izquierda-titulo-titulo">¿Qué hacemos?</h1>
-                    </div>
-                    <p class="contenido-izquierda-parrafo">Nos enfocamos, principalmente, en <span style="color: #3C65E6;">diseñar páginas y aplicaciones web</span> para cualquier tipo de nogocios. </p>
+                <div class="contenido-izquierda-titulo">
+                    <img class="contenido-izquierda-titulo-decoracion" src="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}" alt="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}">
+                    <h1 class="contenido-izquierda-titulo-titulo">¿Qué hacemos?</h1>
+                </div>
+                <p class="contenido-izquierda-parrafo">Nos especializamos, principalmente, en el <span style="color: #3C65E6;">diseño de páginas y aplicaciones web</span> para negocios de cualquier tamaño y sector, poniendo a <span style="color: #3C65E6;">disposición de sus clientes</span> su experiencia en programación, diseño web, gestión de bases de datos y seguridad de la información.
+                </p>
+
+                <div class="contenido-izquierda-titulo">
+                    <img class="contenido-izquierda-titulo-decoracion" src="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}" alt="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}">
+                    <h1 class="contenido-izquierda-titulo-titulo">¡Nos Importas!</h1>
+                </div>
+                <p class="contenido-izquierda-parrafo">En <span style="background: linear-gradient(to right, #3C65E6 35%, #82972c 0%); 
+                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">TEAM LUSSARY </span>, entendemos que la <span style="color: #3C65E6;">la comunicación y satisfacción del cliente</span> son fundamentales para el éxito del desarrollo web. Ofrecemos <span style="color: #3C65E6;">soluciones personalizadas y un servicio excepcional</span>, en constante contacto con el cliente para mejorar continuamente y lograr la excelencia en su trabajo.
+                </p>
+
+
             </div>
 
             <div class="contenido-derecha">
@@ -138,9 +151,9 @@
     <div class="proyectos">
         <div class="proyectos-adelante">
             <h1>NUESTROS PROYECTOS</h1>
-            <p>"No somos perfectos, nuestro codigo si."</p>
+            <p>"No somos perfectos, nuestro codigo sí."</p>
             <hr>
-            <a href="{{ url_for('Lussary_galeria.LussaryGaleria')}}"><button>Galeria</button></a>
+            <a href="{{ url_for('Lussary_galeria.LussaryGaleria')}}"><button>Galería</button></a>
         </div> 
     </div>
 
@@ -164,7 +177,7 @@
 
     
     <div class="contactanos">
-        <h1 class="contactanos-titulo">CONTACTANOS</h1>
+        <h1 class="contactanos-titulo">HABLÁ CON NOSOTROS</h1>
 
         <div class="contactanos-botones">
             <hr class="contactanos-botones-hr1">
@@ -184,4 +197,5 @@
 
     {% endblock %}
 </body>
+
 
