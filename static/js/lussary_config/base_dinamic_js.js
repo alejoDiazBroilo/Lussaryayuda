@@ -14,6 +14,6 @@ window.addEventListener("load", function(){
   const loader = document.querySelector("#loader-container");
   setTimeout(function() {
     loader.className += " hidden";
-  }, 800); // espera 2 segundos antes de ocultar la pantalla de carga
+  }, 800); 
 });
   

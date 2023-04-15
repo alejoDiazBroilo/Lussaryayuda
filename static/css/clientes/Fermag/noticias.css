@@ -13,7 +13,7 @@ body{
 .header{
     width: 100%;
     height: 80vh;
-    background-image: url(https://cdn.pixabay.com/photo/2020/04/16/03/44/sunset-5048921_1280.jpg);
+    background-image: url(/static/src/clientes/Fermag/FondoNoticias.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -58,6 +58,10 @@ body{
     margin: 0 70px 0 70px;
     margin-top: 75px;
   }
+
+.noticias a{
+    text-decoration: none;
+}
 
 .noticia{
     height: 500px;
