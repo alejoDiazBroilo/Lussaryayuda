@@ -437,6 +437,30 @@ canvas {
 /*RESPONSIVE DEL PRINCIPIO*/
 @media (max-width: 800px){
 
+    .estilo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .estilo-hr{
+        width: 80%;
+    }
+
+    .estilo-izquierda-texto-div{
+        width: 100%;
+        text-align: left;
+    }
+
+    .estilo-derecha-texto-div{
+        width: 100%;
+        text-align: right;
+    }
+
+    .estilo-izquierda, .estilo-derecha{
+        width: 90%;
+    }
+
     .contenido{
         border: 10px solid black;
         margin: 50px 20px 0 20px;
@@ -524,39 +548,9 @@ canvas {
         margin-top: -2px;
         margin-left: 100px;
     }
-
-}
-
-/*RESPONSIVE DE LA COMPU DE ARRIBA*/
-
-@media (max-width: 800px){
-
-    .contenido{
-        border: 10px solid black;
-        margin: 50px 20px 0 20px;
-        border-radius: 64px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        border-bottom: none;
-
-    }
     
-    .contenido-camara{
-        width: 100px;
-        height: 30px;
-        border-radius: 64px;
-        margin: 5px auto;
-    }
-
-    .estilo-hr{
-    width: 80%;
-    }
-
-    .estilo-derecha{
-    width: 100%;
-    }
-
 }
+
 
 
 @media (max-width: 600px){
@@ -655,12 +649,6 @@ canvas {
     .proyectos h1{
         font-size: 52px;
     }    
-    .estilo-derecha-texto, .estilo-izquierda-texto{
-        font-size: 27px;
-        font-weight: bold;
-        font-style: italic;
-    
-      }
 
 }
 
