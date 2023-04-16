@@ -18,7 +18,8 @@
             <p class="texto">Soy <input name="name" required type="text" id="name" placeholder="Juan Perez">. Me dirijo a ustedes debido a que necesito:</p>
             <textarea id="mensaje" name="mensaje" id="" cols="30" rows="10" required type="text" placeholder="Necesito una pagina web/aplicacion web de..."></textarea>
             <p class="texto">Atentamente,<input name="email" type="text" id="email" required placeholder="juanp@gmail.com"></p>
-            <button type="submit" name="submit" class="button-58">MANDAR</button>
+            <button type="submit" name="submit" class="button-58" id="enviar">MANDAR</button>
+            <p id="mensaje-exito" class="mensajee"> </p>
           </form>
     </div>
     <div class="redes-sociales"> 
@@ -35,13 +36,10 @@
   <script>
       
     const $form = document.querySelector('#form');
-    console.log('form element:', $form);
         
     $form.addEventListener('submit', handleSubmit);
-    console.log('submit event listener added to form');
         
     async function handleSubmit(event) {
-      console.log('handleSubmit started');
       event.preventDefault();
       const form = new FormData(this);
       const response = await fetch(this.action, {
@@ -52,16 +50,19 @@
       
       if (response.ok) {
         this.reset();
-        console.log('Form submitted successfully');
-        alert('Se ha mandado correctamente, ya pronto responderemos <3');
-      } else {
-        console.log('Error submitting form:', response.statusText);
       }
     }
 
     </script>
-
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.querySelector('#mensaje-exito');
+      mensaje.innerHTML = 'Se ha mandado correctamente, ya pronto responderemos <3';
+    }
   
+    const enviarBtn = document.querySelector('#enviar');
+    enviarBtn.addEventListener('click', mostrarMensaje);
+  </script>
   
   
 
@@ -69,4 +70,4 @@
     {% endblock %}
 
     
-      <script src="{{ url_for('static',filename='js/lussary_config/lussary_contact.js') }}"></script>
+<script src="{{ url_for('static',filename='js/lussary_config/lussary_contact.js') }}"></script>

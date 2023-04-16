@@ -123,6 +123,12 @@ textarea{
   width: 100%;
 }
 
+.mensajee{
+  font-family: 'Poppins',sans-serif;
+  text-align: center;
+  color: #25D366;
+}
+
 .sello{
   width: 90px;
   margin-left: 320px;
