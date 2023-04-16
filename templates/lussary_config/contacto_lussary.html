@@ -1,0 +1,58 @@
+{% extends "lussary_config/base.html" %}
+
+  {% block head %}
+      <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/contacto_lussary.css') }}">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- FONT AWESOME -->
+      <title>Contacto</title>
+      <link rel="shortcut icon" type="image/jpeg" href="/static/src/Lussary/LogoLussary.png" />
+  {% endblock %}
+  {% block content %}
+
+  <div class="main">
+    <div class="div-contacto">
+      <h1>CARTA DE CONTACTO</h1>
+          <form id="form" action="" class="form">
+            <p id="p-saludo" class="texto"></p>
+            <p class="texto">Querido Team Lussary.<img src="/static/src/Lussary/sello.png" alt="sello" class="sello"></p>
+            <p class="texto">Soy <input name="name" required type="text" id="name" placeholder="Juan Perez">. Me dirijo a ustedes debido a que necesito:</p>
+            <textarea id="mensaje" name="message" id="" cols="30" rows="10" required type="text" placeholder="Necesito una pagina web/aplicacion web de..."></textarea>
+            <p class="texto">Atentamente,<input name="email" type="text" id="email" required placeholder="juanp@gmail.com"></p>
+            <button type="submit" class="button-58">MANDAR</button>
+          </form>
+    </div>
+    <div class="redes-sociales"> 
+      <hr style="width: 40%;">
+        <h2>¡O contáctanos por nuestras redes!</h2>  
+        <a href="https://wa.me/5493518147051" class="whatsapp"target="Hola, Como estas!?"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100090203919166&mibextid=ZbWKwL" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/TeamLussary" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/team.lussary/" class="instagram"><i class="fab fa-instagram"></i></a>
+      
+      </div>
+  </div>
+  
+  
+  
+  
+  
+  <script>
+      
+      const $form = document.querySelector('#form')
+      const $buttonMailto = document.querySelector('#trick')
+  
+      $form.addEventListener('submit', handleSubmit)
+  
+      function handleSubmit(event) {
+          event.preventDefault()
+            const form = new FormData(this)
+            console.log(form.get('name'))
+            $buttonMailto.setAttribute('href', `mailto:lussarycompany@gmail.com?subject=nombre ${form.get('name')}  correo ${form.get('email')}&body=${form.get('mensaje')}`)
+            $buttonMailto.click()
+        }
+      
+      </script>
+
+      <script src="{{ url_for('static',filename='js/lussary_config/lussary_contact.js') }}"></script>
+
+    {% endblock %}
