@@ -66,10 +66,6 @@ input[type="submit"] {
 }
 
 
-#trick{
-    opacity: 0;
-}
-
 .button-58 {
   align-items: center;
   background-color: rgb(7, 62, 145);
@@ -128,9 +124,9 @@ textarea{
 }
 
 .sello{
-  width: 110px;
+  width: 90px;
   margin-left: 320px;
-  margin-top: -2000px;
+  margin-top: -40px;
 }
 
 .redes-sociales {
