@@ -12,8 +12,7 @@ from routes.clientes.Fermag.Fermag_proyectos import Fermag_proyectos
 from routes.clientes.Fermag.Fermag_contacto import Fermag_contacto
 from routes.lussary_config.info_politica import Info_Politica
 
-with app.app_context():
-    db.create_all()
+
 
 app.register_blueprint(Home)
 app.register_blueprint(VEME_home)
