@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
 body{
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: rgb(40, 40, 40);
-    line-height: 1.6;
+    line-height: 1;
     margin: 0;
     width: 100%;
-    color: #00BFFF;
-
+    color: #5f89e2;
+    font-family: 'Poppins',sans-serif;
+    height: 100%;
 }
 
 * {
@@ -15,67 +21,50 @@ body{
 }
 
 .main{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
   text-align: center;
   justify-content: center;
   align-items: center;
+
 }
 
-.div-contacto{
-  width: 100%;
+.carta{
   text-align: center;
   justify-content: center;
   align-items: center;
-}
-h1{
-    font-size: 60px;
-    margin-top:100px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
 }
 
 form {
-    width: 500px;
-    margin: 50px auto;
-    text-align: left;
-    padding: 20px;
-    border: 3px solid #ccc;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-}
-
-label {
-    font-size: 20px;
-    font-weight: bold;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  font-size: 22px;
+  color: #363636;
+  background-color: aliceblue;
+  width: 500px;
+  margin: 50px auto;
+  text-align: left;
+  padding: 20px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 input,
 textarea {
-    width: 100%;
     padding: 12px 20px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
 }
 
 input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
 
 #trick{
     opacity: 0;
@@ -83,12 +72,13 @@ input[type="submit"]:hover {
 
 .button-58 {
   align-items: center;
-  background-color: #06f;
-  border: 2px solid #06f;
+  background-color: rgb(7, 62, 145);
+  border: 2px solid rgb(7, 62, 145);
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  display: inline-flex;
+  display: block;
+  margin: 0 auto;
   fill: #000;
   font-family: Inter,sans-serif;
   font-size: 16px;
@@ -106,7 +96,7 @@ input[type="submit"]:hover {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
+  
 }
 
 .button-58:focus {
@@ -125,169 +115,93 @@ input[type="submit"]:hover {
   fill: #06f;
 }
 
-
-.imgFer{
-    margin-top: 37px;
-    width: 300px;
+input, textarea{
+  background-color: rgb(190, 190, 190);
+  border: 2px solid whitesmoke;
+  border-radius: 7px;
+  font-family: 'Poppins',sans-serif;
 
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+textarea{
+  width: 100%;
 }
 
-.social-buttons {
-    width: 500px;
-    margin: 50px auto;
-    text-align: center;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: bolder;
+.sello{
+  width: 110px;
+  margin-left: 320px;
+  margin-top: -2000px;
 }
 
+.redes-sociales {
+  margin-bottom: 80px;
+}
+.redes-sociales i{
+  font-size: 20px;
+}
+.redes-sociales a {
+  display: inline-block;
+  border-radius: 10%;
+  margin: 0 10px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 60px;
+}
 
+.redes-sociales a:hover {
+  cursor: pointer;
+}
 
-.instagram-btn {
-    background-color: #E1306C;
-    color: #fff;
+.whatsapp {
+  background-color: #25D366;
+  color: #fff;
+}
 
+.facebook {
+  background-color: #1877F2;
+  color: #fff;
+}
 
-  }
-  .youtube-btn {
-    background-color: #FF0000;
-    color: #fff;
+.twitter {
+  background-color: #1DA1F2;
+  color: #fff;
+}
 
-  }
-  .facebook-btn {
-    background-color: #3B5998;
-    color: #fff;
-
-  }
-  .phone-btn {
-    background-color: #00BFFF;
-    color: #fff;
-  }
-
-  .google-maps-btn {
-    background-color: #4285F4;
-    color: #fff;
-
-  }
-  
-  .whatsapp-btn {
-    background-color: #25D366;
-    color: #fff;
-
-  }
-  
-  /* Estilo */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    text-decoration:solid;
-    margin-bottom: 30px;
-    padding: 13px;
-    width: 40%;
-  }
-  .btn:hover {
-    opacity: 0.8;
-  }
-  
-  .footer-2 {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    height: auto;
-    width: 100%;
-  }
-  
-  .footer-2 p {
-    margin: 0;
-    font-size: 14px;
-  }
-
-  .logoLuss{
-    width: 140px;
-  }
-
-  .footer-1{
-    display: none;
-  }
+.instagram {
+  background-color: #C13584;
+  color: #fff;
+}
 
 @media only screen and (max-width: 1020px) {
   form {
     width: 80%;
   }
-  .container {
-    grid-template-columns: 1fr;
-  }
-  .social-buttons {
-    width: 80%;
+  .div-contacto{
+    margin-top: 70px;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  h1 {
-    font-size: 40px;
-  }
-  .imgFer {
-    width: 300px;
-  }
   form {
     width: 90%;
     margin: 20px auto;
   }
-  .container {
-    grid-template-columns: 1fr;
+  .sello{
+    display: none;
   }
-  .social-buttons {
-    width: 95%;
-
-  }
-  .logoLuss{
-    width: 100px;
-  }
-  .btn{
-    width: 100%;
-    height: 60px;
-    border-radius: 20px;
+  .div-contacto{
+    margin-top: 70px;
   }
 }
-@media (max-width: 300px) {
-  h1 {
-    font-size: 30px;
-    margin-top: 50px;
-  }
-  
+@media (max-width: 320px) {
   form {
-    width: 90%;
+    width: 100%;
     margin: 30px auto;
     padding: 10px;
   }
-  
-  .imgFer{
-    width: 200px;
-  }
-  
-  .social-buttons {
-    width: 90%;
-    margin: 30px auto;
-  }
-  
-  .btn {
-    width: 100%;
-  }
+
+
+
 }
