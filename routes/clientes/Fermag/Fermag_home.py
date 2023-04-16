@@ -9,7 +9,7 @@ def getNavBar():
         ('Noticias','url_for','Fermag_home.FermagNoticias'),
         ('Servicios','url_for','Fermag_proyectos.FermagProyectos'),
         ('Ubicacion','link','https://www.google.com/maps/?hl=es'),
-        ('Contacto','link','/clientes/Fermag/contacto')
+        ('Contacto','url_for','Fermag_contacto.FermagContacto')
     ]
 
 

@@ -180,15 +180,44 @@
 .footer-contactanos-botones{
   display: flex;
   flex-direction: row;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.footer-contactanos-botones a{
+.footer-contactanos-botones button{
   width: 30px;
   height: 30px;
   padding: 8px;
   font-size: 20px;
   margin-top: -15px;
   margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+.footer-contactanos-botones a{
+  width: 25px;
+  height: 25px;
+  padding: 8px;
+  font-size: 20px;
+  margin-top: -12px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  margin-right: -5px;
+}
+
+.telefono{
+  rotate: 90deg;
+}
+
+.noTelefono:hover{
+  transform: translateY(-5px);
+}
+
+.telefono:hover{
+  transform: translateX(-5px);
 }
 
 .footer-contactanos hr{
@@ -301,7 +330,7 @@
 }
 
 .cell:nth-child(9) {
-  --cell-color: #003d9923;
+  --cell-color: #003d990c;
 }
 
 /*Animation*/
