@@ -1,3 +1,5 @@
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.2.2/dist/smooth-scroll.polyfills.min.js"></script>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -60,8 +62,10 @@
                     <h1></h1>
                     {%if item[1] == 'url_for'%}
                         <li><a href="{{url_for(item[2])}}" class="nav-link">
-                    {%else%}
+                    {%elif item[1 == 'link']%}
                         <li><a href="{{item[2]}}" class="nav-link">
+                    {%elif item[1 == 'id']%}
+                        <li><a href="{{item[2]}}" data-scroll class="nav-link">
                     {%endif%}
                 
                     {{item[0]}}

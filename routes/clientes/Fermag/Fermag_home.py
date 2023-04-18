@@ -7,7 +7,7 @@ def getNavBar():
     return [
         ('Empresa','url_for','Fermag_home.FermagHome'),
         ('Noticias','url_for','Fermag_home.FermagNoticias'),
-        ('Servicios','url_for','Fermag_proyectos.FermagProyectos'),
+        ('Servicios','id','#servicios-servicios'),
         ('Ubicacion','link','https://www.google.com/maps/?hl=es'),
         ('Contacto','url_for','Fermag_contacto.FermagContacto')
     ]

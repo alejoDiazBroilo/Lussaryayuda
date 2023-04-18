@@ -163,6 +163,21 @@ body{
 }
 
 /* SERVICIOS */
+
+#servicios-servicios{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 80px;
+    scroll-padding-bottom: 80px;
+    scroll-padding-left: 80px;
+    scroll-padding-right: 80px;
+    scroll-padding: 80px;
+    scroll-margin-top: 0px;
+    scroll-margin-bottom: 0px;
+    scroll-margin-left: 0px;
+    scroll-margin-right: 0px;
+}
+
 .servicios-main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

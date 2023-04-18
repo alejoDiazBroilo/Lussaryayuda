@@ -34,5 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
     carrousel(inicio);
 });
 
+document.querySelector('a[href="#servicios-servicios"]').addEventListener('click', function(e) {
+    e.preventDefault(); // prevenir comportamiento por defecto del enlace
+    document.querySelector('#servicios-servicios').scrollIntoView({
+        behavior: 'smooth' // para un desplazamiento suave, en lugar de un salto abrupto
+    });
+});
+
 
 
