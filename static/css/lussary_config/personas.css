@@ -1,16 +1,9 @@
- 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-
-}
-
-
-
- 
-/*
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ /*
 
 .box01{
   width: 100%;
@@ -138,390 +131,256 @@ AA
 aA
 aA
 area*/
-
-body{
-  background-color: black;
- }
-
-
-
-.contenedor{
-  width: 100%;
-  height: 75vh;
-  background-color: rebeccapurple;  
-}
-.nada_para_espacio{
-  width: 100%;
-  height: 1px;  
-}
  
- .box01nuevo{ 
-   margin-top: 125px; /*cambiar distancia lo grande que es  */
-   width: 80%;
-   height: 500px;
-   background-color: green;
-   margin-left: 10%; 
-   align-items: center;
-   text-align: center;
-
-
- }
- .box01_interno{
-  width: 100%;
-  height: 400px;
-  background-color: #f0f3bd;
-  display: flex;
-  align-items: flex-end;
-
-
+ body {
+     background-color: black;
  }
  
- .box02nuevo{
-   width: 30%;
-   height: 400px;
-   background-color: #02c39a;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-  
- 
-   
-  
+ .contenedor {
+     width: 100%;
+     height: 75vh;
+     background-color: rebeccapurple;
  }
-
-
+ 
+ .nada_para_espacio {
+     width: 100%;
+     height: 1px;
+ }
+ 
+ .box01nuevo {
+     margin-top: 125px;
+     /*cambiar distancia lo grande que es  */
+     width: 80%;
+     height: 500px;
+     background-color: green;
+     margin-left: 10%;
+     align-items: center;
+     text-align: center;
+ }
+ 
+ .box01_interno {
+     width: 100%;
+     height: 400px;
+     background-color: #f0f3bd;
+     display: flex;
+     align-items: flex-end;
+ }
+ 
+ .box02nuevo {
+     width: 30%;
+     height: 400px;
+     background-color: #02c39a;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
  .contenedor-imagen {
-  width: 250px; 
-  height: 250px;
-  overflow: hidden;  
-  position: absolute;
-  position: relative;
-  display: inline-block;
-  background-size: cover;
-}
-.contenedor-imagen img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  
-}
-.foto-persona{
-
-  background-size: cover;
-}
-
-
- 
- .box03nuevo{
-   width: 70%;
-   background-color: #F3F9FB;
-
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   
-  justify-content: space-evenly;
+     width: 250px;
+     height: 250px;
+     overflow: hidden;
+     position: absolute;
+     position: relative;
+     display: inline-block;
+     background-size: cover;
  }
-
- .nombre{
-  text-align: center;
-  font-family: system-ui;
-  color: transparent;
-  font-size: 80px;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  background-image: linear-gradient(to bottom, #3C65E6 56%, #0006AB 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  
-}
-
-
-
-.descripcion{
-  
-  font-size: 20px;
-
-  color: green;
-  text-align: center;
  
-}
-
-
-
-
- .contactos{
-  height: 100px;
-  width: 100%;
-  background-color: yellow;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
+ .contenedor-imagen img {
+     width: 100%;
+     height: auto;
+     object-fit: cover;
  }
-
+ 
+ .box03nuevo {
+     width: 70%;
+     background-color: #F3F9FB;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+ }
+ 
+ .nombre {
+     text-align: center;
+     font-family: system-ui;
+     color: transparent;
+     font-size: 80px;
+     font-weight: 600;
+     letter-spacing: -0.015em;
+     background-image: linear-gradient(to bottom, #3C65E6 56%, #0006AB 100%);
+     background-clip: text;
+     -webkit-background-clip: text;
+ }
+ 
+ .descripcion {
+     font-size: 20px;
+     color: green;
+     text-align: center;
+ }
+ 
+ .contactos {
+     height: 100px;
+     width: 100%;
+     background-color: yellow;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     align-items: center;
+     text-align: center;
+ }
+ 
  .iconos-contactos {
-  width: 50px; 
-  height: 50px;
-  overflow: hidden;  
-  position: absolute;
-  position: relative;
-  display: inline-block;
-  background-size: cover;
-}
-.iconos-contactos img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  
-}
-
-
-
-
- 
- .box04{
-   width: 100%;
-  height: 100%;
-  
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
- 
+     width: 50px;
+     height: 50px;
+     overflow: hidden;
+     position: absolute;
+     position: relative;
+     display: inline-block;
+     background-size: cover;
  }
  
-
-
-
- .la_nada{
-  width: 100%;
-  height: 25vh;
+ .la_nada {
+     width: 100%;
+     height: 25vh;
  }
-
- .blanco{
-  background-color: white;
- }
- .blanco i{
-  color: black;
- }
-
- @media (max-width: 350px){}
  
-
-/*NUEVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ @media (max-width: 350px) {}
+ /*NUEVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAA
 AA
 aA
 aA
 area*/
-
-body{
-  background-color: black;
- }
-
-
-
-.contenedor{
-  width: 100%;
-  height: 75vh;
-  background-color: rebeccapurple;  
-}
-.nada_para_espacio{
-  width: 100%;
-  height: 1px;  
-}
  
- .box01nuevo{ 
-   margin-top: 125px; /*cambiar distancia lo grande que es  */
-   width: 80%;
-   height: 500px;
-   background-color: green;
-   margin-left: 10%; 
-   align-items: center;
-   text-align: center;
-
-
- }
- .box01_interno{
-  width: 100%;
-  height: 400px;
-  background-color: #f0f3bd;
-  display: flex;
-  align-items: flex-end;
-
-
+ body {
+     background-color: black;
  }
  
- .box02nuevo{
-   width: 30%;
-   height: 400px;
-   background-color: #02c39a;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-  
- 
-   
-  
+ .contenedor {
+     width: 100%;
+     height: 75vh;
+     background-color: rebeccapurple;
  }
-
-
+ 
+ .nada_para_espacio {
+     width: 100%;
+     height: 1px;
+ }
+ 
+ .box01nuevo {
+     margin-top: 125px;
+     /*cambiar distancia lo grande que es  */
+     width: 80%;
+     height: 500px;
+     background-color: green;
+     margin-left: 10%;
+     align-items: center;
+     text-align: center;
+ }
+ 
+ .box01_interno {
+     width: 100%;
+     height: 400px;
+     background-color: #f0f3bd;
+     display: flex;
+     align-items: flex-end;
+ }
+ 
+ .box02nuevo {
+     width: 30%;
+     height: 400px;
+     background-color: #02c39a;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
  .contenedor-imagen {
-  width: 250px; 
-  height: 250px;
-  overflow: hidden;  
-  position: absolute;
-  position: relative;
-  display: inline-block;
-  background-size: cover;
-}
-.contenedor-imagen img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  
-}
-.foto-persona{
-
-  background-size: cover;
-}
-
-
- 
- .box03nuevo{
-   width: 70%;
-   background-color: #F3F9FB;
-
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   
-  justify-content: space-evenly;
- }
-
- .nombre{
-  text-align: center;
-  font-family: system-ui;
-  color: transparent;
-  font-size: 80px;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  background-image: linear-gradient(to bottom, #3C65E6 56%, #0006AB 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  
-}
-
-
-
-.descripcion{
-  
-  font-size: 20px;
-
-  color: green;
-  text-align: center;
- 
-}
-
-
-
-
- .contactos{
-  height: 100px;
-  width: 100%;
-  background-color: yellow;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
- }
-
-
- .iconos-contactos{
-
-  width: 50px; 
-  height: 50px;
-  overflow: hidden;  
- 
-  background-size: cover;
-  background-position: center;
+     width: 250px;
+     height: 250px;
+     overflow: hidden;
+     position: absolute;
+     position: relative;
+     display: inline-block;
+     background-size: cover;
  }
  
-
- 
- .box04{
-   width: 100%;
-  height: 100%;
-  
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
- 
+ .contenedor-imagen img {
+     width: 100%;
+     height: auto;
+     object-fit: cover;
  }
  
-
-
-
- .la_nada{
-  width: 100%;
-  height: 25vh;
+ .foto-persona {
+     background-size: cover;
  }
-
- @media (max-width: 350px){}
-
-
-
- @media (max-width: 350px){}
-
-
- @media (max-width: 350px){}
-
-
-
- @media (max-width: 350px){}
-
  
- 
-
- @media (max-width: 350px){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ .box03nuevo {
+     width: 70%;
+     background-color: #F3F9FB;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
  }
+ 
+ .nombre {
+     text-align: center;
+     font-family: system-ui;
+     color: transparent;
+     font-size: 80px;
+     font-weight: 600;
+     letter-spacing: -0.015em;
+     background-image: linear-gradient(to bottom, #3C65E6 56%, #0006AB 100%);
+     background-clip: text;
+     -webkit-background-clip: text;
+ }
+ 
+ .descripcion {
+     font-size: 20px;
+     color: green;
+     text-align: center;
+ }
+ 
+ .contactos {
+     height: 100px;
+     width: 100%;
+     background-color: yellow;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     align-items: center;
+     text-align: center;
+ }
+ 
+ .iconos-contactos {
+     width: 50px;
+     height: 50px;
+     overflow: hidden;
+     background-size: cover;
+     background-position: center;
+ }
+ 
+ .box04 {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+ }
+ 
+ .la_nada {
+     width: 100%;
+     height: 25vh;
+ }
+ 
+ @media (max-width: 800px) {}
+ 
+ @media (max-width: 350px) {}
+ 
+ @media (max-width: 350px) {}
+ 
+ @media (max-width: 350px) {}
+ 
+ @media (max-width: 350px) {}
