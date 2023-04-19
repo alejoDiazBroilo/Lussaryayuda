@@ -13,6 +13,7 @@ def getNavBar():
     ]
 
 
+#Yeah
 @Fermag_home.route('/Fermag')
 def FermagHome():
     NavBar = getNavBar()
