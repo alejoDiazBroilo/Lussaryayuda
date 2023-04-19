@@ -36,6 +36,7 @@ canvas {
     justify-content: center;
     align-items: flex-end;
     height: 100vh;
+
 }
 
 .principio-adelante-logoUnido{
@@ -83,6 +84,8 @@ canvas {
     margin-top: -10px;
     margin-bottom: 100px;
 }
+
+
 
 /* CONTENIDO */
 
@@ -825,19 +828,3 @@ canvas {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
