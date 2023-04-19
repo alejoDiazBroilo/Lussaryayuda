@@ -6,7 +6,7 @@ Lussary_galeria = Blueprint("Lussary_galeria",__name__)
 @Lussary_galeria.route('/galeria')
 def LussaryGaleria():
     Galeria = [
-        ('src/Lussary/LogoFermag.jpeg', 'FERMAG S.A.', 'src/Lussary/FermagPreview.png', 'clientes/Fermag'),
-        ('src/Lussary/LogoVeme.jpeg', 'VEME', 'src/Lussary/VemePreview.png', 'clientes/VEME')
+        ('src/Lussary/LogoFermag.jpeg', 'FERMAG S.A.', 'src/Lussary/FermagPreview.png', 'Fermag'),
+        ('src/Lussary/LogoVeme.jpeg', 'VEME', 'src/Lussary/VemePreview.png', 'VEME')
     ]
     return render_template('lussary_config/galeria.html', galeria = Galeria,navbar = True)

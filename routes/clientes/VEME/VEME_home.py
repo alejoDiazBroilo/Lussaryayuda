@@ -7,7 +7,7 @@ def mezclar_lista(lista):
     random.shuffle(lista)
     return lista
 
-@VEME_home.route("/clientes/VEME")
+@VEME_home.route("/VEME")
 def getPrincipalPageVEME():
     prendas = ['remeras','vestidos','pantalones','camperas']
     navbar_imgs = []

@@ -53,25 +53,15 @@
             <a href="{{url_for('Fermag_home.FermagHome')}}"><img src="{{ url_for('static',filename='src/clientes/Fermag/logoFermagBlanco.png') }}" alt="FERMAG S.A." id="logo"></a>
         </div>
 
-        <div class="navegacion">
-
+        <div class="navegacion">   
             <input type="checkbox" class="toogle-menu">
             <div class="hamburguer"></div>
             <ul class="menu" id="menu">
-                {% for item in navBar %}
-                    <h1></h1>
-                    {%if item[1] == 'url_for'%}
-                        <li><a href="{{url_for(item[2])}}" class="nav-link">
-                    {%elif item[1 == 'link']%}
-                        <li><a href="{{item[2]}}" class="nav-link">
-                    {%elif item[1 == 'id']%}
-                        <li><a href="{{item[2]}}" data-scroll class="nav-link">
-                    {%endif%}
-                
-                    {{item[0]}}
-                </a></li>
-
-                {% endfor %}
+                <li><a href="{{url_for('Fermag_home.FermagHome')}}" class="nav-link">Empresa</a></li>
+                <li><a href="{{url_for('Fermag_home.FermagNoticias')}}" class="nav-link">Noticias</a></li>
+                <li><a href="{{url_for('Fermag_proyectos.FermagProyectos')}}" class="nav-link">Servicios</a></li>
+                <li><a href="https://www.google.com/maps/?hl=es" class="nav-link">Ubicacion</a></li>
+                <li><a href="{{url_for('Fermag_contacto.FermagContacto')}}" class="nav-link">Contacto</a></li>
             </ul>
         </div>
     </nav>
