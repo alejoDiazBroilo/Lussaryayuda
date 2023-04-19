@@ -48,12 +48,12 @@
             canvas.height = window.innerHeight;
     
             // Configurar la fuente y el tamaño de los caracteres
-            var fontSize = 16;
+            var fontSize = 11;
             ctx.font = fontSize + "px monospace";
     
 
             // Configurar el intervalo de tiempo entre la lluvia de caracteres
-            var interval = 50; // en milisegundos
+            var interval = 100; // en milisegundos
     
             // Definir la función que dibujará los caracteres en el lienzo del canvas
             function drawMatrix() {
@@ -84,10 +84,10 @@
                     ctx.fillText(char, x, Math.random() * canvas.height);
                 }
             }
+
             setTimeout(function() {
                 canvas.classList.add('desenfocado');
             }, 800);
-
 
             // Ejecutar la función de dibujo en un intervalo de tiempo
             setInterval(drawMatrix, interval);
@@ -103,27 +103,26 @@
             <p class="principio-adelante-autor">"John Lasseter"</p>
         </div>
     </div>
-
-    <div class="mid-part">
+<svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 170" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(3.538, 1.666, 39.026, 1)" offset="0%"></stop><stop stop-color="rgba(23.789, 53.159, 125.543, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,17L60,14.2C120,11,240,6,360,11.3C480,17,600,34,720,53.8C840,74,960,96,1080,102C1200,108,1320,96,1440,76.5C1560,57,1680,28,1800,36.8C1920,45,2040,91,2160,93.5C2280,96,2400,57,2520,42.5C2640,28,2760,40,2880,42.5C3000,45,3120,40,3240,53.8C3360,68,3480,102,3600,121.8C3720,142,3840,147,3960,136C4080,125,4200,96,4320,82.2C4440,68,4560,68,4680,76.5C4800,85,4920,102,5040,102C5160,102,5280,85,5400,85C5520,85,5640,102,5760,93.5C5880,85,6000,51,6120,31.2C6240,11,6360,6,6480,11.3C6600,17,6720,34,6840,56.7C6960,79,7080,108,7200,116.2C7320,125,7440,113,7560,113.3C7680,113,7800,125,7920,119C8040,113,8160,91,8280,68C8400,45,8520,23,8580,11.3L8640,0L8640,170L8580,170C8520,170,8400,170,8280,170C8160,170,8040,170,7920,170C7800,170,7680,170,7560,170C7440,170,7320,170,7200,170C7080,170,6960,170,6840,170C6720,170,6600,170,6480,170C6360,170,6240,170,6120,170C6000,170,5880,170,5760,170C5640,170,5520,170,5400,170C5280,170,5160,170,5040,170C4920,170,4800,170,4680,170C4560,170,4440,170,4320,170C4200,170,4080,170,3960,170C3840,170,3720,170,3600,170C3480,170,3360,170,3240,170C3120,170,3000,170,2880,170C2760,170,2640,170,2520,170C2400,170,2280,170,2160,170C2040,170,1920,170,1800,170C1680,170,1560,170,1440,170C1320,170,1200,170,1080,170C960,170,840,170,720,170C600,170,480,170,360,170C240,170,120,170,60,170L0,170Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(10, 10, 10, 1)" offset="0%"></stop><stop stop-color="rgba(10, 10, 10, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,17L60,34C120,51,240,85,360,99.2C480,113,600,108,720,104.8C840,102,960,102,1080,99.2C1200,96,1320,91,1440,73.7C1560,57,1680,28,1800,28.3C1920,28,2040,57,2160,68C2280,79,2400,74,2520,62.3C2640,51,2760,34,2880,25.5C3000,17,3120,17,3240,28.3C3360,40,3480,62,3600,76.5C3720,91,3840,96,3960,90.7C4080,85,4200,68,4320,59.5C4440,51,4560,51,4680,51C4800,51,4920,51,5040,68C5160,85,5280,119,5400,116.2C5520,113,5640,74,5760,73.7C5880,74,6000,113,6120,113.3C6240,113,6360,74,6480,59.5C6600,45,6720,57,6840,51C6960,45,7080,23,7200,28.3C7320,34,7440,68,7560,85C7680,102,7800,102,7920,104.8C8040,108,8160,113,8280,116.2C8400,119,8520,119,8580,119L8640,119L8640,170L8580,170C8520,170,8400,170,8280,170C8160,170,8040,170,7920,170C7800,170,7680,170,7560,170C7440,170,7320,170,7200,170C7080,170,6960,170,6840,170C6720,170,6600,170,6480,170C6360,170,6240,170,6120,170C6000,170,5880,170,5760,170C5640,170,5520,170,5400,170C5280,170,5160,170,5040,170C4920,170,4800,170,4680,170C4560,170,4440,170,4320,170C4200,170,4080,170,3960,170C3840,170,3720,170,3600,170C3480,170,3360,170,3240,170C3120,170,3000,170,2880,170C2760,170,2640,170,2520,170C2400,170,2280,170,2160,170C2040,170,1920,170,1800,170C1680,170,1560,170,1440,170C1320,170,1200,170,1080,170C960,170,840,170,720,170C600,170,480,170,360,170C240,170,120,170,60,170L0,170Z"></path></svg>    <div class="mid-part">
         <h1>Nuestro equipo de desarrollo de software es altamente eficiente y capaz de ofrecer soluciones de manera ágil y rápida.</h1>
         <h3>Estamos comprometidos con la planificación estratégica, la <span style="color: #3C65E6;">creación de sitios web efectivos</span>, <span style="color: #3C65E6;">la atención personalizada</span>, la fijación de <span style="color: #3C65E6;">precios competitivos </span>y la <span style="color: #3C65E6;">implementación de soluciones prácticas </span>que funcionen en el mundo real.</h3>
         <div class="dibujito">
             <div class="grid">
               <div class="item">
                 <img src="sentido-comun.jpg" alt="">
-                <p>Sentido común</p>
+                <p>Diseño comercial efectivo</p>
               </div>
               <div class="item">
                 <img src="pensamiento-estrategico.jpg" alt="">
-                <p>Pensamiento estratégico</p>
+                <p>Juicio Práctico</p>
               </div>
               <div class="item">
                 <img src="diseno-comercial.jpg" alt="">
-                <p>Diseño con orientación comercial</p>
+                <p>Pensamiento planificado y anticipado</p>
               </div>
               <div class="item">
                 <img src="servicio-personalizado.jpg" alt="">
-                <p>Servicio de persona a persona</p>
+                <p>Atención Personalizada</p>
               </div>
             </div>
           </div>
@@ -138,9 +137,8 @@
                 <img class="bateria-deco" src="{{ url_for('static',filename='src/Lussary/bateria.png') }}" alt="Decoracion">
                 <img class="wifi-deco" src="{{ url_for('static',filename='src/Lussary/wifi.png') }}" alt="Decoracion">
                 <img class="signal-deco" src="{{ url_for('static',filename='src/Lussary/signal.png') }}" alt="Decoracion">
-                <div id="clock"> </div>   
-
-            </div>
+                <div id="clock"></div>   
+        </div>
 
         <div class="contenido-lados">
             <div class="contenido-izquierda">
