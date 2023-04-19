@@ -9,11 +9,11 @@ def getNavBar():
         ('Noticias','url_for','Fermag_home.FermagNoticias'),
         ('Servicios','url_for','Fermag_proyectos.FermagProyectos'),
         ('Ubicacion','link','https://www.google.com/maps/?hl=es'),
-        ('Contacto','link','/clientes/Fermag/contacto')
+        ('Contacto','url_for','Fermag_contacto.FermagContacto')
     ]
 
 
-@Fermag_home.route('/clientes/Fermag')
+@Fermag_home.route('/Fermag')
 def FermagHome():
     NavBar = getNavBar()
     Servicios = [
@@ -28,7 +28,7 @@ def FermagHome():
     return render_template('/clientes/Fermag/fermag.html', navBar = NavBar, servicios = Servicios)
 
 
-@Fermag_home.route('/clientes/noticias')
+@Fermag_home.route('/Fermag/noticias')
 def FermagNoticias():
     NavBar = getNavBar()
     Notis = [
@@ -39,7 +39,7 @@ def FermagNoticias():
     ]
     return render_template('/clientes/Fermag/noticias.html', navBar = NavBar,notis = Notis)
 
-@Fermag_home.route("/clientes/Fermag")
+@Fermag_home.route("/Fermag")
 def getPrincipalPageFermag():
     return render_template("clientes/Fermag/fermag.html")
 

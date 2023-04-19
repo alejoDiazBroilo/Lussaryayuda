@@ -19,6 +19,9 @@ window.addEventListener("load", function(){
   }, 800); 
 });
 
+
+
+
 // Evento hover links
 links.forEach(link => {
   link.addEventListener('mouseover', function() {

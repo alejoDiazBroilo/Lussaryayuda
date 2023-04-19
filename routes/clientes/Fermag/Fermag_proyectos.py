@@ -38,7 +38,7 @@ class Descripcion:
         return f'{self.nombre}: {self.descripcion1} : {self.descripcion2}'
 
 
-@Fermag_proyectos.route("/clientes/Fermag/proyectos")    
+@Fermag_proyectos.route("/Fermag/proyectos")    
 def FermagProyectos():
     nombres = [ 
         Proyectos('HIPERMERCADOS LIBERTAD', 'https://images.unsplash.com/photo-1415018255745-0ec3f7aee47b?dpr=1&auto=format&fit=crop&w=1500&h=938&q=80&cs=tinysrgb&crop=', 'Ver mas', 'Buenos Aires, Argentina'),
@@ -49,7 +49,7 @@ def FermagProyectos():
     return render_template("clientes/Fermag/proyectos.html", nombres=nombres)
 
 
-@Fermag_proyectos.route("/clientes/Fermag/proyectos/x")
+@Fermag_proyectos.route("/Fermag/proyectos/x")
 def FermagProyectoInd():
     descripciones = [
         Descripcion('Titulo del proyecto','Aca va una descripcion breve','Este proyecto se trata de bla bla bla', '/static/src/clientes/Fermag/imgrepre.jpg',
