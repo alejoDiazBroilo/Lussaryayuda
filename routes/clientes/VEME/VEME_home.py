@@ -4,14 +4,10 @@ import random
 VEME_home = Blueprint("VEME_home",__name__)
 
 def mezclar_lista(lista):
-    lista_mezclada = lista.copy()
-    random.seed(random.randint(1,100))  # establecer la semilla aleatoria para obtener resultados reproducibles
-    for i in range(len(lista_mezclada)):
-        j = random.randint(i, len(lista_mezclada) - 1)
-        lista_mezclada[i], lista_mezclada[j] = lista_mezclada[j], lista_mezclada[i]
-    return lista_mezclada
+    random.shuffle(lista)
+    return lista
 
-@VEME_home.route("/clientes/VEME")
+@VEME_home.route("/VEME")
 def getPrincipalPageVEME():
     prendas = ['remeras','vestidos','pantalones','camperas']
     navbar_imgs = []

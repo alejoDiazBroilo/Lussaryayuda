@@ -15,10 +15,14 @@ window.onscroll = function() {
     if (window.scrollY < screen.height/3.5 && VEME_cartel_subnombre.clientHeight <= '18'){
         AumentarVEME()
     }
-    
-    
-    
 };
+
+window.addEventListener("load", function(){
+    const loader = document.querySelector("#loader-container");
+    setTimeout(function() {
+      loader.className += " hidden";
+    }, 1200); // espera 2 segundos antes de ocultar la pantalla de carga
+});
 
 
 // FUNCTIONS

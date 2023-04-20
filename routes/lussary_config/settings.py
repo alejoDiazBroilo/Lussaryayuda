@@ -16,6 +16,8 @@ def getHome():
     return redirect(url_for('Home.getHomePrincipalPageLussary'))
 
 
+
+
 @Home.route("/api")
 def getExample():
     return jsonify({'message':'hello'})

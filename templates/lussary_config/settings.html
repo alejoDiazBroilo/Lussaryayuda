@@ -1,195 +1,205 @@
-{% extends "lussary_config/base.html" %}
+    {% extends "lussary_config/base.html" %}
 
-    {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/settings_css.css') }}">
-    <script src="{{url_for('static', filename='js/lussary_config/settings_js.js')}}"></script>
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/settings_css.css') }}">
+        <script src="{{url_for('static', filename='js/lussary_config/settings_js.js')}}"></script>
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="/static/src/Lussary/LogoLussary.png" />
-    {% endblock %}
-    
-    {% block title %}
-    Team Lussary
-    {% endblock %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="/static/src/Lussary/LogoLussary.png" />
+        {% endblock %}
+        
+        {% block title %}
+        Team Lussary
+        {% endblock %}
 
-<body>
-    {% block content %}
+    <body>
+        {% block content %}
 
-    <!--
-    <div class="menu">
-        <ul>
-            <li><a href="">Sobre nosotros</a></li>
-            <li><a href="">Galeria</a></li>
-            <li><a href="">Programadores</a></li>
-            <li><a href="">Contactanos</a></li>
-        </ul>
-    </div>
-    -->
+        
 
-    <div class="principio">
-        <canvas id="matrix-canvas"></canvas>
-        <script>
-            var windowWidth = window.innerWidth;
-            var fontSize = Math.max(Math.floor(windowWidth / 40), 10); // Mínimo de 10, máximo de 40
+        <div class="principio">
+            <canvas id="matrix-canvas"></canvas>
+            <script>
+                var windowWidth = window.innerWidth;
+                var fontSize = Math.max(Math.floor(windowWidth / 40), 10); // Mínimo de 10, máximo de 40
 
-            // Obtener el contexto del lienzo del canvas
-            var canvas = document.getElementById("matrix-canvas");
-            var ctx = canvas.getContext("2d");
-    
-            // Configurar el tamaño del lienzo para que ocupe todo el ancho y alto de la ventana
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-    
-            // Configurar la fuente y el tamaño de los caracteres
-            var fontSize = 16;
-            ctx.font = fontSize + "px monospace";
-    
+                // Obtener el contexto del lienzo del canvas
+                var canvas = document.getElementById("matrix-canvas");
+                var ctx = canvas.getContext("2d");
+        
+                // Configurar el tamaño del lienzo para que ocupe todo el ancho y alto de la ventana
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+        
+                // Configurar la fuente y el tamaño de los caracteres
+                var fontSize = 16;
+                ctx.font = fontSize + "px monospace";
+        
 
-            // Configurar el intervalo de tiempo entre la lluvia de caracteres
-            var interval = 50; // en milisegundos
-    
-            // Definir la función que dibujará los caracteres en el lienzo del canvas
-            function drawMatrix() {
-                // Borrar el contenido anterior del lienzo
-                ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; // Color de fondo transparente
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
-                // Definir los caracteres que se mostrarán en la lluvia
-                var characters = "lussaryteamLUSSARYTEAM";
-    
-                // Iterar por cada columna del lienzo
-                for (var x = 0; x < canvas.width; x += fontSize) {
-                    // Escoger un carácter aleatorio para cada columna
-                    var char = characters[Math.floor(Math.random() * characters.length)];
-    
-                    // Escoger un color aleatorio para el carácter
-                    var color = "#fff"; // Por defecto, el color es blanco
-				    var randomValue = Math.random();
-				    if (randomValue < 0.02) { // Hay una probabilidad del 2% de que el color sea amarillo
-				    	color = "#ff0"; // Color amarillo
-				    }
-				    else {
-					    // Si el número aleatorio generado está entre 0.02 y 0.52, el color será azul. Si está entre 0.52 y 1.0, el color será celeste.
-					    color = (randomValue >= 0.02 && randomValue < 0.52) ? "#40CFFF" : "#0099cc";
-				    }
-                    // Dibujar el carácter en la columna correspondiente
-                    ctx.fillStyle = color;
-                    ctx.fillText(char, x, Math.random() * canvas.height);
+                // Configurar el intervalo de tiempo entre la lluvia de caracteres
+                var interval = 50; // en milisegundos
+        
+                // Definir la función que dibujará los caracteres en el lienzo del canvas
+                function drawMatrix() {
+                    // Borrar el contenido anterior del lienzo
+                    ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; // Color de fondo transparente
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+                    // Definir los caracteres que se mostrarán en la lluvia
+                    var characters = "lussaryteamLUSSARYTEAM";
+        
+                    // Iterar por cada columna del lienzo
+                    for (var x = 0; x < canvas.width; x += fontSize) {
+                        // Escoger un carácter aleatorio para cada columna
+                        var char = characters[Math.floor(Math.random() * characters.length)];
+        
+                        // Escoger un color aleatorio para el carácter
+                        var color = "#fff"; // Por defecto, el color es blanco
+                        var randomValue = Math.random();
+                        if (randomValue < 0.02) { // Hay una probabilidad del 2% de que el color sea amarillo
+                            color = "#ff0"; // Color amarillo
+                        }
+                        else {
+                            // Si el número aleatorio generado está entre 0.02 y 0.52, el color será azul. Si está entre 0.52 y 1.0, el color será celeste.
+                            color = (randomValue >= 0.02 && randomValue < 0.52) ? "#40CFFF" : "#0099cc";
+                        }
+                        // Dibujar el carácter en la columna correspondiente
+                        ctx.fillStyle = color;
+                        ctx.fillText(char, x, Math.random() * canvas.height);
+                    }
                 }
-            }
 
 
-            // Ejecutar la función de dibujo en un intervalo de tiempo
-            setInterval(drawMatrix, interval);
-        </script>
-    
-        <div class="principio-adelante">
-            <div class="principio-adelante-logoUnido">
-                <img class="principio-adelante-logoUnido-imagen" src="{{ url_for('static',filename='src/Lussary/LogoLussary.png') }}" alt="Team Lussary">
-                <h1 class="principio-adelante-logoUnido-nombre">TEAM LUSSARY</h1>
-            </div>
-            <hr class="principio-adelante-hr">
-            <p class="principio-adelante-frase">"El arte desafía a la tecnologia, y la tecnología inspira al arte"</p>
-            <p class="principio-adelante-autor">"John Lasseter"</p>
-        </div>
-    </div>
-
-
-    
-
-    <div class="contenido">
-        <div class="contenido-camara"></div>
-            <div class="div-img-bateria">
-                <img class="bateria-deco" src="{{ url_for('static',filename='src/Lussary/bateria.png') }}" alt="Decoracion">
-                <img class="wifi-deco" src="{{ url_for('static',filename='src/Lussary/wifi.png') }}" alt="Decoracion">
-                <img class="signal-deco" src="{{ url_for('static',filename='src/Lussary/signal.png') }}" alt="Decoracion">
-                <div id="clock"> </div>   
-
-            </div>
-        <div class="contenido-lados">
-            <div class="contenido-izquierda">
-                <div class="contenido-izquierda-titulo">
-                    <img class="contenido-izquierda-titulo-decoracion" src="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}" alt="Decoracion">
-                    <h1 class="contenido-izquierda-titulo-titulo">¿Qué es Lussary?</h1>
+                // Ejecutar la función de dibujo en un intervalo de tiempo
+                setInterval(drawMatrix, interval);
+            </script>
+        
+            <div class="principio-adelante">
+                <div class="principio-adelante-logoUnido">
+                    <img class="principio-adelante-logoUnido-imagen" src="{{ url_for('static',filename='src/Lussary/LogoLussary.png') }}" alt="Team Lussary">
+                    <h1 class="principio-adelante-logoUnido-nombre">TEAM LUSSARY</h1>
                 </div>
-                <p class="contenido-izquierda-parrafo"><span style="background: linear-gradient(to right, #3C65E6 35%, #aeca3e 0%); 
-                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">TEAM LUSSARY</span> es un grupo de cinco personas que quisieron comenzar un emprendimiento de desarrollo web un 17 de Enero del año 2023.
-                    Trabajamos juntos para <span style="color: #3C65E6;">diseñar y desarrollar</span> nuestros proyectos de la mejor manera posible y que el cliente quede a gusto con nuestro trabajo. </p>
-                
+                <hr class="principio-adelante-hr">
+                <p class="principio-adelante-frase">"El arte desafía a la tecnología, y la tecnología inspira al arte"</p>
+                <p class="principio-adelante-autor">"John Lasseter"</p>
+            </div>
+        </div>
+
+
+        
+
+        <div class="contenido">
+            <div class="contenido-camara"></div>
+                <div class="div-img-bateria">
+                    <img class="bateria-deco" src="{{ url_for('static',filename='src/Lussary/bateria.png') }}" alt="Decoracion">
+                    <img class="wifi-deco" src="{{ url_for('static',filename='src/Lussary/wifi.png') }}" alt="Decoracion">
+                    <img class="signal-deco" src="{{ url_for('static',filename='src/Lussary/signal.png') }}" alt="Decoracion">
+                    <div id="clock"></div>   
+
+                </div>
+
+            <div class="contenido-lados">
+                <div class="contenido-izquierda">
+                    <div class="contenido-izquierda-titulo">
+                        <img class="contenido-izquierda-titulo-decoracion" src="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}" alt="Decoracion">
+                        <h1 class="contenido-izquierda-titulo-titulo">¿Qué es Lussary?</h1>
+                    </div>
+                    <p class="contenido-izquierda-parrafo"><span style="background: linear-gradient(to right, #3C65E6 35%, #82972c 0%); 
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">TEAM LUSSARY</span> es un grupo de emprendedores formado por cinco estudiantes que han decidido iniciar un proyecto de desarrollo web el 17 de enero de 2023.
+                        Nuestra misión es <span style="color: #3C65E6;">diseñar y desarrollar</span> páginas y aplicaciones web que cumplan con los más altos estándares de calidad, asegurándonos de que nuestros clientes queden completamente satisfechos con el trabajo.
+                    </p>
+                    
                     <div class="contenido-izquierda-titulo">
                         <img class="contenido-izquierda-titulo-decoracion" src="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}" alt="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}">
                         <h1 class="contenido-izquierda-titulo-titulo">¿Qué hacemos?</h1>
                     </div>
-                    <p class="contenido-izquierda-parrafo">Nos enfocamos, principalmente, en <span style="color: #3C65E6;">diseñar páginas y aplicaciones web</span> para cualquier tipo de nogocios. </p>
-            </div>
+                    <p class="contenido-izquierda-parrafo">Nos especializamos, principalmente, en el <span style="color: #3C65E6;">diseño de páginas y aplicaciones web</span> para negocios de cualquier tamaño y sector, poniendo a <span style="color: #3C65E6;">disposición de nuestros clientes</span> experiencia en programación, diseño web, gestión de bases de datos y seguridad de la información.
+                    </p>
 
-            <div class="contenido-derecha">
-                <div class="contenido-derecha-div">
-                    <img src="{{ url_for('static',filename='/src/Lussary/image75.png') }}" alt="Python" class="contenido-derecha-imagen">
-                    <img src="{{ url_for('static',filename='/src/Lussary/image747.png') }}" alt="MySql" class="contenido-derecha-imagen">
-                    <img src="{{ url_for('static',filename='/src/Lussary/image711.png') }}" alt="Flask" class="contenido-derecha-imagen">
-                    <img src="{{ url_for('static',filename='/src/Lussary/image723.png') }}" alt="Git" class="contenido-derecha-imagen">
-                    <img src="{{ url_for('static',filename='/src/Lussary/image735.png') }}" alt="JS" class="contenido-derecha-imagen">
+                    <div class="contenido-izquierda-titulo">
+                        <img class="contenido-izquierda-titulo-decoracion" src="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}" alt="{{ url_for('static',filename='src/Lussary/cuadrado.png') }}">
+                        <h1 class="contenido-izquierda-titulo-titulo">¡Nos importas!</h1>
+                    </div>
+                    <p class="contenido-izquierda-parrafo">En <span style="background: linear-gradient(to right, #3C65E6 35%, #82972c 0%); 
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">TEAM LUSSARY </span>, entendemos que <span style="color: #3C65E6;">la comunicación y satisfacción del cliente</span> son fundamentales para el éxito del desarrollo web. Ofrecemos <span style="color: #3C65E6;">soluciones personalizadas y un servicio excepcional</span>, en constante contacto con el cliente para mejorar continuamente y lograr la excelencia en su trabajo.
+                    </p>
+
+
+                </div>
+
+                <div class="contenido-derecha">
+                    <div class="contenido-derecha-div">
+                        <img src="{{ url_for('static',filename='/src/Lussary/image75.png') }}" alt="Python" class="contenido-derecha-imagen">
+                        <img src="{{ url_for('static',filename='/src/Lussary/image747.png') }}" alt="MySql" class="contenido-derecha-imagen">
+                        <img src="{{ url_for('static',filename='/src/Lussary/image711.png') }}" alt="Flask" class="contenido-derecha-imagen">
+                        <img src="{{ url_for('static',filename='/src/Lussary/image723.png') }}" alt="Git" class="contenido-derecha-imagen">
+                        <img src="{{ url_for('static',filename='/src/Lussary/image735.png') }}" alt="JS" class="contenido-derecha-imagen">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 
-    <div class="proyectos">
-        <div class="proyectos-adelante">
-            <h1>NUESTROS PROYECTOS</h1>
-            <p>"No somos perfectos, nuestro codigo si."</p>
-            <hr>
-            <a href="{{ url_for('Lussary_galeria.LussaryGaleria')}}"><button>Galeria</button></a>
-        </div> 
-    </div>
-
-
-    
-    <div class="estilo">
-        <div class="estilo-izquierda">
-            <div class="estilo-izquierda-texto-div"><p class="estilo-izquierda-texto">Estilo simple, bonito <br> y agradable a la vista.</p></div>
-            <div class="estilo-izquierda-imagen-div"><img src="{{ url_for('static',filename='/src/Lussary/image449.png') }}" alt="" class="estilo-izquierda-imagen"></div>
-            
+        <div class="proyectos">
+            <div class="proyectos-adelante">
+                <h1>NUESTROS PROYECTOS</h1>
+                <p>"No somos perfectos, nuestro codigo sí."</p>
+                <hr>
+                <a href="{{ url_for('Lussary_galeria.LussaryGaleria')}}"><button>Galería</button></a>
+            </div> 
         </div>
-        <hr class="estilo-hr">
-        <div class="estilo-derecha">
-            <div class="estilo-derecha-texto-div"><p class="estilo-derecha-texto">Adaptable a cualquier pantalla.</p></div>
-            <div class="estilo-derecha-imagen-div"><img src="{{ url_for('static',filename='/src/Lussary/image393.png') }}" alt="" class="estilo-derecha-imagen"></div>
-            
-        </div>
-    </div>
-    
-    <p class="fechaBinaria">10001-1-11111100111</p>
 
-    
-    <div class="contactanos">
-        <h1 class="contactanos-titulo">CONTACTANOS</h1>
 
-        <div class="contactanos-botones">
-            <hr class="contactanos-botones-hr1">
-            <div class="contactanos-botones-div">
-                <a href=""><i class="fa fa-envelope" style="color: #ffffff;"></i></a>
-                <a href=""><i class="fab fa-whatsapp" style="color: #ffffff;"></i></a>
-                <a href=""><i class="fab fa-instagram" style="color: #ffffff;"></i></a>
-                <a href=""><i class="fab fa-facebook-f" style="color: #ffffff;"></i></a>
-                <a href="" style="rotate: 90deg;"><i class="fa fa-phone" style="color: #ffffff;"></i></a>
+        
+        <div class="estilo">
+            <div class="estilo-izquierda">
+                <div class="estilo-izquierda-texto-div"><p class="estilo-izquierda-texto">Estilo simple, bonito <br> y agradable a la vista.</p></div>
+                <div class="estilo-izquierda-imagen-div"><img src="{{ url_for('static',filename='/src/Lussary/image449.png') }}" alt="" class="estilo-izquierda-imagen"></div>
+                
             </div>
-            
-            <hr class="contactanos-botones-hr2">
+            <hr class="estilo-hr">
+            <div class="estilo-derecha">
+                <div class="estilo-derecha-texto-div"><p class="estilo-derecha-texto">Adaptable a cualquier pantalla.</p></div>
+                <div class="estilo-derecha-imagen-div"><img src="{{ url_for('static',filename='/src/Lussary/image393.png') }}" alt="" class="estilo-derecha-imagen"></div>
+                
+            </div>
         </div>
-    </div>
+        
+        <p class="fechaBinaria">10001-1-11111100111</p>
 
-    <script src="{{ url_for('static',filename='js/lussary_config/sttings_js.js') }}"></script>
+        
+        <div class="contactanos">
+            <h1 class="contactanos-titulo">VISITANOS</h1>
 
+            <div class="contactanos-botones">
+                <hr class="contactanos-botones-hr1">
+                <div class="contactanos-botones-div">
+                    <button><i class="fa fa-envelope" style="color: #ffffff;"></i></button>
+                    <button onclick= "location.href='https://wa.me/5493518147051/?text=Hola%20buenos%20dias!.'"><i class="fab fa-whatsapp" style="color: #ffffff;"></i></button>
+                    <button onclick= "location.href='https://www.instagram.com/team.lussary/'"><i class="fab fa-instagram" style="color: #ffffff;"></i></button>
+                    <button onclick= "location.href='https://www.twitter.com/TeamLussary/'"><i class="fab fa-twitter" style="color: #ffffff;"></i></button>
+                    <button onclick= "location.href='https://www.facebook.com/Team Lussary/'"><i class="fab fa-facebook-f" style="color: #ffffff;"></i></button>
+                </div>
+                <hr class="contactanos-botones-hr2">
+            </div>
+        </div>
+
+        <script src="{{ url_for('static',filename='js/lussary_config/settings_js.js') }}"></script>
+
+        {% endblock %}
+    </body>
+
+<<<<<<< HEAD
     {% endblock %}
 </body>
+=======
+
+>>>>>>> 8494d1c6903f1a428f18d45fd1f3745e783de62c

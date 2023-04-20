@@ -3,6 +3,7 @@ body{
     margin: 0;
     font-family: 'Poppins',sans-serif;
     background-color: white;
+
 }
 
 .principio{
@@ -11,7 +12,7 @@ body{
 
 
 canvas {
-    background-color: rgb(10, 10, 10); /* Color de fondo azul */
+    background-color: rgb(10, 10, 10); 
     display: block;
     margin: auto;
     position: absolute;
@@ -48,7 +49,7 @@ canvas {
 }
 
 .principio-adelante-logoUnido-imagen{
-    width: 150px;
+    width: 170px;
     height: 140px;
     margin-right: 20px;
 }
@@ -129,7 +130,6 @@ canvas {
 }
 
 .contenido-izquierda-titulo-titulo{
-    color: white;
     font-size: 45px;
     margin-left: -80px;
     color: rgb(32, 32, 138);
@@ -153,27 +153,26 @@ canvas {
 }
 
 .contenido-derecha-div{
-    width: 350px;
-    background-color: rgba(90, 90, 90, 0.5);
-    border-radius: 16px;
-    margin-bottom: 4px;
-    padding: 2px;
+    width: 700px;
+    background-color: rgba(177, 177, 177, 0.5);
+    border-radius: 10px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 4%;
 }
 
 
 .contenido-derecha-imagen{
-    width: 50px;
-    height: 50px;
-    margin: 0 10px 0 10px;
+    width: 75px;
+    height: 75px;
+    margin: 0 40px 0 10px;
 }
 
 /* PROYECTOS */
 .proyectos{
-    background-image: url(https://s1.best-wallpaper.net/wallpaper/m/2101/Moon-space-black-background_m.webp);
+    background-image: url(/static/src/Lussary/Moon.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -369,9 +368,12 @@ canvas {
     align-items: center;
 }
 
-.contactanos-botones-div a{
+.contactanos-botones-div button{
     margin: 0 10px 0 10px;
     font-size: 22px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .contactanos-botones-hr1{
@@ -423,8 +425,61 @@ canvas {
     font-weight: bold;
 }
 
+.fa:hover, .fab:hover{
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(-5px);
+    transform:scale(1.5);
+    animation-duration: 2s;
+
+}
+
+
 /*RESPONSIVE DEL PRINCIPIO*/
 @media (max-width: 800px){
+
+    .estilo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .estilo-hr{
+        width: 80%;
+    }
+
+    .estilo-izquierda-texto-div{
+        width: 100%;
+        text-align: left;
+    }
+
+    .estilo-derecha-texto-div{
+        width: 100%;
+        text-align: right;
+    }
+
+    .estilo-izquierda, .estilo-derecha{
+        width: 90%;
+    }
+
+    .contenido{
+        border: 10px solid black;
+        margin: 50px 20px 0 20px;
+        border-radius: 64px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom: none;
+    }
+    
+    .contenido-camara{
+        width: 100px;
+        height: 30px;
+        border-radius: 64px;
+        margin: 5px auto;
+    }
+
+    .principio-img{
+        width: 100%;
+    }
 
     .principio-adelante{
         background-color: rgba(20, 20, 20, 0.9);
@@ -490,37 +545,13 @@ canvas {
 
     #clock{
         font-size: 25px;
-        margin-top: 2px;
+        margin-top: -2px;
         margin-left: 100px;
     }
-
-}
-
-/*RESPONSIVE DE LA COMPU DE ARRIBA*/
-
-@media (max-width: 800px){
-
-    .contenido{
-        border: 10px solid black;
-        margin: 50px 20px 0 20px;
-        border-radius: 64px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        border-bottom: none;
-    }
     
-    .contenido-camara{
-        width: 100px;
-        height: 30px;
-        border-radius: 64px;
-        margin: 5px auto;
-    }
-
-    .principio-img{
-        width: 100%;
-    }
-
 }
+
+
 
 @media (max-width: 600px){
     
@@ -539,7 +570,7 @@ canvas {
     #clock{
         font-size: 20px;
         margin-top: -0px;
-        margin-left: 90px;
+        margin-left: 50px;
     }
 
 }
@@ -576,7 +607,7 @@ canvas {
     #clock{
         font-size: 20px;
         margin-top: -0px;
-        margin-left: 65px;
+        margin-left: 45px;
     }
 
     .bateria-deco{  
@@ -591,7 +622,7 @@ canvas {
     #clock{
         font-size: 20px;
         margin-top: 0px;
-        margin-left: 50px;
+        margin-left: 35px;
     }
 }
 /*RESPONSIVE DE LOS PROYECTOS*/
@@ -621,14 +652,8 @@ canvas {
 
 }
 
-@media (max-width: 330px){
-    canvas {
+@media (max-width: 370px){
 
-        position: absolute;
-        max-width: 100%;
-        height: 100vh;
-    }
-    
     .proyectos-titulo{
         font-size: 45px;
     }    
@@ -643,8 +668,8 @@ canvas {
     }
 
     #clock{
-        font-size: 20px;
-        margin-top: -3px;
+        font-size: 15px;
+        margin-top: -0px;
         margin-left: 36px;
     }
 
@@ -670,46 +695,6 @@ canvas {
 
 }
 
-
-/*RESPONSIVE DE LOS ESTILOS*/
-@media (max-width: 800px){
-
-    canvas {
-        background-color: rgb(10, 10, 10); /* Color de fondo azul */
-        display: block;
-        margin: auto;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }    
-    .estilo{
-        flex-direction: column;
-      }
-      
-      .estilo-izquierda{
-        width: 100%;
-      }
-
-      .estilo-hr{
-        width: 80%;
-      }
-    
-      .estilo-derecha{
-        width: 100%;
-      }
-
-}
-
-@media (max-width: 380px){
-      
-    .fechaBinaria{
-        font-size: 10px;
-        letter-spacing: 5px;
-      }
-
-}
-
-/* 400px */
 @media (max-width: 400px){
 
     .contactanos-titulo{
@@ -721,9 +706,28 @@ canvas {
         margin-right: 0px;
     }
 
+    .contenido-izquierda-parrafo{
+        font-size: 23px;
+    }
+
 }
 
-/* 350px */
+@media (max-width: 380px){
+      
+    .fechaBinaria{
+        font-size: 10px;
+        letter-spacing: 5px;
+      }
+}
+
+@media (max-width: 360px){
+    #clock{
+        font-size: 20px;
+        margin-top: -0px;
+        margin-left: 35px;
+    }
+}
+
 @media (max-width: 350px){
 
     .estilo-izquierda-imagen{
@@ -757,9 +761,9 @@ canvas {
     }
 
     #clock{
-        font-size: 20px;
-        margin-top: -0px;
-        margin-left: 40px;
+        font-size: 15px;
+        margin-top: -3px;
+        margin-left: 36px;
     }
 
     .principio-adelante-frase{
@@ -768,17 +772,8 @@ canvas {
 
 }
 
-/* 360px */
-@media (max-width: 360px){
-    #clock{
-        font-size: 20px;
-        margin-top: -0px;
-        margin-left: 35px;
-    }
-}
-
 /* 275px */
-@media (max-width: 280px){
+@media (max-width: 300px){
     
     .contenido-izquierda-titulo-decoracion{
         width: 125px;
@@ -804,9 +799,9 @@ canvas {
     }
 
     #clock{
-        font-size: 15px;
-        margin-top: 0px;
-        margin-left: 25px;
+        font-size: 11px;
+        margin-top: 5px;
+        margin-left: 30px;
     }
 
     .bateria-deco{  
@@ -830,6 +825,19 @@ canvas {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

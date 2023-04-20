@@ -6,6 +6,22 @@ const logo = document.getElementById('logo');
 
 
 // EVENTOS
+// Evento loader
+window.addEventListener("load", function(){
+  const loader = document.querySelector("#loader");
+  const loader_container = document.querySelector("#loader-container");
+  
+  console.log('2 por uno en cabras')
+  setTimeout(function() {
+    console.log('AAAAAAAAAAAAAAAAAAAAAAAA')
+    loader.className += " hidden";
+    loader_container.className += " hidden";
+  }, 800); 
+});
+
+
+
+
 // Evento hover links
 links.forEach(link => {
   link.addEventListener('mouseover', function() {
@@ -70,3 +86,11 @@ function changeColorLinks(state){
     changeImage(logo,"logoFermagBlanco.png",100);
   }
 }
+
+
+
+
+
+
+
+
