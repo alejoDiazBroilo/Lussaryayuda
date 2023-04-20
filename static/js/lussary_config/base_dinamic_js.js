@@ -12,8 +12,13 @@ window.addEventListener("scroll", function() {
 
 window.addEventListener("load", function(){
   const loader = document.querySelector("#loader-container");
+  var imagen_logo = document.getElementById('imagen-logo')
   setTimeout(function() {
     loader.className += " hidden";
   }, 800); 
+  setTimeout(function() {
+    imagen_logo.className += " principio-adelante-logoUnido-imagen"
+  }, 500); 
+  
 });
   

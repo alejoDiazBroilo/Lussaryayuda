@@ -25,7 +25,7 @@ canvas {
 
 canvas {
     filter: blur(0); 
-    transition: filter 4s ease-out; 
+    transition: filter 1s ease-out; 
   }
   
   canvas.desenfocado {
@@ -64,7 +64,6 @@ canvas {
     max-width: 300px;
     animation-name: bounceInDown;
     animation-duration: 1s;
-    animation-delay: 0.5s;
     animation-fill-mode: forwards;
     }
 

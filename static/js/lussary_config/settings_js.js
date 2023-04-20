@@ -1,3 +1,4 @@
+
 function updateTime() {
   const now = new Date();
   const clock = document.getElementById('clock');
@@ -6,3 +7,11 @@ function updateTime() {
   }
 }
   
+
+  window.addEventListener("load", function(){
+    const loader = document.querySelector("#loader-container");
+    setTimeout(function() {
+      loader.className += " hidden";
+    }, 800); 
+  });
+    
