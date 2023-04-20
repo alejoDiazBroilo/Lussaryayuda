@@ -35,23 +35,86 @@
   <div class="contenedor">
     <div class="nada_para_espacio"> 
     </div>  
+
+    <!-- todo  -->
     <div class="box01nuevo">
+
+    <!-- separacion foto y info  -->
       <div class="box01_interno">
+        
+    <!-- foto  -->
         <div class="box02nuevo">
           <div class="contenedor-imagen ">
             <img src= "{{ url_for('static',filename='src/Lussary/salonia.jpeg') }}" alt="foto-persona">
            </div>   
         </div>
+
+
+
+    <!-- info  -->
         <div class="box03nuevo">
-          <p class="nombre"> {{g.texto}}  </p>
-          <p class="edad"> Edad  </p>
-          <p class="telefono"> Telefono </p>
-          <p class="gmail"> GMAIL </p> 
+
+    <!-- nombre -->
+            <p class="nombre">Alejo Luis Diaz Broilo</p>  
+
+
+
+    
+    <!-- info  -->
+
+            <div class="personal-info">
+              <div class="alaing-info">
+                <p class="info"> Roll  </p>
+              </div>
+              <p class="personal"> texot"referencia  </p>
+            </div>
+
+
+    
+    <!-- 1 vez  -->
+          <div class="personal-info">
+            <div class="alaing-info">
+             <p class="info"> Edad  </p>
+            </div>
+            <div class="alaing-persona">
+             <p class="personal"> texot"referencia  </p>
+            </div>
+          </div>
+
+
+    <!-- 2 vez -->
+          <div class="personal-info">
+            <div class="alaing-info">
+              <p class="info"> Telefono </p>
+            </div>
+            <div class="alaing-persona">
+              <p class="personal"> texot"referencia  </p>
+            </div>
+          </div>
+
+
+    <!-- 3 vez -->
+          <div class="personal-info">
+            <div class="alaing-info">
+              <p class="info"> Gmail </p>
+            </div> 
+            <div class="alaing-persona">
+              <p class="personal"> texot"referencia  </p>
+            </div>  
+          </div>
+
+
+
+    <!-- descripcion  -->
           <p class="descripcion">  Descripcion,Descripcion, Descripcion ,Descripcion, Descripcion, Descripcion, Descripcion, Descri pcion, Descri pcion, Descripcion ,Descripcion,Des cripcion,D escripcion, Descripcion, Descripcion,Descripcion, Descripcion,Descripcion, Descripcion,Descripcion, Descripcion</p> 
         </div>
       </div>
+
+
+
+    <!-- contactos  -->
       <div class="contactos">
-     
+    
         <i class="fab fa-instagram"></i>
      
         <i class="fa fa-phone"></i>
@@ -61,7 +124,12 @@
         <i class="fa fa-envelope"></i>
         
         <i class="fab fa-linkedin"></i>
-  </div>
+      </div>
+    </div>
+
+  <div class="espacio_2"> 
+</div>
+  
 
 
 
@@ -69,5 +137,5 @@
 
 
   
-  <i class="fab fa-linkedin" ></i>
+
     {% endblock %}
