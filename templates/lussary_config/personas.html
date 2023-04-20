@@ -1,7 +1,6 @@
-
 {% extends "lussary_config/base.html" %}
 
-    {% block head %}
+{% block head %}
     <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/personas.css') }}">
     <script src="{{url_for('static', filename='js/lussary_config/personas.js')}}"></script>
 
@@ -15,22 +14,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
-    <script language="JavaScript">
+{% endblock %}
 
 
-    </script>
-
-    {% endblock %}
-
-
-    {% block title %}
-    Personas Lussary 
-    {% endblock %}
+{% block title %} Personas Lussary {% endblock %}
 
     
-  <body>
-  
-    {% block content %}
+
+{% block content %}
 
   <div class="contenedor">
     <div class="nada_para_espacio"> 
@@ -130,12 +121,4 @@
   <div class="espacio_2"> 
 </div>
   
-
-
-
-
-
-
-  
-
-    {% endblock %}
+{% endblock %}
