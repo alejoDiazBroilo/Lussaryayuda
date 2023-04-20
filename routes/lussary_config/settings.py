@@ -97,7 +97,7 @@ fondo #fondo del principio
 
 @Home.route("/personas")
 def getPersonas():
-    return render_template("lussary_config/personas.html", g = {'texto': '<h1>HOLA</h1>' })
+    return render_template("lussary_config/personas.html", g = {'texto': '<h1>HOLA</h1>' },navbar = True)
 
 
 
