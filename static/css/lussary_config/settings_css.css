@@ -572,7 +572,7 @@ canvas {
     }
 
     .principio-adelante{
-        background-color: rgba(20, 20, 20, 0.9);
+        background-color: rgba(5, 5, 5, 0.);
         clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%);
         display: flex;
         flex-direction: column;
@@ -586,7 +586,8 @@ canvas {
     }
     
     .principio-adelante-logoUnido-imagen{
-        margin: 0px;
+        margin: 0;
+
     }
     
     .principio-adelante-hr{
@@ -648,6 +649,9 @@ canvas {
         width: 40px;
     }
 
+}
+#imagen-logo{
+    max-width: 300px;
 }
 
 /*RESPONSIVE DE LA COMPU DE ARRIBA*/
