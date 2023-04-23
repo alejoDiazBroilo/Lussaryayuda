@@ -1,14 +1,14 @@
 {% extends "lussary_config/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/personas.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/colaborador.css') }}">
     <link rel="shortcut icon" href="LogoBlackSinLetras.png">
 {% endblock %}
 
 
 {% block title %} Personas Lussary {% endblock %}
 
-    
+
 
 {% block content %}
     <div class="contenido">
@@ -20,7 +20,22 @@
                     </div>
                 </div>
                 <div class="carta-menu">
-                    
+                    <div class="carta-informacion-persona">
+                        <div class="informacion-persona-nombre">
+                            <div class="cartel-hola">
+                                <p>Hola!</p>
+                            </div>
+                            <p class="titulo">Yo soy <b>{{colaborador.nombre.title() +' '+ colaborador.apellido.title()}}</b></p>
+                            <p class="subtitulo">{{colaborador.rol}}</p>
+                        </div>
+
+                        <div class="informacion-persona-general">
+
+
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
             <div class="carta-socialMedia">

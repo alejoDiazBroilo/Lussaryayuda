@@ -95,17 +95,6 @@ fondo #fondo del principio
 """
 
 
-@Home.route("/personas")
-def getPersonas():
-    return render_template("lussary_config/personas.html", g = {'texto': '<h1>HOLA</h1>' },navbar = True)
-
-
-
-
-@Home.route("/informacion")
-def getInformacion():
-    return render_template("lussary_config/informacion.html")
-
 
 @Home.route("/db/traer")
 def traer():
@@ -119,38 +108,3 @@ def traer():
             print(xd[x].medio_relacion.nombre_medio)
 
     return redirect(url_for('Home.getHome'))
-    
-    """
-                                    EJEMPLO DE QUERY DENTRO DE RELACION
-    database = Persona.query.all()
-    print("###########################################")
-    for i in range(len(database)):
-        ultraquery = database[i].contacto_relacion
-        for x in range(len(ultraquery)):
-            print(f"{ultraquery[i].medio_relacion.link_contacto}{database[i].nombre}{ultraquery[i].medio_relacion.link_contacto_fin}")
-        print("//////////////////////////////////////////////////////////////////////////////////////////////////////")
-    return redirect(url_for('Home.getHome'))
-    
-    """
-"""
-
-@Home.route("/")
-def getHome():
-    return render_template("home/home.html")
-
-
-@Home.route("/db/añadir")
-def añadir():
-    newInstance = ExampleDatabase('Coca cola','Bebida bebible')
-    db.session.add(newInstance)
-    db.session.commit()
-    return redirect(url_for('Home.getHome'))
-
-@Home.route("/db/traer")
-def traer():
-    database = ExampleDatabase.query.all()
-    print(database)
-    return redirect(url_for('Home.getHome'))
-
-s
-"""
