@@ -22,6 +22,14 @@ def getContribuidor(nombre):
             'apellido' : 'Morais',
             'edad': 18,
             'rol':'Developer and Businessman',
+            'descripcion':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ipsam commodi corporis minima inventore? Quasi hic ratione alias consequatur illum?',
+            'atributos': [
+                {'atributo' :'Age','descripcion' :'Pepe'},
+                {'atributo' :'Age','descripcion' :'Pepe'},
+                {'atributo' :'Age','descripcion' :'Pepe'},
+                {'atributo' :'Age','descripcion' :'Pepe'},
+                {'atributo' :'Age','descripcion' :'Pepe'},
+            ],
         }
 
     except Exception as e:

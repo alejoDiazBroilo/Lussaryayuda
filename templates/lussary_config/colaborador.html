@@ -28,9 +28,20 @@
                             <p class="titulo">Yo soy <b>{{colaborador.nombre.title() +' '+ colaborador.apellido.title()}}</b></p>
                             <p class="subtitulo">{{colaborador.rol}}</p>
                         </div>
-
+                        <div class="descripciones-persona">
+                            <p>{{colaborador.descripcion}}</p>
+                        </div>
+                        
                         <div class="informacion-persona-general">
-
+                            
+                            {% for i in colaborador.atributos %}
+                                <div class="informacion-persona-general-menu">
+                                    <p><b>{{i.atributo.upper()}}</b></p>
+                                </div>
+                                <div class="informacion-persona-general-menu">
+                                    <p>{{i.descripcion}}</p>
+                                </div>
+                            {% endfor %}
 
                         </div>
 
