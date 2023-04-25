@@ -19,17 +19,21 @@ def getContribuidor(nombre):
         #colaborador = Persona.query.filter_by(id_persona=1).first()
         colaborador = {
             'nombre' : nombre,
-            'apellido' : 'Morais',
+            'apellido' : 'Pepito',
             'edad': 18,
             'rol':'Developer and Businessman',
             'descripcion':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ipsam commodi corporis minima inventore? Quasi hic ratione alias consequatur illum?',
             'atributos': [
                 {'atributo' :'Age','descripcion' :'Pepe'},
-                {'atributo' :'Age','descripcion' :'Pepe'},
-                {'atributo' :'Age','descripcion' :'Pepe'},
-                {'atributo' :'Age','descripcion' :'Pepe'},
-                {'atributo' :'Age','descripcion' :'Pepe'},
+                
             ],
+            'socialMedia':[
+                {'clase':'fa fa-envelope','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
+                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
+                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
+                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
+                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
+            ]
         }
 
     except Exception as e:
