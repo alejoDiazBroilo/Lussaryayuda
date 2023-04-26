@@ -1,5 +1,15 @@
-var content = document.getElementById("content")
+var content = document.getElementById("content");
 
 setTimeout(() => {
-    content.className += " voltear";
-  }, "5000");
+    content.className = "content";
+    console.log('Colaboradores')
+  }, "2000");
+
+  
+
+
+
+
+
+
+

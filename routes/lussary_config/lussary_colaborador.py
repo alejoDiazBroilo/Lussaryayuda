@@ -8,7 +8,36 @@ Lussary_contribuidores = Blueprint("Lussary_contribuidores",__name__)
 
 @Lussary_contribuidores.route("/colaboradores")
 def getContribuidores():
-    return render_template("lussary_config/colaboradores.html",navbar = True)
+
+    iconos = [
+        'trebol.png',
+        'heart.svg',
+        'diamond.svg',
+        'spade.png',
+    ]
+    simbols = [
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '10',
+        'J',
+        'Q',
+        'K',
+        'A'
+    ]
+    n = 1
+    if(n == 'A'):
+        cant=1
+    elif(str(n) in ['J','Q','K']):
+        cant=0
+    else:
+        cant = int(n)
+    return render_template("lussary_config/colaboradores.html",navbar = True, icon = iconos[3],simbol = simbols[n],cant = cant)
 
 
 
