@@ -12,6 +12,7 @@ from routes.clientes.Fermag.Fermag_proyectos import Fermag_proyectos
 from routes.clientes.Fermag.Fermag_contacto import Fermag_contacto
 from routes.lussary_config.info_politica import Info_Politica
 from routes.clientes.CDL.cdl_home import CDL_home
+from routes.clientes.CDL.CDL_servicios import CDL_servicios
 
 
 
@@ -24,6 +25,8 @@ app.register_blueprint(Lussary_galeria)
 app.register_blueprint(Info_Politica)
 app.register_blueprint(Lussary_contact)
 app.register_blueprint(CDL_home)
+app.register_blueprint(CDL_servicios)
+
 
 
 
