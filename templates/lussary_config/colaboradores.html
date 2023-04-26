@@ -1,8 +1,7 @@
-{% extends "base.html" %}
+{% extends "lussary_config/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/informacion.css') }}">
-    <script src="{{url_for('static', filename='js/lussary_config/informacion.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/colaboradores.css') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +12,61 @@
     <link rel="shortcut icon" href="LogoBlackSinLetras.png">
 
 {% endblock %}
+{% block title %}
+    Team Lussary - Colaboradores 
+{% endblock %}
 
 
    
 {% block content %}
-
-
+<div class="contenido">
+    <div class="card">
+        <div class="content" id="content">
+            <div class="back">
+                <div class="back-content">
+                    
+                </div>
+            </div>
+            <div class="front">
+                <div class="front-content">
+                    <div class="front-column">
+                        <div class="valor">
+                            <p>aaa</p>
+                        </div>
+                        <div class="valor">
+                            <p>eee</p>
+                        </div>
+                        <div class="valor">
+                            <p>iii</p>
+                        </div>
+                    </div>
+                    <div class="front-column">
+                        <div class="valor">
+                            <p>aaa</p>
+                        </div>
+                        <div class="valor">
+                            <p>eee</p>
+                        </div>
+                        <div class="valor">
+                            <p>iii</p>
+                        </div>
+                    </div>
+                    <div class="front-column">
+                        <div class="valor">
+                            <p>aaa</p>
+                        </div>
+                        <div class="valor">
+                            <p>eee</p>
+                        </div>
+                        <div class="valor">
+                            <p>iii</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CUSTOM CSS -->
+<script src="{{ url_for('static',filename='js/lussary_config/colaboradores.js') }}"></script>
 {% endblock %}
