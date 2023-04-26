@@ -4,6 +4,7 @@ from utils.db import db
 CDL_home = Blueprint("CDL_home",__name__)
 CDL_servicios = Blueprint("CDL_servicios",__name__)
 
+
 #Yeah
 @CDL_home.route('/CDL')
 def CDLHome():
