@@ -94,11 +94,8 @@ mapa #link del iframe de google maps
 fondo #fondo del principio 
 """
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> Lussary_frontend_personas
 @Home.route("/db/traer")
 def traer():
     database = Persona.query.all()
