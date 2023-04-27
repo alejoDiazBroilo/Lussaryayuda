@@ -1,0 +1,36 @@
+{% extends "clientes/Fermag/baseFermag.html" %}
+
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/noticias.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <title>Fermag S.A.</title>
+        <link rel="shortcut icon" type="image/jpeg" href="/static/src/clientes/Fermag/logoFermag.jpeg" />
+    {% endblock %}
+
+    {% block content %}
+    <script src="{{url_for('static',filename='js/clientes/Fermag/fermag.js')}}"></script>
+    
+    <div class="header">
+        <div class="header-adelante">
+            <h1>NOTICIAS</h1>
+        </div>
+        <hr>
+    </div>
+
+    
+    <div class="noticias">
+        {% for n in notis %}
+        <a href="">
+        <div class="noticia">
+            <img src="{{n[0]}}" alt="">
+            <h1>{{n[1]}}</h1>
+            <hr>
+            <p>{{n[2]}}</p>
+        </div>
+        </a>
+        {% endfor %}
+    </div>
+        
+    {% endblock %}

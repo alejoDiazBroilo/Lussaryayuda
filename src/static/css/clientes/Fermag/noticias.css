@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap%27');
+
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Open+Sans&display=swap');
+
+body{
+    background-color: white ;
+    margin: 0;
+    font-family: 'Saira', sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 80vh;
+    background-image: url(/static/src/clientes/Fermag/FondoNoticias.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    align-items: end;
+}
+
+.header-adelante{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(20, 20, 20, 0.55);
+    width: 100%;
+    height: 60px;
+}
+
+.header-adelante h1{
+    font-size: 40px;
+}
+
+.header hr{
+    width: 60px;
+    border: 1px solid white;
+    z-index: 1;
+}
+
+
+
+
+/* NOTICIAS */
+.noticias {
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 70px 0 70px;
+    margin-top: 75px;
+  }
+
+.noticias a{
+    text-decoration: none;
+}
+
+.noticia{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #eeeeee;
+    transition: .3s;
+    margin-right: .5rem;
+}
+
+.noticia:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.noticia h1{
+    opacity: 1;
+    color: black;
+    font-size: 30px;
+}
+
+.noticia p{
+    opacity: 1;
+    color: black;
+    margin-top: 5px;
+}
+
+.noticia img{
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+    border-radius: 7px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.noticia hr{
+    width: 100px;
+    margin-top: -10px;
+}
+
+@media (max-width: 330px){
+    .noticias{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+    

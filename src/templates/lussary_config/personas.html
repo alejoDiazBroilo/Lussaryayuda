@@ -1,0 +1,141 @@
+
+{% extends "lussary_config/base.html" %}
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/personas.css') }}">
+    <script src="{{url_for('static', filename='js/lussary_config/personas.js')}}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="LogoBlackSinLetras.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <script language="JavaScript">
+
+
+    </script>
+
+    {% endblock %}
+
+
+    {% block title %}
+    Personas Lussary 
+    {% endblock %}
+
+    
+  <body>
+  
+    {% block content %}
+
+  <div class="contenedor">
+    <div class="nada_para_espacio"> 
+    </div>  
+
+    <!-- todo  -->
+    <div class="box01nuevo">
+
+    <!-- separacion foto y info  -->
+      <div class="box01_interno">
+        
+    <!-- foto  -->
+        <div class="box02nuevo">
+          <div class="contenedor-imagen ">
+            <img src= "{{ url_for('static',filename='src/Lussary/salonia.jpeg') }}" alt="foto-persona">
+           </div>   
+        </div>
+
+
+
+    <!-- info  -->
+        <div class="box03nuevo">
+
+    <!-- nombre -->
+            <p class="nombre">Alejo Luis Diaz Broilo</p>  
+
+
+
+    
+    <!-- info  -->
+
+            <div class="personal-info">
+              <div class="alaing-info">
+                <p class="info"> Roll  </p>
+              </div>
+              <p class="personal"> texot"referencia  </p>
+            </div>
+
+
+    
+    <!-- 1 vez  -->
+          <div class="personal-info">
+            <div class="alaing-info">
+             <p class="info"> Edad  </p>
+            </div>
+            <div class="alaing-persona">
+             <p class="personal"> texot"referencia  </p>
+            </div>
+          </div>
+
+
+    <!-- 2 vez -->
+          <div class="personal-info">
+            <div class="alaing-info">
+              <p class="info"> Telefono </p>
+            </div>
+            <div class="alaing-persona">
+              <p class="personal"> texot"referencia  </p>
+            </div>
+          </div>
+
+
+    <!-- 3 vez -->
+          <div class="personal-info">
+            <div class="alaing-info">
+              <p class="info"> Gmail </p>
+            </div> 
+            <div class="alaing-persona">
+              <p class="personal"> texot"referencia  </p>
+            </div>  
+          </div>
+
+
+
+    <!-- descripcion  -->
+          <p class="descripcion">  Descripcion,Descripcion, Descripcion ,Descripcion, Descripcion, Descripcion, Descripcion, Descri pcion, Descri pcion, Descripcion ,Descripcion,Des cripcion,D escripcion, Descripcion, Descripcion,Descripcion, Descripcion,Descripcion, Descripcion,Descripcion, Descripcion</p> 
+        </div>
+      </div>
+
+
+
+    <!-- contactos  -->
+      <div class="contactos">
+    
+        <i class="fab fa-instagram"></i>
+     
+        <i class="fa fa-phone"></i>
+     
+        <i class="fab fa-github"></i>
+       
+        <i class="fa fa-envelope"></i>
+        
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </div>
+
+  <div class="espacio_2"> 
+</div>
+  
+
+
+
+
+
+
+  
+
+    {% endblock %}

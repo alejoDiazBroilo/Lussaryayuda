@@ -1,0 +1,89 @@
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.2.2/dist/smooth-scroll.polyfills.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Fermag S.A {% endblock %}</title>
+    
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/Fermag/baseFermag.css') }}">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- SCROOL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    {% block head %}
+        
+        
+    {% endblock %}
+    
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div class="fondo" id="loader-container">
+        <div id="loader" class="loader">
+
+            <div class="cell d-0"></div>
+            <div class="cell d-1"></div>
+            <div class="cell d-2"></div>
+            
+            <div class="cell d-1"></div>
+            <div class="cell d-2"></div>
+            
+            <div class="cell d-2"></div>
+            <div class="cell d-3"></div>
+            
+            <div class="cell d-3"></div>
+            <div class="cell d-4"></div>
+            
+        </div>
+    </div>
+    <!-- FIN LOADER -->
+
+
+
+
+    <nav class="navBar">
+        <div class="logo">
+            <a href="{{url_for('Fermag_home.FermagHome')}}"><img src="{{ url_for('static',filename='src/clientes/Fermag/logoFermagBlanco.png') }}" alt="FERMAG S.A." id="logo"></a>
+        </div>
+
+        <div class="navegacion">   
+            <input type="checkbox" class="toogle-menu">
+            <div class="hamburguer"></div>
+            <ul class="menu" id="menu">
+                <li><a href="{{url_for('Fermag_home.FermagHome')}}" class="nav-link">Empresa</a></li>
+                <li><a href="{{url_for('Fermag_home.FermagNoticias')}}" class="nav-link">Noticias</a></li>
+                <li><a href="#servicios-servicios" class="nav-link">Servicios</a></li>
+                <li><a href="https://www.google.com/maps/?hl=es" class="nav-link">Ubicacion</a></li>
+                <li><a href="{{url_for('Fermag_contacto.FermagContacto')}}" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <div class="footer" id="footer">
+        <div class="footer-contactanos">
+            <h2>Contactanos</h2>
+            <div class="footer-contactanos-botones">
+                <a href="{{url_for('Fermag_contacto.FermagContacto')}}" class="noTelefono"><i class="fa fa-envelope" style="color: #ffffff;"></i></a>
+                <button class="noTelefono" onclick= "location.href='https://wa.me/5493513992068/'"><i class="fab fa-whatsapp" style="color: #ffffff;"></i></button>
+                <button class="noTelefono" onclick= "location.href='https://www.instagram.com/grupofermag/'"><i class="fab fa-instagram" style="color: #ffffff;"></i></button>
+                <button class="noTelefono" onclick= "location.href='https://www.facebook.com/Fermag S.A/'"><i class="fab fa-facebook-f" style="color: #ffffff;"></i></button>
+                <button class="telefono" onclick="location.href='tel:+4712959'"><i class="fa fa-phone" style="color: #ffffff;"></i></button>
+            </div>
+            <hr>
+            <div class="copyright">
+                <p>Copyright © 2023 | Fermag | </p>
+                <a href="{{url_for('Home.getHome')}}">Team Lussary</a>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static',filename='js/clientes/Fermag/baseFermag.js')}}"></script>
+</body>
+</html>
