@@ -15,12 +15,12 @@ window.addEventListener("load", function(){
 
   const loader = document.querySelector("#loader-container");
   setTimeout(function() {
-    loader.className += " hidden";
+    loader.style.display = 'none';
   }, 800); 
 
   setTimeout(function() {
     imagen_logo.className += " principio-adelante-logoUnido-imagen"
-  }, 500); 
+  }, 800); 
   
 });
   

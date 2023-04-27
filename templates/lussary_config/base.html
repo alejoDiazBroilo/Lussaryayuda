@@ -20,7 +20,7 @@
 <body>
 
     <!-- LOADER -->
-    <div id="loader-container">
+    <div id="loader-container" class="loader-container">
         <div class="loader">
             <div class="svg-frame">
                 <svg style="--i:0;--j:0;">
@@ -108,7 +108,6 @@
 
 
     <!-- CUSTOM JS -->
-    <script src="{{url_for('static', filename='js/lussary_config/settings_js.js')}}"></script>
     {% if navbar %}
     <script src="{{url_for('static', filename='js/lussary_config/base_static_js.js')}}"></script>  
     {% else %}

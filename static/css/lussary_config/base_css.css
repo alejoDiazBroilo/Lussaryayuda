@@ -143,9 +143,14 @@ body{
   .hamburguer, .toogle-menu{
       display: block;
     }
+    .principio-adelante{
+      padding-top: 73px;
+    }
 
     .navBar{
       padding: 10px 20px;
+      
+      
       background-color: rgb(20, 20, 20);
     }
 
@@ -178,7 +183,11 @@ body{
       box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     }
 }
-
+@media screen and (max-width: 560px){
+  .principio-adelante{
+    padding-top: 83px;
+  }
+}
 
 
 
@@ -251,7 +260,12 @@ body{
 
 
 /*LOADER*/
-#loader-container {
+.hidden {
+  display: none;
+  z-index: -1000;
+}
+
+.loader-container {
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -261,18 +275,15 @@ body{
   z-index: 9999;
   background-color: rgb(10, 10, 10);
   display: flex;
-  flex-wrap: wrap;
-  width: var(--total-size);
-  height: var(--total-size);
+  align-items: center;
+  justify-content: center;
 }
 
 .loader {
   display: flex;
   position: absolute;
   
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  
 }
 
 .svg-frame {
@@ -336,6 +347,3 @@ body{
   }
 }
 
-.hidden {
-  display: none;
-}

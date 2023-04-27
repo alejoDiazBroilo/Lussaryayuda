@@ -7,6 +7,9 @@
       <title>Contacto</title>
       <link rel="shortcut icon" type="image/jpeg" href="/static/src/Lussary/LogoLussary.png" />
   {% endblock %}
+  {% block title %}
+  Team Lussary - Contacto
+  {% endblock %}
   {% block content %}
 
   <div class="main">
@@ -67,7 +70,8 @@
   
 
 
-    {% endblock %}
+    
 
     
 <script src="{{ url_for('static',filename='js/lussary_config/lussary_contact.js') }}"></script>
+{% endblock %}

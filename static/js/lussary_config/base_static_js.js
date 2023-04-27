@@ -6,8 +6,11 @@ navBarlogo.style.display = 'block';
 navBarlogo.style.zIndex = '10';
 
 window.addEventListener("load", function(){
+  
     const loader = document.querySelector("#loader-container");
     setTimeout(function() {
-      loader.className += " hidden";
+      //loader.style.display = 'none';
+      //loader.className +=' hidden'
+      console.log('AAAAAAAAAAAAAAAA')
     }, 800); // espera 2 segundos antes de ocultar la pantalla de carga
 });
