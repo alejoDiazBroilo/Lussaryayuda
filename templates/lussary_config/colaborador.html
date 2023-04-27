@@ -1,0 +1,68 @@
+{% extends "lussary_config/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/lussary_config/colaborador.css') }}">
+    <link rel="shortcut icon" href="LogoBlackSinLetras.png">
+{% endblock %}
+
+
+{% block title %} Personas Lussary {% endblock %}
+
+
+
+{% block content %}
+    <div class="contenido">
+        <div class="carta">
+            <div class="carta-main">
+                <div class="carta-menu">
+                    <div class="carta-foto">
+                        <img src="{{url_for('static',filename='/src/Lussary/LogoLussary.png')}}" alt="">
+                    </div>
+                </div>
+                <div class="carta-menu">
+                    <div class="carta-informacion-persona">
+                        <div class="informacion-persona-nombre">
+                            <div class="cartel-hola">
+                                <p>Hola!</p>
+                            </div>
+                            <p class="titulo">Yo soy <b>{{colaborador.nombre.title() +' '+ colaborador.apellido.title()}}</b></p>
+                            <p class="subtitulo">{{colaborador.rol}}</p>
+                        </div>
+                        <div class="descripciones-persona">
+                            <p>{{colaborador.descripcion}}</p>
+                        </div>
+                        
+                        <div class="informacion-persona-general">
+                            
+                            {% for i in colaborador.atributos %}
+                                <div class="informacion-persona-general-menu">
+                                    <p><b>{{i.atributo.upper()}}</b></p>
+                                </div>
+                                <div class="informacion-persona-general-menu">
+                                    <p>{{i.descripcion}}</p>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+           
+                <div class="carta-socialMedia">
+                
+                    {% for i in colaborador.socialMedia %}
+                    <div class="carta-socialMedia-menu">
+                        <a href='{{i.link}}'>
+                            <i class='{{i.clase}}' style="color: #ffffff;"></i>
+                        </a>
+                    </div>
+                {% endfor %}
+                </div>
+            
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename='js/lussary_config/personas.js')}}"></script>
+{% endblock %}

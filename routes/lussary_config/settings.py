@@ -94,6 +94,11 @@ mapa #link del iframe de google maps
 fondo #fondo del principio 
 """
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> Lussary_frontend_personas
 @Home.route("/db/traer")
 def traer():
     database = Persona.query.all()
@@ -106,38 +111,3 @@ def traer():
             print(xd[x].medio_relacion.nombre_medio)
 
     return redirect(url_for('Home.getHome'))
-    
-    """
-                                    EJEMPLO DE QUERY DENTRO DE RELACION
-    database = Persona.query.all()
-    print("###########################################")
-    for i in range(len(database)):
-        ultraquery = database[i].contacto_relacion
-        for x in range(len(ultraquery)):
-            print(f"{ultraquery[i].medio_relacion.link_contacto}{database[i].nombre}{ultraquery[i].medio_relacion.link_contacto_fin}")
-        print("//////////////////////////////////////////////////////////////////////////////////////////////////////")
-    return redirect(url_for('Home.getHome'))
-    
-    """
-"""
-
-@Home.route("/")
-def getHome():
-    return render_template("home/home.html")
-
-
-@Home.route("/db/añadir")
-def añadir():
-    newInstance = ExampleDatabase('Coca cola','Bebida bebible')
-    db.session.add(newInstance)
-    db.session.commit()
-    return redirect(url_for('Home.getHome'))
-
-@Home.route("/db/traer")
-def traer():
-    database = ExampleDatabase.query.all()
-    print(database)
-    return redirect(url_for('Home.getHome'))
-
-s
-"""
