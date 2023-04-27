@@ -35,7 +35,7 @@
                 <div class="front-content">
                     <div class="front-column">
                         <div class="valor">
-                            <p>{{simbol}}</p>
+                            <p><b>{{simbol}}</b></p>
                             <img src="{{url_for('static',filename='src/Lussary/'+icon)}}" class="icon">
                             
                         </div>
@@ -53,11 +53,14 @@
                             
                         </div>
                         <div class="valor">
+                            <img src="{{url_for('static',filename='src/Lussary/Colaboradores/1.jpg')}}" class="foto-colaborador-centro">
                             <div class="centro">
                                 
                             </div>
                             <img src="{{url_for('static',filename='src/Lussary/'+icon)}}" class="icon-centro">
+                           
                         </div>
+                        
                         <div class="valor girar">
                             
                         </div>
@@ -72,7 +75,7 @@
                             {% endfor %}
                         </div>
                         <div class="valor girar">
-                            <p>{{simbol}}</p>
+                            <p><b>{{simbol}}</b></p>
                             <img src="{{url_for('static',filename='src/Lussary/'+icon)}}" class="icon">
                         </div>
                     </div>

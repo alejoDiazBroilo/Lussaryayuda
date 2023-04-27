@@ -82,9 +82,10 @@
   grid-template-rows: 50px 1fr 50px;
 }
 .valor{
+  position: relative;
   width: 100%;
   height: 100%;
-  
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,7 +119,7 @@
   width: 50%;
   border-radius: 0 0 0 50px;
   */
-  background-color: rgba(0, 0, 255,0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   
 }
 .centro::after {
@@ -133,6 +134,15 @@
   z-index: -1;
   
 }
+.foto-colaborador-centro {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  filter: blur(5px); 
+}
 .icon{
   height: 20px;
   width: auto;
@@ -141,6 +151,10 @@
   height: 70px;
   width: auto;
   z-index: 4;
+}
+
+.valor .foto-colaborador-centro:hover + img {
+  filter: none; /* Eliminar el desenfoque de la imagen cuando el cuadrado está presente */
 }
 
 .icon-column{
