@@ -1,3 +1,4 @@
+
 from utils.db import db
 from sqlalchemy import Column, Integer, String, Date, func, ForeignKey
 
@@ -9,7 +10,7 @@ class Persona(db.Model): # se pueden hacer las querys
     descripcion = db.Column(db.String(1000), default = None)
     fecha_creacion = db.Column(db.Date, default=func.now())
 
-    agenda = db.relationship('Contacto', backref='persona_agenda', lazy=True)
+    agenda = db.relationship('Contacto', back_populates='persona_contacto')
     colaborador_datos = db.relationship('Colaborador', backref='persona', uselist=False, lazy=True)
     cliente_datos = db.relationship('Cliente', backref='persona', uselist=False, lazy=True)
 
@@ -39,7 +40,7 @@ class Medio(db.Model): # se pueden hacer las querys
     link_contacto_fin = db.Column(db.String(1000), nullable = False) #unique
     fecha_creacion = db.Column(db.Date, default=func.now())
 
-    contacto_relacion = db.relationship('Contacto', back_populates='medio_relacion', lazy=True)
+    dato_contacto = db.relationship('Contacto', back_populates = 'medio_contacto')
 
     def __init__(self, nombre_medio, link_contacto, link_contacto_fin, fecha_creacion = None):
         self.nombre_medio = nombre_medio
@@ -68,8 +69,9 @@ class Contacto(db.Model): # se pueden hacer las querys
     info_contacto = db.Column(db.String(1000), nullable = False) 
     fecha_creacion = db.Column(db.Date, default=func.now())
 
-    medio_relacion = db.relationship('Medio', back_populates='contacto_relacion', lazy=True)#ignore
-    persona_agenda = db.relationship('Persona', back_populates='agenda', lazy=True)#ignore
+    persona_contacto = db.relationship('Persona', back_populates='agenda')
+    medio_contacto = db.relationship('Medio', back_populates='dato_contacto')
+
     
     def __init__(self, medio, persona, info_contacto, fecha_creacion=None):
         self.id_medio = medio
@@ -152,6 +154,7 @@ class Actividad(db.Model):# se pueden hacer las querys
     fecha_creacion = db.Column(db.Date, default=func.now())
 
     actividad_rol = db.relationship('Rol', backref='actividad', lazy=True)
+    actividad_contribucion = db.relationship('Contribucion', backref='actividad', lazy=True)
 
     def __init__(self, titulo, descripcion, fecha_creacion=None):
         self.titulo = titulo
@@ -239,49 +242,26 @@ class Cliente(db.Model): #Proyecto relacion done
 
 
 
-
-
-
-
-class Area(db.Model):
-    __tablename__ = 'area'
-    id_area = db.Column(db.Integer, primary_key=True)
-    fecha_creacion = db.Column(db.Date, default=func.now())
-    titulo = db.Column(db.String(50), default = None) #unique=True
-    descripcion = db.Column(db.String(1000), default = None)
-    puntaje = db.Column(db.Integer, default = None)
-
-    contribuciones = db.relationship('Contribucion', backref='area', lazy=True)
-
-    def __init__(self, titulo, descripcion, puntaje, fecha_creacion=None):
-        self.titulo = titulo
-        self.descripcion = descripcion
-        self.puntaje = puntaje
-
-        if fecha_creacion is not None:
-            self.fecha_creacion = fecha_creacion
-    
-    def __repr__(self):
-        return f'{self.titulo}, {self.puntaje}\n'
-
-
-
-
+"""
+commit nuevo xd
+"""
 
 
 
 class Contribucion(db.Model): #Area relacion
     __tablename__ = 'contribucion' 
     id_contribucion = db.Column(db.Integer, primary_key=True)
+    puntaje = db.Column(db.Integer)
     fecha_creacion = db.Column(db.Date, default=func.now())
     descripcion = db.Column(db.String(1000), default = None)
     id_colaborador = db.Column(db.Integer, ForeignKey('colaborador.id_colaborador', ondelete='SET NULL', onupdate='CASCADE'))
     id_proyecto = db.Column(db.Integer, ForeignKey('proyecto.id_proyecto', ondelete='SET NULL', onupdate='CASCADE'))
-    id_area = db.Column(db.Integer, ForeignKey('area.id_area', ondelete='SET NULL', onupdate='CASCADE'))
+    id_actividad = db.Column(db.Integer, ForeignKey('actividad.id_actividad', ondelete='SET NULL', onupdate='CASCADE'))
         
-    def __init__(self, colaborador, proyecto, area, descripcion, fecha_creacion=None):
+    def __init__(self, colaborador, proyecto, actividad, descripcion, puntaje, fecha_creacion=None):
         self.id_colaborador = colaborador
-        self.id_area = area
+        self.id_actividad = actividad
+        self.puntaje = puntaje
         self.descripcion = descripcion
         self.id_proyecto = proyecto
         if fecha_creacion is not None:
@@ -336,6 +316,7 @@ class SubProyecto(db.Model): #Proyecto relacion done
             self.fecha_creacion = fecha_creacion
     def __repr__(self):
         return f'{self.titulo} {self.proyecto}\n'
+
 
 
 
