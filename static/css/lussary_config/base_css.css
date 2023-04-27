@@ -285,13 +285,14 @@ body{
   
   
 }
-
 .svg-frame {
-    align-items: center;
+  position: relative;
   width: 300px;
   height: 300px;
   transform-style: preserve-3d;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .svg-frame svg {
@@ -303,7 +304,6 @@ body{
   height: 344px;
   fill: none;
 }
-
 
 .svg-frame:hover svg {
   transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
@@ -346,4 +346,3 @@ body{
     transform: rotate(360deg);
   }
 }
-

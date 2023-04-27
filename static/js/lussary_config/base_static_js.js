@@ -9,8 +9,8 @@ window.addEventListener("load", function(){
   
     const loader = document.querySelector("#loader-container");
     setTimeout(function() {
-      //loader.style.display = 'none';
-      //loader.className +=' hidden'
+      loader.style.display = 'none';
+      loader.className +=' hidden'
       console.log('AAAAAAAAAAAAAAAA')
     }, 800); // espera 2 segundos antes de ocultar la pantalla de carga
 });
