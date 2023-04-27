@@ -30,14 +30,13 @@ def getContribuidores():
         'K',
         'A'
     ]
-    n = 1
-    if(n == 'A'):
+    s = 3
+    n = 7
+    if(simbols[n] in ['A','J','Q','K']):
         cant=1
-    elif(str(n) in ['J','Q','K']):
-        cant=0
     else:
-        cant = int(n)
-    return render_template("lussary_config/colaboradores.html",navbar = True, icon = iconos[3],simbol = simbols[n],cant = cant)
+        cant = int(simbols[n])
+    return render_template("lussary_config/colaboradores.html",navbar = True, icon = iconos[s],simbol = simbols[n],cant = cant)
 
 
 

@@ -40,8 +40,8 @@
                             
                         </div>
                         <div class="valor">
-                            {% for i in cant %}
-                            <img src="{{url_for('static',filename='src/Lussary/'+icon)}}" class="icon-column">
+                            {% for i in range(cant) %}
+                            <img src="{{url_for('static',filename='src/Lussary/'+ icon)}}" class="icon-column">
                             {% endfor %}
                         </div>
                         <div class="valor">
@@ -67,7 +67,9 @@
                             <p></p>
                         </div>
                         <div class="valor girar">
-                            <p>eee</p>
+                            {% for i in range(cant) %}
+                            <img src="{{url_for('static',filename='src/Lussary/'+ icon)}}" class="icon-column">
+                            {% endfor %}
                         </div>
                         <div class="valor girar">
                             <p>{{simbol}}</p>
