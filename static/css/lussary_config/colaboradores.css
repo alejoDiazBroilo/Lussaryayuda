@@ -8,13 +8,47 @@
 
 .contenido{
   padding: 80px 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .card {
+  margin: 20px;
   overflow: visible;
   width: 200px;
   height: 280px;
+  transition: 0.2s ease-in-out;
 }
+.card:hover {
+  transform: scale(1.08);
+}
+@keyframes shake{
+  
+  20%{
+    transform: translateX(-2px);
+  }
+  
+  40%{
+    transform: translateX(2px);
+  }
+  
+  60%{
+    transform: translateX(-3px);
+  }
+  
+  80%{
+    transform: translateX(3px);
+  }
+  90%{
+    transform: translateX(-2px);
+  }
+  
+
+
+}
+
+
 
 .content {
   transform: rotateY(180deg);
@@ -123,7 +157,7 @@
 
 
 
-/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+/* CENTRO */
 .centro-content{
   width: 100%;
   height: 100%;
@@ -142,14 +176,11 @@
   width: 100%;
   backdrop-filter: blur(2px);
   z-index: 1;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
   
   
 }
-.difuminado:hover{
-  backdrop-filter: blur(0);
 
-}
 
 
 

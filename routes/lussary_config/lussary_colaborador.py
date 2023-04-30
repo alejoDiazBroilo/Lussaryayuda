@@ -36,7 +36,7 @@ def getContribuidores():
         cant=1
     else:
         cant = int(simbols[n])
-    return render_template("lussary_config/colaboradores.html",navbar = True, icon = iconos[s],simbol = simbols[n],cant = cant)
+    return render_template("lussary_config/colaboradores.html",navbar = True,cant_cards = 2, icon = iconos[s],simbol = simbols[n],cant = cant)
 
 
 

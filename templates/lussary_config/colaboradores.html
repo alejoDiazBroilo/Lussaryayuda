@@ -24,8 +24,10 @@
    
 {% block content %}
 <div class="contenido">
+    {% for n_card in range(cant_cards) %}
     <div class="card">
-        <div class="content voltear" id="content">
+        <a href="https://www.google.com">
+        <div class="content voltear" id="card-{{n_card+1}}">
             <div class="back">
                 <div class="back-content">
                     
@@ -57,19 +59,15 @@
                             
                         </div>
                         <!-- CENTRO -->
-                        <div class="valor" id="centro_content">
+                        <div class="valor" >
                             <div class="centro-content recortado"  style="background-image: url({{url_for('static',filename='src/Lussary/Colaboradores/1.jpg')}});">
 
                             </div>
                             <div class="centro-content" style="background-image: url({{url_for('static',filename='src/Lussary/Colaboradores/1.jpg')}});">
-                                <div class="difuminado" id="difuminado">
+                                <div class="difuminado" id="difuminado-{{n_card+1}}">
 
                                 </div>
                             </div>
-
-
-
-
                             <!--
                             <div class="centro-imagen" style="background-image: url({{url_for('static',filename='src/Lussary/Colaboradores/1.jpg')}});">
                                 
@@ -109,7 +107,9 @@
                 </div>
             </div>
         </div>
+        </a>
     </div>
+    {% endfor %}
 </div>
 
 <i class="fa-solid fa-diamond"></i>
@@ -121,4 +121,5 @@
 
 <!-- CUSTOM CSS -->
 <script src="{{ url_for('static',filename='js/lussary_config/colaboradores.js') }}"></script>
+
 {% endblock %}
