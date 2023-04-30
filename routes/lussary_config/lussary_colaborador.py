@@ -10,33 +10,51 @@ Lussary_contribuidores = Blueprint("Lussary_contribuidores",__name__)
 def getContribuidores():
 
     iconos = [
-        'trebol.png',
-        'heart.svg',
-        'diamond.svg',
-        'spade.png',
+        'Trebol.png',
+        'Heart.png',
+        'Diamond.png',
+        'Spade.png',
     ]
-    simbols = [
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        'J',
-        'Q',
-        'K',
-        'A'
+
+    cartas = [
+        {
+            'url_foto':'1.jpg',
+            'simbol' : 'A',
+            'cant_simbol' : 1,
+            'icon' : 'Heart.png',
+            'redirect':'1'
+        },
+        {
+            'url_foto':'1.jpg',
+            'simbol' : '9',
+            'cant_simbol' : 9,
+            'icon' : 'Spade.png',
+            'redirect':'2'
+        },
+        {
+            'url_foto':'1.jpg',
+            'simbol' : 'K',
+            'cant_simbol' : 1,
+            'icon' : 'Trebol.png',
+            'redirect':'3'
+        },
+        {
+            'url_foto':'1.jpg',
+            'simbol' : '2',
+            'cant_simbol' : 2,
+            'icon' : 'Diamond.png',
+            'redirect':'4'
+        },
+        {
+            'url_foto':'1.jpg',
+            'simbol' : 'Q',
+            'cant_simbol' : 1,
+            'icon' : 'Spade.png',
+            'redirect':'5'
+        },
     ]
-    s = 3
-    n = 7
-    if(simbols[n] in ['A','J','Q','K']):
-        cant=1
-    else:
-        cant = int(simbols[n])
-    return render_template("lussary_config/colaboradores.html",navbar = True,cant_cards = 2, icon = iconos[s],simbol = simbols[n],cant = cant)
+
+    return render_template("lussary_config/colaboradores.html",navbar = True,cant_cards = len(cartas),cartas = cartas )
 
 
 

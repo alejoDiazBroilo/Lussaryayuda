@@ -23,101 +23,95 @@
 
    
 {% block content %}
-<div class="contenido">
-    {% for n_card in range(cant_cards) %}
-    <div class="card">
-        <a href="https://www.google.com">
-        <div class="content voltear" id="card-{{n_card+1}}">
-            <div class="back">
-                <div class="back-content">
-                    
-                </div>
+<div class="contenedor">
+    <div class="contenido-f3">
+    
+        {% for n_card in range(cant_cards) %}
+            {% if (n_card == 3) %}
             </div>
-            <div class="front">
-                <div class="front-content">
-                    <div class="front-column">
-                        <!-- ARRIBA IZQUIERDA -->
-                        <div class="valor">
-                            <p><b>{{simbol}}</b></p>
-                            <img src="{{url_for('static',filename='src/Lussary/'+icon)}}" class="icon">
-                            
-                        </div>
-                        <!-- IZQUIERDA -->
-                        <div class="valor">
-                            {% for i in range(cant) %}
-                            <img src="{{url_for('static',filename='src/Lussary/'+ icon)}}" class="icon-column">
-                            {% endfor %}
-                        </div>
-                        <!-- ABAJO IZQUIERDA -->
-                        <div class="valor">
-                            
+            <div class="contenido-f2">
+            {% endif %}
+            <div class="carta-main">
+            <div class="card">
+                <a href="{{url_for('Lussary_contribuidores.getContribuidor',nombre=cartas[n_card]['redirect'])}}">
+                <div class="content voltear" id="card-{{n_card+1}}">
+                    <div class="back">
+                        <div class="back-content">
+                            <div class="back-blue-part">
+                                <img src="{{url_for('static',filename='src/Lussary/LogoLussary.png')}}" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="front-column">
-                        <!-- ARRIBA -->
-                        <div class="valor">
-                            
-                        </div>
-                        <!-- CENTRO -->
-                        <div class="valor" >
-                            <div class="centro-content recortado"  style="background-image: url({{url_for('static',filename='src/Lussary/Colaboradores/1.jpg')}});">
-
-                            </div>
-                            <div class="centro-content" style="background-image: url({{url_for('static',filename='src/Lussary/Colaboradores/1.jpg')}});">
-                                <div class="difuminado" id="difuminado-{{n_card+1}}">
-
+                    <div class="front">
+                        <div class="front-content">
+                            <div class="front-column">
+                                <!-- ARRIBA IZQUIERDA -->
+                                <div class="valor">
+                                    <p><b>{{cartas[n_card]['simbol']}}</b></p>
+                                    <img src="{{url_for('static',filename='src/Lussary/Icons/'+cartas[n_card]['icon'])}}" class="icon">
+                                    
+                                </div>
+                                <!-- IZQUIERDA -->
+                                <div class="valor">
+                                    {% for i in range(cartas[n_card]['cant_simbol']) %}
+                                    <img src="{{url_for('static',filename='src/Lussary/Icons/'+ cartas[n_card]['icon'])}}" class="icon-column">
+                                    {% endfor %}
+                                </div>
+                                <!-- ABAJO IZQUIERDA -->
+                                <div class="valor">
+                                    
                                 </div>
                             </div>
-                            <!--
-                            <div class="centro-imagen" style="background-image: url({{url_for('static',filename='src/Lussary/Colaboradores/1.jpg')}});">
-                                
-                                
-                                <img src="{{url_for('static',filename='src/Lussary/Colaboradores/1.jpg')}}" class="foto-colaborador-centro">
+                            <div class="front-column">
+                                <!-- ARRIBA -->
+                                <div class="valor">
+                                    
+                                </div>
+                                <!-- CENTRO -->
+                                <div class="valor" >
+                                    <div class="centro-content recortado"  style="background-image: url({{url_for('static',filename='src/Lussary/Colaboradores/'+cartas[n_card]['url_foto'])}});">
+    
+                                    </div>
+                                    <div class="centro-content" style="background-image: url({{url_for('static',filename='src/Lussary/Colaboradores/'+cartas[n_card]['url_foto'])}});">
+                                        <div class="difuminado" id="difuminado-{{n_card+1}}">
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ABAJO -->
+                                <div class="valor girar">
+                                    
+                                </div>
                             </div>
-                            
-                            
-                            <div class="centro">
-                                
+                            <div class="front-column">
+                                <!-- ARRIBA DERECHA -->
+                                <div class="valor">
+                                    <p></p>
+                                </div>
+                                <!-- DERECHA -->
+                                <div class="valor girar">
+                                    {% for i in range(cartas[n_card]['cant_simbol']) %}
+                                    <img src="{{url_for('static',filename='src/Lussary/Icons/'+ cartas[n_card]['icon'])}}" class="icon-column">
+                                    {% endfor %}
+                                </div>
+                                <!-- ABAJO DERECHA -->
+                                <div class="valor girar">
+                                    <p><b>{{cartas[n_card]['simbol']}}</b></p>
+                                    <img src="{{url_for('static',filename='src/Lussary/Icons/'+cartas[n_card]['icon'])}}" class="icon">
+                                </div>
                             </div>
-                            <img src="{{url_for('static',filename='src/Lussary/'+icon)}}" class="icon-centro">
-                           -->
-                        </div>
-                        <!-- ABAJO -->
-                        <div class="valor girar">
-                            
-                        </div>
-                    </div>
-                    <div class="front-column">
-                        <!-- ARRIBA DERECHA -->
-                        <div class="valor">
-                            <p></p>
-                        </div>
-                        <!-- DERECHA -->
-                        <div class="valor girar">
-                            {% for i in range(cant) %}
-                            <img src="{{url_for('static',filename='src/Lussary/'+ icon)}}" class="icon-column">
-                            {% endfor %}
-                        </div>
-                        <!-- ABAJO DERECHA -->
-                        <div class="valor girar">
-                            <p><b>{{simbol}}</b></p>
-                            <img src="{{url_for('static',filename='src/Lussary/'+icon)}}" class="icon">
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
-        </div>
-        </a>
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 
-<i class="fa-solid fa-diamond"></i>
-<i class="fa-solid fa-heart"></i>
-<img src="{{url_for('static',filename='src/Lussary/trebol.png')}}" class="icon">
-<img src="{{url_for('static',filename='src/Lussary/heart.svg')}}" class="icon">
-<img src="{{url_for('static',filename='src/Lussary/diamond.svg')}}" class="icon">
-<img src="{{url_for('static',filename='src/Lussary/spade.png')}}" class="icon">
+
+
 
 <!-- CUSTOM CSS -->
 <script src="{{ url_for('static',filename='js/lussary_config/colaboradores.js') }}"></script>
