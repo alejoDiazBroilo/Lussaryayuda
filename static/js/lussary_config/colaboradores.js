@@ -39,12 +39,15 @@ cards.forEach(i => {
   addEvento(i[0],i[1])
 });
 
+window.addEventListener("load", function(){
+  
+  setTimeout(() => {
+    cards.forEach(i => {
+      i[0].className = "content";
+    });
+  }, "1500");
+});
 
-setTimeout(() => {
-  cards.forEach(i => {
-    i[0].className = "content";
-  });
-}, "2000");
 
 
 
