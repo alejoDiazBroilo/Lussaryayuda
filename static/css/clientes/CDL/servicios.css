@@ -6,7 +6,9 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
+    margin: 0;
+    padding: 0;
+
 }
 
 .main{
@@ -15,6 +17,8 @@ body{
     align-items: center;
     text-align: center;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 h1{
@@ -33,6 +37,11 @@ h1{
     height: 50vh;
     width: 50vw;
     border-radius: 30px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .center p {
@@ -41,7 +50,6 @@ h1{
     margin: -10 auto;
     font-size: 1.5em;
 }
-
 
 .myButton {
     margin-top: 100px;
@@ -59,6 +67,86 @@ h1{
     animation-iteration-count: infinite;
     font-weight: bold;
 }
+
+@media screen and (max-width: 1440px) {
+    h1 {
+      font-size: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 40px;
+    }
+    .center {
+      width: 70vw;
+    }
+    .myButton {
+      width: 40%;
+      margin-top: 50px;
+    }
+  }
+
+  @media screen and (max-width: 1295px) {
+    h1 {
+      font-size: 60px;
+    }
+    .center {
+      width: 70vw;
+    }
+    .myButton {
+      width: 40%;
+      margin-top: 50px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 45px;
+    }
+    .center {
+      width: 80vw;
+    }
+    .myButton {
+      width: 50%;
+      margin-top: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 40px;
+    }
+    .center {
+      height: auto;
+      width: 90vw;
+      padding: 20px;
+    }
+    .myButton {
+      width: 80%;
+      margin-top: 35px;
+      font-size: 18px;
+      padding: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    h1 {
+      font-size: 35px;
+    }
+    .myButton {
+      width: 100%;
+      margin-top: 50px;
+      font-size: 16px;
+      padding: 15px;
+    }
+    .center p {
+        font-size: 1.5em;
+    }
+    
+  }
+
+
 @keyframes animacion-ambulancia {
     0% {
         box-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000;
