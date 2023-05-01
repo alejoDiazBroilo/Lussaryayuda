@@ -7,8 +7,13 @@
 {% endblock %}
 
 {% block content %}
-<div>
-    <h1>SALO SE LA COME</h1>
-</div>
-
+<body style="background-image: url({{servicio.bg}});">
+    <div class="main" >
+        <div class="center">
+            <h1>{{ servicio.nombre }}</h1>
+            <p>{{ servicio.descripcion }}</p>
+            <a href="https://forms.gle/VLUpMXdVGzYybCb96" class="myButton">HACE TU RESERVA</a>
+        </div>
+    </div>
+</body>
 {% endblock %}
