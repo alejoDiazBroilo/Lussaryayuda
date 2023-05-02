@@ -10,16 +10,24 @@ body{
     padding: 0;
 
 }
-
 .main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
+
+.warning {
+  background-color: #ff0000a1;
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+
 
 h1{
     font-family: 'Teko', sans-serif;
@@ -28,7 +36,7 @@ h1{
 }
 
 .center {
-    background-color: rgba(255, 255, 255, 0.2);   
+    background-color: rgba(255, 255, 255, 0.356);   
     backdrop-filter: blur(20px);
     display: flex;
     align-items: center;
@@ -72,6 +80,21 @@ h1{
     h1 {
       font-size: 60px;
     }
+
+    .warning {
+      margin-bottom: 20px;
+      top: 10%;
+      left: 50%;
+      padding: 0px 0px 0px 0px;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      background-color: #ff0000a1;
+      backdrop-filter: blur(25px);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    
   }
   
   @media screen and (max-width: 1024px) {
@@ -111,6 +134,9 @@ h1{
       width: 50%;
       margin-top: 30px;
     }
+    .warning {
+      width: 100%;
+    }
   }
   
   @media screen and (max-width: 480px) {
@@ -128,7 +154,16 @@ h1{
       font-size: 18px;
       padding: 10px;
     }
+
+
   }
+
+  @media screen and (max-width: 412px) {
+    .center{
+      margin-top: 80px;
+    }
+  }
+  
   
   @media screen and (max-width: 320px) {
     h1 {
