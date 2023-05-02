@@ -21,7 +21,7 @@ body{
 }
 
 .warning {
-  background-color: #ff0000a1;
+  background-color: #f70000a1;
   backdrop-filter: blur(25px);
   border-radius: 20px;
   margin-top: 20px;
