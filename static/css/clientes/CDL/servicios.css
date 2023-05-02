@@ -88,6 +88,7 @@
     .center {
       border-radius: 10px;
       padding: 20px;
+      max-width: 70%;
     }
     
     .center h1 {
@@ -120,7 +121,6 @@
     .main {
       height: 76.3vh;
     }
-    
     .center {
       border-radius: 20px;
     }
@@ -151,5 +151,11 @@
     .container {
       flex-direction: row;
     }
-    
   }
+
+  @media (min-width: 320px) {
+    .center {
+      max-width: 100%;
+      margin-top: 50px;
+      }
+    }
