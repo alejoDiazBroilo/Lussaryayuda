@@ -98,13 +98,7 @@ fondo #fondo del principio
 
 @Home.route("/db/traer")
 def traer():
-    database = Persona.query.all()
+    database = Colaborador.query.filter_by(id_colaborador = 1).first()
+    print(database.persona.nombre)
     print("###########################################")
-    for i in range(len(database)):
-        print("//////////////////////////////////////////////////////////////////////////////////////////////////////")
-        print(database[i].nombre)
-        xd = database[i].agenda
-        for x in range(len(xd)):
-            print(xd[x].medio_relacion.nombre_medio)
-
     return redirect(url_for('Home.getHome'))

@@ -9,7 +9,7 @@ class Persona(db.Model): # se pueden hacer las querys
     descripcion = db.Column(db.String(1000), default = None)
     fecha_creacion = db.Column(db.Date, default=func.now())
 
-    agenda = db.relationship('Contacto', backref='persona_agenda', lazy=True)
+    agenda = db.relationship('Contacto', back_populates='persona', lazy=True)
     colaborador_datos = db.relationship('Colaborador', backref='persona', uselist=False, lazy=True)
     cliente_datos = db.relationship('Cliente', backref='persona', uselist=False, lazy=True)
 
@@ -69,7 +69,7 @@ class Contacto(db.Model): # se pueden hacer las querys
     fecha_creacion = db.Column(db.Date, default=func.now())
 
     medio_relacion = db.relationship('Medio', back_populates='contacto_relacion', lazy=True)#ignore
-    persona_agenda = db.relationship('Persona', back_populates='agenda', lazy=True)#ignore
+    persona = db.relationship('Persona', back_populates='agenda', lazy=True)#ignore
     
     def __init__(self, medio, persona, info_contacto, fecha_creacion=None):
         self.id_medio = medio
@@ -93,8 +93,7 @@ personas = contactos[i].<persona_agenda> usando el backref en las clases que tie
 
 class Colaborador(db.Model):# se pueden hacer las querys
     __tablename__ = 'colaborador'
-    id_colaborador = db.Column(db.Integer, primary_key=True)
-    id_persona = db.Column(db.Integer, ForeignKey('persona.id_persona', ondelete='SET NULL', onupdate='CASCADE')) #persona_relatio
+    id_colaborador = db.Column(db.Integer, ForeignKey('persona.id_persona', onupdate='CASCADE'), primary_key=True, autoincrement=False) #persona_relatio
     fecha_nacimiento = db.Column(db.Date)
     fecha_creacion = db.Column(db.Date, default=func.now())
 
@@ -103,8 +102,8 @@ class Colaborador(db.Model):# se pueden hacer las querys
     contribuciones = db.relationship('Contribucion', backref='colaborador', lazy=True)
     roles = db.relationship('Rol', backref='colaborador', lazy=True)
 
-    def __init__(self, persona, fecha_nacimiento=None, fecha_creacion=None):
-        self.id_persona = persona
+    def __init__(self, colaborador, fecha_nacimiento=None, fecha_creacion=None):
+        self.id_colaborador = colaborador
         self.fecha_nacimiento = fecha_nacimiento
         if fecha_creacion is not None:
             self.fecha_creacion = fecha_creacion
@@ -217,8 +216,7 @@ class Proyecto(db.Model):
 
 class Cliente(db.Model): #Proyecto relacion done
     __tablename__ = 'cliente'
-    id_cliente = db.Column(db.Integer, primary_key=True)
-    id_persona = db.Column(db.Integer, ForeignKey('persona.id_persona', ondelete='SET NULL', onupdate='CASCADE')) #persona_relatio
+    id_cliente = db.Column(db.Integer, ForeignKey('persona.id_persona', onupdate='CASCADE'), primary_key=True, autoincrement=False) #persona_relatio
     id_colaborador = db.Column(db.Integer, ForeignKey('colaborador.id_colaborador', ondelete='SET NULL', onupdate='CASCADE'))
     id_proyecto = db.Column(db.Integer, ForeignKey('proyecto.id_proyecto', ondelete='SET NULL', onupdate='CASCADE'))
     fecha_creacion = db.Column(db.Date, default=func.now())
@@ -227,8 +225,8 @@ class Cliente(db.Model): #Proyecto relacion done
     #proyecto_relacion = db.relationship('Proyecto')
     #colaborador_relacion = db.relationship('Colaborador')
 
-    def __init__(self, persona, colaborador, proyecto, fecha_creacion=None):
-        self.id_persona = persona
+    def __init__(self, cliente, colaborador, proyecto, fecha_creacion=None):
+        self.id_cliente = cliente
         self.id_colaborador = colaborador
         self.id_proyecto = proyecto
         if fecha_creacion is not None:
