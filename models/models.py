@@ -37,6 +37,7 @@ class Medio(db.Model): # se pueden hacer las querys
     nombre_medio = db.Column(db.String(70), nullable = False)
     link_contacto = db.Column(db.String(1000), nullable = False) #unique
     link_contacto_fin = db.Column(db.String(1000), nullable = False) #unique
+    icono = db.Column(db.String(1000), nullable = False)
     fecha_creacion = db.Column(db.Date, default=func.now())
 
     contacto_relacion = db.relationship('Contacto', back_populates='medio_relacion', lazy=True)
