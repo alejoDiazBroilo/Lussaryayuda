@@ -21,6 +21,7 @@ html, body{
 
 .logo a{
   display: block;
+  margin-left: 30px;
 }
 
 .logo a img{
@@ -28,7 +29,6 @@ html, body{
   width: 100px;
   height: 100%;
   padding: 5px;
-  margin-left: 15px;
 }
 
 .navegacion{
@@ -55,8 +55,8 @@ html, body{
   color: white;
   text-decoration: dashed;
   display: block;
-  padding: 5px 10px;
-  font-size: 15px;
+  padding: 5px 15px;
+  font-size: 20px;
   line-height: 1;
   transition: 0.3s;
 }
@@ -64,7 +64,7 @@ html, body{
 .menu li a:hover{
   box-shadow: 0 -2px #fff inset;
   color: white;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 15px 10px 15px;
 }
 
 

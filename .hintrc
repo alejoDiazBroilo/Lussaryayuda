@@ -24,6 +24,15 @@
           "iframe[loading]"
         ]
       }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "width: fit-content"
+        ]
+      }
     ]
   }
 }

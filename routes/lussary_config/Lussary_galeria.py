@@ -7,6 +7,7 @@ Lussary_galeria = Blueprint("Lussary_galeria",__name__)
 def LussaryGaleria():
     Galeria = [
         ('src/Lussary/LogoFermag.jpeg', 'FERMAG S.A.', 'src/Lussary/FermagPreview.png', 'Fermag'),
-        ('src/Lussary/LogoVeme.jpeg', 'VEME', 'src/Lussary/VemePreview.png', 'VEME')
+        ('src/Lussary/LogoVeme.jpeg', 'VEME', 'src/Lussary/VemePreview.png', 'VEME'),
+        ('/src/Lussary/logoCDL.png', 'GRUPO CDL', '', 'CDL')
     ]
     return render_template('lussary_config/galeria.html', galeria = Galeria,navbar = True)
