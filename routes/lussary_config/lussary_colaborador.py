@@ -62,9 +62,9 @@ def getContribuidores():
 @Lussary_contribuidores.route("/colaborador/<nombre>")
 def getContribuidor(nombre):
     try:
-        #colaborador = Persona.query.filter_by(id_persona=1).first()
+        colaborador_ej = Persona.query.filter_by(id_persona=1).first()
         colaborador = {
-            'nombre' : nombre,
+            'nombre' : colaborador_ej.nombre,
             'apellido' : 'Pepito',
             'edad': 18,
             'rol':'Developer and Businessman',
