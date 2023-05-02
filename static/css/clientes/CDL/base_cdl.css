@@ -171,6 +171,9 @@ html, body{
   padding: 0;
 }
 
+.nvf{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 /* FOOTER */
 .footer{
@@ -234,6 +237,7 @@ html, body{
     align-items: center;
     justify-content: center;
     text-align: center;
+  
 }
 
 .botones-contactos button{
@@ -241,6 +245,7 @@ html, body{
     background-color: transparent;
     border: none;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 /* COPYRIGHT */
