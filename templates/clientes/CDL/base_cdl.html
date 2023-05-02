@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} CDL Transportes {% endblock %}</title>
+    
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/CDL/base_cdl.css') }}">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- SCROOL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    {% block head %}
+        
+        
+    {% endblock %}
+    
+</head>
+<body>
+
+    <!-- LOADER -->
+        
+    <!-- FIN LOADER -->
+
+
+
+
+    <nav class="navBar">
+        <div class="logo">
+            <a href="{{url_for('CDL_home.CDLHome')}}"><img src="/static/src/clientes/CDL/logoCDL_White.png" alt="CDL Transportes" id="logo"></a>
+        </div>
+
+        <div class="navegacion">   
+            <input type="checkbox" class="toogle-menu">
+            <div class="hamburguer"></div>
+            <ul class="menu" id="menu">
+                <li><a href="" class="nav-link"><span style="color: red;">E</span>mpresa</a></li>
+                <li><a href="" class="nav-link"><span style="color: red;">S</span>obre nosotros</a></li>
+                <li><a href="" class="nav-link"><span style="color: red;">S</span>ervicios</a></li>
+                <li><a href="" class="nav-link"><span style="color: red;">U</span>bicacion</a></li>
+                <li><a href="" class="nav-link"><span style="color: red;">C</span>ontacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    
+    <div class="footer" id="footer">
+
+        <a class="ubicacion" href="https://goo.gl/maps/iDoUVdffPofWU5wL8"><p class="ubicacion">Ciudad de Córdoba, Argentina.</p></a>
+    
+        <div class="contenido-footer">
+
+            <div class="navBarFooter">
+                <ul>
+                    <li><a href="" class="nvf">Empresa</a></li>
+                    <li><a href="" class="nvf">Sobre nosotros</a></li>
+                    <li><a href="" class="nvf">Servicios</a></li>
+                    <li><a href="" class="nvf">Ubicacion</a></li>
+                    <li><a href="" class="nvf">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="contactos">
+                <div class="botones-contactos">
+                    <button onclick= "location.href='https://wa.me/5493516186600/'"><i class="fab fa-whatsapp" style="color: #ffffff;">Whatsapp</i></button>
+                    <button onclick= "location.href='https://www.instagram.com/cdltransportescba/'"><i class="fab fa-instagram" style="color: #ffffff;">Instagram</i></button>
+                    <button onclick= "location.href='https://www.facebook.com/CDL Transportes/'"><i class="fab fa-facebook-f" style="color: #ffffff;">Facebook</i></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © 2023 | CDL Transportes | </p>
+            <a href="{{url_for('Home.getHome')}}">Team Lussary</a>
+        </div>
+
+    </div>
+
+    <script src="{{url_for('static',filename='js/clientes/CDL/cdl.js')}}"></script>
+
+</body>
+</html>

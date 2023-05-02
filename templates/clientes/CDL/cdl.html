@@ -1,21 +1,95 @@
+{% extends "clientes/CDL/base_cdl.html" %}
 
-    
-    {% block head %}
+{% block head %}
         <link rel="stylesheet" href="{{ url_for('static',filename='css/clientes/CDL/cdl.css') }}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- FONT AWESOME! -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <title>CDL</title>
-        <link rel="shortcut icon" type="image/jpeg" href="/static/src/clientes/Fermag/logoFermag.jpeg" />
+        <link rel="shortcut icon" type="image/jpeg" href="/static/src/clientes/logoCDL.png" />
     {% endblock %}
 
     {% block content %}
-
     <div class="header">
         <div class="texto-header">
-            <h1>Servicio de traslado de pacientes y personas con discapacidad</h1>
-            <p></p>
+            <h2>Servicio de traslado<br>de pacientes y personas<br>con discapacidad.</h2>
+            <hr>
+            <h1>Grupo <span style="color: #ff0000;">C</span>DL Transportes</h2>
             <i class="fa fa-chevron-down" style="color: #ffffff;"></i>
         </div>
+    </div>
+    
+    <div class="contenido">
+        <div class="parteRoja">
+            <div class="img-parteRoja">
+                <img src="https://scontent.fcor2-1.fna.fbcdn.net/v/t1.6435-9/106794617_315192999877140_7593922766184356705_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=S4Xowdw57v0AX8gIe3u&_nc_oc=AQnNh00i7C3ucqtPDcWsusNwWeAkdu8x_parMfBJze9cApD7Eesu2-yVsZ8BX38c9_w&_nc_ht=scontent.fcor2-1.fna&oh=00_AfAZwehPVJ6iDbEYHEwGtdTVjiUGYI4JugiOwPhLXA5lww&oe=6471DD19" alt="">
+            </div>
+            
+            <div class="texto-parteRoja">
+                <h2>SERVICIOS DE TRASLADO</h2>
+                <hr>
+                <p>Los servicios de traslado ofrecen opciones adaptadas a las necesidades de cada persona, como traslados de discapacidad, ART y baja complejidad. Todos ellos buscan garantizar la seguridad, comodidad y eficiencia en el traslado, mediante vehículos equipados y personal capacitado. Estos servicios son una alternativa práctica y conveniente para aquellos que necesitan movilizarse por motivos médicos, laborales o personales. </p>
+            </div>
+            
+        </div>
+
+        <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-68.28,53.58 C319.98,251.93 271.49,-49.98 595.93,173.97 L522.57,-23.38 L-29.90,-30.28 Z" style="stroke: none; fill: #a80000;"></path></svg></div>
+
+        <div class="parteBlanca">
+            <div class="texto-parteBlanca">
+                <h2>CONTACTO</h2>
+                <hr>
+                <p>👉Sabemos que contas con nosotros por eso te compartimos las formas en que podes contactarte, mediante telefono o siguiendo nuestras redes sociales. <br>
+                <span style="color: rgb(48, 48, 255);"><i>#QuedateEnCasa</i></span> Nosotros te cuidamos! <br>
+                👉Cualquier consulta o INFO: <br>
+                📱 351- 618 6600.
+            </div>
+            
+            <div class="img-parteBlanca">
+                <img src="/static/src/clientes/CDL/CDL_Contactos.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="formulario">
+            <div class="texto-formulario">
+                <h2>FORMULARIO</h2>
+                <hr>
+                <p>Si necesitas nuestro servicio de traslado, no dudes en contactarnos, para eso te dejamos el siguiente formulario de traslado CDL para poder responderte con rapidez y exactitud a tu pedido.<br>👉 <a href="https://forms.gle/VLUpMXdVGzYybCb96"><i>Enlace al formulario</i></a></p>
+            </div>
+        </div>
+
+        <div class="servicios">
+            <div class="titulo-servicios">
+                <h1>NUESTROS SERVICIOS</h1>
+                <hr>
+            </div>
+            
+            <div class="cartas-servicios">
+                {% for s in servicios %}
+                <div class="cartas" style="background-color: {{s[3]}};">
+                    <h1>{{s[0]}}<br>{{s[1]}}</h1>
+                    <img src="{{s[2]}}" alt="">
+                    
+                    <!-- BOTON -->
+                    <div class="boton-servicios">
+                        <a href="/buttons/43" class="btn41-43 btn-43">Ver mas</a>
+                    </div>
+                    <!-- ENDBOTON-->
+
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="titulo-servicios">
+            <h1>UBICACIÓN</h1>
+            <hr>
+        </div>
+
+        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217954.32133978835!2d-64.35915706663233!3d-31.399347785171887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1682968022276!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
 
     {% endblock %}
