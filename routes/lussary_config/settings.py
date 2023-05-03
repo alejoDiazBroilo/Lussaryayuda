@@ -31,7 +31,7 @@ def añadir():
     Insert(Persona('Joaquín', 'Morais', ''))#5
     Insert(Persona('Fernando Gabriel', 'Salonia', 'Ciente y principal comunicador de FERMAG'))#6
     
-    Insert(Medio('Instagram', 'www.instagram.com/', '/'))#1
+    Insert(Medio('Instagram', 'https://www.instagram.com/', '/'))#1
     Insert(Medio('GitHub', 'https://github.com/', ''))#2
     Insert(Medio('LinkedIn', 'https://ar.linkedin.com/in/', ''))#3
     Insert(Medio('Correo Electronico', '', ''))#4
@@ -39,7 +39,6 @@ def añadir():
     
     Insert(Contacto(1, 1, 'alejo.diazbroilo'))#IG
     Insert(Contacto(2, 1, 'AlejoLuisDiazBroiloLussary'))#GIT
-    Insert(Contacto(4, 1, 'diazbroiloalejolussary@gmail.com')) # MAIL END ALEJO
     Insert(Contacto(1, 2, 'agus04_Salonia'))#IG
     Insert(Contacto(2, 2, 'Salonia04'))#GIT
     Insert(Contacto(4, 2, 'agus'))
@@ -48,25 +47,42 @@ def añadir():
     Insert(Contacto(1, 4, 'maximoblazquez'))#IG
     Insert(Contacto(1, 5, 'joa_mora05'))#IG
     Insert(Contacto(2, 5, 'JoaquinMorais'))#GIT
-    Insert(Contacto(5, 5, 'joamora'))#GIT
+    Insert(Contacto(5, 5, 'joamora'))#CHESS
     
     Insert(Colaborador(1, '2004-07-18'))#1
     Insert(Colaborador(2, '2004-08-04'))#2
     Insert(Colaborador(3, '2005-03-22'))#3
     Insert(Colaborador(4, '2005-04-02'))#4
     Insert(Colaborador(5, '2005-03-27'))#5
+
+    Insert(Actividad('backend', ''))#1
+    Insert(Actividad('frontend', ''))#2
+    Insert(Actividad('project manager', ''))#3
+    Insert(Actividad('economia', ''))#4
+    Insert(Actividad('marketing', ''))#5
+    Insert(Actividad('social media', ''))#6
+    Insert(Actividad('diseño', ''))#7
+    Insert(Actividad('DBA', ''))#8
+
+    Insert(Rol(1, 1))#Alejo
+    Insert(Rol(1, 8))
+
+    Insert(Rol(2, 2))#Salonia
+    Insert(Rol(2, 6))
     
-    Insert(DescripcionColaborador(1, 'pasatiempos', 'le encanta el lol y la pija'))
-    
-    Insert(Actividad('backend', ''))
-    Insert(Actividad('frontend', ''))
-    Insert(Actividad('project manager', ''))
-    Insert(Actividad('economia', ''))
-    Insert(Actividad('marketing', ''))
-    Insert(Actividad('social media', ''))
-    Insert(Actividad('diseño', ''))
-    
-    Insert(Rol(1, 1))
+    Insert(Rol(5, 2))#Mora
+    Insert(Rol(5, 3))
+    Insert(Rol(5, 4))
+    Insert(Rol(5, 7))
+
+    Insert(DescripcionColaborador(1, 'Lugar de Nacimiento', 'BS. AS. Argentina'))#Alejo
+    Insert(DescripcionColaborador(1, 'Telefono', '2915343727'))
+    Insert(DescripcionColaborador(1, 'Discord', 'maruuu#2459'))
+    Insert(DescripcionColaborador(1, 'Mail', 'diazbroiloalejol@gmail.com'))
+
+    Insert(DescripcionColaborador(2, 'Telefono', '3513 99-2521'))
+    Insert(DescripcionColaborador(2, 'Mail', 'agusalonia04@gmail.com'))
+
     
     Insert(Proyecto('Fermag', 'Lorem ut tortor vestibulum, eget suscipit leo consectetur.'))
     Insert(Proyecto('VEME', 'Lorem i ut tortor vestibulum, eget suscipit leo consectetur.'))
@@ -94,6 +110,7 @@ def añadir():
     Insert(Area('hacer el models', 'hacer el model siguiendo el uml', 5))
 
     Insert(Contribucion(1, 1, 1,  "alejo pudo hacer el models, pendiente revision"))
+
     return redirect(url_for('Home.traer'))
 """
 nombre #titulo del proyecto 
