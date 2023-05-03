@@ -1,5 +1,7 @@
 from utils.db import db
 from sqlalchemy import Column, Integer, String, Date, func, ForeignKey
+from datetime import datetime
+
 
 class Persona(db.Model): # se pueden hacer las querys
     __tablename__ = 'persona'
@@ -81,6 +83,8 @@ class Contacto(db.Model): # se pueden hacer las querys
     def __repr__(self):
         return f'{self.info_contacto}\n'
 
+    def getLink(self):
+        return self.medio_relacion.link_contacto + self.info_contacto + self.medio_relacion.link_contacto_fin
 """
 contactos = Contacto.query.all()
 personas = contactos[i].<persona_agenda> usando el backref en las clases que tienen las relationships
@@ -112,6 +116,18 @@ class Colaborador(db.Model):# se pueden hacer las querys
     
     def __repr__(self):
         return f'{self.fecha_nacimiento}\n'
+
+    def calcularEdad(self):
+        fecha_actual = datetime.now()
+        edad = fecha_actual.year - self.fecha_nacimiento.year - ((fecha_actual.month, fecha_actual.day) < (self.fecha_nacimiento.month, self.fecha_nacimiento.day))
+        return edad
+    
+    def getActividades(self):
+        cadena = ''
+        for x in self.roles:
+            cadena += f"{x.actividad},"
+        return cadena[:-1]
+
 """   
 colaboradores = Colaborador.query.all()
 lista_colaboradores = colaboradores[i].<persona> (te guarda todos los objetos de agenda que tengan persona)

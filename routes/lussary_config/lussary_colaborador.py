@@ -59,27 +59,20 @@ def getContribuidores():
 
 
 
-@Lussary_contribuidores.route("/colaborador/<nombre>")
-def getContribuidor(nombre):
+@Lussary_contribuidores.route("/colaborador/<id>")
+def getContribuidor(id):
     try:
-        colaborador_ej = Persona.query.filter_by(id_persona=1).first()
+        database = Colaborador.query.filter_by(id_colaborador = id).first()
         colaborador = {
-            'nombre' : colaborador_ej.nombre,
-            'apellido' : 'Pepito',
-            'edad': 18,
-            'rol':'Developer and Businessman',
+            'nombre' : database.persona.nombre,
+            'apellido' : database.persona.apellido,
+            'rol':database.getActividades().title(),
             'descripcion':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ipsam commodi corporis minima inventore? Quasi hic ratione alias consequatur illum?',
-            'atributos': [
-                {'atributo' :'Age','descripcion' :'Pepe'},
-                
-            ],
-            'socialMedia':[
-                {'clase':'fa fa-envelope','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
-                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
-                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
-                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
-                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
-            ]
+            'atributos': 
+            [{'atributo':'fa fa-envelope','descripcion': x.getLink()} for x in database.persona.agenda]
+            ,
+            'socialMedia':
+                [{'clase':'fa fa-envelope','link': x.getLink()} for x in database.persona.agenda]
         }
 
     except Exception as e:
