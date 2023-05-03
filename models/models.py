@@ -8,9 +8,7 @@ class Persona(db.Model): # se pueden hacer las querys
     apellido = db.Column(db.String(70), nullable = False)
     descripcion = db.Column(db.String(1000), default = None)
 
-    agenda = db.relationship('Contacto', back_populates='persona', lazy=True)
-    colaborador_datos = db.relationship('Colaborador', backref='persona', uselist=False, lazy=True)
-    cliente_datos = db.relationship('Cliente', backref='persona', uselist=False, lazy=True)
+    contactos = db.relationship('Contacto', lazy=True)
 
     def __init__(self,nombre, apellido, descripcion):
         self.nombre = nombre
@@ -36,8 +34,6 @@ class Medio(db.Model): # se pueden hacer las querys
     link_contacto_fin = db.Column(db.String(1000), nullable = False) #unique
     icono = db.Column(db.String(1000), nullable = True)
 
-    contacto_relacion = db.relationship('Contacto', back_populates='medio_relacion', lazy=True)
-
     def __init__(self, nombre_medio, link_contacto, link_contacto_fin):
         self.nombre_medio = nombre_medio
         self.link_contacto = link_contacto
@@ -62,8 +58,7 @@ class Contacto(db.Model): # se pueden hacer las querys
     id_persona = db.Column(db.Integer, ForeignKey('persona.id_persona', ondelete='SET NULL', onupdate='CASCADE')) #persona_relatio
     info_contacto = db.Column(db.String(1000), nullable = False) 
 
-    medio_relacion = db.relationship('Medio', back_populates='contacto_relacion', lazy=True)#ignore
-    persona = db.relationship('Persona', back_populates='agenda', lazy=True)#ignore
+    contacto_datos = db.relationship('Medio', lazy=True)#ignore
     
     def __init__(self, medio, persona, info_contacto):
         self.id_medio = medio
@@ -88,10 +83,7 @@ class Colaborador(db.Model):# se pueden hacer las querys
     id_colaborador = db.Column(db.Integer, ForeignKey('persona.id_persona', onupdate='CASCADE'), primary_key=True, autoincrement=False) #persona_relatio
     fecha_nacimiento = db.Column(db.Date)
 
-    descripciones = db.relationship('DescripcionColaborador', backref='colaborador', lazy=True)
-    clientes = db.relationship('Cliente', backref='colaborador', lazy=True)
-    contribuciones = db.relationship('Contribucion', backref='colaborador', lazy=True)
-    roles = db.relationship('Rol', backref='colaborador', lazy=True)
+    roles = db.relationship('Rol', lazy=True)
 
     def __init__(self, colaborador, fecha_nacimiento=None):
         self.id_colaborador = colaborador
@@ -135,8 +127,6 @@ class Actividad(db.Model):# se pueden hacer las querys
     titulo = db.Column(db.String(50), default = None) #unique
     descripcion = db.Column(db.String(1000), default = None)
 
-    actividad_rol = db.relationship('Rol', backref='actividad', lazy=True)
-
     def __init__(self, titulo, descripcion):
         self.titulo = titulo
         self.descripcion = descripcion
@@ -154,6 +144,8 @@ class Rol(db.Model):# se pueden hacer las querys
     id_rol = db.Column(db.Integer, primary_key=True)
     id_actividad = db.Column(db.Integer, ForeignKey('actividad.id_actividad', ondelete='SET NULL', onupdate='CASCADE'))
     id_colaborador = db.Column(db.Integer, ForeignKey('colaborador.id_colaborador', ondelete='SET NULL', onupdate='CASCADE'))
+
+    actividades = db.relationship('Actividad', lazy = True)
 
     def __init__(self, colaborador, actividad):
         self.id_colaborador = colaborador
@@ -174,10 +166,6 @@ class Proyecto(db.Model):
     fecha_creacion = db.Column(db.Date, default=func.now(), nullable=False)
     titulo = db.Column(db.String(50), nullable=False, unique=True)
     descripcion = db.Column(db.String(1000), nullable=True)
-
-    clientes = db.relationship('Cliente', backref='proyecto', lazy=True)
-    contribuciones = db.relationship('Contribucion', backref='proyecto', lazy=True)
-    subproyectos = db.relationship('SubProyecto', backref='proyecto', lazy=True)
     
     def __init__(self, titulo, descripcion=None, fecha_creacion=None):
         self.titulo = titulo
@@ -224,8 +212,6 @@ class Area(db.Model):
     descripcion = db.Column(db.String(1000), default = None)
     puntaje = db.Column(db.Integer, default = None)
 
-    contribuciones = db.relationship('Contribucion', backref='area', lazy=True)
-
     def __init__(self, titulo, descripcion, puntaje):
         self.titulo = titulo
         self.descripcion = descripcion
@@ -250,6 +236,8 @@ class Contribucion(db.Model): #Area relacion
     id_proyecto = db.Column(db.Integer, ForeignKey('proyecto.id_proyecto', ondelete='SET NULL', onupdate='CASCADE'))
     id_area = db.Column(db.Integer, ForeignKey('area.id_area', ondelete='SET NULL', onupdate='CASCADE'))
         
+    areas = db.relationship('Area', lazy = True)
+
     def __init__(self, colaborador, proyecto, area, descripcion, fecha_creacion=None):
         self.id_colaborador = colaborador
         self.id_area = area
@@ -272,8 +260,6 @@ class Categoria(db.Model):
     titulo = db.Column(db.String(50), default = None) # unique=True
     descripcion = db.Column(db.String(1000), default = None)
     
-    atributos = db.relationship('AtributoGenerico', backref='categoria')
-
     def __init__(self, titulo, descripcion):
         self.titulo = titulo
         self.descripcion = descripcion
@@ -293,7 +279,8 @@ class SubProyecto(db.Model): #Proyecto relacion done
     descripcion = db.Column(db.String(1000), default = None)
     id_proyecto = db.Column(db.Integer, ForeignKey('proyecto.id_proyecto', ondelete='SET NULL', onupdate='CASCADE'))
 
-    atributos = db.relationship('AtributoGenerico', backref='subproyecto')
+    proyecto = db.relationship('Proyecto', lazy = True)
+    atributos = db.relationship('AtributoGenerico', lazy=True)
 
     def __init__(self, proyecto, titulo, descripcion):
         self.titulo = titulo
@@ -317,6 +304,7 @@ class AtributoGenerico(db.Model):
     id_subproyecto = db.Column(db.Integer, ForeignKey('subproyecto.id_subproyecto', ondelete='SET NULL', onupdate='CASCADE'))
     id_categoria = db.Column(db.Integer, ForeignKey('categoria.id_categoria', ondelete='SET NULL', onupdate='CASCADE'))
     
+    categoria = db.relationship('Categoria', lazy = True)
 
     def __init__(self, titulo, valor, subproyecto, categoria):
         self.titulo = titulo

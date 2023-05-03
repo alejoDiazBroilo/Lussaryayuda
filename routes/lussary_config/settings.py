@@ -98,7 +98,8 @@ fondo #fondo del principio
 
 @Home.route("/db/traer")
 def traer():
-    database = Colaborador.query.filter_by(id_colaborador = 1).first()
-    print(database.persona.nombre)
+    database = Persona.query.all()
+    for i in database:
+        print(f'{i.contactos} {i.nombre}')
     print("###########################################")
     return redirect(url_for('Home.getHome'))
