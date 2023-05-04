@@ -27,8 +27,8 @@ def añadir():
     Insert(Persona('Alejo Luis', 'Diaz Broilo', ''))#1
     Insert(Persona('Agustín Jose', 'Salonia', ''))#2
     Insert(Persona('Marco', 'Fini Minué', ''))#3
-    Insert(Persona('Máximo Tomas', 'Blázquez', ''))#4
-    Insert(Persona('Joaquín', 'Morais', ''))#5
+    Insert(Persona('Máximo Tomas', 'Blazquez', ''))#4
+    Insert(Persona('Joaquin', 'Morais', ''))#5
     Insert(Persona('Fernando Gabriel', 'Salonia', 'Ciente y principal comunicador de FERMAG'))#6
     
     Insert(Medio('Instagram', 'https://www.instagram.com/', '/'))#1
