@@ -114,14 +114,11 @@
 }
 .informacion-persona-general-menu{
     width: 100%;
+    word-wrap: break-word;
 }
 .informacion-persona-general p{
     margin: 5px 0;
 }
-
-
-
-
 
 .carta-socialMedia{
     width: auto;
@@ -139,12 +136,14 @@
     display: flex;
     justify-content: center;
 }
-.carta-socialMedia i{
-    font-size: 30px;
+.carta-socialMedia img{
+    width: 32px;
+    height: auto;
     transition: all 0.3s ease-in-out;
+    filter: invert(100%);
 }
-.carta-socialMedia i:hover{
-    font-size: 38px;
+.carta-socialMedia img:hover{
+    width: 40px;
     cursor: pointer;
 }
 
@@ -191,7 +190,7 @@
         object-position: 50% 100%;
     }
 }
-@media (max-width: 400px){
+@media (max-width: 435px){
     .carta-foto img{
         height: 250px;
         width: 250px;
@@ -201,6 +200,22 @@
     }
     .subtitulo{
         font-size: 20px;
+    }
+    .informacion-persona-general{
+        grid-column-gap: 10px;
+    }
+}
+@media (max-width: 435px){
+    .informacion-persona-general p{
+        font-size: 14px;
+    }
+}
+@media (max-width: 370px){
+    .informacion-persona-general p{
+        font-size: 13px;
+    }
+    .carta-main{
+        padding: 10px;
     }
 }
 @media (max-width: 330px){

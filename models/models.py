@@ -36,10 +36,11 @@ class Medio(db.Model): # se pueden hacer las querys
     link_contacto_fin = db.Column(db.String(1000), nullable = False) #unique
     icono = db.Column(db.String(1000), nullable = True)
 
-    def __init__(self, nombre_medio, link_contacto, link_contacto_fin):
+    def __init__(self, nombre_medio, link_contacto, link_contacto_fin,icono):
         self.nombre_medio = nombre_medio
         self.link_contacto = link_contacto
         self.link_contacto_fin = link_contacto_fin
+        self.icono = icono
     
     def __repr__(self):
         return f'link: {self.link_contacto}_{self.link_contacto_fin}\n'

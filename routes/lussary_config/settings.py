@@ -31,11 +31,11 @@ def añadir():
     Insert(Persona('Joaquin', 'Morais', ''))#5
     Insert(Persona('Fernando Gabriel', 'Salonia', 'Ciente y principal comunicador de FERMAG'))#6
     
-    Insert(Medio('Instagram', 'https://www.instagram.com/', '/'))#1
-    Insert(Medio('GitHub', 'https://github.com/', ''))#2
-    Insert(Medio('LinkedIn', 'https://ar.linkedin.com/in/', ''))#3
-    Insert(Medio('Correo Electronico', '', ''))#4
-    Insert(Medio('CHESS.COM', 'https://www.chess.com/member/', ''))#5
+    Insert(Medio('Instagram', 'https://www.instagram.com/', '/','instagram.svg'))#1
+    Insert(Medio('GitHub', 'https://github.com/', '','github.svg'))#2
+    Insert(Medio('LinkedIn', 'https://ar.linkedin.com/in/','','linkedin.svg'))#3
+    Insert(Medio('Correo Electronico', '', '','fa-solid fa-envelope'))#4
+    Insert(Medio('CHESS.COM', 'https://www.chess.com/member/','','chess.svg'))#5
     
     Insert(Contacto(1, 1, 'alejo.diazbroilo'))#IG
     Insert(Contacto(2, 1, 'AlejoLuisDiazBroiloLussary'))#GIT

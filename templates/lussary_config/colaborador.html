@@ -55,7 +55,8 @@
                     {% for i in colaborador.socialMedia %}
                     <div class="carta-socialMedia-menu">
                         <a href='{{i.link}}'>
-                            <i class='{{i.clase}}' style="color: #ffffff;"></i>
+                            <img src="{{url_for('static',filename='src/Lussary/Icons/'+i.clase)}}" alt="a" style="color: #ffffff;">
+
                         </a>
                     </div>
                 {% endfor %}

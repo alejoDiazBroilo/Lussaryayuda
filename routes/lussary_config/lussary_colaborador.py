@@ -41,7 +41,7 @@ def getContribuidores():
             'redirect':'3'
         },
         {
-            'url_foto':'Blazques1.png',
+            'url_foto':'Blazquez1.png',
             'simbol' : 'A',
             'cant_simbol' : 1,
             'icon' : 'Trebol.png',
@@ -75,7 +75,7 @@ def getContribuidor(id):
         'rol':colaborador.getActividades().title(),
         'url_img' : persona.apellido.split()[0]+'2.png',
         'descripcion':persona.descripcion,
-        'atributos': 
+        'atributos': [{'atributo':'EDAD','descripcion': colaborador.calcularEdad()}]+
         [{'atributo':x.titulo,'descripcion': x.descripcion} for x in descripcionColaborador]
         ,
         'socialMedia':
