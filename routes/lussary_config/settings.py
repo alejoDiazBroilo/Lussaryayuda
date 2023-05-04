@@ -24,7 +24,7 @@ def getExample():
 
 @Home.route("/db/añadir")
 def añadir():
-    Insert(Persona('Alejo Luis', 'Díaz Broilo', ''))#1
+    Insert(Persona('Alejo Luis', 'Diaz Broilo', ''))#1
     Insert(Persona('Agustín Jose', 'Salonia', ''))#2
     Insert(Persona('Marco', 'Fini Minué', ''))#3
     Insert(Persona('Máximo Tomas', 'Blázquez', ''))#4
