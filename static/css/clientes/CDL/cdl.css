@@ -164,6 +164,29 @@ body, html{
     margin-top: -20px;
 }
 
+.boton-parteBlanca{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-parteBlanca a{
+    width: 200px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-parteBlanca img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    align-items: center;
+}
+
 /* FORMULARIO */
 .formulario{
     width: 100vw;
@@ -364,7 +387,6 @@ body, html{
     .texto-parteRoja p{
         padding: 0 5%;
         margin-top: 0;
-        text-align: justify;
     }
 
     .parteRoja img{
@@ -401,7 +423,6 @@ body, html{
     .texto-parteBlanca p{
         padding: 0 5%;
         margin-top: 0;
-        text-align: justify;
         margin-bottom: 75px;
     }
 
@@ -440,7 +461,6 @@ body, html{
     .texto-formulario p{
         font-size: 20px;
         margin: 5px 30px;
-        text-align: justify;
     }
 
     .mapa{
