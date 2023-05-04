@@ -1,6 +1,7 @@
 from flask import Blueprint,render_template,redirect,url_for
 from utils.db import db
-from models.models import Persona,Colaborador,Medio,Contacto,DescripcionColaborador,Rol
+from models.models import *
+import random
 
 
 Lussary_contribuidores = Blueprint("Lussary_contribuidores",__name__)
@@ -18,73 +19,68 @@ def getContribuidores():
 
     cartas = [
         {
-            'url_foto':'1.jpg',
-            'simbol' : 'A',
+            'url_foto':'Diaz1.png',
+            'simbol' : 'J',
             'cant_simbol' : 1,
-            'icon' : 'Heart.png',
+            'icon' : 'Spade.png',
             'redirect':'1'
         },
+        
         {
-            'url_foto':'1.jpg',
-            'simbol' : '9',
-            'cant_simbol' : 9,
-            'icon' : 'Spade.png',
+            'url_foto':'Salonia1.png',
+            'simbol' : '4',
+            'cant_simbol' : 4,
+            'icon' : 'Diamond.png',
             'redirect':'2'
         },
         {
-            'url_foto':'1.jpg',
-            'simbol' : 'K',
+            'url_foto':'Fini1.png',
+            'simbol' : 'Q',
             'cant_simbol' : 1,
-            'icon' : 'Trebol.png',
+            'icon' : 'Heart.png',
             'redirect':'3'
         },
         {
-            'url_foto':'1.jpg',
-            'simbol' : '2',
-            'cant_simbol' : 2,
-            'icon' : 'Diamond.png',
+            'url_foto':'Blazquez1.png',
+            'simbol' : 'A',
+            'cant_simbol' : 1,
+            'icon' : 'Trebol.png',
             'redirect':'4'
         },
         {
-            'url_foto':'1.jpg',
-            'simbol' : 'Q',
+            'url_foto':'Morais1.png',
+            'simbol' : 'A',
             'cant_simbol' : 1,
             'icon' : 'Spade.png',
             'redirect':'5'
         },
+        
     ]
-
+    random.shuffle(cartas)
     return render_template("lussary_config/colaboradores.html",navbar = True,cant_cards = len(cartas),cartas = cartas )
 
 
 
 
-@Lussary_contribuidores.route("/colaborador/<nombre>")
-def getContribuidor(nombre):
-    try:
-        #colaborador = Persona.query.filter_by(id_persona=1).first()
-        colaborador = {
-            'nombre' : nombre,
-            'apellido' : 'Pepito',
-            'edad': 18,
-            'rol':'Developer and Businessman',
-            'descripcion':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ipsam commodi corporis minima inventore? Quasi hic ratione alias consequatur illum?',
-            'atributos': [
-                {'atributo' :'Age','descripcion' :'Pepe'},
-                
-            ],
-            'socialMedia':[
-                {'clase':'fa fa-envelope','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
-                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
-                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
-                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
-                {'clase':'fab fa-whatsapp','link': "https://wa.me/5493518147051/?text=Hola%20buenos%20dias!."},
-            ]
-        }
+@Lussary_contribuidores.route("/colaborador/<int:id>")
+def getContribuidor(id):
+    colaborador = Colaborador.query.filter_by(id_colaborador = id).first()
+    persona = Persona.query.filter_by(id_persona = id).first()
+    contactos = Contacto.query.filter_by(id_persona = id).all()
+    descripcionColaborador = DescripcionColaborador.query.filter_by(id_colaborador = id).all()
+    
+    data = {
+        'nombre' : persona.nombre,
+        'apellido' : persona.apellido,
+        'rol':colaborador.getActividades().title(),
+        'url_img' : persona.apellido.split()[0]+'2.png',
+        'descripcion':persona.descripcion,
+        'atributos': [{'atributo':'EDAD','descripcion': colaborador.calcularEdad()}]+
+        [{'atributo':x.titulo,'descripcion': x.descripcion} for x in descripcionColaborador]
+        ,
+        'socialMedia':
+            [{'clase':x.getIcono(),'link': x.getLink()} for x in contactos if (x.isLink()==True)]
+    }
 
-    except Exception as e:
-        print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-        print(e)
-        return redirect(url_for('Home.getHome'))
 
-    return render_template("lussary_config/colaborador.html",navbar = True,colaborador = colaborador)
+    return render_template("lussary_config/colaborador.html",navbar = True,colaborador = data)
