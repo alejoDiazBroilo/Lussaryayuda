@@ -8,3 +8,4 @@ drop database LussaryTest; create database LussaryTest; use LussaryTest;
 app.config['SQLALCHEMY_DATABASE_URI']= 'mysql+pymysql://root:lScgfuOkbeTLIbCrhwoK@containers-us-west-85.railway.app:5824/railway'
 #app.config['SQLALCHEMY_DATABASE_URI']= "mysql+pymysql://bdi:pepe1234@localhost/LussaryTest"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
