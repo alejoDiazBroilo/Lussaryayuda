@@ -60,8 +60,10 @@ class Contacto(db.Model): # se pueden hacer las querys
     id_persona = db.Column(db.Integer, ForeignKey('persona.id_persona', ondelete='SET NULL', onupdate='CASCADE')) #persona_relatio
     info_contacto = db.Column(db.String(1000), nullable = False) 
 
-    contacto_datos = db.relationship('Medio', lazy=True)#ignore
+    medio_relacion = db.relationship('Medio', lazy=True)#ignore
     
+
+
     def __init__(self, medio, persona, info_contacto):
         self.id_medio = medio
         self.id_persona = persona
@@ -72,6 +74,13 @@ class Contacto(db.Model): # se pueden hacer las querys
 
     def getLink(self):
         return self.medio_relacion.link_contacto + self.info_contacto + self.medio_relacion.link_contacto_fin
+
+    def isLink(self):
+        if self.medio_relacion.link_contacto == '':
+            return False
+        return True
+    def getIcono(self):
+        return self.medio_relacion.icono
 """
 contactos = Contacto.query.all()
 personas = contactos[i].<persona_agenda> usando el backref en las clases que tienen las relationships
@@ -106,8 +115,8 @@ class Colaborador(db.Model):# se pueden hacer las querys
     def getActividades(self):
         cadena = ''
         for x in self.roles:
-            cadena += f"{x.actividad},"
-        return cadena[:-1]
+            cadena += f"{x.actividades.titulo}, "
+        return cadena[:-2]
 
 """   
 colaboradores = Colaborador.query.all()

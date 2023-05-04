@@ -1,6 +1,6 @@
 from flask import Blueprint,render_template,redirect,url_for
 from utils.db import db
-from models.models import Persona,Colaborador,Medio,Contacto,DescripcionColaborador,Rol
+from models.models import *
 
 
 Lussary_contribuidores = Blueprint("Lussary_contribuidores",__name__)
@@ -59,25 +59,23 @@ def getContribuidores():
 
 
 
-@Lussary_contribuidores.route("/colaborador/<id>")
+@Lussary_contribuidores.route("/colaborador/<int:id>")
 def getContribuidor(id):
-    try:
-        database = Colaborador.query.filter_by(id_colaborador = id).first()
-        colaborador = {
-            'nombre' : database.persona.nombre,
-            'apellido' : database.persona.apellido,
-            'rol':database.getActividades().title(),
-            'descripcion':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ipsam commodi corporis minima inventore? Quasi hic ratione alias consequatur illum?',
-            'atributos': 
-            [{'atributo':'fa fa-envelope','descripcion': x.getLink()} for x in database.persona.agenda]
-            ,
-            'socialMedia':
-                [{'clase':'fa fa-envelope','link': x.getLink()} for x in database.persona.agenda]
-        }
+    colaborador = Colaborador.query.filter_by(id_colaborador = id).first()
+    persona = Persona.query.filter_by(id_persona = id).first()
+    contactos = Contacto.query.filter_by(id_persona = id).all()
+    descripcionColaborador = DescripcionColaborador.query.filter_by(id_colaborador = id).all()
+    data = {
+        'nombre' : persona.nombre,
+        'apellido' : persona.apellido,
+        'rol':colaborador.getActividades().title(),
+        'descripcion':persona.descripcion,
+        'atributos': 
+        [{'atributo':x.titulo,'descripcion': x.descripcion} for x in descripcionColaborador]
+        ,
+        'socialMedia':
+            [{'clase':x.getIcono(),'link': x.getLink()} for x in contactos if (x.isLink()==True)]
+    }
 
-    except Exception as e:
-        print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-        print(e)
-        return redirect(url_for('Home.getHome'))
 
-    return render_template("lussary_config/colaborador.html",navbar = True,colaborador = colaborador)
+    return render_template("lussary_config/colaborador.html",navbar = True,colaborador = data)
