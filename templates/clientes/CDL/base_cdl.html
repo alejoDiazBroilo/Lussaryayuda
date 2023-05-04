@@ -23,7 +23,17 @@
 <body>
 
     <!-- LOADER -->
+    
+    <div class="loader-container" id="loader-container">
+        <div class="loader" id="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
         
+    </div>
+    
     <!-- FIN LOADER -->
 
 
@@ -38,11 +48,12 @@
             <input type="checkbox" class="toogle-menu">
             <div class="hamburguer"></div>
             <ul class="menu" id="menu">
-                <li><a href="" class="nav-link"><span style="color: red;">E</span>mpresa</a></li>
-                <li><a href="" class="nav-link"><span style="color: red;">S</span>obre nosotros</a></li>
-                <li><a href="" class="nav-link"><span style="color: red;">S</span>ervicios</a></li>
-                <li><a href="" class="nav-link"><span style="color: red;">U</span>bicacion</a></li>
-                <li><a href="" class="nav-link"><span style="color: red;">C</span>ontacto</a></li>
+                <li><a href="{{url_for('CDL_home.CDLHome')}}" class="nav-link"><span style="color: red;">E</span>mpresa</a></li>
+                <li><a href="#sobre-nosotros" class="nav-link"><span style="color: red;">S</span>obre nosotros</a></li>
+                <li><a href="#contactos" class="nav-link"><span style="color: red;">C</span>ontacto</a></li>
+                <li><a href="#formulario" class="nav-link"><span style="color: red;">F</span>ormulario</a></li>
+                <li><a href="#servicios" class="nav-link"><span style="color: red;">S</span>ervicios</a></li>
+                <li><a href="#ubicacion" class="nav-link"><span style="color: red;">U</span>bicacion</a></li>
             </ul>
         </div>
     </nav>
@@ -57,11 +68,12 @@
 
             <div class="navBarFooter">
                 <ul>
-                    <li><a href="" class="nvf">Empresa</a></li>
-                    <li><a href="" class="nvf">Sobre nosotros</a></li>
-                    <li><a href="" class="nvf">Servicios</a></li>
-                    <li><a href="" class="nvf">Ubicacion</a></li>
-                    <li><a href="" class="nvf">Contacto</a></li>
+                    <li><a href="{{url_for('CDL_home.CDLHome')}}" class="nvf">Empresa</a></li>
+                    <li><a href="#sobre-nosotros" class="nvf">Sobre nosotros</a></li>
+                    <li><a href="#contactos" class="nvf">Contacto</a></li>
+                    <li><a href="#formulario" class="nvf">Formulario</a></li>
+                    <li><a href="#servicios" class="nvf">Servicios</a></li>
+                    <li><a href="#ubicacion" class="nvf">Ubicacion</a></li>
                 </ul>
             </div>
 
@@ -82,6 +94,7 @@
 
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{url_for('static',filename='js/clientes/CDL/cdl.js')}}"></script>
 
 </body>

@@ -19,7 +19,7 @@
         </div>
     </div>
     
-    <div class="contenido">
+    <div class="contenido" id="sobre-nosotros">
         <div class="parteRoja">
             <div class="img-parteRoja">
                 <img src="https://scontent.fcor2-1.fna.fbcdn.net/v/t1.6435-9/106794617_315192999877140_7593922766184356705_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=S4Xowdw57v0AX8gIe3u&_nc_oc=AQnNh00i7C3ucqtPDcWsusNwWeAkdu8x_parMfBJze9cApD7Eesu2-yVsZ8BX38c9_w&_nc_ht=scontent.fcor2-1.fna&oh=00_AfAZwehPVJ6iDbEYHEwGtdTVjiUGYI4JugiOwPhLXA5lww&oe=6471DD19" alt="">
@@ -35,22 +35,24 @@
 
         <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-68.28,53.58 C319.98,251.93 271.49,-49.98 595.93,173.97 L522.57,-23.38 L-29.90,-30.28 Z" style="stroke: none; fill: #a80000;"></path></svg></div>
 
-        <div class="parteBlanca">
+        <div class="parteBlanca" id="contactos">
             <div class="texto-parteBlanca">
                 <h2>CONTACTO</h2>
                 <hr>
                 <p>👉Sabemos que contas con nosotros por eso te compartimos las formas en que podes contactarte, mediante telefono o siguiendo nuestras redes sociales. <br>
                 <span style="color: rgb(48, 48, 255);"><i>#QuedateEnCasa</i></span> Nosotros te cuidamos! <br>
-                👉Cualquier consulta o INFO: <br>
-                📱 351- 618 6600.
+                👉📱Cualquier consulta o INFO: <br>
+                <div class="boton-parteBlanca">
+                    <a href="https://wa.me/5493516186600/"><img src="{{url_for('static',filename='src/clientes/CDL/whatsapp.png')}}" alt=""></a>
+                </div>
             </div>
             
             <div class="img-parteBlanca">
-                <img src="/static/src/clientes/CDL/CDL_Contactos.jpg" alt="">
+                <img src="{{url_for('static',filename='src/clientes/CDL/CDL_Contactos.jpg')}}" alt="">
             </div>
         </div>
 
-        <div class="formulario">
+        <div class="formulario" id="formulario">
             <div class="texto-formulario">
                 <h2>FORMULARIO</h2>
                 <hr>
@@ -58,7 +60,7 @@
             </div>
         </div>
 
-        <div class="servicios">
+        <div class="servicios" id="servicios">
             <div class="titulo-servicios">
                 <h1>NUESTROS SERVICIOS</h1>
                 <hr>
@@ -72,7 +74,7 @@
                     
                     <!-- BOTON -->
                     <div class="boton-servicios">
-                        <a href="/buttons/43" class="btn41-43 btn-43">Ver mas</a>
+                        <a href="{{s[4]}}" class="btn41-43 btn-43">Ver mas</a>
                     </div>
                     <!-- ENDBOTON-->
 
@@ -82,7 +84,7 @@
             </div>
         </div>
 
-        <div class="titulo-servicios">
+        <div class="titulo-servicios" id="ubicacion">
             <h1>UBICACIÓN</h1>
             <hr>
         </div>

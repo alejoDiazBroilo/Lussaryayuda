@@ -8,6 +8,6 @@ def LussaryGaleria():
     Galeria = [
         ('src/Lussary/LogoFermag.jpeg', 'FERMAG S.A.', 'src/Lussary/FermagPreview.png', 'Fermag'),
         ('src/Lussary/LogoVeme.jpeg', 'VEME', 'src/Lussary/VemePreview.png', 'VEME'),
-        ('/src/Lussary/logoCDL.png', 'GRUPO CDL', '', 'CDL')
+        ('/src/Lussary/logoCDL.png', 'GRUPO CDL', 'src/Lussary/CDL_Preview.png', 'CDL')
     ]
     return render_template('lussary_config/galeria.html', galeria = Galeria,navbar = True)
