@@ -44,6 +44,7 @@ def añadir():
     Insert(Contacto(4, 2, 'agus'))
     Insert(Contacto(1, 3, 'marco_fm'))#IG
     Insert(Contacto(2, 3, 'MarcoFm1'))#GIT
+    Insert(Contacto(3, 3, 'marco-fini-minue-b35289275'))
     Insert(Contacto(1, 4, 'maximoblazquez'))#IG
     Insert(Contacto(1, 5, 'joa_mora05'))#IG
     Insert(Contacto(2, 5, 'JoaquinMorais'))#GIT
@@ -57,19 +58,29 @@ def añadir():
 
     Insert(Actividad('backend', ''))#1
     Insert(Actividad('frontend', ''))#2
-    Insert(Actividad('project manager', ''))#3
+    Insert(Actividad('project owner', ''))#3
     Insert(Actividad('economia', ''))#4
     Insert(Actividad('marketing', ''))#5
     Insert(Actividad('social media', ''))#6
     Insert(Actividad('diseño', ''))#7
-    Insert(Actividad('DBA', ''))#8
+    Insert(Actividad('database designer', ''))#8
+    Insert(Actividad('testing', ''))#9
 
     Insert(Rol(1, 1))#Alejo
     Insert(Rol(1, 8))
 
     Insert(Rol(2, 2))#Salonia
     Insert(Rol(2, 6))
+    Insert(Rol(2, 7))
     
+    Insert(Rol(3, 2))#Fini
+    Insert(Rol(3, 7))
+    Insert(Rol(3, 5))
+    Insert(Rol(3, 3))
+    
+    Insert(Rol(4, 9))#Facha
+    Insert(Rol(4, 2))
+
     Insert(Rol(5, 2))#Mora
     Insert(Rol(5, 3))
     Insert(Rol(5, 4))
@@ -83,7 +94,18 @@ def añadir():
     Insert(DescripcionColaborador(2, 'Telefono', '3513 99-2521'))
     Insert(DescripcionColaborador(2, 'Mail', 'agusalonia04@gmail.com'))
 
+    Insert(DescripcionColaborador(3, 'Mail', 'marcofiniminuebusiness@gmail.com'))
+    Insert(DescripcionColaborador(3, 'Telefono', '3518147051'))
+    Insert(DescripcionColaborador(3, 'Discord', 'Marco_Fm1#1501'))
+
+    Insert(DescripcionColaborador(4, 'Mail', 'maxi05blazquez@gmail.com'))
+    Insert(DescripcionColaborador(4, 'Nick Riot', 'Facher05MB'))
+
+    Insert(DescripcionColaborador(5, 'Lugar de Nacimiento', 'BS. AS. Argentina'))
+    Insert(DescripcionColaborador(5, 'Mail', 'joaquinmorais2005@gmail.com'))
     
+
+
     Insert(Proyecto('Fermag', 'Lorem ut tortor vestibulum, eget suscipit leo consectetur.'))
     Insert(Proyecto('VEME', 'Lorem i ut tortor vestibulum, eget suscipit leo consectetur.'))
     Insert(SubProyecto(1, 'empresa1', 'almost null because this cries a lot'))
